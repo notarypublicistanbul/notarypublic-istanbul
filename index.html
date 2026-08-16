@@ -16,6 +16,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
     <!-- Elfsight Google Reviews (loads lazily, does not slow the page) -->
     <script src="https://elfsightcdn.com/platform.js" async></script>
+    <script>
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      window.dispatchEvent(new Event('resize'));
+    }, 1000);
+  });
+</script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
