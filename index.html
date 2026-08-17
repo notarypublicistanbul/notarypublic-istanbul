@@ -106,6 +106,8 @@
     .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 
     .btn-gold { display: inline-block; background: var(--gold); color: #171207; font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; padding: 15px 26px; border: 1px solid var(--gold); transition: all .25s ease; }
+    .hero-cta { font-size: 0.86rem; padding: 21px 34px; box-shadow: 0 10px 34px rgba(201,162,86,0.32); }
+    .hero-cta:hover { box-shadow: 0 12px 40px rgba(201,162,86,0.46); transform: translateY(-1px); }
     .btn-gold:hover { background: var(--gold-bright); border-color: var(--gold-bright); }
     .btn-outline { display: inline-block; background: transparent; color: var(--text); font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 15px 26px; border: 1px solid var(--line); transition: all .25s ease; }
     .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
@@ -121,8 +123,14 @@
     .hero h1 em { font-style: italic; font-weight: 600; color: var(--gold-bright); }
     .hero p.lead { margin: 28px 0 14px; font-size: 1.12rem; }
     .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
-    .hero-trust { font-family: var(--mono); font-size: 0.76rem; letter-spacing: 0.03em; color: var(--muted); margin-top: 28px; }
-    .hero-trust .stars { color: var(--gold); letter-spacing: 2px; }
+    .stats-top { display: flex; justify-content: center; padding-top: 46px; }
+    .rating-badge { display: flex; flex-direction: column; align-items: center; gap: 9px; text-align: center; font-family: var(--mono); color: var(--text); background: rgba(201,162,86,0.1); border: 1px solid rgba(201,162,86,0.4); padding: 22px 40px; transition: all .25s ease; cursor: pointer; }
+    .rating-badge:hover { background: rgba(201,162,86,0.2); border-color: var(--gold-bright); transform: translateY(-1px); }
+    .rating-badge .stars { color: var(--gold-bright); letter-spacing: 4px; font-size: 1.3rem; }
+    .rating-badge .rb-main { font-size: 1.08rem; letter-spacing: 0.02em; }
+    .rating-badge .rb-main b { color: var(--gold-bright); font-weight: 600; }
+    .rating-badge .rb-sub { font-size: 0.72rem; letter-spacing: 0.04em; color: var(--muted); }
+    .rating-badge .g-url { color: var(--gold-bright); border-bottom: 1px solid var(--gold); padding-bottom: 1px; }
     .hero-seal-wrap { display: flex; justify-content: center; }
 
     /* seal graphic */
@@ -138,8 +146,8 @@
 
     /* ---------- STATS ---------- */
     .stats-bar { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--ink-2); }
-    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-    .stat-cell { padding: 30px 28px; border-left: 1px solid var(--line); }
+    .stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); }
+    .stat-cell { padding: 28px 18px; border-left: 1px solid var(--line); }
     .stat-cell:first-child { border-left: none; }
     .stat-value { font-family: var(--display); font-weight: 500; font-size: 2.1rem; color: var(--gold-bright); line-height: 1; margin-bottom: 10px; }
     .stat-key { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
@@ -157,6 +165,10 @@
     .cluster-item h4 { font-family: var(--sans); font-weight: 600; font-size: 0.98rem; color: var(--text); margin-bottom: 6px; }
     .cluster-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
     .cluster-item .flag { display: inline-block; margin-top: 8px; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.04em; color: #e0a999; background: rgba(154,44,34,0.16); border: 1px solid rgba(154,44,34,0.4); padding: 4px 9px; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 13px; }
+    .tag { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.02em; color: var(--gold-bright); background: rgba(201,162,86,0.1); border: 1px solid rgba(201,162,86,0.35); padding: 5px 10px; }
+    .tag-link { transition: all .2s ease; }
+    .tag-link:hover { background: var(--gold); color: #171207; border-color: var(--gold); }
 
     /* ---------- PROCESS ---------- */
     .process { background: var(--ink-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -228,8 +240,8 @@
     .foot-line + .foot-line { margin-top: 10px; opacity: .75; }
 
     /* ---------- FLOATING WHATSAPP ---------- */
-    .whatsapp-float { position: fixed; bottom: 28px; right: 28px; width: 58px; height: 58px; border-radius: 50%; background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; z-index: 1200; box-shadow: 0 8px 30px rgba(37,211,102,0.4); animation: pulse 2.4s infinite; }
-    .whatsapp-float svg { width: 28px; height: 28px; fill: #fff; }
+    .whatsapp-float { position: fixed; bottom: 28px; left: 28px; width: 70px; height: 70px; border-radius: 50%; background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; z-index: 1200; box-shadow: 0 8px 30px rgba(37,211,102,0.4); animation: pulse 2.4s infinite; }
+    .whatsapp-float svg { width: 34px; height: 34px; fill: #fff; }
     @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); } 70% { box-shadow: 0 0 0 18px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
     @media (prefers-reduced-motion: reduce) {
         .whatsapp-float { animation: none; }
@@ -318,10 +330,9 @@
             <h1>Every stamp your document needs to be <em>believed</em>, anywhere.</h1>
             <p class="lead">Certified translation, notarization and apostille legalization for people living far from Istanbul — arranged over WhatsApp, delivered to your door.</p>
             <div class="hero-actions">
-                <a href="https://wa.me/905367708707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="btn-gold">Message Us on WhatsApp &nbsp;&rarr;</a>
+                <a href="https://wa.me/905367708707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="btn-gold hero-cta">Chat via WhatsApp Now — Free Quote &nbsp;&rarr;</a>
                 <a href="#services" class="btn-outline">See What We Handle</a>
             </div>
-            <div class="hero-trust"><span class="stars">★★★★★</span> &nbsp;4.9 rated · 545+ reviews · clients from 92 countries</div>
         </div>
         <div class="hero-seal-wrap">
             <svg class="seal animate" width="280" height="280" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="TAC Notary Public, Apostille and Sworn Translation seal, established 2014">
@@ -343,7 +354,15 @@
 
 <div class="stats-bar">
     <div class="container">
+        <div class="stats-top">
+            <a href="https://g.page/translation.istanbul" target="_blank" rel="noopener" class="rating-badge">
+                <span class="stars">★★★★★</span>
+                <span class="rb-main"><b>Rated 4.9/5</b> by 545+ global clients &nbsp;·&nbsp; 92 countries</span>
+                <span class="rb-sub">Read our reviews on Google Business — <span class="g-url">g.page/translation.istanbul</span></span>
+            </a>
+        </div>
         <div class="stats-grid">
+            <div class="stat-cell"><div class="stat-value">500+</div><div class="stat-key">Happy Real Customers</div></div>
             <div class="stat-cell"><div class="stat-value">55+</div><div class="stat-key">Languages Certified</div></div>
             <div class="stat-cell"><div class="stat-value">92</div><div class="stat-key">Apostille Countries</div></div>
             <div class="stat-cell"><div class="stat-value">2014</div><div class="stat-key">Serving Since</div></div>
@@ -368,7 +387,10 @@
                 <h3>Words, made official</h3>
                 <div class="cluster-item">
                     <h4>Certified &amp; Sworn Translation</h4>
-                    <p>55+ languages, prepared by legal linguists with 10–20 years of experience. Handled 24/7.</p>
+                    <p>Sworn (Yeminli) translation, officially accepted by Turkish notaries, courts and consulates — 55+ languages, prepared by legal linguists with 10–20 years of experience. Handled 24/7.</p>
+                    <div class="tag-row">
+                        <span class="tag">Arabic</span><span class="tag">English</span><span class="tag">Russian</span><span class="tag">Turkish</span><span class="tag">German</span><span class="tag">French</span><span class="tag">Persian / Farsi</span><span class="tag">Ukrainian</span><span class="tag">Kurdish</span><span class="tag">Azerbaijani</span>
+                    </div>
                 </div>
                 <div class="cluster-item">
                     <h4>University Registration Support</h4>
@@ -380,7 +402,19 @@
                 <h3>Signed &amp; sealed</h3>
                 <div class="cluster-item">
                     <h4>Power of Attorney &amp; Affidavits</h4>
-                    <p>Bilingual drafting, certified by Notary Public.</p>
+                    <p>Bilingual drafting, certified by Notary Public. Tap the workflow closest to yours — each opens WhatsApp with your request ready to send.</p>
+                    <div class="tag-row">
+                        <a class="tag tag-link" href="https://wa.me/905367708707?text=Hi%2C+I+need+a+Property+Purchase+Power+of+Attorney" target="_blank" rel="noopener">Property Purchase</a>
+                        <a class="tag tag-link" href="https://wa.me/905367708707?text=Hi%2C+I+need+a+Property+Sale+Power+of+Attorney" target="_blank" rel="noopener">Property Sale</a>
+                        <a class="tag tag-link" href="https://wa.me/905367708707?text=Hi%2C+I+need+a+Vehicle+Purchase+or+Sale+Power+of+Attorney" target="_blank" rel="noopener">Vehicle Purchase / Sale</a>
+                        <a class="tag tag-link" href="https://wa.me/905367708707?text=Hi%2C+I+need+a+Power+of+Attorney+to+Drive+a+Car+Abroad" target="_blank" rel="noopener">Driving a Car Abroad</a>
+                        <a class="tag tag-link" href="https://wa.me/905367708707?text=Hi%2C+I+need+a+Turkish+University+Registration+Power+of+Attorney" target="_blank" rel="noopener">University Registration</a>
+                        <a class="tag tag-link" href="https://wa.me/905367708707?text=Hi%2C+I+need+a+Bank+%26+Financial+Power+of+Attorney" target="_blank" rel="noopener">Bank &amp; Financial</a>
+                        <a class="tag tag-link" href="https://wa.me/905367708707?text=Hi%2C+I+need+a+Company+Formation+Power+of+Attorney" target="_blank" rel="noopener">Company Formation</a>
+                        <a class="tag tag-link" href="https://wa.me/905367708707?text=Hi%2C+I+need+a+Residence+Permit+Power+of+Attorney" target="_blank" rel="noopener">Residence Permit</a>
+                        <a class="tag tag-link" href="https://wa.me/905367708707?text=Hi%2C+I+need+a+Divorce+Power+of+Attorney" target="_blank" rel="noopener">Divorce</a>
+                        <a class="tag tag-link" href="https://wa.me/905367708707?text=Hi%2C+I+need+a+General+Power+of+Attorney" target="_blank" rel="noopener">General / Full POA</a>
+                    </div>
                     <span class="flag">Signature required in person — book via WhatsApp</span>
                 </div>
                 <div class="cluster-item">
