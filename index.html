@@ -17,7 +17,8 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230b0a08'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Georgia,serif' font-size='54' font-weight='700' fill='%23c9a256'%3ET%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Naskh+Arabic:wght@400;500;700&family=EB+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;1,500;1,600&family=Inter:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=optional">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;1,500;1,600&family=Inter:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=optional" rel="stylesheet">
 <!-- Elfsight Google Reviews (loads lazily) -->
 <script src="https://elfsightcdn.com/platform.js" async></script>
 <script type="application/ld+json">
@@ -63,7 +64,8 @@
         --gold: #c9a256;
         --gold-bright: #e8c878;
         --seal: #9a2c22;
-        --paper: #cdbb92;
+        --seal-paper: #4f120c;
+        --paper: #a3865a;
         --paper-ink: #1c1712;
         --text: #f2ede2;
         --muted: #a8a194;
@@ -85,21 +87,20 @@
     section { padding: 120px 0; scroll-margin-top: 84px; }
     img, svg { max-width: 100%; }
 
-    .eyebrow { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+    .eyebrow { font-family: var(--mono); font-size: 0.86rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
     h2.disp { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--gold-bright); font-size: clamp(2.1rem, 4vw, 3rem); line-height: 1.15; }
     .lead { color: var(--muted); font-size: 1.05rem; max-width: 560px; }
 
     /* ---------- HEADER ---------- */
     header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(11,10,8,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); border-top: 3px solid var(--gold); }
     .bismillah-bar { text-align: center; padding: 7px 0 6px; border-bottom: 1px solid var(--line); }
-    .bismillah-bar span { font-family: 'Noto Naskh Arabic', serif; font-size: 1.2rem; color: var(--gold-bright); line-height: 1; direction: rtl; unicode-bidi: isolate; }
+    .bismillah-bar span { font-size: 1.25rem; color: var(--gold-bright); line-height: 1; direction: rtl; unicode-bidi: isolate; }
     .nav-wrap { display: flex; align-items: center; justify-content: space-between; min-height: 68px; padding: 12px 0; gap: 16px; }
-    .brand { display: flex; align-items: center; gap: 12px; }
-    .brand-text { display: flex; align-items: baseline; flex-wrap: wrap; column-gap: 10px; row-gap: 2px; max-width: 560px; }
-    .brand-main { font-family: var(--display); font-style: italic; font-weight: 600; font-size: 1.35rem; color: var(--gold-bright); white-space: nowrap; }
-    .brand-sub { font-family: var(--display); font-style: italic; font-weight: 500; font-size: 0.82rem; letter-spacing: 0.01em; color: var(--muted); line-height: 1.3; }
+    .brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .brand-lines { display: flex; flex-direction: column; gap: 2px; }
+    .brand-line { font-family: var(--display); font-style: italic; font-weight: 600; font-size: 1.5rem; color: var(--gold-bright); line-height: 1.2; white-space: nowrap; }
     nav ul { display: flex; align-items: center; gap: 30px; list-style: none; }
-    nav ul a { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: #d6d3cb; }
+    nav ul a { font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: #d6d3cb; }
     nav ul a:hover { color: var(--gold); }
     .nav-toggle { display: none; width: 34px; height: 34px; background: none; border: none; cursor: pointer; padding: 0; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
     .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); transition: transform .25s ease, opacity .25s ease; }
@@ -121,7 +122,7 @@
     .hero::before { content: ''; position: absolute; top: -120px; right: -160px; width: 620px; height: 620px; background: radial-gradient(circle, rgba(201,162,86,0.09) 0%, transparent 65%); pointer-events: none; }
     .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; }
     .hero-rule { width: 44px; height: 1px; background: var(--gold); margin-bottom: 24px; }
-    .hero h1 { font-family: 'EB Garamond', serif; font-style: italic; font-weight: 500; text-transform: uppercase; font-size: clamp(2.2rem, 4.6vw, 3.4rem); line-height: 1.24; letter-spacing: 0.01em; color: var(--text); }
+    .hero h1 { font-family: var(--display); font-style: italic; font-weight: 500; text-transform: uppercase; font-size: clamp(2.2rem, 4.6vw, 3.4rem); line-height: 1.24; letter-spacing: 0.01em; color: var(--text); }
     .hero h1 em { font-style: italic; font-weight: 600; color: var(--gold-bright); }
     .hero p.lead { margin: 28px 0 14px; font-size: 1.12rem; }
     .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
@@ -155,19 +156,19 @@
     .stat-key { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
 
     .head-row { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 54px; gap: 20px; }
-    .head-sub { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-top: 12px; }
+    .head-sub { font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-top: 12px; }
 
     /* ---------- SERVICES ---------- */
     .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
     .cert-card { background: var(--card); padding: 36px 32px; }
-    .cert-tag { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
-    .cert-title { font-family: var(--sans); font-weight: 700; font-size: 1.02rem; letter-spacing: 0.01em; text-transform: uppercase; color: var(--text); line-height: 1.4; margin-bottom: 14px; }
+    .cert-tag { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .cert-title { font-family: var(--sans); font-weight: 600; font-size: 1.02rem; letter-spacing: 0.01em; text-transform: uppercase; color: var(--text); line-height: 1.4; margin-bottom: 14px; }
     .cert-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
     .cert-note { margin-top: 12px; font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
     .cert-note strong { color: var(--text); font-weight: 600; }
     .flag { display: inline-block; margin-top: 14px; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.04em; color: #e0a999; background: rgba(154,44,34,0.16); border: 1px solid rgba(154,44,34,0.4); padding: 4px 9px; }
     .tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 13px; }
-    .tag { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.02em; color: var(--gold-bright); background: rgba(201,162,86,0.1); border: 1px solid rgba(201,162,86,0.35); padding: 5px 10px; }
+    .tag { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.01em; color: var(--gold-bright); background: rgba(201,162,86,0.1); border: 1px solid rgba(201,162,86,0.35); padding: 6px 12px; }
     .tag-link { transition: all .2s ease; }
     .tag-link:hover { background: var(--gold); color: #171207; border-color: var(--gold); }
 
@@ -184,7 +185,7 @@
     .story { position: relative; text-align: center; overflow: hidden; }
     .story-watermark { position: absolute; top: 50%; left: 50%; width: 640px; height: 640px; transform: translate(-50%,-50%); opacity: 0.045; pointer-events: none; }
     .story .container { position: relative; z-index: 1; }
-    .est-badge { display: inline-block; border: 1px solid var(--line); padding: 10px 24px; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.26em; color: var(--muted); margin-bottom: 40px; }
+    .est-badge { display: inline-block; border: 1px solid var(--line); padding: 10px 24px; font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 40px; }
     .story h2 { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--gold-bright); font-size: clamp(2.2rem, 4.5vw, 3.1rem); }
     .story-divider { width: 44px; height: 1px; background: var(--gold); margin: 36px auto; }
     .story-text { max-width: 680px; margin: 0 auto; color: var(--muted); font-size: 1.06rem; line-height: 1.9; }
@@ -198,8 +199,9 @@
     .rating-text .stars { letter-spacing: 2px; }
     .widget-frame { border: 1px solid var(--line); background: var(--card); padding: 44px 34px; }
     .gpage-frame { margin-top: 40px; border: 1px solid var(--line); background: var(--card); padding: 44px 34px; text-align: center; }
-    .gpage-frame p { max-width: 660px; margin: 0 auto 26px; color: var(--muted); font-size: 1rem; line-height: 1.85; }
-    .gpage-frame .glink { color: var(--gold-bright); font-family: var(--mono); font-size: 0.88rem; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
+    .gpage-frame p { max-width: 660px; margin: 0 auto 28px; color: var(--muted); font-size: 1.14rem; line-height: 1.85; }
+    .gpage-frame .glink { color: var(--gold-bright); font-family: var(--mono); font-size: 1rem; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
+    .gpage-frame .btn-outline { font-size: 0.82rem; padding: 17px 30px; }
 
     /* ---------- FAQ ---------- */
     .faq-list { max-width: 800px; margin: 0 auto; }
@@ -213,37 +215,36 @@
 
     /* ---------- CONTACT (paper panel) ---------- */
     .contact { background: var(--paper); color: var(--paper-ink); }
-    .contact .eyebrow { color: var(--seal); }
+    .contact .eyebrow { color: var(--seal-paper); }
     .contact-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 64px; align-items: start; }
     .contact h2 { font-family: var(--display); font-weight: 500; font-size: clamp(2.2rem, 4vw, 2.9rem); color: var(--paper-ink); margin-bottom: 18px; }
-    .contact-loc { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.14em; color: #52493a; margin-bottom: 20px; }
-    .contact-note { color: #3a3226; font-size: 1rem; max-width: 480px; margin-bottom: 36px; line-height: 1.75; }
+    .contact-loc { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.14em; color: #241d16; margin-bottom: 20px; }
+    .contact-note { color: #241d16; font-size: 1rem; max-width: 480px; margin-bottom: 36px; line-height: 1.75; }
     .contact-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px; }
-    .c-label { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--seal); margin-bottom: 12px; }
+    .c-label { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--seal-paper); margin-bottom: 12px; }
     .c-value { font-size: 1.02rem; color: var(--paper-ink); font-weight: 600; }
-    .c-value a:hover { color: var(--seal); }
-    .c-sub { font-size: 0.88rem; color: #52493a; margin-top: 6px; }
-    .c-sub a:hover { color: var(--seal); }
-    .wa-card { border: 1px solid rgba(28,23,18,0.18); background: #c2af84; padding: 54px 40px; text-align: center; }
-    .wa-icon { width: 58px; height: 58px; border: 1px solid var(--seal); margin: 0 auto 28px; display: flex; align-items: center; justify-content: center; color: var(--seal); }
-    .wa-card h3 { font-family: var(--display); font-style: italic; font-weight: 600; color: var(--seal); font-size: 1.7rem; margin-bottom: 16px; }
-    .wa-card p { font-size: 0.96rem; color: #3a3226; line-height: 1.75; margin-bottom: 28px; }
+    .c-value a:hover { color: var(--seal-paper); }
+    .c-sub { font-size: 0.88rem; color: #241d16; margin-top: 6px; }
+    .c-sub a:hover { color: var(--seal-paper); }
+    .wa-card { border: 1px solid rgba(28,23,18,0.22); background: #8f7650; padding: 54px 40px; text-align: center; }
+    .wa-icon { width: 58px; height: 58px; border: 1px solid var(--seal-paper); margin: 0 auto 28px; display: flex; align-items: center; justify-content: center; color: var(--seal-paper); }
+    .wa-card h3 { font-family: var(--display); font-style: italic; font-weight: 600; color: var(--seal-paper); font-size: 1.7rem; margin-bottom: 16px; }
+    .wa-card p { font-size: 0.96rem; color: #201a13; line-height: 1.75; margin-bottom: 28px; }
 
     /* ---------- FOOTER ---------- */
     footer { border-top: 1px solid var(--line); padding: 56px 0 42px; text-align: center; }
-    .foot-brand { display: flex; align-items: baseline; justify-content: center; flex-wrap: wrap; column-gap: 12px; row-gap: 4px; max-width: 560px; margin: 0 auto 26px; }
-    .foot-wordmark { font-family: var(--display); font-style: italic; font-weight: 600; font-size: 1.7rem; color: var(--gold-bright); }
-    .foot-desc { font-family: var(--display); font-style: italic; font-weight: 500; font-size: 0.86rem; color: var(--muted); line-height: 1.4; }
+    .foot-brand { display: flex; flex-direction: column; align-items: center; gap: 4px; margin: 0 auto 26px; }
+    .foot-brand-line { font-family: var(--display); font-style: italic; font-weight: 600; font-size: 1.5rem; color: var(--gold-bright); line-height: 1.3; }
     .footer-socials { margin-bottom: 26px; display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
     .footer-socials a { width: 42px; height: 42px; border: 1px solid var(--line); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--muted); transition: all .3s ease; }
     .footer-socials a:hover { color: var(--gold); border-color: var(--gold); transform: translateY(-2px); }
-    .foot-line { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+    .foot-line { font-family: var(--mono); font-size: 0.84rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
     .foot-line + .foot-line { margin-top: 10px; opacity: .75; }
     .foot-calligraphy { display: block; width: 220px; height: auto; margin: 34px auto 0; opacity: 1; }
     .foot-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 760px; margin: 0 auto 40px; text-align: left; border-top: 1px solid var(--line); padding-top: 36px; }
-    .foot-info-title { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
-    .foot-info p { font-size: 0.85rem; color: var(--muted); line-height: 1.65; margin-bottom: 10px; }
-    .foot-info a { font-family: var(--mono); font-size: 0.8rem; color: var(--gold-bright); border-bottom: 1px solid var(--gold); padding-bottom: 1px; }
+    .foot-info-title { font-family: var(--mono); font-size: 0.74rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+    .foot-info p { font-size: 0.96rem; color: var(--muted); line-height: 1.65; margin-bottom: 10px; }
+    .foot-info a { font-family: var(--mono); font-size: 0.9rem; color: var(--gold-bright); border-bottom: 1px solid var(--gold); padding-bottom: 1px; }
     .foot-info a:hover { color: var(--text); }
 
     /* ---------- FLOATING WHATSAPP ---------- */
@@ -273,9 +274,10 @@
         nav ul.nav-open { opacity: 1; transform: translateY(0); pointer-events: auto; }
         nav ul li { border-top: 1px solid var(--line); }
         nav ul li:first-child { border-top: none; }
-        nav ul a { display: block; padding: 16px 2px; font-size: 0.74rem; }
+        nav ul a { display: block; padding: 16px 2px; font-size: 0.88rem; }
         .nav-toggle { display: flex; }
         .header-wa { display: none; }
+        .brand-line { font-size: 1.02rem; white-space: normal; }
         .hero-grid { grid-template-columns: 1fr; gap: 50px; }
         .hero-seal-wrap { order: -1; }
         .seal { width: 190px; height: 190px; }
@@ -294,6 +296,7 @@
         .stat-cell:nth-child(n+2) { border-top: 1px solid var(--line); }
         .head-row { flex-direction: column; align-items: flex-start; }
         .foot-info-grid { grid-template-columns: 1fr; gap: 30px; }
+        .brand-line { font-size: 0.86rem; }
     }
 </style>
 </head>
@@ -308,9 +311,9 @@
     <div class="bismillah-bar"><span>&#65021;</span></div>
     <div class="container nav-wrap">
         <a href="#home" class="brand">
-            <span class="brand-text">
-                <span class="brand-main">TAÇ</span>
-                <span class="brand-sub">Certified &amp; Sworn Translation, Notary Public &amp; Apostille Services</span>
+            <span class="brand-lines">
+                <span class="brand-line">TAÇ Certified &amp; Sworn Translation</span>
+                <span class="brand-line">Notary Public &amp; Apostille Services</span>
             </span>
         </a>
         <nav>
@@ -505,7 +508,7 @@
             <div>
                 <div class="eyebrow">Reviews</div>
                 <h2 class="disp">The Verdict of Our Clients</h2>
-                <div class="head-sub">Live from our Google profile · 545+ reviews</div>
+                <div class="head-sub">Live from our Google profile · 500+ reviews</div>
             </div>
             <div class="rating-row">
                 <svg class="mini-seal" width="46" height="46" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -588,10 +591,10 @@
 
 <footer>
     <div class="container">
-        <div class="foot-brand">
-            <span class="foot-wordmark">TAÇ</span>
-            <span class="foot-desc">Certified &amp; Sworn Translation, Notary Public &amp; Apostille Services</span>
-        </div>
+        <a href="#home" class="foot-brand">
+            <span class="foot-brand-line">TAÇ Certified &amp; Sworn Translation</span>
+            <span class="foot-brand-line">Notary Public &amp; Apostille Services</span>
+        </a>
         <div class="footer-socials">
             <a href="https://www.instagram.com/tac_notary_ist/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg></a>
             <a href="https://tr.linkedin.com/company/notarypublic-istanbul" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v1.5"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
