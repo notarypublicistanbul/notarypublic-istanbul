@@ -112,6 +112,8 @@
     .btn-outline { display: inline-block; background: transparent; color: var(--text); font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 15px 26px; border: 1px solid var(--line); transition: all .25s ease; }
     .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
     .btn-ink { display: inline-block; background: var(--paper-ink); color: var(--paper); font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; padding: 15px 26px; border: 1px solid var(--paper-ink); transition: all .25s ease; }
+    .contact-cta-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .contact-cta-row .btn-ink { text-align: center; }
     .btn-ink:hover { background: var(--seal); border-color: var(--seal); color: var(--paper); }
 
     /* ---------- HERO ---------- */
@@ -195,12 +197,14 @@
     .mini-seal { flex-shrink: 0; }
     .rating-text { font-family: var(--mono); font-size: 0.82rem; color: var(--gold); }
     .rating-text .stars { letter-spacing: 2px; }
-    .widget-frame { border: 1px solid var(--line); background: var(--card); padding: 44px 34px; }
+    .widget-frame { border: 1px solid var(--line); background: var(--card); padding: 44px 34px; min-height: 420px; }
     .gpage-frame { margin-top: 40px; border: 1px solid var(--line); background: var(--card); padding: 44px 34px; text-align: center; }
     .gpage-frame p { max-width: 660px; margin: 0 auto 28px; color: var(--muted); font-size: 1.14rem; line-height: 1.85; }
     .gpage-frame .glink { color: var(--gold-bright); font-family: var(--mono); font-size: 1rem; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
     .gpage-frame .btn-outline { font-size: 0.82rem; padding: 17px 30px; }
-    .follow-ig { margin-top: 24px; border: 1px solid var(--line); background: var(--ink-2); padding: 26px 30px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; justify-content: center; text-align: center; }
+    .follow-ig { margin-top: 24px; border: 1px solid var(--line); background: var(--ink-2); padding: 26px 30px; display: flex; flex-direction: column; gap: 22px; }
+    .follow-ig-item { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; justify-content: center; text-align: center; }
+    .follow-ig-divider { width: 160px; height: 1px; background: var(--line); margin: 0 auto; }
     .follow-ig svg { color: var(--gold); flex-shrink: 0; }
     .follow-ig span { color: var(--muted); font-size: 0.96rem; }
     .follow-ig strong { color: var(--gold-bright); font-weight: 600; }
@@ -228,9 +232,6 @@
     .c-value { font-size: 1.02rem; color: var(--paper-ink); font-weight: 600; }
     .c-value a:hover { color: var(--seal-paper); }
     .c-sub { font-size: 0.88rem; color: #241d16; margin-top: 6px; }
-    .c-alt { font-size: 0.82rem; color: #4a4030; margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(28,23,18,0.14); }
-    .c-alt a { color: #4a4030; border-bottom: 1px solid rgba(28,23,18,0.3); }
-    .c-alt a:hover { color: var(--seal-paper); border-color: var(--seal-paper); }
     .c-sub a:hover { color: var(--seal-paper); }
     .wa-card { border: 1px solid rgba(28,23,18,0.22); background: #8f7650; padding: 54px 40px; text-align: center; }
     .wa-icon { width: 58px; height: 58px; border: 1px solid var(--seal-paper); margin: 0 auto 28px; display: flex; align-items: center; justify-content: center; color: var(--seal-paper); }
@@ -256,6 +257,11 @@
     /* ---------- FLOATING WHATSAPP ---------- */
     .whatsapp-float { position: fixed; bottom: 28px; left: 28px; width: 70px; height: 70px; border-radius: 50%; background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; z-index: 1200; box-shadow: 0 8px 30px rgba(37,211,102,0.4); animation: pulse 2.4s infinite; }
     .whatsapp-float svg { width: 34px; height: 34px; fill: #fff; }
+    .telegram-float { position: fixed; bottom: 110px; left: 28px; width: 70px; height: 70px; border-radius: 50%; background: #229ED9; color: #fff; display: flex; align-items: center; justify-content: center; z-index: 1200; box-shadow: 0 8px 30px rgba(34,158,217,0.4); }
+    .telegram-float svg { width: 34px; height: 34px; fill: #fff; }
+    .telegram-float:hover { background: #1c8cc2; }
+    .instagram-float { position: fixed; bottom: 192px; left: 28px; width: 70px; height: 70px; border-radius: 50%; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: #fff; display: flex; align-items: center; justify-content: center; z-index: 1200; box-shadow: 0 8px 30px rgba(214,36,159,0.4); }
+    .instagram-float svg { width: 32px; height: 32px; }
     @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); } 70% { box-shadow: 0 0 0 18px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
     @media (prefers-reduced-motion: reduce) {
         .whatsapp-float { animation: none; }
@@ -303,12 +309,19 @@
         .head-row { flex-direction: column; align-items: flex-start; }
         .foot-info-grid { grid-template-columns: 1fr; gap: 30px; }
         .brand-line { font-size: 0.86rem; }
+        .contact-cta-row { grid-template-columns: 1fr 1fr; }
     }
 </style>
 </head>
 <body>
 <script>document.body.classList.add('js');</script>
 
+<a href="https://ig.me/m/tac_notary_ist" target="_blank" rel="noopener" class="instagram-float" aria-label="Message us on Instagram">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg>
+</a>
+<a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener" class="telegram-float" aria-label="Message us on Telegram">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9z" fill="#fff" stroke="none"/></svg>
+</a>
 <a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
 </a>
@@ -527,16 +540,24 @@
         </div>
         <div class="widget-frame">
             <!-- Elfsight Google Reviews Widget -->
-            <div class="elfsight-app-8dc7a6b5-38fc-4bd9-aee5-a62e9878194b" data-elfsight-app-lazy></div>
+            <div class="elfsight-app-8dc7a6b5-38fc-4bd9-aee5-a62e9878194b"></div>
         </div>
         <div class="gpage-frame">
             <p>We are grateful to Google's kind short-link service, which gave our office its own easy-to-remember address on the map — <a class="glink" href="https://g.page/translation.istanbul" target="_blank" rel="noopener">g.page/translation.istanbul</a> — so that clients from 92 countries can reach our door in a single tap.</p>
             <a href="https://g.page/translation.istanbul" target="_blank" rel="noopener" class="btn-outline">Read All Reviews on Google</a>
         </div>
         <div class="follow-ig">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
-            <span>Follow <strong>@tac_notary_ist</strong> on Instagram for updates and behind-the-scenes.</span>
-            <a href="https://www.instagram.com/tac_notary_ist/" target="_blank" rel="noopener" class="btn-outline">Follow on Instagram</a>
+            <div class="follow-ig-item">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+                <span>Follow <strong>@tac_notary_ist</strong> on Instagram for updates and behind-the-scenes.</span>
+                <a href="https://www.instagram.com/tac_notary_ist/" target="_blank" rel="noopener" class="btn-outline">Follow on Instagram</a>
+            </div>
+            <div class="follow-ig-divider"></div>
+            <div class="follow-ig-item">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9z"/></svg>
+                <span>Prefer Telegram? Message <strong>@TAC_NOTARY_IST</strong> any time.</span>
+                <a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener" class="btn-outline">Message on Telegram</a>
+            </div>
         </div>
     </div>
 </section>
@@ -575,7 +596,6 @@
                     <div class="c-value"><a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener">Line 1: +90 501 333 87 07</a></div>
                     <div class="c-value" style="margin-top:6px;"><a href="https://wa.me/905367708707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener">Line 2: +90 536 770 87 07</a></div>
                     <div class="c-sub"><a href="mailto:notarypublic.istanbul@gmail.com">notarypublic.istanbul@gmail.com</a></div>
-                    <div class="c-alt">Also reachable on <a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener">Telegram</a> or <a href="https://ig.me/m/tac_notary_ist" target="_blank" rel="noopener">Instagram DM</a>.</div>
                 </div>
                 <div>
                     <div class="c-label">Hours</div>
@@ -583,14 +603,19 @@
                     <div class="c-sub">Translation: 24/7 Priority</div>
                 </div>
             </div>
-            <a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="btn-ink">Message WhatsApp Now &nbsp;&rarr;</a>
+            <div class="contact-cta-row">
+                <a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="btn-ink">WhatsApp</a>
+                <a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener" class="btn-ink">Telegram</a>
+                <a href="https://ig.me/m/tac_notary_ist" target="_blank" rel="noopener" class="btn-ink">Instagram</a>
+                <a href="mailto:notarypublic.istanbul@gmail.com" class="btn-ink">Email</a>
+            </div>
         </div>
         <div class="wa-card">
             <div class="wa-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
             <h3>No Price List — Just Ask</h3>
-            <p>Every document is different, so we don't publish a rate card. Share a photo of yours and we'll reply with cost and turnaround the same day.</p>
+            <p>Every document is different, so we don't publish a rate card. Share a photo of your document and we'll reply with cost and turnaround the same day.</p>
             <a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="btn-outline" style="border-color:rgba(28,23,18,0.25); color:var(--paper-ink);">Open WhatsApp Chat</a>
         </div>
     </div>
