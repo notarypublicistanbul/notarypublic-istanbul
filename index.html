@@ -85,7 +85,7 @@
     img, svg { max-width: 100%; }
 
     .eyebrow { font-family: var(--mono); font-size: 0.86rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
-    h2.disp { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--gold-bright); font-size: clamp(2.1rem, 4vw, 3rem); line-height: 1.15; }
+    h2.disp { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--gold-bright); font-size: clamp(2.1rem, 4vw, 3rem); line-height: 1.15; text-wrap: balance; }
     .lead { color: var(--muted); font-size: 1.05rem; max-width: 560px; }
 
     /* ---------- HEADER ---------- */
@@ -122,7 +122,7 @@
     .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; }
     .hero-copy { text-align: center; }
     .hero-rule { width: 44px; height: 1px; background: var(--gold); margin: 0 auto 24px; }
-    .hero h1 { font-family: var(--display); font-style: italic; font-weight: 500; font-size: clamp(2rem, 4.2vw, 3.1rem); line-height: 1.32; letter-spacing: 0.005em; color: var(--text); max-width: 620px; margin: 0 auto; }
+    .hero h1 { font-family: var(--display); font-style: italic; font-weight: 500; font-size: clamp(2rem, 4.2vw, 3.1rem); line-height: 1.32; letter-spacing: 0.005em; color: var(--text); max-width: 620px; margin: 0 auto; text-wrap: balance; }
     .hero h1 em { font-style: italic; font-weight: 600; color: var(--gold-bright); }
     .hero p.lead { margin: 28px auto 14px; font-size: 1.12rem; max-width: 500px; }
     .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; justify-content: center; }
@@ -160,9 +160,9 @@
 
     /* ---------- SERVICES ---------- */
     .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
-    .cert-card { background: var(--card); padding: 36px 32px; }
+    .cert-card { background: var(--card); padding: 36px 32px; text-align: center; }
     .cert-tag { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
-    .cert-title { font-family: var(--sans); font-weight: 600; font-size: 1.02rem; letter-spacing: 0.01em; text-transform: uppercase; color: var(--text); line-height: 1.4; margin-bottom: 14px; }
+    .cert-title { font-family: var(--sans); font-weight: 600; font-size: 1.02rem; letter-spacing: 0.01em; text-transform: uppercase; color: var(--text); line-height: 1.4; margin-bottom: 14px; text-wrap: balance; }
     .cert-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
     .cert-note { margin-top: 12px; font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
     .cert-note strong { color: var(--text); font-weight: 600; }
@@ -178,18 +178,19 @@
     .step-top { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
     .step-num { font-family: var(--mono); font-size: 0.68rem; color: var(--gold); }
     .step-line { flex: 1; height: 1px; background: var(--line); }
-    .step h3 { font-family: var(--display); font-weight: 500; font-size: 1.32rem; margin-bottom: 12px; color: var(--text); }
+    .step h3 { font-family: var(--display); font-weight: 500; font-size: 1.32rem; margin-bottom: 12px; color: var(--text); text-wrap: balance; }
     .step p { font-size: 0.94rem; color: var(--muted); line-height: 1.7; }
 
-    /* ---------- STORY ---------- */
-    .story { position: relative; text-align: center; overflow: hidden; }
+    /* ---------- WATERMARK SEAL (now behind FAQ teaser) ---------- */
+    .faq-teaser { position: relative; overflow: hidden; }
+    .faq-teaser .container { position: relative; z-index: 1; }
     .story-watermark { position: absolute; top: 50%; left: 50%; width: 640px; height: 640px; transform: translate(-50%,-50%); opacity: 0.045; pointer-events: none; }
-    .story .container { position: relative; z-index: 1; }
-    .est-badge { display: inline-block; border: 1px solid var(--line); padding: 10px 24px; font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 40px; }
-    .story h2 { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--gold-bright); font-size: clamp(2.2rem, 4.5vw, 3.1rem); }
-    .story-divider { width: 44px; height: 1px; background: var(--gold); margin: 36px auto; }
-    .story-text { max-width: 680px; margin: 0 auto; color: var(--muted); font-size: 1.06rem; line-height: 1.9; }
-    .story-text + .story-text { margin-top: 20px; }
+
+    /* ---------- WHY APPOINTMENT-ONLY ---------- */
+    .why-notice { margin-top: 32px; padding: 26px 30px; background: rgba(154,44,34,0.16); border: 1px solid rgba(154,44,34,0.4); text-align: center; }
+    .why-notice p { color: #e0a999; font-size: 0.95rem; line-height: 1.75; }
+    .why-notice p + p { margin-top: 14px; }
+    .why-notice strong { color: #f3c3b6; font-weight: 700; }
 
     /* ---------- REVIEWS ---------- */
     .reviews { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -214,7 +215,7 @@
     .faq-list { max-width: 800px; margin: 0 auto; }
     .faq-item { border: 1px solid var(--line); background: var(--card); margin-bottom: 12px; transition: border-color .3s ease; }
     .faq-item:hover { border-color: rgba(200,161,90,0.4); }
-    .faq-item summary { cursor: pointer; padding: 22px 26px; font-family: var(--display); font-weight: 500; font-size: 1.14rem; color: var(--text); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .faq-item summary { cursor: pointer; padding: 22px 26px; font-family: var(--display); font-weight: 500; font-size: 1.14rem; color: var(--text); list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 20px; text-wrap: balance; }
     .faq-item summary::-webkit-details-marker { display: none; }
     .faq-item summary::after { content: '+'; color: var(--gold); font-family: var(--mono); font-size: 1.1rem; flex-shrink: 0; }
     .faq-item[open] summary::after { content: '\2013'; }
@@ -224,7 +225,7 @@
     .contact { background: var(--paper); color: var(--paper-ink); }
     .contact .eyebrow { color: var(--seal-paper); }
     .contact-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 64px; align-items: start; }
-    .contact h2 { font-family: var(--display); font-weight: 500; font-size: clamp(2.2rem, 4vw, 2.9rem); color: var(--paper-ink); margin-bottom: 18px; }
+    .contact h2 { font-family: var(--display); font-weight: 500; font-size: clamp(2.2rem, 4vw, 2.9rem); color: var(--paper-ink); margin-bottom: 18px; text-wrap: balance; }
     .contact-loc { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.14em; color: #241d16; margin-bottom: 20px; }
     .contact-note { color: #241d16; font-size: 1rem; max-width: 480px; margin-bottom: 36px; line-height: 1.75; }
     .contact-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px; }
@@ -235,7 +236,7 @@
     .c-sub a:hover { color: var(--seal-paper); }
     .wa-card { border: 1px solid rgba(28,23,18,0.22); background: #8f7650; padding: 54px 40px; text-align: center; }
     .wa-icon { width: 58px; height: 58px; border: 1px solid var(--seal-paper); margin: 0 auto 28px; display: flex; align-items: center; justify-content: center; color: var(--seal-paper); }
-    .wa-card h3 { font-family: var(--display); font-style: italic; font-weight: 600; color: var(--seal-paper); font-size: 1.7rem; margin-bottom: 16px; }
+    .wa-card h3 { font-family: var(--display); font-style: italic; font-weight: 600; color: var(--seal-paper); font-size: 1.7rem; margin-bottom: 16px; text-wrap: balance; }
     .wa-card p { font-size: 0.96rem; color: #201a13; line-height: 1.75; margin-bottom: 28px; }
 
     /* ---------- FOOTER ---------- */
@@ -339,7 +340,6 @@
             <ul id="navList">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#process">Process</a></li>
-                <li><a href="#story">About</a></li>
                 <li><a href="#reviews">Reviews</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -483,6 +483,10 @@
                 </div>
             </div>
         </div>
+        <div class="why-notice">
+            <p>We work across 5+ notary offices throughout Istanbul — primarily in Fatih — and we prepare every document before you arrive, so when you step in, everything is ready: no waiting, no delays, no wasted time for you or the officers.</p>
+            <p>That's why we can't take unannounced visits. We understand urgency — sometimes you need something done right away. Even a WhatsApp message just <strong>60 minutes</strong> before you arrive gives us enough time to prepare your file and book your slot. One message, and we handle the rest.</p>
+        </div>
     </div>
 </section>
 
@@ -497,26 +501,6 @@
             <div class="step"><div class="step-top"><span class="step-num">03</span><span class="step-line"></span></div><h3>Notary &amp; Apostille</h3><p>We attend the Notary Public and Governorship on your behalf. Signatures needing your presence are booked by appointment.</p></div>
             <div class="step"><div class="step-top"><span class="step-num">04</span><span class="step-line"></span></div><h3>Delivered Worldwide</h3><p>Receive your documents by DHL, FedEx or UPS with tracking — no office visit needed.</p></div>
         </div>
-    </div>
-</section>
-
-<!-- STORY -->
-<section class="story fade-in" id="story">
-    <svg class="story-watermark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <defs><path id="ringWm" d="M100,100 m-87,0 a87,87 0 1,1 174,0 a87,87 0 1,1 -174,0" /></defs>
-        <circle cx="100" cy="100" r="87" fill="none" stroke="#c9a256" stroke-width="1"/>
-        <circle cx="100" cy="100" r="58" fill="none" stroke="#c9a256" stroke-width="1" stroke-dasharray="2 3"/>
-        <text font-family="'IBM Plex Mono', monospace" font-size="12" letter-spacing="1" fill="#c9a256">
-            <textPath href="#ringWm" startOffset="0%">NOTARY PUBLIC &#9670; APOSTILLE &#9670; SWORN TRANSLATION &#9670;</textPath>
-        </text>
-        <text x="100" y="112" text-anchor="middle" font-family="'Fraunces', serif" font-style="italic" font-weight="600" font-size="30" fill="#c9a256">TAÇ</text>
-    </svg>
-    <div class="container">
-        <span class="est-badge">EST. 2014</span>
-        <h2>Narrow on purpose.</h2>
-        <div class="story-divider"></div>
-        <p class="story-text">Since 2014 we've stayed focused on three things: translation, notarization and apostille. No branching out, no diluted attention — just the paperwork that gets families reunited, students enrolled and business owners their time back.</p>
-        <p class="story-text">We don't keep a waiting room. Every case starts on WhatsApp, where we confirm the fee and timing before anything else — so if you do come to Fatih, it's for a 5-to-25-minute signature, not an afternoon in a queue.</p>
     </div>
 </section>
 
@@ -563,7 +547,16 @@
 </section>
 
 <!-- FAQ -->
-<section class="fade-in" id="faq">
+<section class="fade-in faq-teaser" id="faq">
+    <svg class="story-watermark" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs><path id="ringWm" d="M100,100 m-87,0 a87,87 0 1,1 174,0 a87,87 0 1,1 -174,0" /></defs>
+        <circle cx="100" cy="100" r="87" fill="none" stroke="#c9a256" stroke-width="1"/>
+        <circle cx="100" cy="100" r="58" fill="none" stroke="#c9a256" stroke-width="1" stroke-dasharray="2 3"/>
+        <text font-family="'IBM Plex Mono', monospace" font-size="12" letter-spacing="1" fill="#c9a256">
+            <textPath href="#ringWm" startOffset="0%">NOTARY PUBLIC &#9670; APOSTILLE &#9670; SWORN TRANSLATION &#9670;</textPath>
+        </text>
+        <text x="100" y="112" text-anchor="middle" font-family="'Fraunces', serif" font-style="italic" font-weight="600" font-size="30" fill="#c9a256">TAÇ</text>
+    </svg>
     <div class="container">
         <div class="head-row" style="justify-content: center; text-align: center;">
             <div>
@@ -589,7 +582,7 @@
             <div class="eyebrow">Contact</div>
             <h2>Start on WhatsApp</h2>
             <div class="contact-loc">Fatih, İstanbul</div>
-            <p class="contact-note">We operate remotely by appointment only. To get started, please message us on WhatsApp with your request, and we will reply promptly with timing, pricing, and next steps. If your matter requires an in-person signature (such as a Power of Attorney), we will coordinate and book the necessary appointment for you.</p>
+            <p class="contact-note">Certified translation, notarization and apostille legalization for people living far from Istanbul — arranged over WhatsApp, delivered to your door.</p>
             <div class="contact-cols">
                 <div>
                     <div class="c-label">WhatsApp</div>
