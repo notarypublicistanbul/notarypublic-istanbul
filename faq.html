@@ -17,6 +17,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://notarypublic.istanbul/og-image.jpg">
 <link rel="canonical" href="https://notarypublic.istanbul/faq.html">
+<link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/faq.html">
+<link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/faq.html">
+<link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/faq.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230b0a08'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Georgia,serif' font-size='54' font-weight='700' fill='%23c9a256'%3ET%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,7 +81,7 @@
     img, svg { max-width: 100%; }
 
     .eyebrow { font-family: var(--mono); font-size: 0.86rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
-    h2.disp { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--gold-bright); font-size: clamp(2.1rem, 4vw, 3rem); line-height: 1.15; }
+    h2.disp { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--gold-bright); font-size: clamp(2.1rem, 4vw, 3rem); line-height: 1.15; text-wrap: balance; }
     .lead { color: var(--muted); font-size: 1.05rem; max-width: 560px; }
 
     /* ---------- HEADER ---------- */
@@ -92,6 +95,9 @@
     nav ul { display: flex; align-items: center; gap: 30px; list-style: none; }
     nav ul a { font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: #d6d3cb; }
     nav ul a:hover { color: var(--gold); }
+    .lang-switch { display: flex; align-items: center; gap: 6px; color: var(--muted); font-family: var(--mono); font-size: 0.82rem; }
+    .lang-switch a { padding: 0; }
+    .lang-switch .lang-current { color: var(--gold-bright); pointer-events: none; }
     .nav-toggle { display: none; width: 34px; height: 34px; background: none; border: none; cursor: pointer; padding: 0; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
     .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--text); transition: transform .25s ease, opacity .25s ease; }
     .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
@@ -105,17 +111,20 @@
     .btn-outline { display: inline-block; background: transparent; color: var(--text); font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 15px 26px; border: 1px solid var(--line); transition: all .25s ease; }
     .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
     .btn-ink { display: inline-block; background: var(--paper-ink); color: var(--paper); font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; padding: 15px 26px; border: 1px solid var(--paper-ink); transition: all .25s ease; }
+    .contact-cta-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .contact-cta-row .btn-ink { text-align: center; }
     .btn-ink:hover { background: var(--seal); border-color: var(--seal); color: var(--paper); }
 
     /* ---------- HERO ---------- */
     .hero { padding: 196px 0 100px; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; top: -120px; right: -160px; width: 620px; height: 620px; background: radial-gradient(circle, rgba(201,162,86,0.09) 0%, transparent 65%); pointer-events: none; }
     .hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; }
-    .hero-rule { width: 44px; height: 1px; background: var(--gold); margin-bottom: 24px; }
-    .hero h1 { font-family: var(--display); font-style: italic; font-weight: 500; text-transform: uppercase; font-size: clamp(2.2rem, 4.6vw, 3.4rem); line-height: 1.24; letter-spacing: 0.01em; color: var(--text); }
+    .hero-copy { text-align: center; }
+    .hero-rule { width: 44px; height: 1px; background: var(--gold); margin: 0 auto 24px; }
+    .hero h1 { font-family: var(--display); font-style: italic; font-weight: 500; font-size: clamp(2rem, 4.2vw, 3.1rem); line-height: 1.32; letter-spacing: 0.005em; color: var(--text); max-width: 620px; margin: 0 auto; text-wrap: balance; }
     .hero h1 em { font-style: italic; font-weight: 600; color: var(--gold-bright); }
-    .hero p.lead { margin: 28px 0 14px; font-size: 1.12rem; }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; }
+    .hero p.lead { margin: 28px auto 14px; font-size: 1.12rem; max-width: 500px; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 30px; justify-content: center; }
     .stats-top { display: flex; justify-content: center; padding-top: 46px; }
     .rating-badge { display: flex; flex-direction: column; align-items: center; gap: 9px; text-align: center; font-family: var(--mono); color: var(--text); background: rgba(201,162,86,0.1); border: 1px solid rgba(201,162,86,0.4); padding: 22px 40px; transition: all .25s ease; cursor: pointer; }
     .rating-badge:hover { background: rgba(201,162,86,0.2); border-color: var(--gold-bright); transform: translateY(-1px); }
@@ -150,9 +159,9 @@
 
     /* ---------- SERVICES ---------- */
     .cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
-    .cert-card { background: var(--card); padding: 36px 32px; }
+    .cert-card { background: var(--card); padding: 36px 32px; text-align: center; }
     .cert-tag { font-family: var(--mono); font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
-    .cert-title { font-family: var(--sans); font-weight: 600; font-size: 1.02rem; letter-spacing: 0.01em; text-transform: uppercase; color: var(--text); line-height: 1.4; margin-bottom: 14px; }
+    .cert-title { font-family: var(--sans); font-weight: 600; font-size: 1.02rem; letter-spacing: 0.01em; text-transform: uppercase; color: var(--text); line-height: 1.4; margin-bottom: 14px; text-wrap: balance; }
     .cert-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
     .cert-note { margin-top: 12px; font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
     .cert-note strong { color: var(--text); font-weight: 600; }
@@ -168,18 +177,19 @@
     .step-top { display: flex; align-items: center; gap: 14px; margin-bottom: 24px; }
     .step-num { font-family: var(--mono); font-size: 0.68rem; color: var(--gold); }
     .step-line { flex: 1; height: 1px; background: var(--line); }
-    .step h3 { font-family: var(--display); font-weight: 500; font-size: 1.32rem; margin-bottom: 12px; color: var(--text); }
+    .step h3 { font-family: var(--display); font-weight: 500; font-size: 1.32rem; margin-bottom: 12px; color: var(--text); text-wrap: balance; }
     .step p { font-size: 0.94rem; color: var(--muted); line-height: 1.7; }
 
-    /* ---------- STORY ---------- */
-    .story { position: relative; text-align: center; overflow: hidden; }
+    /* ---------- WATERMARK SEAL (now behind FAQ teaser) ---------- */
+    .faq-teaser { position: relative; overflow: hidden; }
+    .faq-teaser .container { position: relative; z-index: 1; }
     .story-watermark { position: absolute; top: 50%; left: 50%; width: 640px; height: 640px; transform: translate(-50%,-50%); opacity: 0.045; pointer-events: none; }
-    .story .container { position: relative; z-index: 1; }
-    .est-badge { display: inline-block; border: 1px solid var(--line); padding: 10px 24px; font-family: var(--mono); font-size: 0.82rem; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 40px; }
-    .story h2 { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--gold-bright); font-size: clamp(2.2rem, 4.5vw, 3.1rem); }
-    .story-divider { width: 44px; height: 1px; background: var(--gold); margin: 36px auto; }
-    .story-text { max-width: 680px; margin: 0 auto; color: var(--muted); font-size: 1.06rem; line-height: 1.9; }
-    .story-text + .story-text { margin-top: 20px; }
+
+    /* ---------- WHY APPOINTMENT-ONLY ---------- */
+    .why-notice { margin-top: 32px; padding: 26px 30px; background: rgba(154,44,34,0.16); border: 1px solid rgba(154,44,34,0.4); text-align: center; }
+    .why-notice p { color: #e0a999; font-size: 0.95rem; line-height: 1.75; }
+    .why-notice p + p { margin-top: 14px; }
+    .why-notice strong { color: #f3c3b6; font-weight: 700; }
 
     /* ---------- REVIEWS ---------- */
     .reviews { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -187,11 +197,18 @@
     .mini-seal { flex-shrink: 0; }
     .rating-text { font-family: var(--mono); font-size: 0.82rem; color: var(--gold); }
     .rating-text .stars { letter-spacing: 2px; }
-    .widget-frame { border: 1px solid var(--line); background: var(--card); padding: 44px 34px; }
+    .widget-frame { border: 1px solid var(--line); background: var(--card); padding: 44px 34px; min-height: 420px; }
     .gpage-frame { margin-top: 40px; border: 1px solid var(--line); background: var(--card); padding: 44px 34px; text-align: center; }
     .gpage-frame p { max-width: 660px; margin: 0 auto 28px; color: var(--muted); font-size: 1.14rem; line-height: 1.85; }
     .gpage-frame .glink { color: var(--gold-bright); font-family: var(--mono); font-size: 1rem; border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
     .gpage-frame .btn-outline { font-size: 0.82rem; padding: 17px 30px; }
+    .follow-ig { margin-top: 24px; border: 1px solid var(--line); background: var(--ink-2); padding: 26px 30px; display: flex; flex-direction: column; gap: 22px; }
+    .follow-ig-item { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; justify-content: center; text-align: center; }
+    .follow-ig-divider { width: 160px; height: 1px; background: var(--line); margin: 0 auto; }
+    .follow-ig svg { color: var(--gold); flex-shrink: 0; }
+    .follow-ig span { color: var(--muted); font-size: 0.96rem; }
+    .follow-ig strong { color: var(--gold-bright); font-weight: 600; }
+    .follow-ig .btn-outline { font-size: 0.72rem; padding: 12px 22px; }
 
     /* ---------- FAQ ---------- */
     .faq-list { max-width: 800px; margin: 0 auto; }
@@ -207,7 +224,7 @@
     .contact { background: var(--paper); color: var(--paper-ink); }
     .contact .eyebrow { color: var(--seal-paper); }
     .contact-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 64px; align-items: start; }
-    .contact h2 { font-family: var(--display); font-weight: 500; font-size: clamp(2.2rem, 4vw, 2.9rem); color: var(--paper-ink); margin-bottom: 18px; }
+    .contact h2 { font-family: var(--display); font-weight: 500; font-size: clamp(2.2rem, 4vw, 2.9rem); color: var(--paper-ink); margin-bottom: 18px; text-wrap: balance; }
     .contact-loc { font-family: var(--mono); font-size: 0.78rem; letter-spacing: 0.14em; color: #241d16; margin-bottom: 20px; }
     .contact-note { color: #241d16; font-size: 1rem; max-width: 480px; margin-bottom: 36px; line-height: 1.75; }
     .contact-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 40px; }
@@ -218,7 +235,7 @@
     .c-sub a:hover { color: var(--seal-paper); }
     .wa-card { border: 1px solid rgba(28,23,18,0.22); background: #8f7650; padding: 54px 40px; text-align: center; }
     .wa-icon { width: 58px; height: 58px; border: 1px solid var(--seal-paper); margin: 0 auto 28px; display: flex; align-items: center; justify-content: center; color: var(--seal-paper); }
-    .wa-card h3 { font-family: var(--display); font-style: italic; font-weight: 600; color: var(--seal-paper); font-size: 1.7rem; margin-bottom: 16px; }
+    .wa-card h3 { font-family: var(--display); font-style: italic; font-weight: 600; color: var(--seal-paper); font-size: 1.7rem; margin-bottom: 16px; text-wrap: balance; }
     .wa-card p { font-size: 0.96rem; color: #201a13; line-height: 1.75; margin-bottom: 28px; }
 
     /* ---------- FOOTER ---------- */
@@ -240,6 +257,11 @@
     /* ---------- FLOATING WHATSAPP ---------- */
     .whatsapp-float { position: fixed; bottom: 28px; left: 28px; width: 70px; height: 70px; border-radius: 50%; background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; z-index: 1200; box-shadow: 0 8px 30px rgba(37,211,102,0.4); animation: pulse 2.4s infinite; }
     .whatsapp-float svg { width: 34px; height: 34px; fill: #fff; }
+    .telegram-float { position: fixed; bottom: 110px; left: 28px; width: 70px; height: 70px; border-radius: 50%; background: #229ED9; color: #fff; display: flex; align-items: center; justify-content: center; z-index: 1200; box-shadow: 0 8px 30px rgba(34,158,217,0.4); }
+    .telegram-float svg { width: 34px; height: 34px; fill: #fff; }
+    .telegram-float:hover { background: #1c8cc2; }
+    .instagram-float { position: fixed; bottom: 192px; left: 28px; width: 70px; height: 70px; border-radius: 50%; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: #fff; display: flex; align-items: center; justify-content: center; z-index: 1200; box-shadow: 0 8px 30px rgba(214,36,159,0.4); }
+    .instagram-float svg { width: 32px; height: 32px; }
     @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); } 70% { box-shadow: 0 0 0 18px rgba(37,211,102,0); } 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); } }
     @media (prefers-reduced-motion: reduce) {
         .whatsapp-float { animation: none; }
@@ -287,7 +309,9 @@
         .head-row { flex-direction: column; align-items: flex-start; }
         .foot-info-grid { grid-template-columns: 1fr; gap: 30px; }
         .brand-line { font-size: 0.86rem; }
+        .contact-cta-row { grid-template-columns: 1fr 1fr; }
     }
+
     .faq-page-hero { padding: 196px 0 20px; text-align: center; }
     .faq-page-hero .eyebrow { display: block; }
     .faq-page-hero h1 { font-family: var(--display); font-style: italic; font-weight: 500; color: var(--gold-bright); font-size: clamp(2.2rem, 5vw, 3.2rem); line-height: 1.15; margin-bottom: 16px; text-wrap: balance; }
@@ -322,6 +346,7 @@
                 <li><a href="index.html#reviews">Reviews</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
+                <li class="lang-switch"><a href="#" class="lang-current">EN</a> / <a href="tr/faq.html">TR</a></li>
             </ul>
         </nav>
         <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navList">
