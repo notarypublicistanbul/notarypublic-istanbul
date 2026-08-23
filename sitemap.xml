@@ -9,6 +9,40 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/tr/</loc>
+        <lastmod>2026-08-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/ru/</loc>
+        <lastmod>2026-08-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/ar/</loc>
+        <lastmod>2026-08-22</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/"/>
     </url>
     <url>
@@ -19,17 +53,8 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/faq.html"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/faq.html"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/faq.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/faq.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/faq.html"/>
-    </url>
-    <url>
-        <loc>https://notarypublic.istanbul/tr/</loc>
-        <lastmod>2026-08-22</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/"/>
-        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/"/>
     </url>
     <url>
         <loc>https://notarypublic.istanbul/tr/faq.html</loc>
@@ -39,17 +64,8 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/faq.html"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/faq.html"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/faq.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/faq.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/faq.html"/>
-    </url>
-    <url>
-        <loc>https://notarypublic.istanbul/ru/</loc>
-        <lastmod>2026-08-22</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/"/>
-        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/"/>
-        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/"/>
-        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/"/>
     </url>
     <url>
         <loc>https://notarypublic.istanbul/ru/faq.html</loc>
@@ -59,6 +75,18 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/faq.html"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/faq.html"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/faq.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/faq.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/faq.html"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/ar/faq.html</loc>
+        <lastmod>2026-08-22</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/faq.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/faq.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/faq.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/faq.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/faq.html"/>
     </url>
 </urlset>
