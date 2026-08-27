@@ -24,7 +24,6 @@
     .chap-num { font-family:var(--mono); font-size:1.2rem; color:var(--ox); border:1px solid rgba(154,44,34,0.5); padding:4px 10px; }
     .chap-line { width:54px; height:1px; background:var(--gold); }
     h2.disp { font-family:var(--disp); font-style:italic; font-weight:400; color:var(--gold-2); font-size:clamp(2.5rem,4.2vw,3.5rem); line-height:1.12; text-transform:uppercase; letter-spacing:0.03em; text-wrap:balance; }
-    .head-sub { font-family:var(--mono); font-size:1.25rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); margin-top:14px; }
     .btn-gold { display:inline-block; background:var(--gold); color:#171207; font-family:var(--mono); font-size:1.1rem; letter-spacing:0.13em; text-transform:uppercase; font-weight:500; padding:18px 30px; border:1px solid var(--gold); transition:all .25s ease; white-space:nowrap; }
     .btn-gold:hover { background:var(--gold-2); border-color:var(--gold-2); transform:translateY(-1px); }
     .btn-outline { display:inline-block; background:transparent; color:var(--cream); font-family:var(--mono); font-size:1.1rem; letter-spacing:0.13em; text-transform:uppercase; padding:18px 30px; border:1px solid var(--line); }
@@ -45,7 +44,7 @@
     nav ul { display:flex; align-items:center; gap:22px; list-style:none; }
     nav ul a { font-family:var(--mono); font-size:1.05rem; letter-spacing:0.08em; text-transform:uppercase; color:#d8d4ca; white-space:nowrap; }
     nav ul a i { font-style:normal; color:var(--ox); font-size:0.85rem; margin-right:5px; vertical-align:2px; }
-    nav ul a:hover { color:var(--gold-2); }
+    nav ul a:hover, nav ul a.active { color:var(--gold-2); }
     .nav-right { display:flex; align-items:center; gap:16px; flex-shrink:0; }
     .nav-toggle { display:none; width:40px; height:40px; background:none; border:1px solid var(--line); cursor:pointer; flex-direction:column; align-items:center; justify-content:center; gap:6px; }
     .nav-toggle span { display:block; width:22px; height:1.5px; background:var(--cream); }
@@ -282,10 +281,10 @@
             <ul id="navList">
                 <li><a href="#services"><i>01</i>服务项目</a></li>
                 <li><a href="e-apostille.html"><i>02</i>电子海牙认证</a></li>
-                <li><a href="../getting-married-in-turkey.html"><i>03</i>结婚登记</a></li>
+                <li><a href="getting-married-in-turkey.html"><i>03</i>结婚登记</a></li>
                 <li><a href="#process"><i>04</i>办理流程</a></li>
-                <li><a href="../reviews.html"><i>05</i>客户评价</a></li>
-                <li><a href="../faq.html"><i>06</i>常见问题</a></li>
+                <li><a href="reviews.html"><i>05</i>客户评价</a></li>
+                <li><a href="faq.html"><i>06</i>常见问题</a></li>
                 <li><a href="#contact"><i>07</i>联系我们</a></li>
             </ul>
         </nav>
@@ -424,7 +423,7 @@
                 <div class="svc-num">№ 03</div>
                 <div class="svc-head"><h3>VIP快速通道土耳其结婚</h3><span class="svc-tag">海牙认证与全球认可</span></div>
                 <p>作为外国夫妇在土耳其结婚？我们的VIP快速通道结婚服务管理一切——从初次咨询到颁发您的海牙认证家庭簿（国际结婚证书），完全合法化并全球认可。</p>
-                <div class="tag-row"><a class="tag tag-cta" href="../getting-married-in-turkey.html">土耳其结婚 — 更多信息 &nbsp;&rarr;</a></div>
+                <div class="tag-row"><a class="tag tag-cta" href="getting-married-in-turkey.html">土耳其结婚 — 更多信息 &nbsp;&rarr;</a></div>
             </div>
             <div class="svc-row">
                 <div class="svc-num">№ 04</div>
@@ -498,7 +497,7 @@
         <div class="gpage-frame">
             <div class="quote-mark" aria-hidden="true">&ldquo;</div>
             <p>多亏Google友好的短链接服务，我们的办公室在地图上有自己容易记住的地址 — <a class="glink" href="https://g.page/translation.istanbul" target="_blank" rel="noopener">g.page/translation.istanbul</a> — 这样来自92个国家的客户只需轻点一下就能找到我们。在那里分享的每一句善言都是我们珍视的信任。</p>
-            <a href="../reviews.html" class="btn-outline">在我们专用页面阅读所有评价</a>
+            <a href="reviews.html" class="btn-outline">在我们专用页面阅读所有评价</a>
         </div>
         <div class="follow-ig">
             <div class="follow-ig-item">
@@ -522,7 +521,7 @@
             <div class="chap"><span class="chap-num">IV</span><span class="chap-line"></span><span class="eyebrow">问题</span></div>
             <h2 class="disp">提问与回答</h2>
             <p>我们的客人在第一条消息之前通常想知道的一切——清晰回答，没有意外。</p>
-            <a href="../faq.html" class="btn-gold">查看所有常见问题 &nbsp;&rarr;</a>
+            <a href="faq.html" class="btn-gold">查看所有常见问题 &nbsp;&rarr;</a>
         </div>
         <div>
             <details class="faq-item"><summary>我需要去您在法提赫的办公室吗？</summary><div class="faq-a">不需要。我们按预约远程工作。在WhatsApp上发送您文件的照片或扫描件；我们代表您出席公证人和省长办公室，并通过DHL、FedEx或UPS向全球递送完成的文件——无需办公室访问。</div></details>
