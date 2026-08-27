@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0d0b09">
 <meta name="robots" content="index, follow">
-<title>常见问题 | TAC 伊斯坦布尔公证服务</title>
-<meta name="description" content="海牙认证时间、公证、委托书、宣誓翻译语言等常见问题解答 — 客户首次WhatsApp咨询前想了解的所有内容。">
+<title>常见问题 | TAC 公证服务伊斯坦布尔</title>
+<meta name="description" content="海牙认证时间、公证、电子海牙认证、委托书、宣誓翻译语言等——客户在第一条WhatsApp消息前询问的一切。">
 <link rel="canonical" href="https://notarypublic.istanbul/zh/faq.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230d0b09'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Georgia,serif' font-size='54' font-weight='700' fill='%23c8a25a'%3ET%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=optional" rel="stylesheet">
@@ -44,6 +44,10 @@
     .nav-right { display:flex; align-items:center; gap:16px; flex-shrink:0; }
     .nav-toggle { display:none; width:40px; height:40px; background:none; border:1px solid var(--line); cursor:pointer; flex-direction:column; align-items:center; justify-content:center; gap:6px; }
     .nav-toggle span { display:block; width:22px; height:1.5px; background:var(--cream); }
+    .btn-gold { display:inline-block; background:var(--gold); color:#171207; font-family:var(--mono); font-size:1.1rem; letter-spacing:0.13em; text-transform:uppercase; font-weight:500; padding:18px 30px; border:1px solid var(--gold); transition:all .25s ease; white-space:nowrap; }
+    .btn-gold:hover { background:var(--gold-2); border-color:var(--gold-2); transform:translateY(-1px); }
+    .btn-outline { display:inline-block; background:transparent; color:var(--cream); font-family:var(--mono); font-size:1.1rem; letter-spacing:0.13em; text-transform:uppercase; padding:18px 30px; border:1px solid var(--line); }
+    .btn-outline:hover { border-color:var(--gold); color:var(--gold); }
     .sub-hero { padding:220px 0 60px; text-align:center; position:relative; overflow:hidden; }
     .sub-hero::before { content:''; position:absolute; inset:0; background:repeating-linear-gradient(90deg, transparent 0 119px, rgba(242,236,222,0.03) 119px 120px); pointer-events:none; }
     .sub-hero .container { position:relative; }
@@ -62,35 +66,27 @@
     .faq-item summary::after { content:'+'; color:var(--gold); font-family:var(--mono); font-size:1.5rem; flex-shrink:0; }
     .faq-item[open] summary::after { content:'\2013'; }
     .faq-a { padding:0 30px 28px; color:var(--muted); font-size:1.35rem; line-height:1.8; }
-    .info-card { border:1px solid var(--line); background:var(--card); padding:50px 44px; text-align:center; max-width:900px; margin:0 auto; }
+    .info-card { border:1px solid var(--line); background:var(--card); padding:50px 44px; text-align:center; max-width:900px; margin:50px auto 0; }
     .info-card p { color:var(--muted); font-size:1.35rem; line-height:1.85; font-style:italic; font-weight:400; }
     .info-card .btn-gold { margin-top:30px; }
-    .btn-gold { display:inline-block; background:var(--gold); color:#171207; font-family:var(--mono); font-size:1.1rem; letter-spacing:0.13em; text-transform:uppercase; font-weight:500; padding:18px 30px; border:1px solid var(--gold); transition:all .25s ease; white-space:nowrap; }
-    .btn-gold:hover { background:var(--gold-2); border-color:var(--gold-2); transform:translateY(-1px); }
-    footer { border-top:1px solid var(--line); padding:64px 0 46px; text-align:center; position:relative; overflow:hidden; }
-    footer .foot-water { position:absolute; bottom:-60px; left:50%; transform:translateX(-50%); font-family:var(--disp); font-style:italic; font-size:16rem; line-height:1; color:rgba(200,162,90,0.04); pointer-events:none; }
-    .foot-brand { display:flex; flex-direction:column; gap:4px; margin:0 auto 28px; position:relative; }
+    footer { border-top:1px solid var(--line); padding:64px 0 46px; text-align:center; }
+    .foot-brand { display:flex; flex-direction:column; gap:4px; margin:0 auto 28px; }
     .foot-brand-line { font-family:var(--disp); font-style:italic; font-weight:400; font-size:1.7rem; color:var(--gold-2); line-height:1.35; text-transform:uppercase; letter-spacing:0.05em; }
-    .footer-socials { margin-bottom:30px; display:flex; justify-content:center; gap:14px; flex-wrap:wrap; position:relative; }
+    .footer-socials { margin-bottom:30px; display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
     .footer-socials a { width:46px; height:46px; border:1px solid var(--line); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--muted); transition:all .3s ease; }
     .footer-socials a:hover { color:var(--gold); border-color:var(--gold); transform:translateY(-2px); }
-    .foot-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; max-width:780px; margin:0 auto 44px; text-align:right; border-top:1px solid var(--line); padding-top:38px; position:relative; }
+    .foot-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; max-width:780px; margin:0 auto 44px; text-align:right; border-top:1px solid var(--line); padding-top:38px; }
     .foot-info-title { font-family:var(--mono); font-size:1.3rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
     .foot-info p { font-size:1.35rem; color:var(--muted); line-height:1.65; margin-bottom:12px; }
     .foot-info a { font-family:var(--mono); font-size:1.3rem; color:var(--gold-2); border-bottom:1px solid var(--gold); padding-bottom:1px; }
     .foot-info a:hover { color:var(--cream); }
-    .foot-line { font-family:var(--mono); font-size:1.2rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); position:relative; }
+    .foot-line { font-family:var(--mono); font-size:1.2rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); }
     .foot-line + .foot-line { margin-top:10px; opacity:.75; }
-    .foot-calligraphy { display:block; width:220px; height:auto; margin:34px auto 0; position:relative; }
     .whatsapp-float { position:fixed; bottom:28px; left:28px; width:70px; height:70px; border-radius:50%; background:#25D366; color:#fff; display:flex; align-items:center; justify-content:center; z-index:1200; box-shadow:0 8px 30px rgba(37,211,102,0.4); }
     .whatsapp-float svg { width:34px; height:34px; fill:#fff; }
-    .telegram-float { position:fixed; bottom:110px; left:28px; width:70px; height:70px; border-radius:50%; background:#229ED9; color:#fff; display:flex; align-items:center; justify-content:center; z-index:1200; }
-    .telegram-float svg { width:34px; height:34px; fill:#fff; }
-    .instagram-float { position:fixed; bottom:192px; left:28px; width:70px; height:70px; border-radius:50%; background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color:#fff; display:flex; align-items:center; justify-content:center; z-index:1200; }
-    .instagram-float svg { width:32px; height:32px; }
     @media (max-width:1200px) {
-        nav ul { flex-direction:column; align-items:stretch; gap:0; position:absolute; top:100%; left:0; right:0; background:var(--ink); border-bottom:1px solid var(--line); padding:6px 24px 18px; opacity:0; transform:translateY(-10px); pointer-events:none; transition:opacity .22s ease, transform .22s ease; }
-        nav ul.nav-open { opacity:1; transform:translateY(0); pointer-events:auto; }
+        nav ul { flex-direction:column; align-items:stretch; gap:0; position:absolute; top:100%; left:0; right:0; background:var(--ink); border-bottom:1px solid var(--line); padding:6px 24px 18px; display:none; }
+        nav ul.nav-open { display:flex; }
         nav ul li { border-top:1px solid var(--line); } nav ul li:first-child { border-top:none; }
         nav ul a { display:block; padding:16px 2px; font-size:1.1rem; white-space:normal; }
         .nav-toggle { display:flex; } .top-meta { display:none; }
@@ -101,37 +97,36 @@
 </style>
 </head>
 <body>
-<a href="https://ig.me/m/tac_notary_ist" target="_blank" rel="noopener" class="instagram-float" aria-label="Instagram"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="1" fill="#fff" stroke="none"/></svg></a>
-<a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener" class="telegram-float" aria-label="Telegram"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9z" fill="#fff" stroke="none"/></svg></a>
 <a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
 
 <header>
     <div class="container bismillah-bar">
         <span class="top-meta">伊斯坦布尔法提赫区 · 自2014年</span>
-        <a class="bis-link" href="https://www.youtube.com/watch?v=_bjK1bQFXkI" target="_blank" rel="noopener" aria-label="Bismillah"><span class="bis">&#65021;</span></a>
+        <a class="bis-link" href="https://www.youtube.com/watch?v=_bjK1bQFXkI" target="_blank" rel="noopener"><span class="bis">&#65021;</span></a>
         <span class="lang-switch">
-            <a href="../faq.html">EN</a> / 
-            <a href="../tr/faq.html">Türkçe</a> / 
-            <a href="../ru/faq.html">Русский</a> / 
-            <a href="../ar/faq.html">عربي</a> / 
+            <a href="../">EN</a> /
+            <a href="../tr/">Türkçe</a> /
+            <a href="../ru/">Русский</a> /
+            <a href="../ar/">عربي</a> /
             <a href="#" class="lang-current">中文</a>
         </span>
     </div>
     <div class="container nav-wrap">
-        <a href="../index.html#home" class="brand" aria-label="TAC Notary Public Istanbul">
+        <a href="index.html#home" class="brand">
             <span>
-                <span class="brand-name">Taç Notary Public Services</span>
+                <span class="brand-name">Taç 公证服务</span>
                 <span class="brand-sub">海牙认证与宣誓翻译</span>
             </span>
         </a>
         <nav>
             <ul id="navList">
-                <li><a href="../zh/#services"><i>01</i>服务项目</a></li>
-                <li><a href="../getting-married-in-turkey.html"><i>02</i>结婚登记</a></li>
-                <li><a href="../zh/#process"><i>03</i>办理流程</a></li>
-                <li><a href="reviews.html"><i>04</i>客户评价</a></li>
-                <li><a href="faq.html" class="active"><i>05</i>常见问题</a></li>
-                <li><a href="../zh/#contact"><i>06</i>联系我们</a></li>
+                <li><a href="index.html#services"><i>01</i>服务项目</a></li>
+                <li><a href="e-apostille.html"><i>02</i>电子海牙认证</a></li>
+                <li><a href="getting-married-in-turkey.html"><i>03</i>结婚登记</a></li>
+                <li><a href="index.html#process"><i>04</i>办理流程</a></li>
+                <li><a href="reviews.html"><i>05</i>客户评价</a></li>
+                <li><a href="faq.html" class="active"><i>06</i>常见问题</a></li>
+                <li><a href="index.html#contact"><i>07</i>联系我们</a></li>
             </ul>
         </nav>
         <div class="nav-right">
@@ -143,15 +138,15 @@
 <main>
     <section class="sub-hero">
         <div class="container">
-            <div class="chap"><span class="chap-num">IV</span><span class="chap-line"></span><span class="eyebrow">常见问题</span></div>
+            <div class="chap"><span class="chap-num">IV</span><span class="chap-line"></span><span class="eyebrow">问题</span></div>
             <h1 class="disp">提问与回答</h1>
             <div class="hero-flourish" aria-hidden="true">&#9670;</div>
-            <p class="lead">我们的客人在第一条消息之前通常想知道的一切——海牙认证时间、公证、委托书等。还有疑问？直接通过WhatsApp联系我们。</p>
+            <p class="lead">人们在第一条消息之前通常会问的一切——海牙认证时间、公证、委托书等等。仍然有疑问？直接在WhatsApp上给我们发消息。</p>
             <div class="badge-slot">
                 <script defer async src='https://cdn.trustindex.io/loader.js?3b622c67958b841f6c46f0e017b'></script>
                 <div style="margin-top:20px;"><script defer async src='https://cdn.trustindex.io/loader-cert.js?529eae479b1284067046d5021fa'></script></div>
             </div>
-            <a class="back-link" href="../index.html">&larr; 返回首页</a>
+            <a class="back-link" href="index.html">&larr; 返回首页</a>
         </div>
     </section>
 
@@ -159,41 +154,40 @@
         <div class="container">
             <div class="faq-list">
                 <details class="faq-item"><summary>伊斯坦布尔的海牙认证流程需要多长时间？</summary><div class="faq-a">大多数文件在1-3个工作日内完成。某些程序可以紧急当天处理——在WhatsApp上确认，我们将在一条消息中回复确切的时间和费用。</div></details>
-                <details class="faq-item"><summary>什么是海牙认证（Apostille）？</summary><div class="faq-a">海牙认证是单页证书，在所有92个海牙公约国家得到认可，确认土耳其公共文件——以及签署它的公证人或官员——是真实的。它让文件可以在国外使用，无需进一步的大使馆认证。</div></details>
-                <details class="faq-item"><summary>海牙认证和公证是一样的吗？</summary><div class="faq-a">不——它们是两个独立的步骤。公证确认签名、副本或翻译在土耳其境内是真实的。然后海牙认证将该公证认证用于另一个国家。大多数离开土耳其的文件都需要两者，按顺序完成，我们为您处理整个流程。</div></details>
-                <details class="faq-item"><summary>哪些文件可以进行海牙认证？</summary><div class="faq-a">大多数土耳其公共文件都符合条件——出生、结婚和死亡证明、文凭和成绩单、委托书、公司文件以及任何这些文件的认证翻译。在WhatsApp上发送照片，我们会在您付款前确认资格。</div></details>
-                <details class="faq-item"><summary>您可以认证在土耳其境外签发的文件吗？</summary><div class="faq-a">不可以。海牙认证必须在文件签发的国家签发——我们无法在土耳其认证外国签发的文件。通过WhatsApp发送详细信息，我们可以指导您找到真正需要的内容。</div></details>
-                <details class="faq-item"><summary>我需要去您在法提赫的办公室吗？</summary><div class="faq-a">不需要。我们按预约远程工作。在WhatsApp上发送您文件的照片或扫描件；我们代表您出席公证人和省长办公室，并通过DHL、FedEx或UPS向全球递送完成的文件——无需办公室访问。</div></details>
-                <details class="faq-item"><summary>土耳其的公证人实际上做什么？</summary><div class="faq-a">土耳其公证人认证签名、准备和认证委托书和宣誓书、认证文件真实副本，并确认翻译。这是一个正式的法律角色，不仅仅是签名服务——这就是为什么某些文件（如委托书）要求签署人亲自到场。</div></details>
+                <details class="faq-item"><summary>什么是海牙认证？</summary><div class="faq-a">海牙认证是一份单页证书，在所有92个海牙公约国家得到认可，确认土耳其公共文件——以及签署它的公证人或官员——是真实的。它允许文件在国外使用而无需进一步的大使馆认证。</div></details>
+                <details class="faq-item"><summary>海牙认证和公证是一回事吗？</summary><div class="faq-a">不——它们是两个独立的步骤。公证认证签名、副本或翻译在土耳其境内是真实的。海牙认证然后认证该公证以便在另一个国家使用。大多数离开土耳其的文件两者都需要，按该顺序完成，我们为您处理整个流程。</div></details>
+                <details class="faq-item"><summary>哪些文件可以进行海牙认证？</summary><div class="faq-a">大多数土耳其公共文件符合条件——出生、结婚和死亡证明、文凭和成绩单、委托书、公司文件以及任何这些文件的认证翻译。在WhatsApp上给我们发张照片，我们将在您支付任何费用之前确认资格。</div></details>
+                <details class="faq-item"><summary>你们能对土耳其境外签发的文件进行海牙认证吗？</summary><div class="faq-a">不能。海牙认证必须在文件原产国签发——我们无法在这里土耳其对境外签发的文件进行海牙认证。在WhatsApp上给我们发消息提供详细信息，我们可以指引您找到您实际需要的东西。</div></details>
+                <details class="faq-item"><summary>我需要去你们在法提赫的办公室吗？</summary><div class="faq-a">不需要。我们按预约远程工作。在WhatsApp上发送您文件的照片或扫描件；我们代表您出席公证人和省长办公室，并通过DHL、FedEx或UPS向全球递送完成的文件——无需办公室访问。</div></details>
+                <details class="faq-item"><summary>土耳其的公证人实际上做什么？</summary><div class="faq-a">土耳其公证人认证签名，准备并认证委托书和宣誓书，认证文件真实副本，并确认翻译。这是一个正式的法律角色，不仅仅是签字服务——这就是为什么有些文件，如委托书，要求签字人亲自出现。</div></details>
                 <details class="faq-item"><summary>委托书需要我亲自到场吗？</summary><div class="faq-a">是的。土耳其公证人要求授予委托书的人在公证人面前亲自签字——这是法律要求，不是我们可以跳过的形式。请先在WhatsApp上给我们发消息，这样我们可以确认文件，预订您的预约时段，避免您到达时等待。</div></details>
-                <details class="faq-item"><summary>我可以在签署前看到委托书样本吗？</summary><div class="faq-a">是的。通过WhatsApp给我们发消息，我们将发送符合您情况的样本，这样您在预订预约之前就确切知道您在签署什么。</div></details>
-                <details class="faq-item"><summary>你们翻译哪些语言？</summary><div class="faq-a">我们提供55多种语言的认证和宣誓翻译，由拥有10-20年经验的法律语言学家准备。翻译请求24/7优先处理。</div></details>
-                <details class="faq-item"><summary>如果我的文件不在您列出的语言中怎么办？</summary><div class="faq-a">无论如何，通过WhatsApp发送文件照片——我们的语言列表涵盖了我们最常请求的配对，但并不详尽，我们通常可以在同一条消息中确认我们是否可以提供帮助。</div></details>
-                <details class="faq-item"><summary>你们的宣誓翻译在土耳其境外被认可吗？</summary><div class="faq-a">与公证人认证和海牙认证配对的宣誓翻译通常在国际上被接受，因为海牙认证是外国当局所依赖的。要求因国家和机构而异，因此值得与接收方确认他们确切需要什么。</div></details>
-                <details class="faq-item"><summary>你们为什么不公布固定价格？</summary><div class="faq-a">费用取决于文件类型、长度、语言配对和紧急程度，因此单一的价格表最终会在两种情况下都具有误导性。在WhatsApp上发送照片，我们在您承诺任何事情之前，在同一天回复确切报价。</div></details>
-                <details class="faq-item"><summary>我如何预订我的第一次预约？</summary><div class="faq-a">通过WhatsApp发送您文件的照片。我们首先确认详细信息、费用和时间，只有在您的案件确实需要签名时才预订面对面预约。</div></details>
-                <details class="faq-item"><summary>您能帮助国际学生在土耳其进行大学注册吗？</summary><div class="faq-a">是的。我们指导国际学生完成大学录取、完整注册和学生居留许可支持——从第一条消息到第一堂课。</div></details>
+                <details class="faq-item"><summary>我可以在签字前看到委托书样本吗？</summary><div class="faq-a">是的。在WhatsApp上给我们发消息，我们将发送符合您情况的样本，这样您在预订预约之前就确切知道您在签什么。</div></details>
+                <details class="faq-item"><summary>你们翻译哪些语言？</summary><div class="faq-a">我们提供55种以上语言的认证和宣誓翻译，由拥有10-20年经验的法律语言学家准备。翻译请求24/7优先处理。</div></details>
+                <details class="faq-item"><summary>如果我的文件不在你们列出的语言中怎么办？</summary><div class="faq-a">无论如何请在WhatsApp上给我们发文件照片——我们的语言列表涵盖我们最常请求的配对，但并非详尽无遗，我们通常可以在同一条消息中确认我们是否能提供帮助。</div></details>
+                <details class="faq-item"><summary>你们的宣誓翻译在土耳其境外得到认可吗？</summary><div class="faq-a">与公证认证和海牙认证配对的宣誓翻译通常在国际上被接受，因为海牙认证是外国当局所依赖的。要求因国家和机构而异，因此值得向接收方确认他们确切需要什么。</div></details>
+                <details class="faq-item"><summary>你们为什么不公布固定价格？</summary><div class="faq-a">成本取决于文件类型、长度、语言对和紧急程度，所以单一的公布价格表最终会在任何一方面都具有误导性。在WhatsApp上发照片，我们在同一天回复确切报价，在您承诺任何事情之前。</div></details>
+                <details class="faq-item"><summary>我如何预订我的第一个预约？</summary><div class="faq-a">在WhatsApp上给我们发您文件的照片。我们首先确认细节、费用和时间，只有在您的情况实际需要签字时才预订面对面预约。</div></details>
+                <details class="faq-item"><summary>你们能帮助国际学生在土耳其进行大学注册吗？</summary><div class="faq-a">是的。我们指导国际学生完成大学录取、完整注册和学生居留许可支持——从第一条消息到第一堂课。</div></details>
             </div>
-            <div class="info-card" style="margin-top:50px;">
-                <p>在这里没有找到您的答案？</p>
-                <a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="btn-gold">通过WhatsApp询问我们 &nbsp;&rarr;</a>
+            <div class="info-card">
+                <p>在这里没找到您的答案？</p>
+                <a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="btn-gold">在WhatsApp上询问我们 &nbsp;&rarr;</a>
             </div>
         </div>
     </section>
 </main>
 
 <footer>
-    <div class="foot-water" aria-hidden="true">T</div>
     <div class="container">
         <div class="foot-brand">
-            <span class="foot-brand-line">TAÇ认证与宣誓翻译</span>
+            <span class="foot-brand-line">TAÇ 认证与宣誓翻译</span>
             <span class="foot-brand-line">公证与海牙认证服务</span>
         </div>
         <div class="footer-socials">
             <a href="https://www.instagram.com/tac_notary_ist/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg></a>
             <a href="https://tr.linkedin.com/company/notarypublic-istanbul" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v1.5"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
             <a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9z"/></svg></a>
-            <a href="mailto:notarypublic.istanbul@gmail.com" aria-label="电子邮件"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
+            <a href="mailto:notarypublic.istanbul@gmail.com" aria-label="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
         </div>
         <div class="foot-info-grid">
             <div class="foot-info">
@@ -207,9 +201,8 @@
                 <a href="mailto:business@notarypublic.istanbul">business@notarypublic.istanbul</a>
             </div>
         </div>
-        <div class="foot-line">© 2026 TAC Translation, Notary Public & Apostille Services — Fatih, İstanbul</div>
+        <div class="foot-line">© 2026 TAC Translation, Notary Public &amp; Apostille Services — Fatih, İstanbul</div>
         <div class="foot-line">notarypublic.istanbul · g.page/translation.istanbul</div>
-        <img class="foot-calligraphy" src="../alhamdulillah.png" alt="Alhamdulillahi Rabbil Alameen" width="220" height="63" loading="lazy" decoding="async">
     </div>
 </footer>
 
