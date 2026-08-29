@@ -4,207 +4,258 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0d0b09">
+<meta name="robots" content="index, follow">
 <title>TAC Notary Public Istanbul | Certified Translation & Apostille Services</title>
+<meta name="description" content="Notary Public, Apostille & Certified Translation services in Fatih, Istanbul since 2014. NEW: E-Apostille 100% online. 500+ five-star Google reviews · 4.9 rating · 92 countries served.">
 <link rel="canonical" href="https://notarypublic.istanbul/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230d0b09'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Georgia,serif' font-size='54' font-weight='700' fill='%23c8a25a'%3ET%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=optional" rel="stylesheet">
+
+<!-- Premium Animation Libraries -->
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
 <style>
-    :root { --ink:#0d0b09; --ink-2:#141110; --card:#110e0b; --line:rgba(242,236,222,0.12); --gold:#c8a25a; --gold-2:#ecd08a; --ox:#9a2c22; --ox-soft:rgba(154,44,34,0.16); --paper:#efe6cf; --paper-ink:#241d13; --bronze:#6a563c; --cream:#f4eee0; --muted:#a99f8d; --disp:'EB Garamond','Garamond',Georgia,serif; --mono:'IBM Plex Mono',monospace; }
-    * { margin:0; padding:0; box-sizing:border-box; } html { scroll-behavior:smooth; }
+    :root { --ink:#080706; --ink-2:#0f0e0d; --card:#110e0b; --line:rgba(242,236,222,0.08); --gold:#c8a25a; --gold-2:#ecd08a; --gold-glow:rgba(200, 162, 90, 0.15); --ox:#9a2c22; --ox-soft:rgba(154,44,34,0.16); --paper:#efe6cf; --paper-ink:#241d13; --bronze:#6a563c; --cream:#f4eee0; --muted:#a99f8d; --disp:'EB Garamond','Garamond',Georgia,serif; --mono:'IBM Plex Mono',monospace; }
+    * { margin:0; padding:0; box-sizing:border-box; } html { scroll-behavior: auto; }
     body { font-family:var(--disp); font-size:21px; background:var(--ink); color:var(--cream); line-height:1.75; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
-    a { text-decoration:none; color:inherit; transition:color .25s ease; }
+    a { text-decoration:none; color:inherit; transition:color .4s cubic-bezier(0.16, 1, 0.3, 1); }
+    ::selection { background:var(--gold); color:#080706; }
     .container { max-width:1200px; margin:0 auto; padding:0 24px; }
-    section { padding:110px 0; scroll-margin-top:120px; }
-    img, svg { max-width:100%; }
-    .eyebrow { font-family:var(--mono); font-size:1.25rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); }
-    .chap { display:flex; align-items:center; gap:18px; margin-bottom:22px; }
-    .chap-num { font-family:var(--mono); font-size:1.2rem; color:var(--ox); border:1px solid rgba(154,44,34,0.5); padding:4px 10px; }
-    .chap-line { width:54px; height:1px; background:var(--gold); }
-    h2.disp { font-family:var(--disp); font-style:italic; font-weight:400; color:var(--gold-2); font-size:clamp(2.5rem,4.2vw,3.5rem); line-height:1.12; text-transform:uppercase; letter-spacing:0.03em; text-wrap:balance; }
-    .btn-gold { display:inline-block; background:var(--gold); color:#171207; font-family:var(--mono); font-size:1.1rem; letter-spacing:0.13em; text-transform:uppercase; font-weight:500; padding:18px 30px; border:1px solid var(--gold); transition:all .25s ease; white-space:nowrap; }
-    .btn-gold:hover { background:var(--gold-2); border-color:var(--gold-2); transform:translateY(-1px); }
-    .btn-outline { display:inline-block; background:transparent; color:var(--cream); font-family:var(--mono); font-size:1.1rem; letter-spacing:0.13em; text-transform:uppercase; padding:18px 30px; border:1px solid var(--line); }
-    .btn-outline:hover { border-color:var(--gold); color:var(--gold); }
-    header { position:fixed; top:0; left:0; right:0; z-index:1000; background:rgba(13,11,9,0.94); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); border-top:3px solid var(--gold); }
-    .bismillah-bar { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:8px 0; border-bottom:1px solid var(--line); }
-    .bismillah-bar .bis { font-family:Tahoma,'Segoe UI',sans-serif; font-size:1.4rem; color:var(--gold-2); line-height:1; direction:rtl; unicode-bidi:isolate; }
-    .bis-link { display:inline-block; } .bis-link:hover { color:inherit; }
-    .top-meta { font-family:var(--mono); font-size:1rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); }
-    .lang-switch { display:flex; align-items:center; gap:6px; color:var(--muted); font-family:var(--mono); font-size:1.05rem; }
-    .lang-switch a { padding:4px 8px; border:1px solid transparent; }
+    section { padding:140px 0; scroll-margin-top:120px; }
+    img, svg { max-width:100%; display: block; }
+    
+    /* Premium Noise Overlay */
+    .noise-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0.035; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); }
+
+    .eyebrow { font-family:var(--mono); font-size:1.1rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); }
+    .chap { display:flex; align-items:center; gap:18px; margin-bottom:32px; }
+    .chap-num { font-family:var(--mono); font-size:1.1rem; color:var(--ox); border:1px solid rgba(154,44,34,0.4); padding:6px 12px; }
+    .chap-line { width:60px; height:1px; background:var(--gold); }
+    h2.disp { font-family:var(--disp); font-style:italic; font-weight:400; color:var(--gold-2); font-size:clamp(3rem,5.5vw,4.5rem); line-height:1.1; text-transform:uppercase; letter-spacing:-0.02em; }
+    
+    /* Magnetic Buttons */
+    .btn-gold { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:var(--gold); color:#080706; font-family:var(--mono); font-size:1rem; letter-spacing:0.15em; text-transform:uppercase; font-weight:500; padding:20px 36px; border:1px solid var(--gold); transition: all .5s cubic-bezier(0.16, 1, 0.3, 1); white-space:nowrap; position: relative; overflow: hidden; }
+    .btn-gold::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.6s ease; }
+    .btn-gold:hover::before { left: 100%; }
+    .btn-gold:hover { background:var(--gold-2); border-color:var(--gold-2); transform:translateY(-2px); box-shadow: 0 10px 40px var(--gold-glow); }
+    .btn-outline { display:inline-flex; align-items:center; justify-content:center; background:transparent; color:var(--cream); font-family:var(--mono); font-size:1rem; letter-spacing:0.15em; text-transform:uppercase; padding:20px 36px; border:1px solid var(--line); transition: all .5s cubic-bezier(0.16, 1, 0.3, 1); white-space:nowrap; }
+    .btn-outline:hover { border-color:var(--gold); color:var(--gold); box-shadow: 0 10px 40px rgba(200, 162, 90, 0.05); }
+
+    header { position:fixed; top:0; left:0; right:0; z-index:1000; background:rgba(8,7,6,0.85); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
+    .bismillah-bar { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0; border-bottom:1px solid var(--line); }
+    .bismillah-bar .bis { font-family:Tahoma,'Segoe UI',sans-serif; font-size:1.3rem; color:var(--gold-2); line-height:1; direction:rtl; unicode-bidi:isolate; }
+    .bis-link { display:inline-block; } .bis-link:hover { color:var(--gold); }
+    .top-meta { font-family:var(--mono); font-size:0.9rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); }
+    .lang-switch { display:flex; align-items:center; gap:8px; color:var(--muted); font-family:var(--mono); font-size:0.95rem; }
+    .lang-switch a { padding:4px 8px; border:1px solid transparent; transition: all 0.3s ease; }
     .lang-switch a:hover { color:var(--gold); border-color:var(--line); }
-    .lang-switch .lang-current { color:var(--gold-2); border-color:var(--line); pointer-events:none; }
-    .nav-wrap { display:flex; align-items:center; justify-content:space-between; gap:22px; padding:14px 0; min-height:74px; }
+    .lang-switch .lang-current { color:var(--gold-2); border-color:rgba(200,162,90,0.3); }
+    .nav-wrap { display:flex; align-items:center; justify-content:space-between; gap:22px; padding:18px 0; }
     .brand { display:flex; align-items:center; gap:14px; flex-shrink:0; }
-    .brand-name { display:block; font-family:var(--disp); font-style:italic; font-weight:500; font-size:1.4rem; color:var(--gold-2); line-height:1.1; text-transform:uppercase; letter-spacing:0.05em; white-space:nowrap; }
-    .brand-sub { display:block; font-family:var(--mono); font-size:0.95rem; letter-spacing:0.26em; text-transform:uppercase; color:var(--muted); margin-top:3px; white-space:nowrap; }
-    nav ul { display:flex; align-items:center; gap:22px; list-style:none; }
-    nav ul a { font-family:var(--mono); font-size:1.05rem; letter-spacing:0.08em; text-transform:uppercase; color:#d8d4ca; white-space:nowrap; }
-    nav ul a i { font-style:normal; color:var(--ox); font-size:0.85rem; margin-right:5px; vertical-align:2px; }
+    .brand-name { display:block; font-family:var(--disp); font-style:italic; font-weight:500; font-size:1.3rem; color:var(--gold-2); line-height:1.1; text-transform:uppercase; letter-spacing:0.05em; white-space:nowrap; }
+    .brand-sub { display:block; font-family:var(--mono); font-size:0.85rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--muted); margin-top:4px; }
+    nav ul { display:flex; align-items:center; gap:28px; list-style:none; }
+    nav ul a { font-family:var(--mono); font-size:0.95rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); white-space:nowrap; position: relative; }
+    nav ul a i { font-style:normal; color:var(--ox); font-size:0.8rem; margin-right:6px; vertical-align:1px; }
+    nav ul a::after { content:''; position:absolute; left:0; bottom:-4px; width:0; height:1px; background:var(--gold); transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
     nav ul a:hover, nav ul a.active { color:var(--gold-2); }
+    nav ul a:hover::after { width: 100%; }
     .nav-right { display:flex; align-items:center; gap:16px; flex-shrink:0; }
     .nav-toggle { display:none; width:40px; height:40px; background:none; border:1px solid var(--line); cursor:pointer; flex-direction:column; align-items:center; justify-content:center; gap:6px; }
-    .nav-toggle span { display:block; width:22px; height:1.5px; background:var(--cream); }
-    .hero { padding:235px 0 110px; position:relative; overflow:hidden; }
-    .hero-grid { display:grid; grid-template-columns:0.92fr 1.08fr; gap:48px; align-items:center; }
-    .hero-copy { text-align:center; }
-    .hero h1 { font-family:var(--disp); font-style:italic; font-weight:400; font-size:clamp(2.6rem,4.8vw,3.9rem); line-height:1.22; color:var(--cream); max-width:720px; margin:22px auto 0; text-transform:uppercase; }
-    .hero h1 em { font-weight:500; color:var(--gold-2); }
-    .hero-flourish { display:flex; align-items:center; justify-content:center; gap:16px; margin:30px auto 10px; color:var(--gold); font-size:0.95rem; }
-    .hero-flourish::before, .hero-flourish::after { content:''; height:1px; width:90px; background:linear-gradient(90deg, transparent, var(--gold)); }
-    .hero-flourish::after { background:linear-gradient(90deg, var(--gold), transparent); }
-    .hero .lead { color:var(--muted); font-size:1.4rem; max-width:580px; margin:18px auto 8px; }
-    .hero-actions { display:flex; gap:14px; flex-wrap:wrap; margin-top:34px; justify-content:center; }
-    .stats-bar { background:var(--ink-2); border-bottom:1px solid var(--line); padding:76px 0 64px; }
-    .stats-grid { display:grid; grid-template-columns:repeat(5,1fr); margin-bottom:58px; }
-    .stat-cell { position:relative; text-align:center; padding:38px 14px 8px; }
-    .stat-cell::before { content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:44px; height:2px; background:var(--gold); }
-    .stat-cell + .stat-cell { border-left:1px solid var(--line); }
-    .stat-value { font-family:var(--disp); font-weight:500; font-size:3.4rem; color:var(--gold-2); line-height:1; margin-bottom:14px; }
-    .stat-key { font-family:var(--mono); font-size:1.2rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); }
-    .rating-plaque { display:flex; flex-direction:column; gap:22px; border:1px solid rgba(200,162,90,0.4); background:linear-gradient(135deg, rgba(200,162,90,0.14), rgba(200,162,90,0.03)); padding:30px 44px 36px; }
-    .rp-top { text-align:center; margin-bottom:4px; }
-    .cert-slot { margin-top:30px; text-align:center; }
-    .rp-body { display:grid; grid-template-columns:auto auto 1fr auto; align-items:center; gap:38px; width:100%; }
-    .rp-score { font-family:var(--disp); font-style:italic; font-weight:500; font-size:3.1rem; color:var(--gold-2); line-height:1; text-align:center; }
-    .rp-score em { font-size:1.4rem; color:var(--muted); }
-    .rp-divider { width:1px; align-self:stretch; background:rgba(200,162,90,0.35); }
-    .rp-main { font-family:var(--mono); font-size:1.45rem; line-height:1.6; }
-    .rp-main b { color:var(--gold-2); }
-    .rp-sub { font-family:var(--mono); font-size:1.25rem; color:var(--muted); margin-top:8px; }
-    .rp-sub .g-url { color:var(--gold-2); border-bottom:1px solid var(--gold); padding-bottom:1px; }
-    .rp-arrow { width:56px; height:56px; border:1px solid var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--gold-2); font-size:1.3rem; transition:all .3s ease; }
-    .rp-arrow:hover { background:var(--gold); color:#171207; }
-    .svc-list { border-top:1px solid var(--line); margin-top:60px; }
-    .svc-row { position:relative; text-align:center; padding:58px 24px; border-bottom:1px solid var(--line); }
-    .svc-row-featured { background:linear-gradient(135deg, rgba(200,162,90,0.13), rgba(200,162,90,0.04)); border:1px solid rgba(200,162,90,0.45); }
-    .badge-new { display:inline-block; background:var(--gold); color:#171207; font-family:var(--mono); font-size:1rem; letter-spacing:0.24em; text-transform:uppercase; font-weight:500; padding:6px 16px; margin-bottom:18px; }
-    .svc-num { font-family:var(--mono); font-size:1.25rem; letter-spacing:0.22em; color:var(--ox); margin-bottom:14px; }
-    .svc-head { display:flex; flex-direction:column; align-items:center; gap:10px; margin-bottom:16px; }
-    .svc-head h3 { font-family:var(--disp); font-style:italic; font-weight:500; font-size:1.95rem; color:var(--cream); text-transform:uppercase; letter-spacing:0.04em; text-wrap:balance; }
-    .svc-tag { font-family:var(--mono); font-size:1.25rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); }
-    .svc-row p { color:var(--muted); font-size:1.3rem; max-width:860px; margin:0 auto; }
-    .tag-row { display:flex; flex-wrap:wrap; gap:10px; margin-top:24px; justify-content:center; }
-    .tag { display:inline-flex; align-items:center; justify-content:center; text-align:center; font-family:var(--mono); font-size:1.25rem; color:var(--gold-2); background:rgba(200,162,90,0.1); border:1px solid rgba(200,162,90,0.35); padding:11px 20px; }
-    .tag-link:hover { background:var(--gold); color:#171207; border-color:var(--gold); }
-    .tag-row-lang { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; }
-    .tag-row-lang .tag { white-space:nowrap; font-size:1.12rem; padding:11px 6px; }
-    .tag-row-grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
-    .tag-row-grid4 .tag { font-size:1.08rem; padding:12px 10px; line-height:1.5; text-wrap:balance; }
-    .tag-cta { background:var(--gold); color:#171207; border-color:var(--gold); font-weight:500; }
-    .tag-cta:hover { background:var(--gold-2); border-color:var(--gold-2); color:#171207; }
-    .flag { display:inline-block; margin-top:18px; font-family:var(--mono); font-size:1.2rem; color:#e0a999; background:var(--ox-soft); border:1px solid rgba(154,44,34,0.4); padding:8px 16px; }
+    .nav-toggle span { display:block; width:20px; height:1px; background:var(--cream); transition: all 0.4s ease; }
+    .nav-toggle.active span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity:0; }
+    .nav-toggle.active span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+    .hero { padding:260px 0 140px; position:relative; overflow:hidden; }
+    .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+    .hero-copy { text-align:left; }
+    .hero h1 { font-family:var(--disp); font-style:italic; font-weight:400; font-size:clamp(3.5rem,6vw,5.5rem); line-height:1.05; color:var(--cream); max-width:800px; text-transform:uppercase; letter-spacing:-0.02em; }
+    .hero h1 em { font-weight:500; color:var(--gold-2); font-style:italic; }
+    .hero-flourish { display:flex; align-items:center; gap:16px; margin:40px 0 30px; color:var(--gold); font-size:0.9rem; }
+    .hero-flourish::before, .hero-flourish::after { content:''; height:1px; width:80px; background:var(--gold); opacity: 0.5; }
+    .hero .lead { color:var(--muted); font-size:1.3rem; max-width:520px; margin:0 0 40px; line-height: 1.8; }
+    .hero-actions { display:flex; gap:16px; flex-wrap:wrap; }
+
+    .stats-bar { background:var(--ink-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:100px 0; }
+    .stats-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:40px; }
+    .stat-cell { text-align:center; position: relative; }
+    .stat-cell:not(:last-child)::after { content:''; position:absolute; right:0; top:20%; height:60%; width:1px; background:var(--line); }
+    .stat-value { font-family:var(--disp); font-weight:400; font-size:clamp(2.5rem, 4vw, 3.5rem); color:var(--gold-2); line-height:1; margin-bottom:16px; }
+    .stat-key { font-family:var(--mono); font-size:0.95rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); }
+    
+    .rating-plaque { margin-top:80px; display:flex; flex-direction:column; gap:32px; border:1px solid rgba(200,162,90,0.2); background:linear-gradient(135deg, rgba(200,162,90,0.05), rgba(8,7,6,0)); padding:40px; position: relative; overflow: hidden; }
+    .rating-plaque::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:radial-gradient(circle, var(--gold-glow) 0%, transparent 60%); opacity: 0.5; pointer-events: none; }
+    .rp-top { text-align:center; margin-bottom:4px; position: relative; z-index: 1; }
+    .rp-body { display:grid; grid-template-columns:auto auto 1fr auto; align-items:center; gap:40px; width:100%; position: relative; z-index: 1; }
+    .rp-score { font-family:var(--disp); font-style:italic; font-weight:400; font-size:3.5rem; color:var(--gold-2); line-height:1; text-align:center; }
+    .rp-score em { font-size:1.5rem; color:var(--muted); }
+    .rp-divider { width:1px; align-self:stretch; background:rgba(200,162,90,0.2); }
+    .rp-main { font-family:var(--mono); font-size:1.1rem; line-height:1.6; color: var(--cream); }
+    .rp-main b { color:var(--gold-2); font-weight: 500; }
+    .rp-sub { font-family:var(--mono); font-size:1rem; color:var(--muted); margin-top:12px; }
+    .rp-sub .g-url { color:var(--gold-2); border-bottom:1px solid rgba(200,162,90,0.4); padding-bottom:2px; transition: border-color 0.3s ease; }
+    .rp-sub .g-url:hover { border-color: var(--gold); }
+    .rp-arrow { width:60px; height:60px; border:1px solid rgba(200,162,90,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--gold-2); font-size:1.2rem; transition:all .5s cubic-bezier(0.16, 1, 0.3, 1); }
+    .rp-arrow:hover { background:var(--gold); color:#080706; border-color:var(--gold); transform:translateX(5px); }
+
+    .svc-list { border-top:1px solid var(--line); margin-top:80px; }
+    .svc-row { position:relative; text-align:center; padding:80px 24px; border-bottom:1px solid var(--line); transition:background .6s ease; }
+    .svc-row:hover { background:var(--card); }
+    .svc-row-featured { background:linear-gradient(135deg, rgba(200,162,90,0.08), rgba(8,7,6,0)); border:1px solid rgba(200,162,90,0.2); }
+    .badge-new { display:inline-block; background:var(--gold); color:#080706; font-family:var(--mono); font-size:0.85rem; letter-spacing:0.2em; text-transform:uppercase; font-weight:500; padding:8px 16px; margin-bottom:24px; }
+    .svc-num { font-family:var(--mono); font-size:1rem; letter-spacing:0.2em; color:var(--ox); margin-bottom:20px; }
+    .svc-head { display:flex; flex-direction:column; align-items:center; gap:12px; margin-bottom:24px; }
+    .svc-head h3 { font-family:var(--disp); font-style:italic; font-weight:400; font-size:clamp(2rem, 3vw, 2.5rem); color:var(--cream); text-transform:uppercase; letter-spacing:-0.01em; }
+    .svc-tag { font-family:var(--mono); font-size:1rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); }
+    .svc-row p { color:var(--muted); font-size:1.15rem; max-width:760px; margin:0 auto; line-height: 1.8; }
+    .tag-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; justify-content:center; }
+    .tag { display:inline-flex; align-items:center; justify-content:center; text-align:center; font-family:var(--mono); font-size:0.95rem; color:var(--gold-2); background:rgba(200,162,90,0.05); border:1px solid rgba(200,162,90,0.15); padding:12px 20px; transition:all .4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .tag-link:hover { background:var(--gold); color:#080706; border-color:var(--gold); transform:translateY(-2px); }
+    .tag-row-lang { display:grid; grid-template-columns:repeat(6,1fr); gap:12px; max-width: 900px; margin: 32px auto 0; }
+    .tag-row-lang .tag { white-space:nowrap; font-size:0.9rem; padding:10px 6px; }
+    .tag-row-grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; max-width: 1000px; margin: 32px auto 0; }
+    .tag-row-grid4 .tag { font-size:0.9rem; padding:14px 10px; line-height:1.4; text-wrap:balance; }
+    .tag-cta { background:var(--gold); color:#080706; border-color:var(--gold); font-weight:500; }
+    .tag-cta:hover { background:var(--gold-2); border-color:var(--gold-2); color:#080706; transform:translateY(-2px); box-shadow: 0 10px 30px var(--gold-glow); }
+    .flag { display:inline-block; margin-top:32px; font-family:var(--mono); font-size:0.9rem; color:#e0a999; background:var(--ox-soft); border:1px solid rgba(154,44,34,0.3); padding:12px 20px; line-height: 1.6; max-width: 800px; }
+
     .process { background:var(--ink-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-    .process-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:44px; margin-top:80px; }
-    .step { position:relative; padding-top:26px; text-align:center; }
-    .step::before { content:attr(data-n); position:absolute; top:-52px; left:50%; transform:translateX(-50%); font-family:var(--disp); font-style:italic; font-size:6.6rem; line-height:1; color:transparent; -webkit-text-stroke:1px rgba(200,162,90,0.28); pointer-events:none; }
-    .step-top { display:flex; align-items:center; gap:14px; margin-bottom:22px; }
-    .step-dot { width:12px; height:12px; border:2px solid var(--gold); border-radius:50%; background:var(--ink-2); z-index:1; flex-shrink:0; }
+    .process-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:40px; margin-top:80px; }
+    .step { position:relative; padding-top:32px; text-align:center; }
+    .step::before { content:attr(data-n); position:absolute; top:-60px; left:50%; transform:translateX(-50%); font-family:var(--disp); font-style:italic; font-size:8rem; line-height:1; color:transparent; -webkit-text-stroke:1px rgba(200,162,90,0.15); pointer-events:none; }
+    .step-top { display:flex; align-items:center; gap:14px; margin-bottom:28px; }
+    .step-dot { width:10px; height:10px; border:1px solid var(--gold); border-radius:50%; background:var(--ink-2); z-index:1; flex-shrink:0; }
     .step-line { flex:1; height:1px; background:var(--line); }
-    .step h3 { font-family:var(--disp); font-style:italic; font-weight:500; font-size:1.65rem; margin-bottom:12px; color:var(--cream); text-transform:uppercase; letter-spacing:0.04em; }
-    .step p { font-size:1.35rem; color:var(--muted); }
+    .step h3 { font-family:var(--disp); font-style:italic; font-weight:400; font-size:1.5rem; margin-bottom:16px; color:var(--cream); text-transform:uppercase; letter-spacing:0.05em; }
+    .step p { font-size:1.05rem; color:var(--muted); line-height: 1.7; }
+
     .reviews { position:relative; overflow:hidden; border-bottom:1px solid var(--line); }
-    .gpage-frame { border:1px solid var(--line); background:var(--card); padding:54px 44px; text-align:center; margin-top:56px; }
-    .gpage-frame .quote-mark { font-family:var(--disp); font-size:4rem; color:var(--gold); line-height:1; }
-    .gpage-frame p { max-width:820px; margin:10px auto 30px; color:var(--muted); font-size:1.65rem; line-height:1.85; font-style:italic; font-weight:400; }
-    .gpage-frame .glink { color:var(--gold-2); font-family:var(--mono); font-size:1.45rem; border-bottom:1px solid var(--gold); padding-bottom:2px; font-style:normal; }
-    .follow-ig { margin-top:24px; border:1px solid var(--line); background:var(--ink-2); padding:34px 38px; display:flex; flex-direction:column; gap:26px; }
-    .follow-ig-item { display:flex; align-items:center; gap:18px; flex-wrap:wrap; justify-content:center; text-align:center; }
-    .follow-ig-divider { width:160px; height:1px; background:var(--line); margin:0 auto; }
+    .gpage-frame { border:1px solid var(--line); background:var(--card); padding:60px 40px; text-align:center; margin-top:60px; position: relative; }
+    .gpage-frame .quote-mark { font-family:var(--disp); font-size:5rem; color:var(--gold); line-height:1; opacity: 0.5; margin-bottom: -20px; }
+    .gpage-frame p { max-width:700px; margin:0 auto 32px; color:var(--muted); font-size:1.4rem; line-height:1.8; font-style:italic; font-weight: 400; }
+    .gpage-frame .glink { color:var(--gold-2); font-family:var(--mono); font-size:1.1rem; border-bottom:1px solid rgba(200,162,90,0.4); padding-bottom:2px; font-style:normal; transition: border-color 0.3s ease; }
+    .gpage-frame .glink:hover { border-color: var(--gold); }
+    .follow-ig { margin-top:32px; border:1px solid var(--line); background:var(--ink-2); padding:40px; display:flex; flex-direction:column; gap:32px; }
+    .follow-ig-item { display:flex; align-items:center; gap:20px; flex-wrap:wrap; justify-content:center; text-align:center; }
+    .follow-ig-divider { width:120px; height:1px; background:var(--line); margin:0 auto; }
     .follow-ig svg { color:var(--gold); flex-shrink:0; }
-    .follow-ig span { color:var(--muted); font-size:1.35rem; }
-    .follow-ig strong { color:var(--gold-2); font-weight:600; }
-    .faq-grid { display:grid; grid-template-columns:0.85fr 1.35fr; gap:70px; align-items:start; }
+    .follow-ig span { color:var(--muted); font-size:1.1rem; max-width: 400px; }
+    .follow-ig strong { color:var(--gold-2); font-weight:500; }
+
+    .faq-grid { display:grid; grid-template-columns:0.8fr 1.2fr; gap:80px; align-items:start; }
     .faq-left { position:sticky; top:150px; }
-    .faq-left p { color:var(--muted); font-size:1.4rem; margin:20px 0 30px; font-style:italic; font-weight:400; }
-    .faq-item { border:1px solid var(--line); background:var(--card); margin-bottom:14px; }
-    .faq-item summary { cursor:pointer; padding:26px 30px; font-family:var(--disp); font-style:italic; font-weight:500; font-size:1.6rem; color:var(--cream); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:20px; text-wrap:balance; }
+    .faq-left p { color:var(--muted); font-size:1.2rem; margin:24px 0 32px; font-style:italic; line-height: 1.7; }
+    .faq-item { border:1px solid var(--line); background:var(--card); margin-bottom:16px; transition:border-color .4s ease, background .4s ease; }
+    .faq-item:hover { border-color:rgba(200,162,90,0.3); background: rgba(17, 14, 11, 0.8); }
+    .faq-item summary { cursor:pointer; padding:28px 32px; font-family:var(--disp); font-style:italic; font-weight:400; font-size:1.4rem; color:var(--cream); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:20px; text-wrap:balance; }
     .faq-item summary::-webkit-details-marker { display:none; }
-    .faq-item summary::after { content:'+'; color:var(--gold); font-family:var(--mono); font-size:1.5rem; flex-shrink:0; }
-    .faq-item[open] summary::after { content:'\2013'; }
-    .faq-a { padding:0 30px 28px; color:var(--muted); font-size:1.35rem; line-height:1.8; }
+    .faq-item summary::after { content:'+'; color:var(--gold); font-family:var(--mono); font-size:1.5rem; flex-shrink:0; transition: transform 0.4s ease; }
+    .faq-item[open] summary::after { content:'−'; transform: rotate(180deg); }
+    .faq-a { padding:0 32px 32px; color:var(--muted); font-size:1.1rem; line-height:1.8; }
+
     .contact { background:var(--bronze); color:var(--cream); }
     .contact .eyebrow { color:var(--gold-2); }
-    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start; }
-    .contact h2 { font-family:var(--disp); font-style:italic; font-weight:400; font-size:clamp(2.5rem,4vw,3.3rem); color:var(--gold-2); margin:14px 0 20px; text-transform:uppercase; letter-spacing:0.03em; }
-    .contact-loc { font-family:var(--mono); font-size:1.3rem; letter-spacing:0.14em; color:#e3d9c6; margin-bottom:16px; }
-    .contact-note { color:#e9e0cd; font-size:1.4rem; max-width:520px; margin-bottom:40px; }
-    .c-big-label { font-family:var(--mono); font-size:1.2rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-2); margin-bottom:8px; }
-    .c-big { font-family:var(--disp); font-weight:600; font-size:clamp(2rem,3.4vw,2.9rem); color:#f7f1e4; line-height:1.2; }
+    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+    .contact h2 { font-family:var(--disp); font-style:italic; font-weight:400; font-size:clamp(3rem,5vw,4rem); color:var(--gold-2); margin:24px 0 32px; text-transform:uppercase; letter-spacing:-0.02em; }
+    .contact-loc { font-family:var(--mono); font-size:1rem; letter-spacing:0.2em; color:rgba(244,238,224,0.6); margin-bottom:16px; text-transform: uppercase; }
+    .contact-note { color:rgba(244,238,224,0.8); font-size:1.2rem; max-width:480px; margin-bottom:48px; line-height: 1.7; }
+    .c-big-label { font-family:var(--mono); font-size:0.9rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold-2); margin-bottom:12px; }
+    .c-big { font-family:var(--disp); font-weight:400; font-size:clamp(2.5rem,4vw,3.5rem); color:var(--cream); line-height:1.1; margin-bottom: 8px; }
     .c-big a:hover { color:var(--gold-2); }
-    .c-sub { font-size:1.4rem; color:#ddd2bc; margin-top:8px; }
+    .c-sub { font-size:1.1rem; color:rgba(244,238,224,0.7); margin-top:12px; }
     .c-sub a:hover { color:var(--gold-2); }
-    .c-hours { margin-top:30px; }
-    .contact-cta-row { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:44px; }
-    .btn-ink { display:flex; align-items:center; justify-content:center; gap:10px; background:rgba(11,10,8,0.55); color:var(--gold-2); font-family:var(--mono); font-size:1.15rem; letter-spacing:0.14em; text-transform:uppercase; padding:20px 14px; border:1px solid rgba(11,10,8,0.55); transition:all .25s ease; white-space:nowrap; }
-    .btn-ink:hover { background:var(--gold); border-color:var(--gold); color:#171207; }
-    .btn-ink svg { width:20px; height:20px; flex-shrink:0; }
-    .wa-card { border:1px solid rgba(0,0,0,0.3); background:#55432c; padding:48px 42px; text-align:center; }
-    .wa-card h3 { font-family:var(--disp); font-style:italic; font-weight:400; color:var(--gold-2); font-size:2.2rem; margin-bottom:22px; text-transform:uppercase; letter-spacing:0.04em; }
-    .wa-card p { font-size:1.4rem; color:#e9e0cd; line-height:1.8; margin-bottom:30px; font-weight:400; }
-    .wa-card .btn-outline { font-size:1.2rem; padding:20px 34px; border-color:rgba(236,208,138,0.5); color:var(--gold-2); }
-    .wa-card .btn-outline:hover { background:var(--gold); border-color:var(--gold); color:#171207; }
-    footer { border-top:1px solid var(--line); padding:64px 0 46px; text-align:center; }
-    .foot-brand { display:flex; flex-direction:column; gap:4px; margin:0 auto 28px; }
-    .foot-brand-line { font-family:var(--disp); font-style:italic; font-weight:400; font-size:1.7rem; color:var(--gold-2); line-height:1.35; text-transform:uppercase; letter-spacing:0.05em; }
-    .footer-socials { margin-bottom:30px; display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
-    .footer-socials a { width:46px; height:46px; border:1px solid var(--line); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--muted); transition:all .3s ease; }
-    .footer-socials a:hover { color:var(--gold); border-color:var(--gold); transform:translateY(-2px); }
-    .foot-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; max-width:780px; margin:0 auto 44px; text-align:right; border-top:1px solid var(--line); padding-top:38px; }
-    .foot-info-title { font-family:var(--mono); font-size:1.3rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
-    .foot-info p { font-size:1.35rem; color:var(--muted); line-height:1.65; margin-bottom:12px; }
-    .foot-info a { font-family:var(--mono); font-size:1.3rem; color:var(--gold-2); border-bottom:1px solid var(--gold); padding-bottom:1px; }
-    .foot-info a:hover { color:var(--cream); }
-    .foot-line { font-family:var(--mono); font-size:1.2rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); }
-    .foot-line + .foot-line { margin-top:10px; opacity:.75; }
-    .whatsapp-float { position:fixed; bottom:28px; left:28px; width:70px; height:70px; border-radius:50%; background:#25D366; color:#fff; display:flex; align-items:center; justify-content:center; z-index:1200; box-shadow:0 8px 30px rgba(37,211,102,0.4); }
-    .whatsapp-float svg { width:34px; height:34px; fill:#fff; }
+    .c-hours { margin-top:40px; padding-top: 40px; border-top: 1px solid rgba(244,238,224,0.1); }
+    .contact-cta-row { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:48px; }
+    .btn-ink { display:flex; align-items:center; justify-content:center; gap:10px; background:rgba(8,7,6,0.4); color:var(--gold-2); font-family:var(--mono); font-size:0.95rem; letter-spacing:0.15em; text-transform:uppercase; padding:20px 14px; border:1px solid rgba(8,7,6,0.4); transition:all .4s cubic-bezier(0.16, 1, 0.3, 1); white-space:nowrap; }
+    .btn-ink:hover { background:var(--gold); border-color:var(--gold); color:#080706; transform:translateY(-2px); }
+    .btn-ink svg { width:18px; height:18px; flex-shrink:0; }
+    .wa-card { border:1px solid rgba(0,0,0,0.2); background:rgba(0,0,0,0.2); padding:56px 48px; text-align:center; backdrop-filter: blur(10px); }
+    .wa-card h3 { font-family:var(--disp); font-style:italic; font-weight:400; color:var(--gold-2); font-size:2rem; margin-bottom:24px; text-transform:uppercase; letter-spacing:-0.01em; }
+    .wa-card p { font-size:1.1rem; color:rgba(244,238,224,0.8); line-height:1.8; margin-bottom:36px; }
+
+    footer { border-top:1px solid var(--line); padding:80px 0 60px; text-align:center; }
+    .foot-brand { display:flex; flex-direction:column; gap:8px; margin:0 auto 40px; }
+    .foot-brand-line { font-family:var(--disp); font-style:italic; font-weight:400; font-size:1.5rem; color:var(--gold-2); line-height:1.3; text-transform:uppercase; letter-spacing:0.05em; }
+    .footer-socials { margin-bottom:40px; display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
+    .footer-socials a { width:50px; height:50px; border:1px solid var(--line); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--muted); transition:all .4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .footer-socials a:hover { color:var(--gold); border-color:var(--gold); transform:translateY(-4px); box-shadow: 0 10px 30px rgba(200, 162, 90, 0.1); }
+    .foot-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; max-width:800px; margin:0 auto 60px; text-align:left; border-top:1px solid var(--line); padding-top:60px; }
+    .foot-info-title { font-family:var(--mono); font-size:0.9rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    .foot-info p { font-size:1.05rem; color:var(--muted); line-height:1.7; margin-bottom:16px; }
+    .foot-info a { font-family:var(--mono); font-size:1rem; color:var(--gold-2); border-bottom:1px solid rgba(200,162,90,0.3); padding-bottom:2px; transition: border-color 0.3s ease; }
+    .foot-info a:hover { color:var(--cream); border-color: var(--gold); }
+    .foot-line { font-family:var(--mono); font-size:0.9rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); opacity: 0.7; }
+    .foot-line + .foot-line { margin-top:8px; }
+
+    .whatsapp-float { position:fixed; bottom:32px; left:32px; width:64px; height:64px; border-radius:50%; background:#25D366; color:#fff; display:flex; align-items:center; justify-content:center; z-index:1200; box-shadow:0 10px 40px rgba(37,211,102,0.3); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .whatsapp-float:hover { transform: scale(1.1); }
+    .whatsapp-float svg { width:32px; height:32px; fill:#fff; }
+
+    /* GSAP Reveal Utilities */
+    .reveal-up { opacity: 0; transform: translateY(40px); transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal-up.active { opacity: 1; transform: translateY(0); }
+
     @media (max-width:1200px) {
-        nav ul { flex-direction:column; align-items:stretch; gap:0; position:absolute; top:100%; left:0; right:0; background:var(--ink); border-bottom:1px solid var(--line); padding:6px 24px 18px; display:none; }
+        nav ul { flex-direction:column; align-items:stretch; gap:0; position:absolute; top:100%; left:0; right:0; background:var(--ink); border-bottom:1px solid var(--line); padding:20px 24px; display:none; }
         nav ul.nav-open { display:flex; }
         nav ul li { border-top:1px solid var(--line); } nav ul li:first-child { border-top:none; }
-        nav ul a { display:block; padding:16px 2px; font-size:1.1rem; white-space:normal; }
+        nav ul a { display:block; padding:16px 0; font-size:1rem; } nav ul a::after { display:none; }
         .nav-toggle { display:flex; } .top-meta { display:none; }
-        .hero { padding:205px 0 80px; }
+        .hero { padding:220px 0 100px; }
         .hero-grid { grid-template-columns:1fr; gap:60px; }
-        .stats-grid { grid-template-columns:1fr 1fr; }
-        .stat-cell { padding:30px 12px 6px; }
-        .stat-cell + .stat-cell { border-left:none; }
-        .stat-cell:nth-child(even) { border-left:1px solid var(--line); }
-        .stat-cell:nth-child(n+3) { border-top:1px solid var(--line); margin-top:28px; }
-        .stat-cell:nth-child(5) { grid-column:1 / -1; border-left:none; }
-        .rp-body { grid-template-columns:1fr; text-align:center; gap:20px; }
-        .rp-divider { width:70px; height:1px; align-self:center; margin:0 auto; }
+        .hero-copy { text-align:center; }
+        .hero h1 { margin: 0 auto; }
+        .hero-flourish { justify-content: center; }
+        .hero .lead { margin: 0 auto 40px; }
+        .hero-actions { justify-content: center; }
+        .stats-grid { grid-template-columns:1fr 1fr; gap: 40px 20px; }
+        .stat-cell:not(:last-child)::after { display: none; }
+        .rp-body { grid-template-columns:1fr; text-align:center; gap:24px; }
+        .rp-divider { width:60px; height:1px; align-self:center; margin:0 auto; }
         .rp-arrow { margin:0 auto; }
         .tag-row-lang, .tag-row-grid4 { grid-template-columns:repeat(3,1fr); }
-        .process-grid { grid-template-columns:1fr 1fr; gap:66px 34px; }
+        .process-grid { grid-template-columns:1fr 1fr; gap:60px 30px; }
         .faq-grid { grid-template-columns:1fr; gap:40px; }
-        .faq-left { position:static; }
-        .contact-grid { grid-template-columns:1fr; gap:50px; }
+        .faq-left { position:static; text-align: center; }
+        .faq-left p { margin: 24px auto 32px; }
+        .contact-grid { grid-template-columns:1fr; gap:60px; }
+        .contact h2 { text-align: center; }
+        .contact-loc { text-align: center; }
+        .contact-note { margin: 0 auto 48px; text-align: center; }
         .contact-cta-row { grid-template-columns:1fr 1fr; }
-        section { padding:84px 0; }
+        section { padding:100px 0; }
     }
     @media (max-width:600px) {
         .process-grid { grid-template-columns:1fr; }
-        .stat-value { font-size:2.7rem; }
-        .foot-info-grid { grid-template-columns:1fr; gap:30px; }
+        .stat-value { font-size:2.5rem; }
+        .foot-info-grid { grid-template-columns:1fr; gap:40px; }
         .brand-sub { display:none; }
-        .svc-head h3 { font-size:1.6rem; }
+        .svc-head h3 { font-size:1.8rem; }
         .tag-row-lang, .tag-row-grid4 { grid-template-columns:repeat(2,1fr); }
+        .contact-cta-row { grid-template-columns:1fr; }
     }
 </style>
 </head>
 <body>
-<a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+
+<div class="noise-overlay"></div>
+
+<a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
 
 <header>
     <div class="container bismillah-bar">
         <span class="top-meta">Fatih, İstanbul — Est. 2014</span>
         <a class="bis-link" href="https://www.youtube.com/watch?v=_bjK1bQFXkI" target="_blank" rel="noopener"><span class="bis">&#65021;</span></a>
         <span class="lang-switch">
-            <a href="#" class="lang-current">EN</a> / 
-            <a href="tr/">Türkçe</a> / 
-            <a href="ru/">Русский</a> / 
-            <a href="ar/">عربي</a> / 
+            <a href="#" class="lang-current">EN</a> /
+            <a href="tr/">Türkçe</a> /
+            <a href="ru/">Русский</a> /
+            <a href="ar/">عربي</a> /
             <a href="zh/">中文</a>
         </span>
     </div>
@@ -227,7 +278,9 @@
             </ul>
         </nav>
         <div class="nav-right">
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navList"><span></span><span></span><span></span></button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navList">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </div>
 </header>
@@ -235,13 +288,13 @@
 <section class="hero" id="home">
     <div class="container hero-grid">
         <div class="hero-copy">
-            <div class="eyebrow">We're located in Fatih, İstanbul — providing Notary Public services since 2014</div>
-            <h1>The Ultimate Stamp of <em>Trust</em>, Recognized by Authorities Worldwide.</h1>
-            <div class="hero-flourish" aria-hidden="true">&#9670;</div>
-            <p class="lead">Certified translation, notarization and apostille legalization — arranged simply over WhatsApp, prepared with care, and delivered to your door. Wherever you are, this is all it takes.</p>
-            <div class="hero-actions">
-                <a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="btn-gold">Chat via WhatsApp Now — Free Quote &nbsp;&rarr;</a>
-                <a href="#services" class="btn-outline">See What We Handle</a>
+            <div class="eyebrow reveal-up">We're located in Fatih, İstanbul — providing Notary Public services since 2014</div>
+            <h1 class="reveal-up">The Ultimate Stamp of <em>Trust</em>, Recognized by Authorities Worldwide.</h1>
+            <div class="hero-flourish reveal-up" aria-hidden="true">&#9670;</div>
+            <p class="lead reveal-up">Certified translation, notarization and apostille legalization — arranged simply over WhatsApp, prepared with care, and delivered to your door. Wherever you are, this is all it takes.</p>
+            <div class="hero-actions reveal-up">
+                <a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="btn-gold magnetic-btn">Chat via WhatsApp Now &nbsp;&rarr;</a>
+                <a href="#services" class="btn-outline magnetic-btn">See What We Handle</a>
             </div>
         </div>
     </div>
@@ -250,13 +303,13 @@
 <div class="stats-bar">
     <div class="container">
         <div class="stats-grid">
-            <div class="stat-cell"><div class="stat-value">500+</div><div class="stat-key">Happy Real Customers</div></div>
-            <div class="stat-cell"><div class="stat-value">55+</div><div class="stat-key">Languages Certified</div></div>
-            <div class="stat-cell"><div class="stat-value">92</div><div class="stat-key">Apostille Countries</div></div>
-            <div class="stat-cell"><div class="stat-value">2014</div><div class="stat-key">Serving Since</div></div>
-            <div class="stat-cell"><div class="stat-value">24/7</div><div class="stat-key">Translation Priority</div></div>
+            <div class="stat-cell reveal-up"><div class="stat-value">500+</div><div class="stat-key">Happy Real Customers</div></div>
+            <div class="stat-cell reveal-up"><div class="stat-value">55+</div><div class="stat-key">Languages Certified</div></div>
+            <div class="stat-cell reveal-up"><div class="stat-value">92</div><div class="stat-key">Apostille Countries</div></div>
+            <div class="stat-cell reveal-up"><div class="stat-value">2014</div><div class="stat-key">Serving Since</div></div>
+            <div class="stat-cell reveal-up"><div class="stat-value">24/7</div><div class="stat-key">Translation Priority</div></div>
         </div>
-        <div class="rating-plaque">
+        <div class="rating-plaque reveal-up">
             <div class="rp-top"><script defer async src='https://cdn.trustindex.io/loader.js?3b622c67958b841f6c46f0e017b'></script></div>
             <div class="rp-body">
                 <div class="rp-score">4.9<em>/5</em></div>
@@ -265,31 +318,32 @@
                     <div class="rp-main">Rated <b>4.9/5</b> by 500+ global clients &nbsp;·&nbsp; 92 countries</div>
                     <div class="rp-sub">Read our reviews on Google Business — <a class="g-url" href="https://g.page/translation.istanbul" target="_blank" rel="noopener">g.page/translation.istanbul</a></div>
                 </div>
-                <a class="rp-arrow" href="https://g.page/translation.istanbul" target="_blank" rel="noopener">&rarr;</a>
+                <a class="rp-arrow magnetic-btn" href="https://g.page/translation.istanbul" target="_blank" rel="noopener">&rarr;</a>
             </div>
         </div>
-        <div class="cert-slot"><script defer async src='https://cdn.trustindex.io/loader-cert.js?529eae479b1284067046d5021fa'></script></div>
+        <div class="cert-slot reveal-up" style="margin-top:40px;"><script defer async src='https://cdn.trustindex.io/loader-cert.js?529eae479b1284067046d5021fa'></script></div>
     </div>
 </div>
 
 <section id="services">
     <div class="container">
-        <div class="chap" style="justify-content:center;"><span class="chap-num">I</span><span class="chap-line"></span><span class="eyebrow">Services</span></div>
-        <h2 class="disp" style="text-align:center;">What We Certify</h2>
+        <div class="chap reveal-up" style="justify-content:center;"><span class="chap-num">I</span><span class="chap-line"></span><span class="eyebrow">Services</span></div>
+        <h2 class="disp reveal-up" style="text-align:center;">What We Certify</h2>
         <div class="svc-list">
-            <div class="svc-row svc-row-featured">
+            <div class="svc-row svc-row-featured reveal-up">
+                <span class="badge-new">New · Fully Online</span>
                 <div class="svc-num">№ 01</div>
-                <div class="svc-head"><h3>E-Apostille Worldwide — Online Apostille Certification</h3><span class="svc-tag">100% Remote · No Travel Needed</span></div>
-                <p>Turkey's first fully remote apostille service. Send a scanned copy, verify authenticity on a live video call, and we certify it with an apostille and deliver it to your country. Any original, genuine document qualifies.</p>
+                <div class="svc-head"><h3>E-Apostille Worldwide</h3><span class="svc-tag">100% Remote · No Travel Needed</span></div>
+                <p>Turkey's first fully remote apostille service, modeled on the trusted US online notary public standard. Send a scanned copy of your document, verify its authenticity on a live video call, and we certify it with an apostille and deliver it to your country — even outside of Turkey.</p>
                 <div class="tag-row">
-                    <a class="tag tag-cta" href="e-apostille.html">E-Apostille Worldwide — More Information &nbsp;&rarr;</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+want+to+book+an+E-Apostille+video+call+appointment" target="_blank" rel="noopener">Book Verification Video Call</a>
+                    <a class="tag tag-cta magnetic-btn" href="e-apostille.html">E-Apostille Worldwide — More Information &nbsp;&rarr;</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+want+to+book+an+E-Apostille+video+call+appointment" target="_blank" rel="noopener">Book Verification Video Call</a>
                 </div>
                 <span class="flag">E-Apostille requires a live verification video call plus a recorded video of the document from every side — strictly by appointment. Certified PDF in 1–2 working days; apostilled hard copy delivered worldwide in 3–7 business days.</span>
             </div>
-            <div class="svc-row">
+            <div class="svc-row reveal-up">
                 <div class="svc-num">№ 02</div>
-                <div class="svc-head"><h3>Sworn / Certified Translation &amp; Notarization</h3><span class="svc-tag">Legal Certification</span></div>
+                <div class="svc-head"><h3>Sworn / Certified Translation</h3><span class="svc-tag">Legal Certification</span></div>
                 <p>Sworn (Yeminli) translation, officially accepted by Turkish notaries, courts and consulates — prepared by legal linguists with 10–20 years of experience. Handled 24/7.</p>
                 <div class="tag-row tag-row-lang">
                     <span class="tag">Arabic</span><span class="tag">English</span><span class="tag">Russian</span><span class="tag">Turkish</span><span class="tag">German</span><span class="tag">French</span>
@@ -297,68 +351,68 @@
                     <span class="tag">Chinese</span><span class="tag">Dutch</span><span class="tag">Greek</span><span class="tag">Bulgarian</span><span class="tag">Romanian</span><span class="tag">Polish</span>
                 </div>
             </div>
-            <div class="svc-row">
+            <div class="svc-row reveal-up">
                 <div class="svc-num">№ 03</div>
-                <div class="svc-head"><h3>Powers of Attorney, Consent Letters &amp; Affidavits</h3><span class="svc-tag">Notarial Acts</span></div>
+                <div class="svc-head"><h3>Powers of Attorney & Affidavits</h3><span class="svc-tag">Notarial Acts</span></div>
                 <p>Bilingual drafting, certified by Notary Public &amp; Apostille, to be valid around the world — tap your workflow below and ask for a sample of our work.</p>
                 <div class="tag-row tag-row-grid4">
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Property+Purchase+or+Sale+Power+of+Attorney" target="_blank" rel="noopener">Property Purchase / Sale</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Vehicle+Purchase+or+Sale+Power+of+Attorney" target="_blank" rel="noopener">Vehicle Purchase / Sale</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Power+of+Attorney+to+Drive+a+Car+Abroad" target="_blank" rel="noopener">Driving a Car Abroad</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Turkish+University+Registration+Power+of+Attorney" target="_blank" rel="noopener">University Registration</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Bank+%26+Financial+Power+of+Attorney" target="_blank" rel="noopener">Bank &amp; Financial</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Company+Formation+Power+of+Attorney" target="_blank" rel="noopener">Company Formation</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Residence+Permit+Power+of+Attorney" target="_blank" rel="noopener">Residence Permit</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Divorce+Power+of+Attorney" target="_blank" rel="noopener">Divorce</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+to+Revoke+a+Power+of+Attorney" target="_blank" rel="noopener">Revoke Power of Attorney</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Marriage+Eligibility+%28Celibacy%29+Certificate" target="_blank" rel="noopener">Marriage Eligibility Certificate</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Child+Travel+Consent+Letter" target="_blank" rel="noopener">Child Travel Consent Letter</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+Commercial+Contract+Notarization" target="_blank" rel="noopener">Commercial Contract Notarization</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Property+Purchase+or+Sale+Power+of+Attorney" target="_blank" rel="noopener">Property Purchase / Sale</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Vehicle+Purchase+or+Sale+Power+of+Attorney" target="_blank" rel="noopener">Vehicle Purchase / Sale</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Power+of+Attorney+to+Drive+a+Car+Abroad" target="_blank" rel="noopener">Driving a Car Abroad</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Turkish+University+Registration+Power+of+Attorney" target="_blank" rel="noopener">University Registration</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Bank+%26+Financial+Power+of+Attorney" target="_blank" rel="noopener">Bank &amp; Financial</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Company+Formation+Power+of+Attorney" target="_blank" rel="noopener">Company Formation</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Residence+Permit+Power+of+Attorney" target="_blank" rel="noopener">Residence Permit</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Divorce+Power+of+Attorney" target="_blank" rel="noopener">Divorce</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+to+Revoke+a+Power+of+Attorney" target="_blank" rel="noopener">Revoke Power of Attorney</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Marriage+Eligibility+%28Celibacy%29+Certificate" target="_blank" rel="noopener">Marriage Eligibility Certificate</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Child+Travel+Consent+Letter" target="_blank" rel="noopener">Child Travel Consent Letter</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+Commercial+Contract+Notarization" target="_blank" rel="noopener">Commercial Contract Notarization</a>
                 </div>
                 <span class="flag">Please note: while our new E-Apostille service is fully online, a Power of Attorney can never be done online — Turkish law requires you to sign in person at our notary office. Message us on WhatsApp first and we will book your appointment.</span>
             </div>
-            <div class="svc-row">
+            <div class="svc-row reveal-up">
                 <div class="svc-num">№ 04</div>
-                <div class="svc-head"><h3>VIP Fast-Track Marriage in Turkey</h3><span class="svc-tag">Apostille-Certified &amp; Globally Recognized</span></div>
-                <p>Getting married in Turkey as a foreign couple? Our VIP fast-track marriage service manages everything — from the first consultation to the issuance of your apostilled Family Book, fully legalized and recognized worldwide.</p>
-                <div class="tag-row"><a class="tag tag-cta" href="getting-married-in-turkey.html">Getting Married in Turkey — For More Information &nbsp;&rarr;</a></div>
+                <div class="svc-head"><h3>VIP Fast-Track Marriage</h3><span class="svc-tag">Apostille-Certified &amp; Globally Recognized</span></div>
+                <p>Getting married in Turkey as a foreign couple? Our VIP fast-track marriage service manages everything — from the first consultation and document preparation to the issuance of your apostilled Family Book, fully legalized and recognized worldwide.</p>
+                <div class="tag-row"><a class="tag tag-cta magnetic-btn" href="getting-married-in-turkey.html">Getting Married in Turkey — More Info &nbsp;&rarr;</a></div>
             </div>
-            <div class="svc-row">
+            <div class="svc-row reveal-up">
                 <div class="svc-num">№ 05</div>
-                <div class="svc-head"><h3>Apostille &amp; Consular Legalization</h3><span class="svc-tag">Global Authentication</span></div>
+                <div class="svc-head"><h3>Apostille & Consular Legalization</h3><span class="svc-tag">Global Authentication</span></div>
                 <p>Apostille legalization recognized across 92 Hague Convention countries, typically completed in 1–3 working days. For non-Hague destinations, we handle consular legalization directly with consulates in Istanbul and embassies in Ankara.</p>
                 <div class="tag-row">
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+an+Apostille+Certificate" target="_blank" rel="noopener">Apostille Certificate</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+Consular+Legalization" target="_blank" rel="noopener">Consular Legalization</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+Embassy+Attestation" target="_blank" rel="noopener">Embassy Attestation</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+Governorship+of+Istanbul+Legalization" target="_blank" rel="noopener">Governorship of Istanbul Legalization</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+Ministry+of+Foreign+Affairs+Legalization" target="_blank" rel="noopener">Ministry of Foreign Affairs (Ankara)</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+an+Apostille+Certificate" target="_blank" rel="noopener">Apostille Certificate</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+Consular+Legalization" target="_blank" rel="noopener">Consular Legalization</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+Embassy+Attestation" target="_blank" rel="noopener">Embassy Attestation</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+Governorship+of+Istanbul+Legalization" target="_blank" rel="noopener">Governorship of Istanbul Legalization</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+Ministry+of+Foreign+Affairs+Legalization" target="_blank" rel="noopener">Ministry of Foreign Affairs (Ankara)</a>
                 </div>
             </div>
-            <div class="svc-row">
+            <div class="svc-row reveal-up">
                 <div class="svc-num">№ 06</div>
-                <div class="svc-head"><h3>University Enrollment &amp; Student Permits</h3><span class="svc-tag">Academic &amp; Immigration</span></div>
+                <div class="svc-head"><h3>University Enrollment & Student Permits</h3><span class="svc-tag">Academic & Immigration</span></div>
                 <p>We coordinate admission letters, course registration, dormitory paperwork and student residence permits — from your first acceptance email to your first day of class.</p>
                 <div class="tag-row">
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+help+with+University+Admission" target="_blank" rel="noopener">University Admission</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+help+with+Course+Registration" target="_blank" rel="noopener">Course Registration</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Student+Residence+Permit" target="_blank" rel="noopener">Student Residence Permit</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+help+with+Health+Insurance+Registration" target="_blank" rel="noopener">Health Insurance Registration</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+help+with+Transcript+Equivalency" target="_blank" rel="noopener">Transcript Equivalency</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+help+with+University+Admission" target="_blank" rel="noopener">University Admission</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+help+with+Course+Registration" target="_blank" rel="noopener">Course Registration</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Student+Residence+Permit" target="_blank" rel="noopener">Student Residence Permit</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+help+with+Health+Insurance+Registration" target="_blank" rel="noopener">Health Insurance Registration</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+help+with+Transcript+Equivalency" target="_blank" rel="noopener">Transcript Equivalency</a>
                 </div>
             </div>
-            <div class="svc-row">
+            <div class="svc-row reveal-up">
                 <div class="svc-num">№ 07</div>
-                <div class="svc-head"><h3>Fingerprints &amp; Photo Certification</h3><span class="svc-tag">Identity Verification</span></div>
+                <div class="svc-head"><h3>Fingerprints & Photo Certification</h3><span class="svc-tag">Identity Verification</span></div>
                 <p>Fingerprint cards accepted for background checks, visa applications and security clearances; true-likeness photos meeting biometric passport and visa standards — ready same day.</p>
                 <div class="tag-row">
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+Fingerprinting+for+a+Visa+Application" target="_blank" rel="noopener">Visa Fingerprinting</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+Fingerprinting+for+a+Background+Check" target="_blank" rel="noopener">Background Check</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Biometric+Passport+Photo" target="_blank" rel="noopener">Biometric Passport Photo</a>
-                    <a class="tag tag-link" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Visa+Photo" target="_blank" rel="noopener">Visa Photo</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+Fingerprinting+for+a+Visa+Application" target="_blank" rel="noopener">Visa Fingerprinting</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+Fingerprinting+for+a+Background+Check" target="_blank" rel="noopener">Background Check</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Biometric+Passport+Photo" target="_blank" rel="noopener">Biometric Passport Photo</a>
+                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Visa+Photo" target="_blank" rel="noopener">Visa Photo</a>
                 </div>
             </div>
-            <div class="svc-row">
+            <div class="svc-row reveal-up">
                 <div class="svc-num">№ 08</div>
                 <div class="svc-head"><h3>Worldwide Courier</h3><span class="svc-tag">Delivery</span></div>
                 <p>Every finished document is packed, tracked and insured for the journey — then delivered with care to your door, anywhere in Turkey or across the world, usually within 2 to 7 business days.</p>
@@ -370,38 +424,38 @@
 
 <section class="process" id="process">
     <div class="container">
-        <div class="chap" style="justify-content:center;"><span class="chap-num">II</span><span class="chap-line"></span><span class="eyebrow">Process</span></div>
-        <h2 class="disp" style="margin:0 auto; text-align:center;">A<br>Procedure<br>Without<br>Surprises</h2>
+        <div class="chap reveal-up" style="justify-content:center;"><span class="chap-num">II</span><span class="chap-line"></span><span class="eyebrow">Process</span></div>
+        <h2 class="disp reveal-up" style="margin:0 auto; text-align:center;">A Procedure Without Surprises</h2>
         <div class="process-grid">
-            <div class="step" data-n="1"><div class="step-top"><span class="step-line"></span><span class="step-dot"></span><span class="step-line"></span></div><h3>Send Your Document</h3><p>Share a photo or scan over WhatsApp. We confirm scope, fee and timing in one reply.</p></div>
-            <div class="step" data-n="2"><div class="step-top"><span class="step-line"></span><span class="step-dot"></span><span class="step-line"></span></div><h3>Certified Translation</h3><p>A sworn linguist prepares the text; a second reader verifies names, dates and figures.</p></div>
-            <div class="step" data-n="3"><div class="step-top"><span class="step-line"></span><span class="step-dot"></span><span class="step-line"></span></div><h3>Notary &amp; Apostille</h3><p>We attend the Notary Public and Governorship on your behalf. Signatures needing your presence are booked by appointment.</p></div>
-            <div class="step" data-n="4"><div class="step-top"><span class="step-line"></span><span class="step-dot"></span><span class="step-line"></span></div><h3>Delivered Worldwide</h3><p>Receive your documents by DHL, FedEx or UPS with tracking — no office visit needed.</p></div>
+            <div class="step reveal-up" data-n="1"><div class="step-top"><span class="step-line"></span><span class="step-dot"></span><span class="step-line"></span></div><h3>Send Your Document</h3><p>Share a photo or scan over WhatsApp. We confirm scope, fee and timing in one reply.</p></div>
+            <div class="step reveal-up" data-n="2"><div class="step-top"><span class="step-line"></span><span class="step-dot"></span><span class="step-line"></span></div><h3>Certified Translation</h3><p>A sworn linguist prepares the text; a second reader verifies names, dates and figures.</p></div>
+            <div class="step reveal-up" data-n="3"><div class="step-top"><span class="step-line"></span><span class="step-dot"></span><span class="step-line"></span></div><h3>Notary & Apostille</h3><p>We attend the Notary Public and Governorship on your behalf. Signatures needing your presence are booked by appointment.</p></div>
+            <div class="step reveal-up" data-n="4"><div class="step-top"><span class="step-line"></span><span class="step-dot"></span><span class="step-line"></span></div><h3>Delivered Worldwide</h3><p>Receive your documents by DHL, FedEx or UPS with tracking — no office visit needed.</p></div>
         </div>
     </div>
 </section>
 
 <section class="reviews" id="reviews">
     <div class="container">
-        <div class="chap" style="justify-content:center;"><span class="chap-num">III</span><span class="chap-line"></span><span class="eyebrow">Reviews</span></div>
-        <h2 class="disp" style="text-align:center;">The Verdict of Our Clients</h2>
-        <div class="head-sub" style="text-align:center;">Live from our Google profile · 500+ reviews · ★★★★★ 4.9 / 5</div>
-        <div class="gpage-frame">
+        <div class="chap reveal-up" style="justify-content:center;"><span class="chap-num">III</span><span class="chap-line"></span><span class="eyebrow">Reviews</span></div>
+        <h2 class="disp reveal-up" style="text-align:center;">The Verdict of Our Clients</h2>
+        <div class="head-sub reveal-up" style="text-align:center; font-family:var(--mono); font-size:1rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-top:16px;">Live from our Google profile · 500+ reviews · ★★★★★ 4.9 / 5</div>
+        <div class="gpage-frame reveal-up">
             <div class="quote-mark" aria-hidden="true">&ldquo;</div>
             <p>Thanks to Google's kind short-link service, our office has its own easy-to-remember address on the map — <a class="glink" href="https://g.page/translation.istanbul" target="_blank" rel="noopener">g.page/translation.istanbul</a> — so clients from 92 countries can reach us in a single tap. Every kind word shared there is a trust we honor.</p>
-            <a href="reviews.html" class="btn-outline">Read All Reviews on Our Dedicated Page</a>
+            <a href="reviews.html" class="btn-outline magnetic-btn">Read All Reviews on Our Dedicated Page</a>
         </div>
-        <div class="follow-ig">
+        <div class="follow-ig reveal-up">
             <div class="follow-ig-item">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
                 <span>Follow <strong>@TAC_NOTARY_IST</strong> on Instagram for updates, stories and behind-the-scenes of our daily work.</span>
-                <a href="https://www.instagram.com/tac_notary_ist/" target="_blank" rel="noopener" class="btn-outline">Follow on Instagram</a>
+                <a href="https://www.instagram.com/tac_notary_ist/" target="_blank" rel="noopener" class="btn-outline magnetic-btn">Follow on Instagram</a>
             </div>
             <div class="follow-ig-divider"></div>
             <div class="follow-ig-item">
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9z"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9z"/></svg>
                 <span>Prefer Telegram? Message <strong>@TAC_NOTARY_IST</strong> any time — we reply promptly, day or night.</span>
-                <a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener" class="btn-outline">Message on Telegram</a>
+                <a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener" class="btn-outline magnetic-btn">Message on Telegram</a>
             </div>
         </div>
     </div>
@@ -409,23 +463,23 @@
 
 <section class="fade-in" id="faq">
     <div class="container faq-grid">
-        <div class="faq-left">
+        <div class="faq-left reveal-up">
             <div class="chap"><span class="chap-num">IV</span><span class="chap-line"></span><span class="eyebrow">Questions</span></div>
-            <h2 class="disp">Asked &amp; Answered</h2>
+            <h2 class="disp">Asked & Answered</h2>
             <p>Everything our guests usually wish to know before their first message — answered plainly, without surprises.</p>
-            <a href="faq.html" class="btn-gold">View All FAQs &nbsp;&rarr;</a>
+            <a href="faq.html" class="btn-gold magnetic-btn">View All FAQs &nbsp;&rarr;</a>
         </div>
         <div>
-            <details class="faq-item"><summary>Do I need to visit your office in person?</summary><div class="faq-a">No office visit is necessary. We handle all document reviews, cost estimates, and consultations fully online via WhatsApp. Once confirmed, we share our exact office address with a scheduled appointment. And with our new E-Apostille service, eligible documents are verified by video call and apostilled entirely online.</div></details>
-            <details class="faq-item"><summary>How long does the apostille process take in Istanbul?</summary><div class="faq-a">Most documents are completed within 1–3 working days. With E-Apostille, your certified PDF is ready in 1–2 working days and the hard copy reaches your country in 3–7 business days.</div></details>
-            <details class="faq-item"><summary>Do I need to be present in person for a Power of Attorney?</summary><div class="faq-a">Yes. Turkish notaries require the person granting the power of attorney to sign in front of the Notary Public in person — this is a legal requirement, not a formality we can skip, and no Power of Attorney can be done online.</div></details>
+            <details class="faq-item reveal-up"><summary>Do I need to visit your office in person?</summary><div class="faq-a">No office visit is necessary. To keep our processing fast and efficient, we handle all document reviews, cost estimates, and consultations fully online via WhatsApp. Once we review your documents and confirm your project details, we will provide our exact office address along with a scheduled appointment for physical document drop-off or pickup. And with our new <strong>E-Apostille</strong> service, eligible documents are verified by video call and apostilled entirely online.<br><br><strong>Our 3-Step Process:</strong><br><br>1. <strong>Send Documents:</strong> Share a clear photo or scan via WhatsApp for a quick document audit and price quote.<br><br>2. <strong>Approval & Scheduling:</strong> Once agreed, we schedule your in-person appointment or proceed remotely.<br><br>3. <strong>Legalization & Delivery:</strong> We complete all Notary Public and Governorship attestations on your behalf and deliver finished documents worldwide via DHL, FedEx, or UPS.</div></details>
+            <details class="faq-item reveal-up"><summary>How long does the apostille process take in Istanbul?</summary><div class="faq-a">Most documents are completed within 1–3 working days. With E-Apostille, your certified PDF is ready in 1–2 working days and the hard copy reaches your country in 3–7 business days. Urgent same-day handling is possible for certain procedures — confirm on WhatsApp and we will reply with the exact timing and fee in one message.</div></details>
+            <details class="faq-item reveal-up"><summary>Do I need to be present in person for a Power of Attorney?</summary><div class="faq-a">Yes. Turkish notaries require the person granting the power of attorney to sign in front of the Notary Public in person — this is a legal requirement, not a formality we can skip, and no Power of Attorney can be done online. Message us on WhatsApp first so we can confirm the document, book your appointment slot and avoid any waiting when you arrive.</div></details>
         </div>
     </div>
 </section>
 
 <section class="contact" id="contact">
     <div class="container contact-grid">
-        <div>
+        <div class="reveal-up">
             <div class="chap"><span class="chap-num">V</span><span class="chap-line"></span><span class="eyebrow">Contact</span></div>
             <h2>Start on WhatsApp</h2>
             <div class="contact-loc">Fatih, İstanbul</div>
@@ -435,37 +489,37 @@
             <div class="c-sub"><a href="mailto:notarypublic.istanbul@gmail.com">notarypublic.istanbul@gmail.com</a></div>
             <div class="c-hours">
                 <div class="c-big-label">Hours</div>
-                <div class="c-sub" style="margin-top:0; font-size:1.45rem; color:#f7f1e4; font-weight:600;">Mon–Fri: 09:00 – 17:00</div>
+                <div class="c-sub" style="margin-top:0; font-size:1.2rem; color:var(--cream); font-weight:500;">Mon–Fri: 09:00 – 17:00</div>
                 <div class="c-sub">Translation: 24/7 Priority</div>
             </div>
             <div class="contact-cta-row">
-                <a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="btn-ink">WhatsApp</a>
-                <a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener" class="btn-ink">Telegram</a>
-                <a href="https://ig.me/m/tac_notary_ist" target="_blank" rel="noopener" class="btn-ink">Instagram</a>
-                <a href="mailto:notarypublic.istanbul@gmail.com" class="btn-ink">Email</a>
+                <a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="btn-ink magnetic-btn">WhatsApp</a>
+                <a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener" class="btn-ink magnetic-btn">Telegram</a>
+                <a href="https://ig.me/m/tac_notary_ist" target="_blank" rel="noopener" class="btn-ink magnetic-btn">Instagram</a>
+                <a href="mailto:notarypublic.istanbul@gmail.com" class="btn-ink magnetic-btn">Email</a>
             </div>
         </div>
-        <div class="wa-card">
+        <div class="wa-card reveal-up">
             <h3>Every Quote, Prepared With Care</h3>
             <p>Because every document is unique, we prepare your quote personally — simply share a photo on WhatsApp and we will reply the same day with cost and timing. And if you are a student, or going through a difficult financial moment, please tell us: it is our honor to offer a considerate, reduced rate. Careful service belongs to everyone.</p>
-            <a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="btn-outline">Open WhatsApp Chat</a>
+            <a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="btn-outline magnetic-btn">Open WhatsApp Chat</a>
         </div>
     </div>
 </section>
 
 <footer>
     <div class="container">
-        <div class="foot-brand">
+        <div class="foot-brand reveal-up">
             <span class="foot-brand-line">TAÇ Certified &amp; Sworn Translation</span>
             <span class="foot-brand-line">Notary Public &amp; Apostille Services</span>
         </div>
-        <div class="footer-socials">
+        <div class="footer-socials reveal-up">
             <a href="https://www.instagram.com/tac_notary_ist/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg></a>
             <a href="https://tr.linkedin.com/company/notarypublic-istanbul" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v1.5"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
             <a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9z"/></svg></a>
             <a href="mailto:notarypublic.istanbul@gmail.com" aria-label="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
         </div>
-        <div class="foot-info-grid">
+        <div class="foot-info-grid reveal-up">
             <div class="foot-info">
                 <div class="foot-info-title">Feedback &amp; Complaints</div>
                 <p>We're always looking to improve — share complaints, suggestions or feedback anytime. Every message is kept confidential.</p>
@@ -477,15 +531,59 @@
                 <a href="mailto:business@notarypublic.istanbul">business@notarypublic.istanbul</a>
             </div>
         </div>
-        <div class="foot-line">© 2026 TAC Translation, Notary Public &amp; Apostille Services — Fatih, İstanbul</div>
-        <div class="foot-line">notarypublic.istanbul · g.page/translation.istanbul</div>
+        <div class="foot-line reveal-up">© 2026 TAC Translation, Notary Public &amp; Apostille Services — Fatih, İstanbul</div>
+        <div class="foot-line reveal-up">notarypublic.istanbul · g.page/translation.istanbul</div>
     </div>
 </footer>
 
 <script>
+    // 1. Lenis Smooth Scroll (Buttery smooth feel)
+    const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+
+    // 2. GSAP Scroll Reveals (Cinematic fade-up)
+    gsap.registerPlugin(ScrollTrigger);
+    const revealElements = document.querySelectorAll('.reveal-up');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // 3. Magnetic Button Effect
+    const magneticBtns = document.querySelectorAll('.magnetic-btn');
+    magneticBtns.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            gsap.to(btn, { x: x * 0.3, y: y * 0.3, duration: 0.3, ease: "power2.out" });
+        });
+        btn.addEventListener('mouseleave', () => {
+            gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: "elastic.out(1, 0.3)" });
+        });
+    });
+
+    // 4. Mobile Menu Toggle
     const navToggle = document.getElementById('navToggle');
     const navList = document.getElementById('navList');
-    navToggle.addEventListener('click', () => { const open = navList.classList.toggle('nav-open'); navToggle.setAttribute('aria-expanded', open ? 'true' : 'false'); });
+    navToggle.addEventListener('click', () => { 
+        navToggle.classList.toggle('active');
+        const open = navList.classList.toggle('nav-open'); 
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false'); 
+    });
+    navList.querySelectorAll('a').forEach(link => { 
+        link.addEventListener('click', () => { 
+            navList.classList.remove('nav-open'); 
+            navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false'); 
+        }); 
+    });
 </script>
 </body>
 </html>
