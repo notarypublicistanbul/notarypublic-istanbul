@@ -6,46 +6,67 @@
 <meta name="theme-color" content="#0d0b09">
 <meta name="robots" content="index, follow">
 <title>Client Reviews | TAC Notary Public Istanbul</title>
-<meta name="description" content="500+ five-star Google reviews from clients in 92 countries. Rated 4.9/5 for Certified Translation, Apostille & Notary Public services in Fatih, Istanbul.">
+<meta name="description" content="500+ five-star reviews from clients in 92 countries. Read what our clients say about our notary, apostille and translation services in Fatih, Istanbul.">
 <link rel="canonical" href="https://notarypublic.istanbul/reviews.html">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230d0b09'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Georgia,serif' font-size='54' font-weight='700' fill='%23c8a25a'%3ET%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=optional" rel="stylesheet">
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <style>
-    :root { --ink:#0d0b09; --ink-2:#141110; --card:#110e0b; --line:rgba(242,236,222,0.12); --gold:#c8a25a; --gold-2:#ecd08a; --ox:#9a2c22; --ox-soft:rgba(154,44,34,0.16); --cream:#f4eee0; --muted:#a99f8d; --disp:'EB Garamond','Garamond',Georgia,serif; --mono:'IBM Plex Mono',monospace; }
-    * { margin:0; padding:0; box-sizing:border-box; } html { scroll-behavior:smooth; }
-    body { font-family:var(--disp); font-size:21px; background:var(--ink); color:var(--cream); line-height:1.75; overflow-x:hidden; -webkit-font-smoothing:antialiased; }
-    a { text-decoration:none; color:inherit; transition:color .25s ease; }
-    ::selection { background:var(--gold); color:#171207; }
+    :root { --ink:#080706; --ink-2:#0f0e0d; --card:#110e0b; --line:rgba(242,236,222,0.08); --gold:#c8a25a; --gold-2:#ecd08a; --gold-glow:rgba(200, 162, 90, 0.15); --ox:#9a2c22; --ox-soft:rgba(154,44,34,0.16); --cream:#f4eee0; --muted:#a99f8d; --disp:'EB Garamond','Garamond',Georgia,serif; --mono:'IBM Plex Mono',monospace; }
+    * { margin:0; padding:0; box-sizing:border-box; } html { scroll-behavior: auto; }
+    body { font-family:var(--disp); font-size:21px; background:var(--ink); color:var(--cream); line-height:1.75; overflow-x:hidden; -webkit-font-smoothing:antialiased; position: relative; }
+    a { text-decoration:none; color:inherit; transition:color .4s cubic-bezier(0.16, 1, 0.3, 1); }
+    ::selection { background:var(--gold); color:#080706; }
     .container { max-width:1200px; margin:0 auto; padding:0 24px; }
-    section { padding:110px 0; scroll-margin-top:120px; }
-    .eyebrow { font-family:var(--mono); font-size:1.25rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); }
-    .chap { display:flex; align-items:center; gap:18px; margin-bottom:22px; justify-content:center; }
-    .chap-num { font-family:var(--mono); font-size:1.2rem; color:var(--ox); border:1px solid rgba(154,44,34,0.5); padding:4px 10px; }
-    .chap-line { width:54px; height:1px; background:var(--gold); }
-    h1.disp { font-family:var(--disp); font-style:italic; font-weight:400; color:var(--gold-2); font-size:clamp(2.4rem,4.4vw,3.6rem); line-height:1.12; text-transform:uppercase; letter-spacing:0.03em; text-wrap:balance; }
+    section { padding:140px 0; scroll-margin-top:120px; }
+
+    .noise-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9998; opacity: 0.03; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); }
+    .bg-orb { position: fixed; border-radius: 50%; filter: blur(120px); opacity: 0.12; z-index: -1; pointer-events: none; animation: floatOrb 25s infinite alternate ease-in-out; }
+    .bg-orb-1 { width: 600px; height: 600px; background: var(--gold); top: -200px; left: -200px; }
+    .bg-orb-2 { width: 500px; height: 500px; background: var(--ox); bottom: -200px; right: -200px; animation-delay: -12s; }
+    @keyframes floatOrb { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(100px, 80px) scale(1.1); } }
+
+    .eyebrow { font-family:var(--mono); font-size:1.1rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); }
+    .chap { display:flex; align-items:center; gap:18px; margin-bottom:32px; }
+    .chap-num { font-family:var(--mono); font-size:1.1rem; color:var(--ox); border:1px solid rgba(154,44,34,0.4); padding:6px 12px; }
+    .chap-line { width:60px; height:1px; background:var(--gold); }
+    h1.disp, h2.disp { font-family:var(--disp); font-style:italic; font-weight:400; color:var(--gold-2); font-size:clamp(2.4rem,4.4vw,3.6rem); line-height:1.12; text-transform:uppercase; letter-spacing:0.03em; text-wrap:balance; }
     .lead { color:var(--muted); font-size:1.4rem; max-width:820px; margin:18px auto 8px; }
-    header { position:fixed; top:0; left:0; right:0; z-index:1000; background:rgba(13,11,9,0.94); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); border-top:3px solid var(--gold); }
-    .bismillah-bar { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:8px 0; border-bottom:1px solid var(--line); }
-    .bismillah-bar .bis { font-family:Tahoma,'Segoe UI',sans-serif; font-size:1.4rem; color:var(--gold-2); line-height:1; direction:rtl; unicode-bidi:isolate; }
-    .bis-link { display:inline-block; } .bis-link:hover { color:inherit; }
-    .top-meta { font-family:var(--mono); font-size:1rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); }
-    .lang-switch { display:flex; align-items:center; gap:6px; color:var(--muted); font-family:var(--mono); font-size:1.05rem; }
-    .lang-switch a { padding:4px 8px; border:1px solid transparent; }
-    .lang-switch a:hover { color:var(--gold); border-color:var(--line); }
-    .lang-switch .lang-current { color:var(--gold-2); border-color:var(--line); pointer-events:none; }
-    .nav-wrap { display:flex; align-items:center; justify-content:space-between; gap:22px; padding:14px 0; min-height:74px; }
+
+    header { position:fixed; top:0; left:0; right:0; z-index:1000; background:rgba(8,7,6,0.85); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
+    .bismillah-bar { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0; border-bottom:1px solid var(--line); }
+    .bismillah-bar .bis { font-family:Tahoma,'Segoe UI',sans-serif; font-size:1.3rem; color:var(--gold-2); line-height:1; direction:rtl; unicode-bidi:isolate; }
+    .bis-link { display:inline-block; } .bis-link:hover { color:var(--gold); }
+    .top-meta { font-family:var(--mono); font-size:0.9rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); }
+    .lang-switch { display:flex; align-items:center; gap:12px; font-size: 1.4rem; }
+    .lang-switch a { transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); display: inline-block; filter: grayscale(100%) opacity(0.5); }
+    .lang-switch a:hover, .lang-switch a.lang-current { filter: grayscale(0%) opacity(1); transform: scale(1.2); }
+    .nav-wrap { display:flex; align-items:center; justify-content:space-between; gap:22px; padding:18px 0; }
     .brand { display:flex; align-items:center; gap:14px; flex-shrink:0; }
-    .brand-name { display:block; font-family:var(--disp); font-style:italic; font-weight:500; font-size:1.4rem; color:var(--gold-2); line-height:1.1; text-transform:uppercase; letter-spacing:0.05em; white-space:nowrap; }
-    .brand-sub { display:block; font-family:var(--mono); font-size:0.95rem; letter-spacing:0.26em; text-transform:uppercase; color:var(--muted); margin-top:3px; white-space:nowrap; }
-    nav ul { display:flex; align-items:center; gap:22px; list-style:none; }
-    nav ul a { font-family:var(--mono); font-size:1.05rem; letter-spacing:0.08em; text-transform:uppercase; color:#d8d4ca; white-space:nowrap; }
-    nav ul a i { font-style:normal; color:var(--ox); font-size:0.85rem; margin-right:5px; vertical-align:2px; }
+    .brand-name { display:block; font-family:var(--disp); font-style:italic; font-weight:500; font-size:1.3rem; color:var(--gold-2); line-height:1.1; text-transform:uppercase; letter-spacing:0.05em; white-space:nowrap; }
+    .brand-sub { display:block; font-family:var(--mono); font-size:0.85rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--muted); margin-top:4px; }
+    nav ul { display:flex; align-items:center; gap:28px; list-style:none; }
+    nav ul a { font-family:var(--mono); font-size:0.95rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); white-space:nowrap; position: relative; }
+    nav ul a i { font-style:normal; color:var(--ox); font-size:0.8rem; margin-right:6px; vertical-align:1px; }
+    nav ul a::after { content:''; position:absolute; left:0; bottom:-4px; width:0; height:1px; background:var(--gold); transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
     nav ul a:hover, nav ul a.active { color:var(--gold-2); }
+    nav ul a:hover::after { width: 100%; }
     .nav-right { display:flex; align-items:center; gap:16px; flex-shrink:0; }
     .nav-toggle { display:none; width:40px; height:40px; background:none; border:1px solid var(--line); cursor:pointer; flex-direction:column; align-items:center; justify-content:center; gap:6px; }
-    .nav-toggle span { display:block; width:22px; height:1.5px; background:var(--cream); }
-    .btn-outline { display:inline-block; background:transparent; color:var(--cream); font-family:var(--mono); font-size:1.1rem; letter-spacing:0.13em; text-transform:uppercase; padding:18px 30px; border:1px solid var(--line); }
-    .btn-outline:hover { border-color:var(--gold); color:var(--gold); }
+    .nav-toggle span { display:block; width:20px; height:1px; background:var(--cream); transition: all 0.4s ease; }
+    .nav-toggle.active span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
+    .nav-toggle.active span:nth-child(2) { opacity:0; }
+    .nav-toggle.active span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+
+    .btn-gold { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:var(--gold); color:#080706; font-family:var(--mono); font-size:1rem; letter-spacing:0.15em; text-transform:uppercase; font-weight:500; padding:20px 36px; border:1px solid var(--gold); transition: all .5s cubic-bezier(0.16, 1, 0.3, 1); white-space:nowrap; position: relative; overflow: hidden; }
+    .btn-gold::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transition: left 0.6s ease; }
+    .btn-gold:hover::before { left: 100%; }
+    .btn-gold:hover { background:var(--gold-2); border-color:var(--gold-2); transform:translateY(-2px); box-shadow: 0 10px 40px var(--gold-glow); }
+    .btn-outline { display:inline-flex; align-items:center; justify-content:center; background:transparent; color:var(--cream); font-family:var(--mono); font-size:1rem; letter-spacing:0.15em; text-transform:uppercase; padding:20px 36px; border:1px solid var(--line); transition: all .5s cubic-bezier(0.16, 1, 0.3, 1); white-space:nowrap; }
+    .btn-outline:hover { border-color:var(--gold); color:var(--gold); box-shadow: 0 10px 40px rgba(200, 162, 90, 0.05); }
+
     .sub-hero { padding:220px 0 60px; text-align:center; position:relative; overflow:hidden; }
     .sub-hero::before { content:''; position:absolute; inset:0; background:repeating-linear-gradient(90deg, transparent 0 119px, rgba(242,236,222,0.03) 119px 120px); pointer-events:none; }
     .sub-hero .container { position:relative; }
@@ -54,6 +75,8 @@
     .hero-flourish::before { background:linear-gradient(90deg, transparent, var(--gold)); }
     .hero-flourish::after { background:linear-gradient(90deg, var(--gold), transparent); }
     .badge-slot { margin:36px auto 0; text-align:center; }
+    .back-link { display:inline-block; margin-top:26px; font-family:var(--mono); font-size:1.05rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); }
+    .back-link:hover { color:var(--gold); }
     .gpage-frame { border:1px solid var(--line); background:var(--card); padding:54px 44px; text-align:center; margin:56px auto 0; max-width:900px; }
     .gpage-frame .quote-mark { font-family:var(--disp); font-size:4rem; color:var(--gold); line-height:1; }
     .gpage-frame p { max-width:820px; margin:10px auto 30px; color:var(--muted); font-size:1.65rem; line-height:1.85; font-style:italic; font-weight:400; }
@@ -65,46 +88,60 @@
     .follow-ig svg { color:var(--gold); flex-shrink:0; }
     .follow-ig span { color:var(--muted); font-size:1.35rem; }
     .follow-ig strong { color:var(--gold-2); font-weight:600; }
-    footer { border-top:1px solid var(--line); padding:64px 0 46px; text-align:center; }
-    .foot-brand { display:flex; flex-direction:column; gap:4px; margin:0 auto 28px; }
-    .foot-brand-line { font-family:var(--disp); font-style:italic; font-weight:400; font-size:1.7rem; color:var(--gold-2); line-height:1.35; text-transform:uppercase; letter-spacing:0.05em; }
-    .footer-socials { margin-bottom:30px; display:flex; justify-content:center; gap:14px; flex-wrap:wrap; }
-    .footer-socials a { width:46px; height:46px; border:1px solid var(--line); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--muted); transition:all .3s ease; }
-    .footer-socials a:hover { color:var(--gold); border-color:var(--gold); transform:translateY(-2px); }
-    .foot-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; max-width:780px; margin:0 auto 44px; text-align:right; border-top:1px solid var(--line); padding-top:38px; }
-    .foot-info-title { font-family:var(--mono); font-size:1.3rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
-    .foot-info p { font-size:1.35rem; color:var(--muted); line-height:1.65; margin-bottom:12px; }
-    .foot-info a { font-family:var(--mono); font-size:1.3rem; color:var(--gold-2); border-bottom:1px solid var(--gold); padding-bottom:1px; }
-    .foot-info a:hover { color:var(--cream); }
-    .foot-line { font-family:var(--mono); font-size:1.2rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); }
-    .foot-line + .foot-line { margin-top:10px; opacity:.75; }
-    .whatsapp-float { position:fixed; bottom:28px; left:28px; width:70px; height:70px; border-radius:50%; background:#25D366; color:#fff; display:flex; align-items:center; justify-content:center; z-index:1200; box-shadow:0 8px 30px rgba(37,211,102,0.4); }
-    .whatsapp-float svg { width:34px; height:34px; fill:#fff; }
+
+    footer { border-top:1px solid var(--line); padding:80px 0 60px; text-align:center; }
+    .foot-brand { display:flex; flex-direction:column; gap:8px; margin:0 auto 40px; }
+    .foot-brand-line { font-family:var(--disp); font-style:italic; font-weight:400; font-size:1.5rem; color:var(--gold-2); line-height:1.3; text-transform:uppercase; letter-spacing:0.05em; }
+    .footer-socials { margin-bottom:40px; display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
+    .footer-socials a { width:50px; height:50px; border:1px solid var(--line); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--muted); transition:all .4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .footer-socials a:hover { color:var(--gold); border-color:var(--gold); transform:translateY(-4px); box-shadow: 0 10px 30px rgba(200, 162, 90, 0.1); }
+    .foot-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; max-width:800px; margin:0 auto 60px; text-align:left; border-top:1px solid var(--line); padding-top:60px; }
+    .foot-info-title { font-family:var(--mono); font-size:0.9rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+    .foot-info p { font-size:1.05rem; color:var(--muted); line-height:1.7; margin-bottom:16px; }
+    .foot-info a { font-family:var(--mono); font-size:1rem; color:var(--gold-2); border-bottom:1px solid rgba(200,162,90,0.3); padding-bottom:2px; transition: border-color 0.3s ease; }
+    .foot-info a:hover { color:var(--cream); border-color: var(--gold); }
+    .foot-line { font-family:var(--mono); font-size:0.9rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); opacity: 0.7; }
+    .foot-line + .foot-line { margin-top:8px; }
+
+    .whatsapp-float { position:fixed; bottom:32px; left:32px; width:64px; height:64px; border-radius:50%; background:#25D366; color:#fff; display:flex; align-items:center; justify-content:center; z-index:1200; box-shadow:0 10px 40px rgba(37,211,102,0.3); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .whatsapp-float:hover { transform: scale(1.1); }
+    .whatsapp-float svg { width:32px; height:32px; fill:#fff; }
+
+    .reveal-up { opacity: 0; transform: translateY(40px); transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal-up.active { opacity: 1; transform: translateY(0); }
+
     @media (max-width:1200px) {
-        nav ul { flex-direction:column; align-items:stretch; gap:0; position:absolute; top:100%; left:0; right:0; background:var(--ink); border-bottom:1px solid var(--line); padding:6px 24px 18px; display:none; }
+        nav ul { flex-direction:column; align-items:stretch; gap:0; position:absolute; top:100%; left:0; right:0; background:var(--ink); border-bottom:1px solid var(--line); padding:20px 24px; display:none; }
         nav ul.nav-open { display:flex; }
         nav ul li { border-top:1px solid var(--line); } nav ul li:first-child { border-top:none; }
-        nav ul a { display:block; padding:16px 2px; font-size:1.1rem; white-space:normal; }
+        nav ul a { display:block; padding:16px 0; font-size:1rem; } nav ul a::after { display:none; }
         .nav-toggle { display:flex; } .top-meta { display:none; }
         .sub-hero { padding:190px 0 40px; }
-        .foot-info-grid { grid-template-columns:1fr; gap:30px; }
+        .foot-info-grid { grid-template-columns:1fr; gap:40px; }
     }
-    @media (max-width:600px) { .brand-sub { display:none; } .gpage-frame, .follow-ig { padding:36px 24px; } }
+    @media (max-width:600px) { .brand-sub { display:none; } .gpage-frame, .follow-ig { padding:36px 24px; } .lang-switch { font-size: 1.2rem; gap: 8px; } }
 </style>
 </head>
 <body>
-<a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+
+<div class="noise-overlay"></div>
+<div class="bg-orb bg-orb-1"></div>
+<div class="bg-orb bg-orb-2"></div>
+
+<a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
 
 <header>
     <div class="container bismillah-bar">
         <span class="top-meta">Fatih, İstanbul — Est. 2014</span>
         <a class="bis-link" href="https://www.youtube.com/watch?v=_bjK1bQFXkI" target="_blank" rel="noopener"><span class="bis">&#65021;</span></a>
         <span class="lang-switch">
-            <a href="#" class="lang-current">EN</a> /
-            <a href="tr/reviews.html">Türkçe</a> /
-            <a href="ru/reviews.html">Русский</a> /
-            <a href="ar/reviews.html">عربي</a> /
-            <a href="zh/reviews.html">中文</a>
+            <a href="#" class="lang-current" title="English">🇬🇧</a>
+            <a href="tr/reviews.html" title="Türkçe">🇹🇷</a>
+            <a href="ru/reviews.html" title="Русский">🇷🇺</a>
+            <a href="ar/reviews.html" title="عربي">🇸🇦</a>
+            <a href="zh/reviews.html" title="中文">🇨🇳</a>
         </span>
     </div>
     <div class="container nav-wrap">
@@ -126,7 +163,9 @@
             </ul>
         </nav>
         <div class="nav-right">
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navList"><span></span><span></span><span></span></button>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navList">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </div>
 </header>
@@ -134,38 +173,39 @@
 <main>
     <section class="sub-hero">
         <div class="container">
-            <div class="chap"><span class="chap-num">III</span><span class="chap-line"></span><span class="eyebrow">Reviews</span></div>
-            <h1 class="disp">The Verdict of Our Clients</h1>
-            <div class="hero-flourish" aria-hidden="true">&#9670;</div>
-            <p class="lead">Live from our Google profile — every kind word shared by our guests from 92 countries is a trust we honor.</p>
-            <div class="badge-slot">
+            <div class="chap reveal-up" style="justify-content:center;"><span class="chap-num">III</span><span class="chap-line"></span><span class="eyebrow">Reviews</span></div>
+            <h1 class="disp reveal-up">The Verdict of Our Clients</h1>
+            <div class="hero-flourish reveal-up" aria-hidden="true">&#9670;</div>
+            <p class="lead reveal-up">Live from our Google profile — every kind word shared by our guests from 92 countries is a trust we honor.</p>
+            <div class="badge-slot reveal-up">
                 <script defer async src='https://cdn.trustindex.io/loader.js?3b622c67958b841f6c46f0e017b'></script>
                 <div style="margin-top:20px;"><script defer async src='https://cdn.trustindex.io/loader-cert.js?529eae479b1284067046d5021fa'></script></div>
             </div>
+            <a class="back-link reveal-up" href="index.html">&larr; Back to Homepage</a>
         </div>
     </section>
 
     <section style="padding-top:20px;">
         <div class="container">
-            <div class="gpage-frame">
+            <div class="gpage-frame reveal-up">
                 <div class="quote-mark" aria-hidden="true">&ldquo;</div>
                 <p>Thanks to Google's kind short-link service, our office has its own easy-to-remember address on the map — <a class="glink" href="https://g.page/translation.istanbul" target="_blank" rel="noopener">g.page/translation.istanbul</a> — so clients from 92 countries can reach us in a single tap. Every kind word shared there is a trust we honor.</p>
-                <a href="https://g.page/translation.istanbul" target="_blank" rel="noopener" class="btn-outline">Read All Reviews on Google</a>
+                <a href="https://g.page/translation.istanbul" target="_blank" rel="noopener" class="btn-outline magnetic-btn">Read All Reviews on Google</a>
             </div>
-            <div class="trustindex-widget">
+            <div class="trustindex-widget reveal-up">
                 <script defer async src='https://cdn.trustindex.io/loader.js?f94e69c7979f839711267aff409'></script>
             </div>
-            <div class="follow-ig">
+            <div class="follow-ig reveal-up">
                 <div class="follow-ig-item">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
                     <span>Follow <strong>@TAC_NOTARY_IST</strong> on Instagram for updates, stories and behind-the-scenes of our daily work.</span>
-                    <a href="https://www.instagram.com/tac_notary_ist/" target="_blank" rel="noopener" class="btn-outline">Follow on Instagram</a>
+                    <a href="https://www.instagram.com/tac_notary_ist/" target="_blank" rel="noopener" class="btn-outline magnetic-btn">Follow on Instagram</a>
                 </div>
                 <div class="follow-ig-divider"></div>
                 <div class="follow-ig-item">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9z"/></svg>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9z"/></svg>
                     <span>Prefer Telegram? Message <strong>@TAC_NOTARY_IST</strong> any time — we reply promptly, day or night.</span>
-                    <a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener" class="btn-outline">Message on Telegram</a>
+                    <a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener" class="btn-outline magnetic-btn">Message on Telegram</a>
                 </div>
             </div>
         </div>
@@ -174,17 +214,17 @@
 
 <footer>
     <div class="container">
-        <div class="foot-brand">
+        <div class="foot-brand reveal-up">
             <span class="foot-brand-line">TAÇ Certified &amp; Sworn Translation</span>
             <span class="foot-brand-line">Notary Public &amp; Apostille Services</span>
         </div>
-        <div class="footer-socials">
+        <div class="footer-socials reveal-up">
             <a href="https://www.instagram.com/tac_notary_ist/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg></a>
             <a href="https://tr.linkedin.com/company/notarypublic-istanbul" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v1.5"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
             <a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9z"/></svg></a>
             <a href="mailto:notarypublic.istanbul@gmail.com" aria-label="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
         </div>
-        <div class="foot-info-grid">
+        <div class="foot-info-grid reveal-up">
             <div class="foot-info">
                 <div class="foot-info-title">Feedback &amp; Complaints</div>
                 <p>We're always looking to improve — share complaints, suggestions or feedback anytime. Every message is kept confidential.</p>
@@ -196,15 +236,55 @@
                 <a href="mailto:business@notarypublic.istanbul">business@notarypublic.istanbul</a>
             </div>
         </div>
-        <div class="foot-line">© 2026 TAC Translation, Notary Public &amp; Apostille Services — Fatih, İstanbul</div>
-        <div class="foot-line">notarypublic.istanbul · g.page/translation.istanbul</div>
+        <div class="foot-line reveal-up">© 2026 TAC Translation, Notary Public &amp; Apostille Services — Fatih, İstanbul</div>
+        <div class="foot-line reveal-up">notarypublic.istanbul · g.page/translation.istanbul</div>
     </div>
 </footer>
 
 <script>
+    const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+
+    gsap.registerPlugin(ScrollTrigger);
+    const revealElements = document.querySelectorAll('.reveal-up');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    const magneticBtns = document.querySelectorAll('.magnetic-btn');
+    magneticBtns.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            gsap.to(btn, { x: x * 0.3, y: y * 0.3, duration: 0.3, ease: "power2.out" });
+        });
+        btn.addEventListener('mouseleave', () => {
+            gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: "elastic.out(1, 0.3)" });
+        });
+    });
+
     const navToggle = document.getElementById('navToggle');
     const navList = document.getElementById('navList');
-    navToggle.addEventListener('click', () => { const open = navList.classList.toggle('nav-open'); navToggle.setAttribute('aria-expanded', open ? 'true' : 'false'); });
+    navToggle.addEventListener('click', () => { 
+        navToggle.classList.toggle('active');
+        const open = navList.classList.toggle('nav-open'); 
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false'); 
+    });
+    navList.querySelectorAll('a').forEach(link => { 
+        link.addEventListener('click', () => { 
+            navList.classList.remove('nav-open'); 
+            navToggle.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false'); 
+        }); 
+    });
 </script>
 </body>
 </html>
