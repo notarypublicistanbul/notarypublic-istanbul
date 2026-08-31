@@ -3,289 +3,466 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0d0b09">
-<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a0a0a">
+<meta name="description" content="Frequently asked questions about apostille, notarization, sworn translation, powers of attorney and more — TAC Notary Public Istanbul, serving since 2014.">
 <title>Frequently Asked Questions | TAC Notary Public Istanbul</title>
-<meta name="description" content="Apostille timing, notarization, E-Apostille, power of attorney, sworn translation languages and more — everything clients ask before their first WhatsApp message.">
-<link rel="canonical" href="https://notarypublic.istanbul/faq.html">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230d0b09'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Georgia,serif' font-size='54' font-weight='700' fill='%23c8a25a'%3ET%3C/text%3E%3C/svg%3E">
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=optional" rel="stylesheet">
-<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0a'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Georgia,serif' font-size='54' font-weight='700' fill='%23D4AF37'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
 <style>
-    :root { --ink:#080706; --ink-2:#0f0e0d; --card:#110e0b; --line:rgba(242,236,222,0.08); --gold:#c8a25a; --gold-2:#ecd08a; --gold-glow:rgba(200, 162, 90, 0.15); --ox:#9a2c22; --ox-soft:rgba(154,44,34,0.16); --cream:#f4eee0; --muted:#a99f8d; --disp:'EB Garamond','Garamond',Georgia,serif; --mono:'IBM Plex Mono',monospace; }
-    * { margin:0; padding:0; box-sizing:border-box; } html { scroll-behavior: auto; }
-    body { font-family:var(--disp); font-size:21px; background:var(--ink); color:var(--cream); line-height:1.75; overflow-x:hidden; -webkit-font-smoothing:antialiased; position: relative; }
-    a { text-decoration:none; color:inherit; transition:color .4s cubic-bezier(0.16, 1, 0.3, 1); }
-    ::selection { background:var(--gold); color:#080706; }
-    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
-    section { padding:140px 0; scroll-margin-top:120px; }
-
-    .noise-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9998; opacity: 0.03; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); }
-    .bg-orb { position: fixed; border-radius: 50%; filter: blur(120px); opacity: 0.12; z-index: -1; pointer-events: none; animation: floatOrb 25s infinite alternate ease-in-out; }
-    .bg-orb-1 { width: 600px; height: 600px; background: var(--gold); top: -200px; left: -200px; }
-    .bg-orb-2 { width: 500px; height: 500px; background: var(--ox); bottom: -200px; right: -200px; animation-delay: -12s; }
-    @keyframes floatOrb { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(100px, 80px) scale(1.1); } }
-
-    .eyebrow { font-family:var(--mono); font-size:1.1rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); }
-    .chap { display:flex; align-items:center; gap:18px; margin-bottom:32px; }
-    .chap-num { font-family:var(--mono); font-size:1.1rem; color:var(--ox); border:1px solid rgba(154,44,34,0.4); padding:6px 12px; }
-    .chap-line { width:60px; height:1px; background:var(--gold); }
-    h1.disp, h2.disp { font-family:var(--disp); font-style:italic; font-weight:400; color:var(--gold-2); font-size:clamp(2.4rem,4.4vw,3.6rem); line-height:1.12; text-transform:uppercase; letter-spacing:0.03em; text-wrap:balance; }
-    .lead { color:var(--muted); font-size:1.4rem; max-width:820px; margin:18px auto 8px; }
-
-    header { position:fixed; top:0; left:0; right:0; z-index:1000; background:rgba(8,7,6,0.85); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
-    .bismillah-bar { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0; border-bottom:1px solid var(--line); }
-    .bismillah-bar .bis { font-family:Tahoma,'Segoe UI',sans-serif; font-size:1.3rem; color:var(--gold-2); line-height:1; direction:rtl; unicode-bidi:isolate; }
-    .bis-link { display:inline-block; } .bis-link:hover { color:var(--gold); }
-    .top-meta { font-family:var(--mono); font-size:0.9rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); }
-    .lang-switch { display:flex; align-items:center; gap:12px; font-size: 1.4rem; }
-    .lang-switch a { transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); display: inline-block; filter: grayscale(100%) opacity(0.5); }
-    .lang-switch a:hover, .lang-switch a.lang-current { filter: grayscale(0%) opacity(1); transform: scale(1.2); }
-    .nav-wrap { display:flex; align-items:center; justify-content:space-between; gap:22px; padding:18px 0; }
-    .brand { display:flex; align-items:center; gap:14px; flex-shrink:0; }
-    .brand-name { display:block; font-family:var(--disp); font-style:italic; font-weight:500; font-size:1.3rem; color:var(--gold-2); line-height:1.1; text-transform:uppercase; letter-spacing:0.05em; white-space:nowrap; }
-    .brand-sub { display:block; font-family:var(--mono); font-size:0.85rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--muted); margin-top:4px; }
-    nav ul { display:flex; align-items:center; gap:28px; list-style:none; }
-    nav ul a { font-family:var(--mono); font-size:0.95rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); white-space:nowrap; position: relative; }
-    nav ul a i { font-style:normal; color:var(--ox); font-size:0.8rem; margin-right:6px; vertical-align:1px; }
-    nav ul a::after { content:''; position:absolute; left:0; bottom:-4px; width:0; height:1px; background:var(--gold); transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-    nav ul a:hover, nav ul a.active { color:var(--gold-2); }
-    nav ul a:hover::after { width: 100%; }
-    .nav-right { display:flex; align-items:center; gap:16px; flex-shrink:0; }
-    .nav-toggle { display:none; width:40px; height:40px; background:none; border:1px solid var(--line); cursor:pointer; flex-direction:column; align-items:center; justify-content:center; gap:6px; }
-    .nav-toggle span { display:block; width:20px; height:1px; background:var(--cream); transition: all 0.4s ease; }
-    .nav-toggle.active span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
-    .nav-toggle.active span:nth-child(2) { opacity:0; }
-    .nav-toggle.active span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
-
-    .btn-gold { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:var(--gold); color:#080706; font-family:var(--mono); font-size:1rem; letter-spacing:0.15em; text-transform:uppercase; font-weight:500; padding:20px 36px; border:1px solid var(--gold); transition: all .5s cubic-bezier(0.16, 1, 0.3, 1); white-space:nowrap; position: relative; overflow: hidden; }
-    .btn-gold::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transition: left 0.6s ease; }
-    .btn-gold:hover::before { left: 100%; }
-    .btn-gold:hover { background:var(--gold-2); border-color:var(--gold-2); transform:translateY(-2px); box-shadow: 0 10px 40px var(--gold-glow); }
-    .btn-outline { display:inline-flex; align-items:center; justify-content:center; background:transparent; color:var(--cream); font-family:var(--mono); font-size:1rem; letter-spacing:0.15em; text-transform:uppercase; padding:20px 36px; border:1px solid var(--line); transition: all .5s cubic-bezier(0.16, 1, 0.3, 1); white-space:nowrap; }
-    .btn-outline:hover { border-color:var(--gold); color:var(--gold); box-shadow: 0 10px 40px rgba(200, 162, 90, 0.05); }
-
-    .sub-hero { padding:220px 0 60px; text-align:center; position:relative; overflow:hidden; }
-    .sub-hero::before { content:''; position:absolute; inset:0; background:repeating-linear-gradient(90deg, transparent 0 119px, rgba(242,236,222,0.03) 119px 120px); pointer-events:none; }
-    .sub-hero .container { position:relative; }
-    .hero-flourish { display:flex; align-items:center; justify-content:center; gap:16px; margin:30px auto 10px; color:var(--gold); font-size:0.95rem; }
-    .hero-flourish::before, .hero-flourish::after { content:''; height:1px; width:90px; }
-    .hero-flourish::before { background:linear-gradient(90deg, transparent, var(--gold)); }
-    .hero-flourish::after { background:linear-gradient(90deg, var(--gold), transparent); }
-    .badge-slot { margin:36px auto 0; text-align:center; }
-    .back-link { display:inline-block; margin-top:26px; font-family:var(--mono); font-size:1.05rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); }
-    .back-link:hover { color:var(--gold); }
-
-    .faq-list { max-width:900px; margin:0 auto; }
-    .faq-item { border:1px solid var(--line); background:var(--card); margin-bottom:16px; transition:border-color .4s ease, background .4s ease; }
-    .faq-item:hover { border-color:rgba(200,162,90,0.3); background: rgba(17, 14, 11, 0.8); }
-    .faq-item summary { cursor:pointer; padding:28px 32px; font-family:var(--disp); font-style:italic; font-weight:400; font-size:1.4rem; color:var(--cream); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:20px; text-wrap:balance; }
-    .faq-item summary::-webkit-details-marker { display:none; }
-    .faq-item summary::after { content:'+'; color:var(--gold); font-family:var(--mono); font-size:1.5rem; flex-shrink:0; transition: transform 0.4s ease; }
-    .faq-item[open] summary::after { content:'−'; transform: rotate(180deg); }
-    .faq-a { padding:0 32px 32px; color:var(--muted); font-size:1.1rem; line-height:1.8; }
-
-    .info-card { border:1px solid var(--line); background:var(--card); padding:50px 44px; text-align:center; max-width:900px; margin:50px auto 0; }
-    .info-card p { color:var(--muted); font-size:1.35rem; line-height:1.85; font-style:italic; font-weight:400; }
-    .info-card .btn-gold { margin-top:30px; }
-
-    footer { border-top:1px solid var(--line); padding:80px 0 60px; text-align:center; }
-    .foot-brand { display:flex; flex-direction:column; gap:8px; margin:0 auto 40px; }
-    .foot-brand-line { font-family:var(--disp); font-style:italic; font-weight:400; font-size:1.5rem; color:var(--gold-2); line-height:1.3; text-transform:uppercase; letter-spacing:0.05em; }
-    .footer-socials { margin-bottom:40px; display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
-    .footer-socials a { width:50px; height:50px; border:1px solid var(--line); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--muted); transition:all .4s cubic-bezier(0.16, 1, 0.3, 1); }
-    .footer-socials a:hover { color:var(--gold); border-color:var(--gold); transform:translateY(-4px); box-shadow: 0 10px 30px rgba(200, 162, 90, 0.1); }
-    .foot-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; max-width:800px; margin:0 auto 60px; text-align:left; border-top:1px solid var(--line); padding-top:60px; }
-    .foot-info-title { font-family:var(--mono); font-size:0.9rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
-    .foot-info p { font-size:1.05rem; color:var(--muted); line-height:1.7; margin-bottom:16px; }
-    .foot-info a { font-family:var(--mono); font-size:1rem; color:var(--gold-2); border-bottom:1px solid rgba(200,162,90,0.3); padding-bottom:2px; transition: border-color 0.3s ease; }
-    .foot-info a:hover { color:var(--cream); border-color: var(--gold); }
-    .foot-line { font-family:var(--mono); font-size:0.9rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); opacity: 0.7; }
-    .foot-line + .foot-line { margin-top:8px; }
-
-    .whatsapp-float { position:fixed; bottom:32px; left:32px; width:64px; height:64px; border-radius:50%; background:#25D366; color:#fff; display:flex; align-items:center; justify-content:center; z-index:1200; box-shadow:0 10px 40px rgba(37,211,102,0.3); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-    .whatsapp-float:hover { transform: scale(1.1); }
-    .whatsapp-float svg { width:32px; height:32px; fill:#fff; }
-
-    .reveal-up { opacity: 0; transform: translateY(40px); transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1); }
-    .reveal-up.active { opacity: 1; transform: translateY(0); }
-
-    @media (max-width:1200px) {
-        nav ul { flex-direction:column; align-items:stretch; gap:0; position:absolute; top:100%; left:0; right:0; background:var(--ink); border-bottom:1px solid var(--line); padding:20px 24px; display:none; }
-        nav ul.nav-open { display:flex; }
-        nav ul li { border-top:1px solid var(--line); } nav ul li:first-child { border-top:none; }
-        nav ul a { display:block; padding:16px 0; font-size:1rem; } nav ul a::after { display:none; }
-        .nav-toggle { display:flex; } .top-meta { display:none; }
-        .sub-hero { padding:190px 0 40px; }
-        .foot-info-grid { grid-template-columns:1fr; gap:40px; }
+    :root {
+        --gold: #D4AF37;
+        --gold-light: #F4E8C1;
+        --gold-2: #ecd08a;
+        --gold-dark: #B8941F;
+        --gold-glow: rgba(212, 175, 55, 0.4);
+        --dark: #0a0a0a;
+        --darker: #050505;
+        --gray: #1a1a1a;
+        --gray-light: #2a2a2a;
+        --text: #f5f5f5;
+        --text-muted: #888;
+        --muted: #a99f8d;
+        --text-dim: #666;
+        --line: rgba(242, 236, 222, 0.08);
+        --ox: #9a2c22;
+        --ox-soft: rgba(154,44,34,0.16);
+        --font-serif: 'Cormorant Garamond', Georgia, serif;
+        --font-sans: 'Inter', -apple-system, sans-serif;
+        --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Courier New', monospace;
     }
-    @media (max-width:600px) { .brand-sub { display:none; } .info-card { padding:36px 24px; } .lang-switch { font-size: 1.2rem; gap: 8px; } }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+        font-family: var(--font-sans);
+        background: var(--darker);
+        color: var(--text);
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+
+    .bg-animation {
+        position: fixed; top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: -1;
+        background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+    }
+    .bg-animation::before {
+        content: '';
+        position: absolute;
+        width: 200%; height: 200%;
+        background: radial-gradient(circle, rgba(212,175,55,0.04) 1px, transparent 1px);
+        background-size: 50px 50px;
+        animation: moveGrid 20s linear infinite;
+    }
+    @keyframes moveGrid { 0% { transform: translate(0,0); } 100% { transform: translate(50px,50px); } }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    /* ============ HEADER ============ */
+    header {
+        position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+        background: rgba(8,7,6,0.85);
+        backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--line);
+    }
+
+    .bismillah-bar {
+        display: flex; align-items: center; justify-content: space-between;
+        gap: 16px; padding: 12px 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+    /* Universal system fonts — renders on every PC & phone */
+    .bismillah-bar .bis {
+        font-family: Tahoma, 'Segoe UI', 'Noto Sans Arabic', 'Geeza Pro', 'Al Bayan', Arial, sans-serif;
+        font-size: 1.4rem;
+        color: var(--gold-2);
+        line-height: 1;
+        direction: rtl;
+        unicode-bidi: isolate;
+        text-shadow: 0 0 14px rgba(212, 175, 55, 0.35);
+        transition: all 0.3s ease;
+    }
+    .bis-link { display: inline-block; text-decoration: none; }
+    .bis-link:hover .bis { color: var(--gold); text-shadow: 0 0 20px rgba(212, 175, 55, 0.6); }
+
+    .top-meta {
+        font-family: var(--mono);
+        font-size: 0.9rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--muted);
+    }
+
+    .lang-switcher { display: flex; gap: 0.3rem; align-items: center; }
+    .lang-btn {
+        padding: 0.4rem 0.9rem;
+        background: transparent;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        color: var(--muted);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        font-family: var(--font-sans);
+        text-decoration: none;
+        font-weight: 500;
+    }
+    .lang-btn:hover, .lang-btn.active {
+        border-color: var(--gold);
+        color: var(--gold);
+        background: rgba(212, 175, 55, 0.05);
+        transform: translateY(-2px);
+    }
+    .lang-btn.active { background: rgba(212, 175, 55, 0.1); }
+
+    .nav-wrap { display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 0; }
+    .brand { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
+    .brand-name {
+        font-family: var(--font-serif);
+        font-size: 1.5rem; font-weight: 600; letter-spacing: 2px; color: #ffffff;
+    }
+    .brand-name span { color: var(--gold); }
+    .brand-sub {
+        font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase;
+        color: var(--muted); margin-top: 0.2rem;
+    }
+
+    nav ul { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    nav ul a {
+        font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase;
+        color: var(--muted); text-decoration: none; transition: all 0.3s ease;
+        font-weight: 500; position: relative;
+    }
+    nav ul a::after {
+        content: ''; position: absolute; bottom: -4px; left: 0;
+        width: 0; height: 1px; background: var(--gold); transition: width 0.3s ease;
+    }
+    nav ul a:hover, nav ul a.active { color: var(--gold); }
+    nav ul a:hover::after, nav ul a.active::after { width: 100%; }
+    nav ul a i { font-style: normal; color: var(--gold); font-size: 0.75rem; margin-right: 0.3rem; }
+
+    .nav-toggle {
+        display: none; width: 40px; height: 40px; background: none;
+        border: 1px solid rgba(212, 175, 55, 0.3); cursor: pointer;
+        flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+    }
+    .nav-toggle span { display: block; width: 20px; height: 1px; background: var(--text); transition: all 0.4s ease; }
+
+    /* ============ SUB-HERO ============ */
+    .sub-hero { margin-top: 150px; padding: 5rem 5% 3rem; text-align: center; position: relative; }
+    .section-num {
+        display: inline-block; font-size: 0.85rem; letter-spacing: 3px;
+        text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;
+    }
+    .sub-hero h1 {
+        font-family: var(--font-serif);
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        font-weight: 400; line-height: 1.1; margin-bottom: 1rem; letter-spacing: 1px;
+    }
+    .sub-hero h1 span { color: var(--gold); font-style: italic; }
+    .hero-flourish {
+        display: flex; align-items: center; justify-content: center; gap: 16px;
+        margin: 1.5rem auto; color: var(--gold); font-size: 0.9rem;
+    }
+    .hero-flourish::before, .hero-flourish::after { content: ''; height: 1px; width: 80px; }
+    .hero-flourish::before { background: linear-gradient(90deg, transparent, var(--gold)); }
+    .hero-flourish::after { background: linear-gradient(90deg, var(--gold), transparent); }
+    .sub-hero p {
+        font-size: 1.15rem; color: var(--muted); max-width: 700px;
+        margin: 0 auto 2rem; line-height: 1.8; font-weight: 300;
+    }
+    .back-link {
+        display: inline-block; font-size: 0.85rem; letter-spacing: 2px;
+        text-transform: uppercase; color: var(--muted); text-decoration: none;
+        border: 1px solid rgba(255,255,255,0.2); padding: 0.8rem 1.8rem;
+        transition: all 0.3s ease;
+    }
+    .back-link:hover { border-color: var(--text); color: var(--text); transform: translateY(-2px); }
+
+    /* ============ FAQ ============ */
+    .faq { padding: 2rem 5% 6rem; }
+    .faq-list { max-width: 900px; margin: 0 auto; }
+    .faq-item {
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        background: var(--gray);
+        margin-bottom: 1rem;
+        transition: all 0.3s ease;
+    }
+    .faq-item:hover { border-color: rgba(212, 175, 55, 0.4); }
+    .faq-item[open] { border-color: rgba(212, 175, 55, 0.5); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+    .faq-item summary {
+        cursor: pointer;
+        font-family: var(--font-serif);
+        font-size: 1.25rem;
+        color: var(--text);
+        font-weight: 500;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: color 0.3s ease;
+        text-align: center;
+        position: relative;
+        padding: 1.5rem 3.5rem;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+        content: '+';
+        color: var(--gold);
+        font-size: 1.5rem;
+        position: absolute;
+        right: 1.2rem;
+        transition: transform 0.3s ease;
+    }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item summary:hover { color: var(--gold); }
+    .faq-item .faq-a {
+        padding: 0 2.5rem 2rem;
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.8;
+        text-align: center;
+    }
+
+    /* ============ INFO CARD ============ */
+    .info-card {
+        max-width: 900px;
+        margin: 3rem auto 0;
+        padding: 3rem;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(10, 10, 10, 0.5));
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    .info-card::before {
+        content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.05), transparent);
+        animation: shimmer 6s ease-in-out infinite;
+    }
+    @keyframes shimmer { 0% { left: -100%; } 50%, 100% { left: 100%; } }
+    .info-card h3 {
+        font-family: var(--font-serif);
+        font-size: 2rem; color: var(--gold); margin-bottom: 1.5rem;
+        font-style: italic; position: relative;
+    }
+    .btn-primary {
+        padding: 1rem 2.5rem; background: var(--gold); color: var(--dark);
+        text-decoration: none; font-weight: 600; letter-spacing: 2px;
+        text-transform: uppercase; font-size: 0.85rem; transition: all 0.3s ease;
+        border: 2px solid var(--gold); display: inline-block; position: relative;
+    }
+    .btn-primary:hover {
+        background: transparent; color: var(--gold);
+        transform: translateY(-3px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+    }
+
+    /* ============ FOOTER ============ */
+    footer { padding: 4rem 5% 2rem; background: var(--darker); border-top: 1px solid rgba(212, 175, 55, 0.1); text-align: center; }
+    .alhamdulillah { margin-bottom: 2rem; }
+    .alhamdulillah img { height: 60px; width: auto; opacity: 0.9; transition: all 0.3s ease; }
+    .alhamdulillah img:hover { opacity: 1; filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4)); }
+    .footer-brand {
+        font-family: var(--font-serif); font-size: 1.5rem; color: var(--gold);
+        margin-bottom: 2rem; letter-spacing: 2px; text-transform: uppercase;
+    }
+    .footer-info {
+        display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem; max-width: 800px; margin: 0 auto 3rem; text-align: center;
+    }
+    .footer-info h4 { font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .footer-info p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 0.5rem; }
+    .footer-info a { color: var(--gold); text-decoration: none; }
+    .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(212, 175, 55, 0.1); color: var(--text-dim); font-size: 0.85rem; text-align: center; }
+    .footer-bottom a { color: var(--gold); text-decoration: none; }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 968px) {
+        nav ul { display: none; }
+        .nav-toggle { display: flex; }
+    }
+    @media (max-width: 768px) {
+        .bismillah-bar { flex-wrap: wrap; justify-content: center; }
+        .top-meta { display: none; }
+        .lang-switcher { flex-wrap: wrap; justify-content: center; }
+        .sub-hero { margin-top: 170px; }
+        .sub-hero h1 { font-size: 2.5rem; }
+        .faq-item summary { padding: 1.2rem 2.8rem; font-size: 1.1rem; }
+        .faq-item .faq-a { padding: 0 1.5rem 1.5rem; }
+        .info-card { padding: 2rem 1.5rem; }
+        .alhamdulillah img { height: 50px; }
+    }
 </style>
 </head>
 <body>
+    <div class="bg-animation"></div>
 
-<div class="noise-overlay"></div>
-<div class="bg-orb bg-orb-1"></div>
-<div class="bg-orb bg-orb-2"></div>
-
-<a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-</a>
-
-<header>
-    <div class="container bismillah-bar">
-        <span class="top-meta">Fatih, İstanbul — Est. 2014</span>
-        <a class="bis-link" href="https://www.youtube.com/watch?v=_bjK1bQFXkI" target="_blank" rel="noopener"><span class="bis">&#65021;</span></a>
-   <span class="lang-switch">
-    <a href="..." class="lang-current">ENGLISH</a> / 
-    <a href="...">TÜRKÇE</a> / 
-    <a href="...">РУССКИЙ</a> / 
-    <a href="...">العربية</a> / 
-    <a href="...">中文</a>
-</span>
-    </div>
-    <div class="container nav-wrap">
-        <a href="index.html#home" class="brand">
-            <span>
-                <span class="brand-name">Taç Notary Public Services</span>
-                <span class="brand-sub">Apostille &amp; Sworn Translation</span>
-            </span>
-        </a>
-        <nav>
-            <ul id="navList">
-                <li><a href="index.html#services"><i>01</i>Services</a></li>
-                <li><a href="e-apostille.html"><i>02</i>E-Apostille</a></li>
-                <li><a href="getting-married-in-turkey.html"><i>03</i>Getting Married</a></li>
-                <li><a href="index.html#process"><i>04</i>Process</a></li>
-                <li><a href="reviews.html"><i>05</i>Reviews</a></li>
-                <li><a href="faq.html" class="active"><i>06</i>FAQ</a></li>
-                <li><a href="index.html#contact"><i>07</i>Contact</a></li>
-            </ul>
-        </nav>
-        <div class="nav-right">
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navList">
+    <header>
+        <div class="container bismillah-bar">
+            <span class="top-meta">Fatih, İstanbul — Est. 2014</span>
+            <a class="bis-link" href="https://www.youtube.com/watch?v=_bjK1bQFXkI" target="_blank" rel="noopener">
+                <span class="bis">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</span>
+            </a>
+            <nav class="lang-switcher">
+                <a href="#" class="lang-btn active">ENGLISH</a>
+                <a href="tr/faq.html" class="lang-btn">TÜRKÇE</a>
+                <a href="ru/faq.html" class="lang-btn">РУССКИЙ</a>
+                <a href="ar/faq.html" class="lang-btn">العربية</a>
+                <a href="zh/faq.html" class="lang-btn">中文</a>
+            </nav>
+        </div>
+        <div class="container nav-wrap">
+            <a href="index.html#home" class="brand">
+                <div>
+                    <div class="brand-name"><span>TAÇ</span> NOTARY PUBLIC</div>
+                    <div class="brand-sub">Apostille & Sworn Translation</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="index.html#services"><i>01</i> Services</a></li>
+                    <li><a href="e-apostille.html"><i>02</i> E-Apostille</a></li>
+                    <li><a href="getting-married-in-turkey.html"><i>03</i> Getting Married</a></li>
+                    <li><a href="index.html#process"><i>04</i> Process</a></li>
+                    <li><a href="reviews.html"><i>05</i> Reviews</a></li>
+                    <li><a href="faq.html" class="active"><i>06</i> FAQ</a></li>
+                    <li><a href="index.html#contact"><i>07</i> Contact</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
         </div>
-    </div>
-</header>
+    </header>
 
-<main>
     <section class="sub-hero">
-        <div class="container">
-            <div class="chap reveal-up" style="justify-content:center;"><span class="chap-num">IV</span><span class="chap-line"></span><span class="eyebrow">Questions</span></div>
-            <h1 class="disp reveal-up">Asked &amp; Answered</h1>
-            <div class="hero-flourish reveal-up" aria-hidden="true">&#9670;</div>
-            <p class="lead reveal-up">Everything people usually ask before their first message — apostille timing, notarization, power of attorney, and more. Still stuck? Message us on WhatsApp directly.</p>
-         
-                <div style="margin-top:20px;"><script defer async src='https://cdn.trustindex.io/loader-cert.js?529eae479b1284067046d5021fa'></script></div>
-            </div>
-            <a class="back-link reveal-up" href="index.html">&larr; Back to Homepage</a>
+        <div class="section-num">IV — Questions</div>
+        <h1>Asked & <span>Answered</span></h1>
+        <div class="hero-flourish">◆</div>
+        <p>Answers to our most common questions, clear, complete, & fully transparent</p>
+        <a href="index.html" class="back-link">← Back to Homepage</a>
+    </section>
+
+    <section class="faq">
+        <div class="faq-list">
+            <details class="faq-item">
+                <summary>How long does the apostille process take in Istanbul?</summary>
+                <div class="faq-a">Most documents are completed within 1–3 working days. With E-Apostille, your certified PDF is ready in 1–2 working days and the hard copy reaches your country in 3–7 business days. Urgent same-day handling is possible for certain procedures — confirm on WhatsApp and we will reply with the exact timing and fee in one message.</div>
+            </details>
+            <details class="faq-item">
+                <summary>What exactly is an apostille?</summary>
+                <div class="faq-a">An apostille is a single-page certificate, recognized in all 92 Hague Convention countries, that confirms a Turkish public document — and the notary or official who signed it — is genuine. It lets the document be used abroad without further embassy legalization.</div>
+            </details>
+            <details class="faq-item">
+                <summary>Is an apostille the same as notarization?</summary>
+                <div class="faq-a">No — they're two separate steps. Notarization certifies that a signature, copy or translation is authentic inside Turkey. Apostille then certifies that notarization for use in another country. Most documents leaving Turkey need both, done in that order, and we handle the full sequence for you.</div>
+            </details>
+            <details class="faq-item">
+                <summary>Which documents can be apostilled?</summary>
+                <div class="faq-a">Most Turkish public documents qualify — birth, marriage and death certificates, diplomas and transcripts, powers of attorney, company documents, and certified translations of any of these. Send us a photo on WhatsApp and we'll confirm eligibility before you pay for anything.</div>
+            </details>
+            <details class="faq-item">
+                <summary>Can you apostille a document that was issued outside Turkey?</summary>
+                <div class="faq-a">No. An apostille has to be issued in the country where the document originated — we can't apostille a foreign-issued document here in Turkey. Message us on WhatsApp with the details and we can point you toward what you actually need.</div>
+            </details>
+            <details class="faq-item">
+                <summary>Do I need to visit your office in Fatih?</summary>
+                <div class="faq-a">No. We work remotely by appointment. Send a photo or scan of your document on WhatsApp; we attend the Notary Public and Governorship on your behalf, and deliver the finished documents worldwide by DHL, FedEx or UPS — no office visit needed.</div>
+            </details>
+            <details class="faq-item">
+                <summary>What does a Notary Public in Turkey actually do?</summary>
+                <div class="faq-a">A Turkish Notary Public certifies signatures, prepares and certifies powers of attorney and affidavits, certifies true copies of documents, and confirms translations. It's a formal legal role, not just a signing service — which is why some documents, like a power of attorney, require the signer to appear in person.</div>
+            </details>
+            <details class="faq-item">
+                <summary>Do I need to be present in person for a Power of Attorney?</summary>
+                <div class="faq-a">Yes. Turkish notaries require the person granting the power of attorney to sign in front of the Notary Public in person — this is a legal requirement, not a formality we can skip. Message us on WhatsApp first so we can confirm the document, book your appointment slot and avoid any waiting when you arrive.</div>
+            </details>
+            <details class="faq-item">
+                <summary>Can I see a sample Power of Attorney before I sign?</summary>
+                <div class="faq-a">Yes. Message us on WhatsApp and we'll send a sample matching your situation, so you know exactly what you're signing before you book your appointment.</div>
+            </details>
+            <details class="faq-item">
+                <summary>Which languages do you translate?</summary>
+                <div class="faq-a">We provide certified and sworn translation in more than 55 languages, prepared by legal linguists with 10–20 years of experience. Translation requests are handled 24/7 with priority.</div>
+            </details>
+            <details class="faq-item">
+                <summary>What if my document isn't in a language you've listed?</summary>
+                <div class="faq-a">Message us on WhatsApp with the document photo regardless — our language list covers our most requested pairs, but it isn't exhaustive, and we can usually confirm within the same message whether we can help.</div>
+            </details>
+            <details class="faq-item">
+                <summary>Are your sworn translations recognized outside Turkey?</summary>
+                <div class="faq-a">A sworn translation paired with a notary certification and an apostille is generally accepted internationally, since the apostille is what foreign authorities rely on. Requirements vary by country and institution, so it's worth confirming with the receiving party exactly what they require.</div>
+            </details>
+            <details class="faq-item">
+                <summary>Why don't you publish fixed prices?</summary>
+                <div class="faq-a">Cost depends on the document type, length, language pair and urgency, so a single published price list would end up being misleading either way. Send a photo on WhatsApp and we reply with an exact quote the same day, before you commit to anything.</div>
+            </details>
+            <details class="faq-item">
+                <summary>How do I book my first appointment?</summary>
+                <div class="faq-a">Message us on WhatsApp with a photo of your document. We confirm the details, cost and timing first, and only book an in-person appointment if your case actually needs a signature.</div>
+            </details>
+            <details class="faq-item">
+                <summary>Can you help international students with university registration in Turkey?</summary>
+                <div class="faq-a">Yes. We guide international students through university admission, full registration and student residence permit support — from the first message to the first class.</div>
+            </details>
+        </div>
+
+        <div class="info-card">
+            <h3>Didn't find your answer here?</h3>
+            <a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="btn-primary">Ask Us on WhatsApp →</a>
         </div>
     </section>
 
-    <section style="padding-top:20px;">
-        <div class="container">
-            <div class="faq-list">
-                <details class="faq-item reveal-up"><summary>How long does the apostille process take in Istanbul?</summary><div class="faq-a">Most documents are completed within 1–3 working days. Urgent same-day handling is possible for certain procedures — confirm on WhatsApp and we will reply with the exact timing and fee in one message.</div></details>
-                <details class="faq-item reveal-up"><summary>What exactly is an apostille?</summary><div class="faq-a">An apostille is a single-page certificate, recognized in all 92 Hague Convention countries, that confirms a Turkish public document — and the notary or official who signed it — is genuine. It lets the document be used abroad without further embassy legalization.</div></details>
-                <details class="faq-item reveal-up"><summary>Is an apostille the same as notarization?</summary><div class="faq-a">No — they're two separate steps. Notarization certifies that a signature, copy or translation is authentic inside Turkey. Apostille then certifies that notarization for use in another country. Most documents leaving Turkey need both, done in that order, and we handle the full sequence for you.</div></details>
-                <details class="faq-item reveal-up"><summary>Which documents can be apostilled?</summary><div class="faq-a">Most Turkish public documents qualify — birth, marriage and death certificates, diplomas and transcripts, powers of attorney, company documents, and certified translations of any of these. Send us a photo on WhatsApp and we'll confirm eligibility before you pay for anything.</div></details>
-                <details class="faq-item reveal-up"><summary>Can you apostille a document that was issued outside Turkey?</summary><div class="faq-a">No. An apostille has to be issued in the country where the document originated — we can't apostille a foreign-issued document here in Turkey. Message us on WhatsApp with the details and we can point you toward what you actually need.</div></details>
-                <details class="faq-item reveal-up"><summary>Do I need to visit your office in Fatih?</summary><div class="faq-a">No. We work remotely by appointment. Send a photo or scan of your document on WhatsApp; we attend the Notary Public and Governorship on your behalf, and deliver the finished documents worldwide by DHL, FedEx or UPS — no office visit needed.</div></details>
-                <details class="faq-item reveal-up"><summary>What does a Notary Public in Turkey actually do?</summary><div class="faq-a">A Turkish Notary Public certifies signatures, prepares and certifies powers of attorney and affidavits, certifies true copies of documents, and confirms translations. It's a formal legal role, not just a signing service — which is why some documents, like a power of attorney, require the signer to appear in person.</div></details>
-                <details class="faq-item reveal-up"><summary>Do I need to be present in person for a Power of Attorney?</summary><div class="faq-a">Yes. Turkish notaries require the person granting the power of attorney to sign in front of the Notary Public in person — this is a legal requirement, not a formality we can skip. Message us on WhatsApp first so we can confirm the document, book your appointment slot and avoid any waiting when you arrive.</div></details>
-                <details class="faq-item reveal-up"><summary>Can I see a sample Power of Attorney before I sign?</summary><div class="faq-a">Yes. Message us on WhatsApp and we'll send a sample matching your situation, so you know exactly what you're signing before you book your appointment.</div></details>
-                <details class="faq-item reveal-up"><summary>Which languages do you translate?</summary><div class="faq-a">We provide certified and sworn translation in more than 55 languages, prepared by legal linguists with 10–20 years of experience. Translation requests are handled 24/7 with priority.</div></details>
-                <details class="faq-item reveal-up"><summary>What if my document isn't in a language you've listed?</summary><div class="faq-a">Message us on WhatsApp with the document photo regardless — our language list covers our most requested pairs, but it isn't exhaustive, and we can usually confirm within the same message whether we can help.</div></details>
-                <details class="faq-item reveal-up"><summary>Are your sworn translations recognized outside Turkey?</summary><div class="faq-a">A sworn translation paired with a notary certification and an apostille is generally accepted internationally, since the apostille is what foreign authorities rely on. Requirements vary by country and institution, so it's worth confirming with the receiving party exactly what they require.</div></details>
-                <details class="faq-item reveal-up"><summary>Why don't you publish fixed prices?</summary><div class="faq-a">Cost depends on the document type, length, language pair and urgency, so a single published price list would end up being misleading either way. Send a photo on WhatsApp and we reply with an exact quote the same day, before you commit to anything.</div></details>
-                <details class="faq-item reveal-up"><summary>How do I book my first appointment?</summary><div class="faq-a">Message us on WhatsApp with a photo of your document. We confirm the details, cost and timing first, and only book an in-person appointment if your case actually needs a signature.</div></details>
-                <details class="faq-item reveal-up"><summary>Can you help international students with university registration in Turkey?</summary><div class="faq-a">Yes. We guide international students through university admission, full registration and student residence permit support — from the first message to the first class.</div></details>
-            </div>
-            <div class="info-card reveal-up">
-                <p>Didn't find your answer here?</p>
-                <a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" target="_blank" rel="noopener" class="btn-gold magnetic-btn">Ask Us on WhatsApp &nbsp;&rarr;</a>
-            </div>
+    <footer>
+        <div class="alhamdulillah">
+            <img src="alhamdulillah-gold.png" alt="Alhamdulillah" />
         </div>
-    </section>
-</main>
 
-<footer>
-    <div class="container">
-        <div class="foot-brand reveal-up">
-            <span class="foot-brand-line">TAÇ Certified &amp; Sworn Translation</span>
-            <span class="foot-brand-line">Notary Public &amp; Apostille Services</span>
-        </div>
-        <div class="footer-socials reveal-up">
-            <a href="https://www.instagram.com/tac_notary_ist/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg></a>
-            <a href="https://tr.linkedin.com/company/notarypublic-istanbul" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v1.5"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-            <a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9z"/></svg></a>
-            <a href="mailto:notarypublic.istanbul@gmail.com" aria-label="Email"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
-        </div>
-        <div class="foot-info-grid reveal-up">
-            <div class="foot-info">
-                <div class="foot-info-title">Feedback &amp; Complaints</div>
-                <p>We're always looking to improve — share complaints, suggestions or feedback anytime. Every message is kept confidential.</p>
+        <div class="footer-brand">TAÇ Certified & Sworn Translation · Notary Public & Apostille Services</div>
+
+        <div class="footer-info">
+            <div>
+                <h4>Feedback & Complaints</h4>
+                <p>We're always looking to improve — share complaints, suggestions or feedback anytime.</p>
                 <a href="mailto:info@notarypublic.istanbul">info@notarypublic.istanbul</a>
             </div>
-            <div class="foot-info">
-                <div class="foot-info-title">Business Inquiries</div>
+            <div>
+                <h4>Business Inquiries</h4>
                 <p>For business notary solutions, document authentication or partnerships, reach our business desk directly.</p>
                 <a href="mailto:business@notarypublic.istanbul">business@notarypublic.istanbul</a>
             </div>
         </div>
-        <div class="foot-line reveal-up">© 2026 TAC Translation, Notary Public &amp; Apostille Services — Fatih, İstanbul</div>
-        <div class="foot-line reveal-up">notarypublic.istanbul · g.page/translation.istanbul</div>
-    </div>
-</footer>
 
-<script>
-    const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
-    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-    requestAnimationFrame(raf);
+        <div class="footer-bottom">
+            <p>© 2026 TAC Translation, Notary Public & Apostille Services — Fatih, İstanbul</p>
+            <p>
+                <a href="https://notarypublic.istanbul">notarypublic.istanbul</a>
+                ·
+                <a href="https://g.page/translation.istanbul" target="_blank" rel="noopener">g.page/translation.istanbul</a>
+            </p>
+        </div>
+    </footer>
 
-    gsap.registerPlugin(ScrollTrigger);
-    const revealElements = document.querySelectorAll('.reveal-up');
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                revealObserver.unobserve(entry.target);
-            }
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navList = document.querySelector('nav ul');
+        navToggle.addEventListener('click', () => {
+            navList.style.display = navList.style.display === 'flex' ? 'none' : 'flex';
+            navList.style.flexDirection = 'column';
+            navList.style.position = 'absolute';
+            navList.style.top = '100%';
+            navList.style.left = '0';
+            navList.style.right = '0';
+            navList.style.background = 'rgba(10, 10, 10, 0.98)';
+            navList.style.padding = '2rem';
+            navList.style.borderBottom = '1px solid rgba(212, 175, 55, 0.1)';
         });
-    }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
-    revealElements.forEach(el => revealObserver.observe(el));
-
-    const magneticBtns = document.querySelectorAll('.magnetic-btn');
-    magneticBtns.forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-            const rect = btn.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
-            gsap.to(btn, { x: x * 0.3, y: y * 0.3, duration: 0.3, ease: "power2.out" });
-        });
-        btn.addEventListener('mouseleave', () => {
-            gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: "elastic.out(1, 0.3)" });
-        });
-    });
-
-    const navToggle = document.getElementById('navToggle');
-    const navList = document.getElementById('navList');
-    navToggle.addEventListener('click', () => { 
-        navToggle.classList.toggle('active');
-        const open = navList.classList.toggle('nav-open'); 
-        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false'); 
-    });
-    navList.querySelectorAll('a').forEach(link => { 
-        link.addEventListener('click', () => { 
-            navList.classList.remove('nav-open'); 
-            navToggle.classList.remove('active');
-            navToggle.setAttribute('aria-expanded', 'false'); 
-        }); 
-    });
-</script>
+    </script>
 </body>
 </html>
