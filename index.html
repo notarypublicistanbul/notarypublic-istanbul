@@ -10,13 +10,100 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0a'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Georgia,serif' font-size='54' font-weight='700' fill='%23D4AF37'%3ET%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TAC Notary Public Istanbul">
+<meta property="og:title" content="TAC Notary Public Istanbul | Certified Translation & Apostille Services">
+<meta property="og:description" content="Certified translation, notarization and apostille legalization — arranged over WhatsApp, delivered to your door. 500+ 5-star reviews, serving 50+ countries.">
+<meta property="og:url" content="https://notarypublic.istanbul/">
+<meta property="og:image" content="https://notarypublic.istanbul/og-image.jpg">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TAC Notary Public Istanbul | Certified Translation & Apostille Services">
+<meta name="twitter:description" content="Certified translation, notarization and apostille legalization — arranged over WhatsApp, delivered to your door. 500+ 5-star reviews, serving 50+ countries.">
+<meta name="twitter:image" content="https://notarypublic.istanbul/og-image.jpg">
+
+<!-- LocalBusiness structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "TAC Notary Public Istanbul",
+  "image": "https://notarypublic.istanbul/og-image.jpg",
+  "url": "https://notarypublic.istanbul/",
+  "telephone": "+905013338707",
+  "email": "notarypublic.istanbul@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fatih",
+    "addressRegion": "Istanbul",
+    "addressCountry": "TR"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
+    }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/tac_notary_ist/",
+    "https://t.me/TAC_NOTARY_IST",
+    "https://g.page/translation.istanbul"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "500"
+  }
+}
+</script>
+
+<!-- FAQPage structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need to visit your office in person?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No office visit is necessary. To keep our processing fast and efficient, we handle all document reviews, cost estimates, and consultations fully online via WhatsApp. Once we review your documents and confirm your project details, we will provide our exact office address along with a scheduled appointment for physical document drop-off or pickup. And with our new E-Apostille service, eligible documents are verified by video call and apostilled entirely online."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does the apostille process take in Istanbul?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most documents are completed within 1–3 working days. With E-Apostille, your certified PDF is ready in 1–2 working days and the hard copy reaches your country in 3–7 business days. Urgent same-day handling is possible for certain procedures — confirm on WhatsApp and we will reply with the exact timing and fee in one message."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to be present in person for a Power of Attorney?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Turkish notaries require the person granting the power of attorney to sign in front of the Notary Public in person — this is a legal requirement, not a formality we can skip, and no Power of Attorney can be done online. Message us on WhatsApp first so we can confirm the document, book your appointment slot and avoid any waiting when you arrive."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Added Amiri font for better Bismillah rendering -->
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 
 <style>
     :root {
         --gold: #D4AF37;
         --gold-light: #F4E8C1;
-        --gold-2: #ecd08a;
         --gold-dark: #B8941F;
         --gold-glow: rgba(212, 175, 55, 0.4);
         --dark: #0a0a0a;
@@ -25,19 +112,29 @@
         --gray-light: #2a2a2a;
         --text: #f5f5f5;
         --text-muted: #888;
-        --muted: #a99f8d;
         --text-dim: #666;
-        --line: rgba(242, 236, 222, 0.08);
         --ox: #9a2c22;
         --ox-soft: rgba(154,44,34,0.16);
         --font-serif: 'Cormorant Garamond', Georgia, serif;
         --font-sans: 'Inter', -apple-system, sans-serif;
-        --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Courier New', monospace;
+        --font-arabic: 'Amiri', serif; /* New font for Bismillah */
     }
-
+    
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-
+    
+    ::selection { background: rgba(212, 175, 55, 0.3); color: #fff; }
+    
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--darker); }
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(var(--gold-dark), var(--gold));
+        border-radius: 6px;
+        border: 2px solid var(--darker);
+    }
+    ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+    html { scrollbar-color: var(--gold-dark) var(--darker); scrollbar-width: thin; }
+    
     body {
         font-family: var(--font-sans);
         background: var(--darker);
@@ -45,13 +142,15 @@
         line-height: 1.6;
         overflow-x: hidden;
     }
-
+    
     .bg-animation {
-        position: fixed; top: 0; left: 0;
+        position: fixed;
+        top: 0; left: 0;
         width: 100%; height: 100%;
         z-index: -1;
         background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
     }
+    
     .bg-animation::before {
         content: '';
         position: absolute;
@@ -60,449 +159,1283 @@
         background-size: 50px 50px;
         animation: moveGrid 20s linear infinite;
     }
-    @keyframes moveGrid { 0% { transform: translate(0,0); } 100% { transform: translate(50px,50px); } }
-
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
-
-    /* ============ HEADER ============ */
+    
+    /* Fine film-grain texture for a more tactile, premium surface */
+    .bg-animation::after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        opacity: 0.035;
+        mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        pointer-events: none;
+    }
+    
+    /* Scroll-reveal: elements fade + rise into place as they enter view */
+    .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    @keyframes moveGrid {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(50px, 50px); }
+    }
+    
     header {
-        position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-        background: rgba(8,7,6,0.85);
-        backdrop-filter: blur(16px);
-        border-bottom: 1px solid var(--line);
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        padding: 1.2rem 5%;
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        z-index: 1000;
+        transition: box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1), padding 0.4s cubic-bezier(0.22, 1, 0.36, 1), background 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     }
-
-    .bismillah-bar {
-        display: flex; align-items: center; justify-content: space-between;
-        gap: 16px; padding: 12px 0;
-        border-bottom: 1px solid var(--line);
+    
+    header.scrolled {
+        padding: 0.8rem 5%;
+        background: rgba(8, 8, 8, 0.98);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(212, 175, 55, 0.15);
     }
-
-    /* FIXED: Full Bismillah phrase + universal system fonts (works on every PC & phone) */
-    .bismillah-bar .bis {
-        font-family: Tahoma, 'Segoe UI', 'Noto Sans Arabic', 'Geeza Pro', 'Al Bayan', Arial, sans-serif;
-        font-size: 1.4rem;
-        color: var(--gold-2);
-        line-height: 1;
-        direction: rtl;
-        unicode-bidi: isolate;
-        text-shadow: 0 0 14px rgba(212, 175, 55, 0.35);
-        transition: all 0.3s ease;
+    
+    .header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.8rem;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        letter-spacing: 1px;
     }
-    .bis-link { display: inline-block; text-decoration: none; }
-    .bis-link:hover .bis { color: var(--gold); text-shadow: 0 0 20px rgba(212, 175, 55, 0.6); }
-
-    .top-meta {
-        font-family: var(--mono);
-        font-size: 0.9rem;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: var(--muted);
+    
+    .bis-link {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.35rem 1rem;
+        background: transparent;
+        border: none;
+        text-decoration: none;
     }
-
-    .lang-switcher { display: flex; gap: 0.3rem; align-items: center; }
+    
+    /* UPDATED: Bismillah Image Style */
+    .bismillah-img {
+        height: 26px;
+        width: auto;
+        display: inline-block;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .bismillah-img:hover {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+    }
+    
+    .lang-switcher {
+        display: flex;
+        gap: 0.3rem;
+        align-items: center;
+    }
+    
     .lang-btn {
         padding: 0.4rem 0.9rem;
         background: transparent;
         border: 1px solid rgba(212, 175, 55, 0.2);
-        color: var(--muted);
+        color: var(--text-muted);
         cursor: pointer;
-        transition: all 0.3s ease;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
         font-size: 0.75rem;
         letter-spacing: 1px;
         font-family: var(--font-sans);
         text-decoration: none;
         font-weight: 500;
     }
+    
     .lang-btn:hover, .lang-btn.active {
         border-color: var(--gold);
         color: var(--gold);
         background: rgba(212, 175, 55, 0.05);
         transform: translateY(-2px);
     }
+    
     .lang-btn.active { background: rgba(212, 175, 55, 0.1); }
-
-    .nav-wrap { display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 0; }
-    .brand { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
+    
+    .nav-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+    }
+    
     .brand-name {
         font-family: var(--font-serif);
-        font-size: 1.5rem; font-weight: 600; letter-spacing: 2px; color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: #ffffff;
     }
+    
     .brand-name span { color: var(--gold); }
+    
     .brand-sub {
-        font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase;
-        color: var(--muted); margin-top: 0.2rem;
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-top: 0.2rem;
     }
-
-    nav ul { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    
+    nav ul {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+    }
+    
     nav ul a {
-        font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase;
-        color: var(--muted); text-decoration: none; transition: all 0.3s ease;
-        font-weight: 500; position: relative;
+        font-size: 0.85rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        font-weight: 500;
+        position: relative;
     }
+    
     nav ul a::after {
-        content: ''; position: absolute; bottom: -4px; left: 0;
-        width: 0; height: 1px; background: var(--gold); transition: width 0.3s ease;
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: var(--gold);
+        transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
     }
+    
     nav ul a:hover, nav ul a.active { color: var(--gold); }
     nav ul a:hover::after, nav ul a.active::after { width: 100%; }
-    nav ul a i { font-style: normal; color: var(--gold); font-size: 0.75rem; margin-right: 0.3rem; }
-
+    
+    nav ul a i {
+        font-style: normal;
+        color: var(--gold);
+        font-size: 0.75rem;
+        margin-right: 0.3rem;
+    }
+    
     .nav-toggle {
-        display: none; width: 40px; height: 40px; background: none;
-        border: 1px solid rgba(212, 175, 55, 0.3); cursor: pointer;
-        flex-direction: column; align-items: center; justify-content: center; gap: 6px;
+        display: none;
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        cursor: pointer;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
     }
-    .nav-toggle span { display: block; width: 20px; height: 1px; background: var(--text); transition: all 0.4s ease; }
-
-    /* ============ HERO ============ */
-    .hero { margin-top: 150px; padding: 6rem 5%; text-align: center; position: relative; }
+    
+    .nav-toggle span {
+        display: block;
+        width: 20px;
+        height: 1px;
+        background: var(--text);
+        transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .hero {
+        margin-top: 90px;
+        padding: 5rem 5% 3.5rem;
+        text-align: center;
+        position: relative;
+    }
+    
     .hero-badge {
-        display: inline-block; padding: 0.6rem 1.5rem;
-        background: rgba(212, 175, 55, 0.1); border: 1px solid var(--gold);
-        color: var(--gold); font-size: 0.8rem; letter-spacing: 3px;
-        text-transform: uppercase; margin-bottom: 2rem;
+        display: inline-block;
+        padding: 0.6rem 1.5rem;
+        background: rgba(212, 175, 55, 0.1);
+        border: 1px solid var(--gold);
+        color: var(--gold);
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        animation: fadeInDown 1s ease;
+        box-shadow: 0 8px 24px rgba(212, 175, 55, 0.12);
     }
+    
     .hero h1 {
         font-family: var(--font-serif);
         font-size: clamp(2.5rem, 6vw, 4.5rem);
-        font-weight: 400; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: 1px;
+        font-weight: 400;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        letter-spacing: 1px;
+        animation: fadeInUp 1s ease 0.2s both;
     }
-    .hero h1 em { color: var(--gold); font-style: italic; font-weight: 500; }
+    
+    .hero h1 em {
+        color: var(--gold);
+        font-style: italic;
+        font-weight: 500;
+    }
+    
     .hero-flourish {
-        display: flex; align-items: center; justify-content: center; gap: 16px;
-        margin: 2rem auto; color: var(--gold); font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin: 2rem auto;
+        color: var(--gold);
+        font-size: 0.9rem;
+        animation: fadeInUp 1s ease 0.3s both;
     }
-    .hero-flourish::before, .hero-flourish::after { content: ''; height: 1px; width: 80px; }
-    .hero-flourish::before { background: linear-gradient(90deg, transparent, var(--gold)); }
-    .hero-flourish::after { background: linear-gradient(90deg, var(--gold), transparent); }
+    
+    .hero-flourish::before, .hero-flourish::after {
+        content: '';
+        height: 1px;
+        width: 80px;
+        background: linear-gradient(90deg, transparent, var(--gold));
+    }
+    
+    .hero-flourish::after {
+        background: linear-gradient(90deg, var(--gold), transparent);
+    }
+    
     .hero-subtitle {
-        font-size: 1.15rem; color: var(--muted); max-width: 700px;
-        margin: 0 auto 2.5rem; line-height: 1.8; font-weight: 300;
+        font-size: 1.15rem;
+        color: var(--text-muted);
+        max-width: 700px;
+        margin: 0 auto 2.5rem;
+        line-height: 1.8;
+        font-weight: 300;
+        animation: fadeInUp 1s ease 0.4s both;
     }
-    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    
+    .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        animation: fadeInUp 1s ease 0.6s both;
+    }
+    
     .btn-primary {
-        padding: 1rem 2.5rem; background: var(--gold); color: var(--dark);
-        text-decoration: none; font-weight: 600; letter-spacing: 2px;
-        text-transform: uppercase; font-size: 0.85rem; transition: all 0.3s ease;
-        border: 2px solid var(--gold); display: inline-block;
+        padding: 1rem 2.5rem;
+        background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 45%, var(--gold-dark) 100%);
+        color: var(--dark);
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        border: 2px solid var(--gold);
+        display: inline-block;
+        position: relative;
+        box-shadow: 0 8px 24px rgba(212, 175, 55, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.3);
     }
+    
     .btn-primary:hover {
-        background: transparent; color: var(--gold);
-        transform: translateY(-3px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        background: transparent;
+        color: var(--gold);
+        transform: translateY(-3px);
+        box-shadow: 0 16px 40px rgba(212, 175, 55, 0.3);
     }
+    
     .btn-secondary {
-        padding: 1rem 2.5rem; background: transparent; color: var(--text);
-        text-decoration: none; font-weight: 500; letter-spacing: 2px;
-        text-transform: uppercase; font-size: 0.85rem;
-        border: 2px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease; display: inline-block;
+        padding: 1rem 2.5rem;
+        background: rgba(255, 255, 255, 0.02);
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        display: inline-block;
+        backdrop-filter: blur(6px);
     }
-    .btn-secondary:hover { border-color: var(--text); transform: translateY(-3px); }
-
-    /* ============ MARQUEE ============ */
+    
+    .btn-secondary:hover {
+        border-color: var(--gold);
+        color: var(--gold);
+        transform: translateY(-3px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    }
+    
     .marquee {
         overflow: hidden;
         border-top: 1px solid rgba(212, 175, 55, 0.1);
         border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-        padding: 1.5rem 0; background: var(--gray);
+        padding: 1.5rem 0;
+        background: var(--gray);
     }
+    
     .marquee-track {
-        display: flex; gap: 3rem; animation: marquee 40s linear infinite;
-        white-space: nowrap; font-size: 0.85rem; letter-spacing: 2px;
-        text-transform: uppercase; color: var(--muted);
+        display: flex;
+        gap: 3rem;
+        animation: marquee 40s linear infinite;
+        white-space: nowrap;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--text-muted);
     }
+    
     .marquee-track span { color: var(--gold); margin: 0 0.5rem; }
-    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-    /* ============ STATS ============ */
+    
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    
     .stats {
-        padding: 4rem 5%; background: var(--gray);
-        display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 2rem; text-align: center;
+        padding: 2.5rem 5%;
+        background: var(--gray);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        text-align: center;
         border-top: 1px solid rgba(212, 175, 55, 0.1);
         border-bottom: 1px solid rgba(212, 175, 55, 0.1);
     }
-    .stat-item { padding: 1.5rem; }
+    
+    .stat-item { padding: 0.75rem; transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+    .stat-item:hover { transform: translateY(-4px); }
+    .stat-item:hover .stat-number { text-shadow: 0 0 24px rgba(212, 175, 55, 0.5); }
+    
     .stat-number {
-        font-family: var(--font-serif); font-size: 3.5rem; font-weight: 600;
-        color: var(--gold); display: block; margin-bottom: 0.5rem; line-height: 1;
+        font-family: var(--font-serif);
+        font-size: 3.5rem;
+        font-weight: 600;
+        color: var(--gold);
+        display: block;
+        margin-bottom: 0.5rem;
+        line-height: 1;
+        transition: text-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     }
-    .stat-label { color: var(--muted); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; }
-
-    /* ============ TRUST SHOWCASE ============ */
+    
+    .stat-label {
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    
     .trust-showcase {
-        padding: 5rem 5%;
+        padding: 3rem 5%;
         background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.1) 0%, var(--darker) 70%);
-        position: relative; overflow: hidden;
+        position: relative;
+        overflow: hidden;
     }
-    .trust-container { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+    
+    .trust-showcase::before {
+        content: '';
+        position: absolute;
+        top: -50%; left: -50%;
+        width: 200%; height: 200%;
+        background: 
+            radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+        animation: trustGlow 8s ease-in-out infinite alternate;
+        pointer-events: none;
+    }
+    
+    @keyframes trustGlow {
+        0% { opacity: 0.5; transform: scale(1); }
+        100% { opacity: 1; transform: scale(1.1); }
+    }
+    
+    /* UPDATED: Wider container for trust section */
+    .trust-container {
+        max-width: 1200px; /* Increased from 1000px */
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+    
     .trust-card {
         background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(10, 10, 10, 0.98) 100%);
-        border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 20px;
-        padding: 3.5rem 3rem;
-        display: grid; grid-template-columns: 350px 1fr;
-        align-items: center; gap: 3rem;
-        position: relative; overflow: hidden;
-        box-shadow: 0 0 60px rgba(212, 175, 55, 0.2), 0 20px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(212, 175, 55, 0.2);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 20px;
+        padding: 2.5rem 3rem;
+        display: grid;
+        /* UPDATED: Adjusted grid to give text more space */
+        grid-template-columns: 350px 1fr; 
+        align-items: center;
+        gap: 3rem;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 
+            0 0 60px rgba(212, 175, 55, 0.2),
+            0 20px 60px rgba(0, 0, 0, 0.5),
+            inset 0 1px 0 rgba(212, 175, 55, 0.2);
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
     }
+    
+    .trust-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 
+            0 0 80px rgba(212, 175, 55, 0.25),
+            0 30px 70px rgba(0, 0, 0, 0.55),
+            inset 0 1px 0 rgba(212, 175, 55, 0.25);
+    }
+    
     .trust-card::before {
-        content: ''; position: absolute; top: 0; left: -100%;
-        width: 100%; height: 100%;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
         background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
         animation: shimmer 4s ease-in-out infinite;
     }
-    @keyframes shimmer { 0% { left: -100%; } 50%, 100% { left: 100%; } }
-    .trust-score-section {
-        text-align: center; position: relative;
-        display: flex; flex-direction: column; align-items: center; gap: 1rem;
+    
+    @keyframes shimmer {
+        0% { left: -100%; }
+        50%, 100% { left: 100%; }
     }
+    
+    .trust-score-section { 
+        text-align: center; 
+        position: relative; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
     .trust-score {
-        font-family: 'Inter', sans-serif; font-weight: 900; font-size: 8rem;
-        color: var(--gold); line-height: 1; letter-spacing: -4px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+        font-size: 8rem;
+        color: var(--gold);
+        line-height: 1;
+        letter-spacing: -4px;
         text-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
     }
-    .trust-score .out-of { font-size: 2.5rem; color: var(--muted); font-weight: 700; letter-spacing: 0; }
-    .trust-stars { font-size: 1.8rem; color: var(--gold); letter-spacing: 4px; text-shadow: 0 0 20px rgba(212, 175, 55, 0.6); }
-    .trust-details { position: relative; text-align: center; }
+    
+    .trust-score .out-of {
+        font-size: 2.5rem;
+        color: var(--text-muted);
+        font-weight: 700;
+        letter-spacing: 0;
+    }
+    
+    .trust-stars {
+        font-size: 1.8rem;
+        color: var(--gold);
+        letter-spacing: 4px;
+        text-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+    }
+    
+    .trust-divider {
+        width: 1px;
+        align-self: stretch;
+        background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.4), transparent);
+    }
+    
+    .trust-details { 
+        position: relative; 
+        text-align: center;
+    }
+    
+    /* UPDATED: Headline styling to encourage single line */
     .trust-headline {
-        font-family: var(--font-serif); font-size: 1.8rem; color: var(--text);
-        margin-bottom: 1rem; font-weight: 500; line-height: 1.3; white-space: nowrap;
+        font-family: var(--font-serif);
+        font-size: 1.8rem; /* Slightly larger */
+        color: var(--text);
+        margin-bottom: 1rem;
+        font-weight: 500;
+        line-height: 1.3;
     }
-    .trust-headline strong { color: var(--gold); font-weight: 700; }
-    .trust-subtext { color: var(--muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem; }
+    
+    .trust-headline strong {
+        color: var(--gold);
+        font-weight: 700;
+    }
+    
+    .trust-subtext {
+        color: var(--text-muted);
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+    
     .trust-subtext a {
-        color: var(--gold); text-decoration: none;
-        border-bottom: 1px solid rgba(212, 175, 55, 0.4); transition: all 0.3s ease;
+        color: var(--gold);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
     }
-    .trust-subtext a:hover { border-bottom-color: var(--gold); text-shadow: 0 0 10px rgba(212, 175, 55, 0.3); }
+    
+    .trust-subtext a:hover {
+        border-bottom-color: var(--gold);
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+    }
+    
     .trust-google-badge {
-        display: inline-flex; align-items: center; gap: 0.8rem;
-        padding: 1rem 2rem; background: rgba(212, 175, 55, 0.15);
-        border: 1px solid rgba(212, 175, 55, 0.4); border-radius: 8px;
-        color: var(--gold); font-size: 0.9rem; font-weight: 600;
-        letter-spacing: 1px; text-decoration: none; transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 1rem 2rem;
+        background: rgba(212, 175, 55, 0.15);
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        border-radius: 8px;
+        color: var(--gold);
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-decoration: none;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
     }
+    
     .trust-google-badge:hover {
-        background: rgba(212, 175, 55, 0.25); transform: translateY(-2px);
+        background: rgba(212, 175, 55, 0.25);
+        transform: translateY(-2px);
         box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
     }
-    .trust-google-badge .g-icon { font-size: 1.3rem; font-weight: 700; }
-
-    /* ============ SERVICES ============ */
-    .services { padding: 6rem 5%; }
-    .section-header { text-align: center; margin-bottom: 4rem; }
+    
+    .trust-google-badge .g-icon { 
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+    
+    .services { padding: 4rem 5%; }
+    
+    .section-header { 
+        text-align: center; 
+        margin-bottom: 2.5rem;
+    }
+    
     .section-num {
-        display: inline-block; font-size: 0.85rem; letter-spacing: 3px;
-        text-transform: uppercase; color: var(--gold); margin-bottom: 1rem;
+        display: inline-block;
+        font-size: 0.85rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 1rem;
     }
+    
     .section-title {
-        font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 3.5rem);
-        font-weight: 400; margin-bottom: 1rem;
+        font-family: var(--font-serif);
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 400;
+        margin-bottom: 1rem;
     }
+    
     .section-title span { color: var(--gold); font-style: italic; }
-    .services-grid { display: grid; gap: 3rem; max-width: 1200px; margin: 0 auto; }
+    
+    .services-grid {
+        display: grid;
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
     .service-card {
-        background: var(--gray); padding: 3rem;
+        background: linear-gradient(160deg, rgba(255,255,255,0.025), rgba(255,255,255,0) 40%), var(--gray);
+        padding: 3rem;
         border: 1px solid rgba(255,255,255,0.05);
-        transition: all 0.3s ease; position: relative; text-align: center;
+        transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+        position: relative;
+        text-align: center;
     }
+    
     .service-card:hover {
-        border-color: var(--gold); transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        border-color: var(--gold);
+        transform: translateY(-8px);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(212, 175, 55, 0.15), 0 0 50px rgba(212, 175, 55, 0.08);
     }
+    
     .service-card.featured {
         background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(10, 10, 10, 0));
         border: 1px solid rgba(212, 175, 55, 0.2);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.35);
     }
+    
     .service-badge {
-        display: inline-block; padding: 0.4rem 1rem; background: var(--gold);
-        color: var(--dark); font-size: 0.75rem; letter-spacing: 2px;
-        text-transform: uppercase; font-weight: 600; margin-bottom: 1.5rem;
+        display: inline-block;
+        padding: 0.4rem 1rem;
+        background: var(--gold);
+        color: var(--dark);
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
     }
-    .service-num { color: var(--gold); font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 1rem; display: block; font-weight: 600; }
-    .service-card h3 { font-family: var(--font-serif); font-size: 2rem; margin-bottom: 0.5rem; font-weight: 500; }
-    .service-tag { color: var(--gold); font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; display: block; }
-    .service-card p { color: var(--muted); font-size: 1rem; line-height: 1.8; margin-bottom: 1.5rem; }
-    .service-links { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; justify-content: center; }
+    
+    .service-num {
+        color: var(--gold);
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+        display: block;
+        font-weight: 600;
+    }
+    
+    .service-card h3 {
+        font-family: var(--font-serif);
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+    }
+    
+    .service-tag {
+        color: var(--gold);
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        display: block;
+    }
+    
+    .service-card p {
+        color: var(--text-muted);
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-links {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+        justify-content: center;
+    }
+    
     .service-link {
-        padding: 0.8rem 1.5rem; background: var(--gold); color: var(--dark);
-        text-decoration: none; font-size: 0.8rem; font-weight: 600;
-        letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s ease;
+        padding: 0.8rem 1.5rem;
+        background: linear-gradient(135deg, var(--gold-light), var(--gold) 55%, var(--gold-dark));
+        color: var(--dark);
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border: 1px solid var(--gold);
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        box-shadow: 0 6px 18px rgba(212, 175, 55, 0.15);
     }
-    .service-link:hover { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
-    .service-link.outline { background: transparent; color: var(--gold); border: 1px solid rgba(212, 175, 55, 0.3); }
-    .service-link.outline:hover { background: var(--gold); color: var(--dark); }
+    
+    .service-link:hover {
+        background: transparent;
+        color: var(--gold);
+        border: 1px solid var(--gold);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(212, 175, 55, 0.25);
+    }
+    
+    .service-link.outline {
+        background: transparent;
+        color: var(--gold);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    
+    .service-link.outline:hover {
+        background: var(--gold);
+        color: var(--dark);
+    }
+    
     .service-note {
-        background: var(--ox-soft); border: 1px solid rgba(154, 44, 34, 0.3);
-        padding: 1rem 1.5rem; color: #e0a999; font-size: 0.9rem; line-height: 1.6;
+        background: var(--ox-soft);
+        border: 1px solid rgba(154, 44, 34, 0.3);
+        padding: 1rem 1.5rem;
+        color: #e0a999;
+        font-size: 0.9rem;
+        line-height: 1.6;
     }
-    .language-grid { display: grid; grid-template-columns: repeat(8, 1fr); gap: 0.8rem; margin-top: 1.5rem; }
+    
+    .language-grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+    }
+    
     .lang-tag {
-        padding: 0.8rem 0.5rem; background: rgba(212, 175, 55, 0.05);
-        border: 1px solid rgba(212, 175, 55, 0.15); text-align: center;
-        font-size: 0.8rem; color: var(--gold-light); transition: all 0.3s ease;
-        font-weight: 500; letter-spacing: 0.5px;
+        padding: 0.8rem 0.5rem;
+        background: rgba(212, 175, 55, 0.05);
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        text-align: center;
+        font-size: 0.8rem;
+        color: var(--gold-light);
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        font-weight: 500;
+        letter-spacing: 0.5px;
     }
-    .lang-tag:hover { background: var(--gold); color: var(--dark); border-color: var(--gold); }
-    .workflow-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.8rem; margin-top: 1.5rem; }
+    
+    .lang-tag:hover {
+        background: var(--gold);
+        color: var(--dark);
+        border-color: var(--gold);
+    }
+    
+    .workflow-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+    }
+    
     .workflow-tag {
-        padding: 1rem 0.5rem; background: rgba(212, 175, 55, 0.05);
-        border: 1px solid rgba(212, 175, 55, 0.15); text-align: center;
-        font-size: 0.85rem; color: var(--gold-light); text-decoration: none;
-        transition: all 0.3s ease; line-height: 1.4;
+        padding: 1rem 0.5rem;
+        background: rgba(212, 175, 55, 0.05);
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        text-align: center;
+        font-size: 0.85rem;
+        color: var(--gold-light);
+        text-decoration: none;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        line-height: 1.4;
     }
-    .workflow-tag:hover { background: var(--gold); color: var(--dark); border-color: var(--gold); transform: translateY(-2px); }
-    .courier-tags { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    
+    .workflow-tag:hover {
+        background: var(--gold);
+        color: var(--dark);
+        border-color: var(--gold);
+        transform: translateY(-2px);
+    }
+    
+    .courier-tags {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    
     .courier-tag {
-        padding: 1.2rem 1rem; background: rgba(212, 175, 55, 0.05);
-        border: 1px solid rgba(212, 175, 55, 0.15); text-align: center;
-        font-size: 1rem; color: var(--gold-light); letter-spacing: 1px;
-        font-weight: 500; transition: all 0.3s ease;
+        padding: 1.2rem 1rem;
+        background: rgba(212, 175, 55, 0.05);
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        text-align: center;
+        font-size: 1rem;
+        color: var(--gold-light);
+        letter-spacing: 1px;
+        font-weight: 500;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
     }
-    .courier-tag:hover { background: var(--gold); color: var(--dark); border-color: var(--gold); }
-
+    
+    .courier-tag:hover {
+        background: var(--gold);
+        color: var(--dark);
+        border-color: var(--gold);
+    }
+    
     .appt-notice {
-        max-width: 1200px; margin: 4rem auto; padding: 4rem 3rem;
+        max-width: 1200px;
+        margin: 2.5rem auto;
+        padding: 2.5rem 3rem;
         border: 1px solid rgba(212, 175, 55, 0.3);
         background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(10, 10, 10, 0.5));
-        text-align: center; position: relative; overflow: hidden;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 25px 60px rgba(0,0,0,0.35);
     }
+    
     .appt-notice::before {
-        content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
         background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.05), transparent);
         animation: shimmer 6s ease-in-out infinite;
     }
+    
     .appt-notice h4 {
-        font-family: var(--font-serif); font-size: 2.5rem; color: var(--gold);
-        margin-bottom: 1.5rem; font-style: italic; position: relative;
+        font-family: var(--font-serif);
+        font-size: 2.5rem;
+        color: var(--gold);
+        margin-bottom: 1.5rem;
+        font-style: italic;
+        position: relative;
     }
+    
     .appt-notice p {
-        color: var(--muted); font-size: 1.05rem; line-height: 1.8;
-        margin-bottom: 1rem; max-width: 900px; margin-left: auto; margin-right: auto; position: relative;
+        color: var(--text-muted);
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
     }
+    
     .appt-notice strong { color: var(--text); }
-
-    /* ============ PROCESS ============ */
+    
     .process {
-        padding: 6rem 5%; background: var(--gray);
+        padding: 4rem 5%;
+        background: var(--gray);
         border-top: 1px solid rgba(212, 175, 55, 0.1);
         border-bottom: 1px solid rgba(212, 175, 55, 0.1);
     }
+    
     .process-grid {
-        display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem; max-width: 1200px; margin: 3rem auto 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 3rem auto 0;
     }
-    .process-step { padding: 2rem; text-align: center; position: relative; }
+    
+    .process-step {
+        padding: 2rem;
+        text-align: center;
+        position: relative;
+        transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .process-step:hover {
+        transform: translateY(-6px);
+    }
+    
+    .process-step:hover::before {
+        -webkit-text-stroke: 1px rgba(212, 175, 55, 0.6);
+    }
+    
     .process-step::before {
-        content: attr(data-n); position: absolute; top: -20px; left: 50%;
-        transform: translateX(-50%); font-family: var(--font-serif); font-size: 4rem;
-        color: transparent; -webkit-text-stroke: 1px rgba(212, 175, 55, 0.3); line-height: 1;
+        content: attr(data-n);
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: var(--font-serif);
+        font-size: 4rem;
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(212, 175, 55, 0.3);
+        line-height: 1;
+        transition: -webkit-text-stroke-color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     }
-    .process-step h3 { font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text); font-weight: 500; }
-    .process-step p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
-
-    /* ============ REVIEWS ============ */
+    
+    .process-step h3 {
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--text);
+        font-weight: 500;
+    }
+    
+    .process-step p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
     .reviews { padding: 6rem 5%; }
+    
     .review-card {
-        max-width: 900px; margin: 3rem auto; padding: 3rem;
-        background: var(--gray); border: 1px solid rgba(212, 175, 55, 0.1);
-        text-align: center; position: relative;
+        max-width: 900px;
+        margin: 3rem auto;
+        padding: 3rem;
+        background: var(--gray);
+        border: 1px solid rgba(212, 175, 55, 0.1);
+        text-align: center;
+        position: relative;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
     }
+    
+    .review-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 40px rgba(212, 175, 55, 0.08);
+    }
+    
     .review-card::before {
-        content: '"'; font-family: var(--font-serif); font-size: 6rem;
-        color: var(--gold); opacity: 0.3; position: absolute; top: -20px; left: 30px; line-height: 1;
+        content: '"';
+        font-family: var(--font-serif);
+        font-size: 6rem;
+        color: var(--gold);
+        opacity: 0.3;
+        position: absolute;
+        top: -20px;
+        left: 30px;
+        line-height: 1;
     }
+    
     .review-card p {
-        font-family: var(--font-serif); font-size: 1.3rem; color: var(--muted);
-        line-height: 1.8; font-style: italic; margin-bottom: 2rem;
+        font-family: var(--font-serif);
+        font-size: 1.3rem;
+        color: var(--text-muted);
+        line-height: 1.8;
+        font-style: italic;
+        margin-bottom: 2rem;
     }
-    .review-card a { color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(212, 175, 55, 0.4); }
+    
+    .review-card a {
+        color: var(--gold);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+    }
+    
     .social-links {
-        display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem; max-width: 900px; margin: 3rem auto 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 900px;
+        margin: 3rem auto 0;
     }
-    .social-card { padding: 2rem; background: var(--gray); border: 1px solid rgba(212, 175, 55, 0.1); text-align: center; }
-    .social-card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem; }
-    .social-card a { color: var(--gold); text-decoration: none; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; font-weight: 600; }
-
-    /* ============ FAQ ============ */
-    .faq { padding: 6rem 5%; background: var(--gray); border-top: 1px solid rgba(212, 175, 55, 0.1); }
-    .faq-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; max-width: 1200px; margin: 0 auto; }
-    .faq-left { text-align: center; display: flex; flex-direction: column; align-items: center; }
-    .faq-left h2 { font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 1rem; font-weight: 400; }
-    .faq-left p { color: var(--muted); font-size: 1rem; line-height: 1.7; margin-bottom: 2rem; }
-    .faq-item { border-bottom: 1px solid rgba(212, 175, 55, 0.1); padding: 1.5rem 0; }
+    
+    .social-card {
+        padding: 2rem;
+        background: var(--gray);
+        border: 1px solid rgba(212, 175, 55, 0.1);
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .social-card:hover {
+        border-color: var(--gold);
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    }
+    
+    .social-card p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+    
+    .social-card a {
+        color: var(--gold);
+        text-decoration: none;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    
+    .faq {
+        padding: 4rem 5%;
+        background: var(--gray);
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+    }
+    
+    .faq-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .faq-left {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .faq-left h2 {
+        font-family: var(--font-serif);
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 400;
+    }
+    
+    .faq-left p {
+        color: var(--text-muted);
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+    }
+    
+    .faq-item {
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        padding: 1.5rem 0;
+    }
+    
     .faq-item summary {
-        cursor: pointer; font-family: var(--font-serif); font-size: 1.2rem;
-        color: var(--text); font-weight: 500; list-style: none;
-        display: flex; justify-content: center; align-items: center;
-        transition: color 0.3s ease; text-align: center; position: relative;
+        cursor: pointer;
+        font-family: var(--font-serif);
+        font-size: 1.2rem;
+        color: var(--text);
+        font-weight: 500;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        text-align: center;
+        position: relative;
     }
+    
     .faq-item summary::-webkit-details-marker { display: none; }
+    
     .faq-item summary::after {
-        content: '+'; color: var(--gold); font-size: 1.5rem;
-        position: absolute; right: 0; transition: transform 0.3s ease;
+        content: '+';
+        color: var(--gold);
+        font-size: 1.5rem;
+        position: absolute;
+        right: 0;
+        transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
     }
+    
+    .faq-item {
+        transition: padding-left 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
     .faq-item[open] summary::after { transform: rotate(45deg); }
     .faq-item summary:hover { color: var(--gold); }
-    .faq-item .faq-a { padding-top: 1rem; color: var(--muted); font-size: 0.95rem; line-height: 1.7; text-align: center; }
-
-    /* ============ CONTACT ============ */
-    .contact { padding: 6rem 5%; }
-    .contact-grid { display: grid; grid-template-columns: 1fr; gap: 4rem; max-width: 800px; margin: 0 auto; text-align: center; }
-    .contact-info h2 { font-family: var(--font-serif); font-size: 3rem; margin-bottom: 1rem; font-weight: 400; }
+    
+    .faq-item .faq-a {
+        padding-top: 1rem;
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.7;
+        text-align: center;
+    }
+    
+    .contact { padding: 4rem 5%; }
+    
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .contact-info h2 {
+        font-family: var(--font-serif);
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: 400;
+    }
+    
     .contact-info h2 span { color: var(--gold); font-style: italic; }
-    .contact-location { font-size: 0.85rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 2rem; }
-    .contact-note { color: var(--muted); font-size: 1rem; line-height: 1.7; margin-bottom: 2rem; }
-    .contact-label { font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    
+    .contact-location {
+        font-size: 0.85rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 2rem;
+    }
+    
+    .contact-note {
+        color: var(--text-muted);
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-label {
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 0.5rem;
+    }
+    
     .contact-phone {
-        font-family: var(--font-serif); font-size: 2.5rem; color: var(--text);
-        text-decoration: none; display: block; margin-bottom: 1rem; transition: color 0.3s ease;
+        font-family: var(--font-serif);
+        font-size: 2.5rem;
+        color: var(--text);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 1rem;
+        transition: color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
     }
+    
     .contact-phone:hover { color: var(--gold); }
-    .contact-email { color: var(--muted); text-decoration: none; font-size: 1rem; transition: color 0.3s ease; }
+    
+    .contact-email {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
     .contact-email:hover { color: var(--gold); }
-    .contact-hours { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(212, 175, 55, 0.1); }
-    .contact-hours p { color: var(--text); font-size: 1.1rem; margin-bottom: 0.5rem; }
-    .contact-hours .priority { color: var(--muted); font-size: 0.9rem; }
-    .quote-card { background: var(--gray); padding: 3rem; border: 1px solid rgba(212, 175, 55, 0.1); text-align: center; }
-    .quote-card h3 { font-family: var(--font-serif); font-size: 2rem; margin-bottom: 1.5rem; font-weight: 400; font-style: italic; }
-    .quote-card p { color: var(--muted); font-size: 1rem; line-height: 1.8; margin-bottom: 2rem; }
-    .contact-methods { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; }
+    
+    .contact-hours {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+    }
+    
+    .contact-hours p {
+        color: var(--text);
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .contact-hours .priority {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+    }
+    
+    .quote-card {
+        background: linear-gradient(160deg, rgba(212, 175, 55, 0.05), rgba(255,255,255,0) 50%), var(--gray);
+        padding: 3rem;
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        text-align: center;
+        box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+    }
+    
+    .quote-card h3 {
+        font-family: var(--font-serif);
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        font-weight: 400;
+        font-style: italic;
+    }
+    
+    .quote-card p {
+        color: var(--text-muted);
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-methods {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    
     .contact-method-btn {
-        padding: 1rem 1.5rem; background: var(--gold); color: var(--dark);
-        text-decoration: none; font-size: 0.8rem; font-weight: 600;
-        letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s ease;
-        border: 2px solid var(--gold); text-align: center;
+        padding: 1rem 1.5rem;
+        background: linear-gradient(135deg, var(--gold-light), var(--gold) 55%, var(--gold-dark));
+        color: var(--dark);
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        border: 2px solid var(--gold);
+        text-align: center;
+        box-shadow: 0 8px 22px rgba(212, 175, 55, 0.15);
     }
+    
     .contact-method-btn:hover {
-        background: transparent; color: var(--gold); transform: translateY(-3px);
-        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        background: transparent;
+        color: var(--gold);
+        transform: translateY(-3px);
+        box-shadow: 0 16px 36px rgba(212, 175, 55, 0.25);
     }
-
-    /* ============ FOOTER ============ */
-    footer { padding: 4rem 5% 2rem; background: var(--darker); border-top: 1px solid rgba(212, 175, 55, 0.1); text-align: center; }
-    .alhamdulillah { margin-bottom: 2rem; }
-    .alhamdulillah img { height: 60px; width: auto; opacity: 0.9; transition: all 0.3s ease; }
-    .alhamdulillah img:hover { opacity: 1; filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4)); }
+    
+    footer {
+        padding: 2.5rem 5% 1.5rem;
+        background: var(--darker);
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+        text-align: center;
+    }
+    
+    .alhamdulillah {
+        margin-bottom: 1.25rem;
+    }
+    
+    .alhamdulillah img {
+        height: 60px;
+        width: auto;
+        opacity: 0.9;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .alhamdulillah img:hover {
+        opacity: 1;
+        filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
+    }
+    
     .footer-brand {
-        font-family: var(--font-serif); font-size: 1.5rem; color: var(--gold);
-        margin-bottom: 2rem; letter-spacing: 2px; text-transform: uppercase;
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        color: var(--gold);
+        margin-bottom: 2rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
     }
+    
     .footer-info {
-        display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem; max-width: 800px; margin: 0 auto 3rem; text-align: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 800px;
+        margin: 0 auto 3rem;
+        text-align: center;
     }
-    .footer-info h4 { font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
-    .footer-info p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 0.5rem; }
-    .footer-info a { color: var(--gold); text-decoration: none; }
-    .footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(212, 175, 55, 0.1); color: var(--text-dim); font-size: 0.85rem; text-align: center; }
-    .footer-bottom a { color: var(--gold); text-decoration: none; }
-
-    /* ============ RESPONSIVE ============ */
+    
+    .footer-info h4 {
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 1rem;
+    }
+    
+    .footer-info p {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-info a {
+        color: var(--gold);
+        text-decoration: none;
+    }
+    
+    .footer-bottom {
+        padding-top: 2rem;
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+        color: var(--text-dim);
+        font-size: 0.85rem;
+        text-align: center;
+    }
+    
+    .footer-bottom a {
+        color: var(--gold);
+        text-decoration: none;
+    }
+    
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
     @media (max-width: 968px) {
-        .trust-card { grid-template-columns: 1fr; text-align: center; padding: 3rem 2rem; }
-        .trust-headline { white-space: normal; }
+        .trust-card {
+            grid-template-columns: 1fr;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        .trust-divider {
+            width: 60px;
+            height: 1px;
+            margin: 0 auto;
+        }
         .faq-grid { grid-template-columns: 1fr; }
         nav ul { display: none; }
         .nav-toggle { display: flex; }
@@ -510,11 +1443,10 @@
         .workflow-grid { grid-template-columns: repeat(3, 1fr); }
         .courier-tags { grid-template-columns: repeat(3, 1fr); }
     }
+    
     @media (max-width: 768px) {
-        .bismillah-bar { flex-wrap: wrap; justify-content: center; }
-        .top-meta { display: none; }
+        .header-top { flex-direction: column; gap: 0.5rem; }
         .lang-switcher { flex-wrap: wrap; justify-content: center; }
-        .hero { margin-top: 170px; }
         .hero h1 { font-size: 2.5rem; }
         .service-card { padding: 2rem; }
         .language-grid { grid-template-columns: repeat(3, 1fr); }
@@ -529,13 +1461,13 @@
 </head>
 <body>
     <div class="bg-animation"></div>
-
+    
     <header>
-        <div class="container bismillah-bar">
-            <span class="top-meta">Fatih, İstanbul — Est. 2014</span>
-            <!-- FIXED: Full Bismillah phrase, universal default fonts on every PC & phone -->
-            <a class="bis-link" href="https://www.youtube.com/watch?v=_bjK1bQFXkI" target="_blank" rel="noopener">
-                <span class="bis">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</span>
+        <div class="header-top">
+            <span>Fatih, İstanbul — Est. 2014</span>
+            <!-- UPDATED: Bismillah Image (background removed) -->
+            <a href="https://www.youtube.com/watch?v=_bjK1bQFXkI" target="_blank" rel="noopener" class="bis-link">
+                <img src="bismillah-gold.png" alt="Bismillah" class="bismillah-img">
             </a>
             <nav class="lang-switcher">
                 <a href="#" class="lang-btn active">ENGLISH</a>
@@ -545,7 +1477,7 @@
                 <a href="zh/" class="lang-btn">中文</a>
             </nav>
         </div>
-        <div class="container nav-wrap">
+        <div class="nav-wrap">
             <a href="#home" class="brand">
                 <div>
                     <div class="brand-name"><span>TAÇ</span> NOTARY PUBLIC</div>
@@ -568,27 +1500,26 @@
             </button>
         </div>
     </header>
-
+    
     <section class="hero" id="home">
-        <div class="hero-badge">Fatih, Istanbul — Est. 2014</div>
         <h1>Global Document Authentication,<br>Handled With <em>Care</em>.</h1>
         <div class="hero-flourish">◆</div>
         <p class="hero-subtitle">
-            Certified translation, notarization and apostille legalization — arranged simply over WhatsApp, prepared with care, and delivered to your door. Wherever you are, this is all it takes.
+            CERTIFIED TRANSLATION, NOTARIZATION, AND APOSTILLE—HANDLED VIA WHATSAPP, CRAFTED WITH CARE, AND DELIVERED TO YOUR DOORSTEP.
         </p>
         <div class="cta-buttons">
-            <a href="https://wa.me/905013338707?text=Hi%2C+may+I+see+some+samples+of+your+work%3F" class="btn-primary">Samples of Our Work — Free Quote</a>
+            <a href="https://wa.me/905013338707?text=Hi%2C+may+I+see+some+samples+of+your+work%3F" class="btn-primary">View Samples of Our Work</a>
             <a href="#services" class="btn-secondary">See What We Handle</a>
         </div>
     </section>
-
+    
     <div class="marquee">
         <div class="marquee-track">
             <div>E-Apostille · 100% Online <span>◆</span> Sworn Translation · Legal Certification <span>◆</span> Powers of Attorney · Notarial Acts <span>◆</span> Marriage in Turkey · VIP Fast-Track <span>◆</span> Apostille · Global Authentication <span>◆</span> Student Permits · Academic & Immigration <span>◆</span> Fingerprints & Photos · Identity Verification <span>◆</span> Worldwide Courier · Delivery <span>◆</span></div>
             <div>E-Apostille · 100% Online <span>◆</span> Sworn Translation · Legal Certification <span>◆</span> Powers of Attorney · Notarial Acts <span>◆</span> Marriage in Turkey · VIP Fast-Track <span>◆</span> Apostille · Global Authentication <span>◆</span> Student Permits · Academic & Immigration <span>◆</span> Fingerprints & Photos · Identity Verification <span>◆</span> Worldwide Courier · Delivery <span>◆</span></div>
         </div>
     </div>
-
+    
     <section class="stats">
         <div class="stat-item"><span class="stat-number">500+</span><span class="stat-label">Happy Clients</span></div>
         <div class="stat-item"><span class="stat-number">55+</span><span class="stat-label">Languages</span></div>
@@ -596,7 +1527,7 @@
         <div class="stat-item"><span class="stat-number">2014</span><span class="stat-label">Serving Since</span></div>
         <div class="stat-item"><span class="stat-number">24/7</span><span class="stat-label">Translation Priority</span></div>
     </section>
-
+    
     <section class="trust-showcase">
         <div class="trust-container">
             <div class="trust-card">
@@ -604,10 +1535,14 @@
                     <div class="trust-score">4.9<span class="out-of">/5</span></div>
                     <div class="trust-stars">★★★★★</div>
                 </div>
+                
                 <div class="trust-details">
-                    <h3 class="trust-headline">Rated <strong>4.9 out of 5</strong> by over 500 global clients across +50 countries</h3>
+                    <!-- UPDATED: Text is now in a wider container, should fit on one line on desktop -->
+                    <h3 class="trust-headline">
+                        Rated <strong>4.9/5</strong> by 500+ clients across 50+ countries
+                    </h3>
                     <p class="trust-subtext">
-                        Every review is a testament to the trust our clients place in us. Read their stories on Google Business —
+                        Real reviews from real clients. See our stories on Google Business: 
                         <a href="https://g.page/translation.istanbul" target="_blank" rel="noopener">g.page/translation.istanbul</a>
                     </p>
                     <a href="https://g.page/translation.istanbul" target="_blank" rel="noopener" class="trust-google-badge">
@@ -618,13 +1553,13 @@
             </div>
         </div>
     </section>
-
+    
     <section class="services" id="services">
         <div class="section-header">
             <div class="section-num">I — Services</div>
             <h2 class="section-title">What We <span>Certify</span></h2>
         </div>
-
+        
         <div class="services-grid">
             <div class="service-card featured">
                 <div class="service-badge">New · Fully Online</div>
@@ -638,7 +1573,7 @@
                 </div>
                 <div class="service-note">E-Apostille requires a live verification video call plus a recorded video of the document from every side — strictly by appointment. Certified PDF in 1–2 working days; apostilled hard copy delivered worldwide in 3–7 business days.</div>
             </div>
-
+            
             <div class="service-card">
                 <span class="service-num">№ 02</span>
                 <h3>Sworn / Certified Translation & Notarization</h3>
@@ -671,7 +1606,7 @@
                     <div class="lang-tag">DANSK</div>
                 </div>
             </div>
-
+            
             <div class="service-card">
                 <span class="service-num">№ 03</span>
                 <h3>Powers of Attorney, Consent Letters & Affidavits</h3>
@@ -696,7 +1631,7 @@
                 </div>
                 <div class="service-note" style="margin-top: 1.5rem;">Please note: while our new E-Apostille service is fully online, a Power of Attorney can never be done online — Turkish law requires you to sign in person at our notary office. Message us on WhatsApp first and we will book your appointment.</div>
             </div>
-
+            
             <div class="service-card">
                 <span class="service-num">№ 04</span>
                 <h3>VIP Fast-Track Marriage in Turkey</h3>
@@ -706,7 +1641,7 @@
                     <a href="getting-married-in-turkey.html" class="service-link">More Information →</a>
                 </div>
             </div>
-
+            
             <div class="service-card">
                 <span class="service-num">№ 05</span>
                 <h3>Apostille & Consular Legalization</h3>
@@ -720,7 +1655,7 @@
                     <a href="https://wa.me/905013338707?text=Hi%2C+I+need+Ministry+of+Foreign+Affairs+Legalization" class="workflow-tag">Ministry of Foreign Affairs</a>
                 </div>
             </div>
-
+            
             <div class="service-card">
                 <span class="service-num">№ 06</span>
                 <h3>University Enrollment & Student Permits</h3>
@@ -734,7 +1669,7 @@
                     <a href="https://wa.me/905013338707?text=Hi%2C+I+need+help+with+Transcript+Equivalency" class="workflow-tag">Transcript Equivalency</a>
                 </div>
             </div>
-
+            
             <div class="service-card">
                 <span class="service-num">№ 07</span>
                 <h3>Fingerprints & Photo Certification</h3>
@@ -748,7 +1683,7 @@
                     <a href="https://wa.me/905013338707?text=Hi%2C+I+need+a+True+Likeness+Photo" class="workflow-tag">True Likeness Photo</a>
                 </div>
             </div>
-
+            
             <div class="service-card">
                 <span class="service-num">№ 08</span>
                 <h3>Worldwide Courier</h3>
@@ -763,14 +1698,14 @@
                 </div>
             </div>
         </div>
-
+        
         <div class="appt-notice">
             <h4>By Appointment Only</h4>
             <p>To ensure your time with us is seamless, we prepare all necessary documents ahead of your arrival. For this reason, we kindly inform our guests that we are <strong>strictly unable to accept walk-ins</strong> without a prior appointment.</p>
             <p>Should you require urgent, same-day assistance, please contact us via WhatsApp no later than 60 minutes before your intended arrival. It is our pleasure to take care of everything for you.</p>
         </div>
     </section>
-
+    
     <section class="process" id="process">
         <div class="section-header">
             <div class="section-num">II — Process</div>
@@ -783,29 +1718,7 @@
             <div class="process-step" data-n="4"><h3>Delivered Worldwide</h3><p>Receive your documents by DHL, FedEx or UPS with tracking — no office visit needed.</p></div>
         </div>
     </section>
-
-    <section class="reviews" id="reviews">
-        <div class="section-header">
-            <div class="section-num">III — Reviews</div>
-            <h2 class="section-title">The Verdict of Our <span>Clients</span></h2>
-            <p style="color: var(--muted); font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase;">Live from our Google profile · 500+ reviews · ★★★★★ 4.9 / 5</p>
-        </div>
-        <div class="review-card">
-            <p>Thanks to Google's kind short-link service, our office has its own easy-to-remember address on the map — <a href="https://g.page/translation.istanbul" target="_blank" rel="noopener">g.page/translation.istanbul</a> — so clients from 92 countries can reach us in a single tap. Every kind word shared there is a trust we honor.</p>
-            <a href="reviews.html" class="btn-secondary">Read All Reviews</a>
-        </div>
-        <div class="social-links">
-            <div class="social-card">
-                <p>Follow <strong style="color: var(--gold);">@TAC_NOTARY_IST</strong> on Instagram for updates, stories and behind-the-scenes of our daily work.</p>
-                <a href="https://www.instagram.com/tac_notary_ist/" target="_blank" rel="noopener">Follow on Instagram</a>
-            </div>
-            <div class="social-card">
-                <p>Prefer Telegram? Message <strong style="color: var(--gold);">@TAC_NOTARY_IST</strong> any time — we reply promptly, day or night.</p>
-                <a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener">Message on Telegram</a>
-            </div>
-        </div>
-    </section>
-
+    
     <section class="faq" id="faq">
         <div class="faq-grid">
             <div class="faq-left">
@@ -830,30 +1743,29 @@
             </div>
         </div>
     </section>
-
+    
     <section class="contact" id="contact">
         <div class="contact-grid">
             <div class="contact-info">
                 <div class="section-num">V — Contact</div>
                 <h2>Start on <span>WhatsApp</span></h2>
                 <div class="contact-location">Fatih, İstanbul</div>
-                <p class="contact-note">Certified translation, notarization and apostille legalization — arranged over WhatsApp, delivered to your door.</p>
-
+                
                 <div class="contact-label">WhatsApp — one number, day or night</div>
                 <a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" class="contact-phone">+90 501 333 87 07</a>
                 <a href="mailto:notarypublic.istanbul@gmail.com" class="contact-email">notarypublic.istanbul@gmail.com</a>
-
+                
                 <div class="contact-hours">
                     <div class="contact-label">Hours</div>
                     <p>Mon–Fri: 09:00 – 17:00</p>
                     <p class="priority">Translation: 24/7 Priority</p>
                 </div>
             </div>
-
+            
             <div class="quote-card">
                 <h3>Every Quote, Prepared With Care</h3>
                 <p>Because every document is unique, we prepare your quote personally — simply share a photo on WhatsApp and we will reply the same day with cost and timing. And if you are a student, or going through a difficult financial moment, please tell us: it is our honor to offer a considerate, reduced rate. Careful service belongs to everyone.</p>
-
+                
                 <div class="contact-methods">
                     <a href="https://wa.me/905013338707?text=HI%2C+May+I+ask+for+an+appointment%21" class="contact-method-btn">WhatsApp</a>
                     <a href="https://t.me/TAC_NOTARY_IST" class="contact-method-btn">Telegram</a>
@@ -863,14 +1775,14 @@
             </div>
         </div>
     </section>
-
+    
     <footer>
         <div class="alhamdulillah">
             <img src="alhamdulillah-gold.png" alt="Alhamdulillah" />
         </div>
-
+        
         <div class="footer-brand">TAÇ Certified & Sworn Translation · Notary Public & Apostille Services</div>
-
+        
         <div class="footer-info">
             <div>
                 <h4>Feedback & Complaints</h4>
@@ -883,17 +1795,17 @@
                 <a href="mailto:business@notarypublic.istanbul">business@notarypublic.istanbul</a>
             </div>
         </div>
-
+        
         <div class="footer-bottom">
             <p>© 2026 TAC Translation, Notary Public & Apostille Services — Fatih, İstanbul</p>
             <p>
-                <a href="https://notarypublic.istanbul" style="color: var(--gold); text-decoration: none;">notarypublic.istanbul</a>
-                ·
+                <a href="https://notarypublic.istanbul" style="color: var(--gold); text-decoration: none;">notarypublic.istanbul</a> 
+                · 
                 <a href="https://g.page/translation.istanbul" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: none;">g.page/translation.istanbul</a>
             </p>
         </div>
     </footer>
-
+    
     <script>
         const navToggle = document.querySelector('.nav-toggle');
         const navList = document.querySelector('nav ul');
@@ -908,6 +1820,31 @@
             navList.style.padding = '2rem';
             navList.style.borderBottom = '1px solid rgba(212, 175, 55, 0.1)';
         });
+
+        // Header gains a subtle shadow + shrinks slightly once the page scrolls
+        const siteHeader = document.querySelector('header');
+        const onScroll = () => {
+            siteHeader.classList.toggle('scrolled', window.scrollY > 20);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        // Scroll-reveal: fade + rise elements into place as they enter the viewport
+        const revealSelectors = '.service-card, .process-step, .review-card, .social-card, .quote-card, .faq-item, .trust-card, .stat-item, .contact-info, .footer-info > div';
+        const revealEls = document.querySelectorAll(revealSelectors);
+        revealEls.forEach((el, i) => {
+            el.classList.add('reveal');
+            el.style.transitionDelay = (i % 4) * 0.08 + 's';
+        });
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(el => revealObserver.observe(el));
     </script>
 </body>
 </html>
