@@ -3,620 +3,1850 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0d0b09">
-<title>TAC Noter Hizmetleri İstanbul | Onaylı Tercüme ve Apostil</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230d0b09'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Georgia,serif' font-size='54' font-weight='700' fill='%23c8a25a'%3ET%3C/text%3E%3C/svg%3E">
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=optional" rel="stylesheet">
-<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<style>
-    :root { --ink:#080706; --ink-2:#0f0e0d; --card:#110e0b; --line:rgba(242,236,222,0.08); --gold:#c8a25a; --gold-2:#ecd08a; --gold-glow:rgba(200, 162, 90, 0.15); --ox:#9a2c22; --ox-soft:rgba(154,44,34,0.16); --paper:#efe6cf; --paper-ink:#241d13; --bronze:#6a563c; --cream:#f4eee0; --muted:#a99f8d; --disp:'EB Garamond','Garamond',Georgia,serif; --mono:'IBM Plex Mono',monospace; }
-    * { margin:0; padding:0; box-sizing:border-box; } html { scroll-behavior: auto; }
-    body { font-family:var(--disp); font-size:21px; background:var(--ink); color:var(--cream); line-height:1.75; overflow-x:hidden; -webkit-font-smoothing:antialiased; position: relative; }
-    a { text-decoration:none; color:inherit; transition:color .4s cubic-bezier(0.16, 1, 0.3, 1); }
-    ::selection { background:var(--gold); color:#080706; }
-    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
-    section { padding:140px 0; scroll-margin-top:120px; }
-    img, svg { max-width:100%; display: block; }
+<meta name="theme-color" content="#0a0a0a">
+<meta name="description" content="TAÇ Noter Halka Açık İstanbul - 2014'ten beri profesyonel apostil, yeminli tercüme ve noter onay hizmetleri. 500+ 5 yıldızlı değerlendirme. 50+ ülkeye, 55+ dilde hizmet.">
+<title>TAÇ Noter Halka Açık İstanbul | Yeminli Tercüme ve Apostil Hizmetleri</title>
+<link rel="canonical" href="https://notarypublic.istanbul/tr/">
+<link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/">
+<link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0a'/%3E%3Ctext x='50' y='68' text-anchor='middle' font-family='Georgia,serif' font-size='54' font-weight='700' fill='%23D4AF37'%3ET%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    .noise-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9998; opacity: 0.03; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); }
-    .bg-orb { position: fixed; border-radius: 50%; filter: blur(120px); opacity: 0.12; z-index: -1; pointer-events: none; animation: floatOrb 25s infinite alternate ease-in-out; }
-    .bg-orb-1 { width: 600px; height: 600px; background: var(--gold); top: -200px; left: -200px; }
-    .bg-orb-2 { width: 500px; height: 500px; background: var(--ox); bottom: -200px; right: -200px; animation-delay: -12s; }
-    @keyframes floatOrb { 0% { transform: translate(0, 0) scale(1); } 100% { transform: translate(100px, 80px) scale(1.1); } }
-    
-    .eyebrow { font-family:var(--mono); font-size:1.1rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); }
-    .chap { display:flex; align-items:center; gap:18px; margin-bottom:32px; }
-    .chap-num { font-family:var(--mono); font-size:1.1rem; color:var(--ox); border:1px solid rgba(154,44,34,0.4); padding:6px 12px; }
-    .chap-line { width:60px; height:1px; background:var(--gold); }
-    h2.disp { font-family:var(--disp); font-style:italic; font-weight:400; color:var(--gold-2); font-size:clamp(3rem,5.5vw,4.5rem); line-height:1.1; text-transform:uppercase; letter-spacing:-0.02em; }
-    
-    .btn-gold { display:inline-flex; align-items:center; justify-content:center; gap:8px; background:var(--gold); color:#080706; font-family:var(--mono); font-size:1rem; letter-spacing:0.15em; text-transform:uppercase; font-weight:500; padding:20px 36px; border:1px solid var(--gold); transition: all .5s cubic-bezier(0.16, 1, 0.3, 1); white-space:nowrap; position: relative; overflow: hidden; }
-    .btn-gold::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent); transition: left 0.6s ease; }
-    .btn-gold:hover::before { left: 100%; }
-    .btn-gold:hover { background:var(--gold-2); border-color:var(--gold-2); transform:translateY(-2px); box-shadow: 0 10px 40px var(--gold-glow); }
-    .btn-outline { display:inline-flex; align-items:center; justify-content:center; background:transparent; color:var(--cream); font-family:var(--mono); font-size:1rem; letter-spacing:0.15em; text-transform:uppercase; padding:20px 36px; border:1px solid var(--line); transition: all .5s cubic-bezier(0.16, 1, 0.3, 1); white-space:nowrap; }
-    .btn-outline:hover { border-color:var(--gold); color:var(--gold); box-shadow: 0 10px 40px rgba(200, 162, 90, 0.05); }
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TAÇ Noter Halka Açık İstanbul">
+<meta property="og:title" content="TAÇ Noter Halka Açık İstanbul | Yeminli Tercüme ve Apostil Hizmetleri">
+<meta property="og:description" content="Yeminli tercüme, noter onayı ve apostil tasdiki — WhatsApp üzerinden düzenlenir, kapınıza teslim edilir. 500+ 5 yıldızlı değerlendirme, 50+ ülkeye hizmet.">
+<meta property="og:url" content="https://notarypublic.istanbul/tr/">
+<meta property="og:image" content="https://notarypublic.istanbul/og-image.jpg">
+<meta property="og:locale" content="tr_TR">
 
-    header { position:fixed; top:0; left:0; right:0; z-index:1000; background:rgba(8,7,6,0.85); backdrop-filter:blur(16px); border-bottom:1px solid var(--line); }
-    .bismillah-bar { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0; border-bottom:1px solid var(--line); }
-    .bismillah-bar .bis { font-family:Tahoma,'Segoe UI',sans-serif; font-size:1.3rem; color:var(--gold-2); line-height:1; direction:rtl; unicode-bidi:isolate; }
-    .bis-link { display:inline-block; } .bis-link:hover { color:var(--gold); }
-    .top-meta { font-family:var(--mono); font-size:0.9rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); }
-    
-    .lang-switch { display:flex; align-items:center; gap:12px; font-size: 1.4rem; }
-    .lang-switch a { transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); display: inline-block; filter: grayscale(100%) opacity(0.5); }
-    .lang-switch a:hover, .lang-switch a.lang-current { filter: grayscale(0%) opacity(1); transform: scale(1.2); }
-    
-    .nav-wrap { display:flex; align-items:center; justify-content:space-between; gap:22px; padding:18px 0; }
-    .brand { display:flex; align-items:center; gap:14px; flex-shrink:0; }
-    .brand-name { display:block; font-family:var(--disp); font-style:italic; font-weight:500; font-size:1.3rem; color:var(--gold-2); line-height:1.1; text-transform:uppercase; letter-spacing:0.05em; white-space:nowrap; }
-    .brand-sub { display:block; font-family:var(--mono); font-size:0.85rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--muted); margin-top:4px; }
-    nav ul { display:flex; align-items:center; gap:28px; list-style:none; }
-    nav ul a { font-family:var(--mono); font-size:0.95rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); white-space:nowrap; position: relative; }
-    nav ul a i { font-style:normal; color:var(--ox); font-size:0.8rem; margin-right:6px; vertical-align:1px; }
-    nav ul a::after { content:''; position:absolute; left:0; bottom:-4px; width:0; height:1px; background:var(--gold); transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-    nav ul a:hover, nav ul a.active { color:var(--gold-2); }
-    nav ul a:hover::after { width: 100%; }
-    .nav-right { display:flex; align-items:center; gap:16px; flex-shrink:0; }
-    .nav-toggle { display:none; width:40px; height:40px; background:none; border:1px solid var(--line); cursor:pointer; flex-direction:column; align-items:center; justify-content:center; gap:6px; }
-    .nav-toggle span { display:block; width:20px; height:1px; background:var(--cream); transition: all 0.4s ease; }
-    .nav-toggle.active span:nth-child(1) { transform:translateY(7px) rotate(45deg); }
-    .nav-toggle.active span:nth-child(2) { opacity:0; }
-    .nav-toggle.active span:nth-child(3) { transform:translateY(-7px) rotate(-45deg); }
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TAÇ Noter Halka Açık İstanbul | Yeminli Tercüme ve Apostil Hizmetleri">
+<meta name="twitter:description" content="Yeminli tercüme, noter onayı ve apostil tasdiki — WhatsApp üzerinden düzenlenir, kapınıza teslim edilir. 500+ 5 yıldızlı değerlendirme, 50+ ülkeye hizmet.">
+<meta name="twitter:image" content="https://notarypublic.istanbul/og-image.jpg">
 
-    .hero { padding:220px 0 140px; position:relative; overflow:hidden; }
-    .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
-    .hero-copy { text-align: center; }
-    .hero h1 { font-family:var(--disp); font-style:italic; font-weight:400; font-size:clamp(2.2rem, 3.2vw, 3rem); line-height:1.2; color:var(--cream); text-transform:uppercase; letter-spacing:-0.01em; margin-bottom: 10px; }
-    .hero h1 em { font-weight:500; color:var(--gold-2); font-style:italic; }
-    .hero-flourish { display:flex; align-items:center; justify-content: center; gap:16px; margin:30px 0 30px; color:var(--gold); font-size:0.9rem; }
-    .hero-flourish::before, .hero-flourish::after { content:''; height:1px; width:60px; background:var(--gold); opacity: 0.5; }
-    .hero .lead { color:var(--muted); font-size:1.2rem; max-width:480px; margin:0 auto 40px; line-height: 1.7; }
-    .hero-actions { display:flex; gap:16px; flex-wrap:wrap; justify-content: center; }
-
-    .cert-doc { background:var(--paper); color:var(--paper-ink); padding:40px 30px; border:1px solid rgba(200,162,90,0.3); box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 60px var(--gold-glow); position: relative; transform: rotate(2deg); transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); max-width: 420px; margin: 0 auto; }
-    .cert-doc:hover { transform: rotate(0deg) scale(1.02); }
-    .cert-doc::before { content:'APOSTIL'; position:absolute; top:20px; right:20px; font-family:var(--mono); font-size:0.7rem; letter-spacing:0.2em; color:var(--ox); border:1px solid var(--ox); padding:2px 6px; }
-    .cert-doc h4 { font-family:var(--disp); font-size:1.5rem; text-align:center; margin-bottom:5px; font-weight:500; }
-    .cert-doc .sub { font-size:0.85rem; text-align:center; color:#5c4b32; margin-bottom:20px; font-style:italic; }
-    .cert-row { display:flex; gap:10px; font-size:0.85rem; margin-bottom:6px; font-family:var(--mono); }
-    .cert-row b { min-width:90px; color:#5c4b32; font-weight:500; }
-    .cert-seal { width:80px; height:80px; border:2px dashed var(--ox); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:var(--disp); font-size:0.75rem; text-align:center; color:var(--ox); margin:20px auto 0; font-weight:600; line-height:1.2; }
-
-    .marquee { overflow:hidden; border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:24px 0; background:var(--ink-2); }
-    .marquee-track { display:flex; gap:60px; animation: marquee 40s linear infinite; white-space:nowrap; font-family:var(--mono); font-size:1rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); }
-    .marquee-track span { color:var(--gold); margin: 0 10px; }
-    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-    .stats-bar { background:var(--ink-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:100px 0; }
-    .stats-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:40px; }
-    .stat-cell { text-align:center; position: relative; }
-    .stat-cell:not(:last-child)::after { content:''; position:absolute; right:0; top:20%; height:60%; width:1px; background:var(--line); }
-    .stat-value { font-family:var(--disp); font-weight:400; font-size:clamp(2.5rem, 4vw, 3.5rem); color:var(--gold-2); line-height:1; margin-bottom:16px; }
-    .stat-key { font-family:var(--mono); font-size:0.95rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); }
-    
-    .rating-plaque { margin-top:80px; display:flex; flex-direction:column; gap:32px; border:1px solid rgba(200,162,90,0.2); background:linear-gradient(135deg, rgba(200,162,90,0.05), rgba(8,7,6,0)); padding:40px; position: relative; overflow: hidden; }
-    .rating-plaque::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:radial-gradient(circle, var(--gold-glow) 0%, transparent 60%); opacity: 0.5; pointer-events: none; }
-    .rp-top { text-align:center; margin-bottom:4px; position: relative; z-index: 1; }
-    .rp-body { display:grid; grid-template-columns:auto auto 1fr auto; align-items:center; gap:40px; width:100%; position: relative; z-index: 1; }
-    .rp-score { font-family:var(--disp); font-style:italic; font-weight:400; font-size:3.5rem; color:var(--gold-2); line-height:1; text-align:center; }
-    .rp-score em { font-size:1.5rem; color:var(--muted); }
-    .rp-divider { width:1px; align-self:stretch; background:rgba(200,162,90,0.2); }
-    .rp-main { font-family:var(--mono); font-size:1.1rem; line-height:1.6; color: var(--cream); }
-    .rp-main b { color:var(--gold-2); font-weight: 500; }
-    .rp-sub { font-family:var(--mono); font-size:1rem; color:var(--muted); margin-top:12px; }
-    .rp-sub .g-url { color:var(--gold-2); border-bottom:1px solid rgba(200,162,90,0.4); padding-bottom:2px; transition: border-color 0.3s ease; }
-    .rp-sub .g-url:hover { border-color: var(--gold); }
-    .rp-arrow { width:60px; height:60px; border:1px solid rgba(200,162,90,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--gold-2); font-size:1.2rem; transition:all .5s cubic-bezier(0.16, 1, 0.3, 1); }
-    .rp-arrow:hover { background:var(--gold); color:#080706; border-color:var(--gold); transform:translateX(5px); }
-
-    .svc-list { border-top:1px solid var(--line); margin-top:80px; }
-    .svc-row { position:relative; text-align:center; padding:80px 24px; border-bottom:1px solid var(--line); transition:background .6s ease; }
-    .svc-row:hover { background:rgba(17, 14, 11, 0.6); }
-    .svc-row-featured { background:linear-gradient(135deg, rgba(200,162,90,0.08), rgba(8,7,6,0)); border:1px solid rgba(200,162,90,0.2); }
-    .badge-new { display:inline-block; background:var(--gold); color:#080706; font-family:var(--mono); font-size:0.85rem; letter-spacing:0.2em; text-transform:uppercase; font-weight:500; padding:8px 16px; margin-bottom:24px; }
-    .svc-num { font-family:var(--mono); font-size:1rem; letter-spacing:0.2em; color:var(--ox); margin-bottom:20px; }
-    .svc-head { display:flex; flex-direction:column; align-items:center; gap:12px; margin-bottom:24px; }
-    .svc-head h3 { font-family:var(--disp); font-style:italic; font-weight:400; font-size:clamp(2rem, 3vw, 2.5rem); color:var(--cream); text-transform:uppercase; letter-spacing:-0.01em; }
-    .svc-tag { font-family:var(--mono); font-size:1rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--gold); }
-    .svc-row p { color:var(--muted); font-size:1.15rem; max-width:760px; margin:0 auto; line-height: 1.8; }
-    .tag-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; justify-content:center; }
-    .tag { display:inline-flex; align-items:center; justify-content:center; text-align:center; font-family:var(--mono); font-size:0.95rem; color:var(--gold-2); background:rgba(200,162,90,0.05); border:1px solid rgba(200,162,90,0.15); padding:12px 20px; transition:all .4s cubic-bezier(0.16, 1, 0.3, 1); }
-    .tag-link:hover { background:var(--gold); color:#080706; border-color:var(--gold); transform:translateY(-2px); }
-    .tag-row-lang { display:grid; grid-template-columns:repeat(6,1fr); gap:12px; max-width: 900px; margin: 32px auto 0; }
-    .tag-row-lang .tag { white-space:nowrap; font-size:0.9rem; padding:10px 6px; }
-    .tag-row-grid4 { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; max-width: 1000px; margin: 32px auto 0; }
-    .tag-row-grid4 .tag { font-size:0.9rem; padding:14px 10px; line-height:1.4; text-wrap:balance; }
-    .tag-cta { background:var(--gold); color:#080706; border-color:var(--gold); font-weight:500; }
-    .tag-cta:hover { background:var(--gold-2); border-color:var(--gold-2); color:#080706; transform:translateY(-2px); box-shadow: 0 10px 30px var(--gold-glow); }
-    .flag { display:inline-block; margin-top:32px; font-family:var(--mono); font-size:0.9rem; color:#e0a999; background:var(--ox-soft); border:1px solid rgba(154,44,34,0.3); padding:12px 20px; line-height: 1.6; max-width: 800px; }
-
-    .appt-notice { max-width: 900px; margin: 80px auto 0; border: 1px solid rgba(200,162,90,0.3); background: rgba(200,162,90,0.03); padding: 40px; text-align: center; backdrop-filter: blur(10px); }
-    .appt-notice h4 { font-family: var(--disp); font-size: 1.8rem; color: var(--gold-2); margin-bottom: 16px; font-style: italic; }
-    .appt-notice p { color: var(--muted); font-size: 1.1rem; line-height: 1.7; margin-bottom: 12px; }
-    .appt-notice strong { color: var(--cream); }
-
-    .process { background:var(--ink-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-    .process-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:40px; margin-top:80px; }
-    .step { position:relative; padding-top:32px; text-align:center; }
-    .step::before { content:attr(data-n); position:absolute; top:-60px; left:50%; transform:translateX(-50%); font-family:var(--disp); font-style:italic; font-size:8rem; line-height:1; color:transparent; -webkit-text-stroke:1px rgba(200,162,90,0.15); pointer-events:none; }
-    .step-top { display:flex; align-items:center; gap:14px; margin-bottom:28px; }
-    .step-dot { width:10px; height:10px; border:1px solid var(--gold); border-radius:50%; background:var(--ink-2); z-index:1; flex-shrink:0; }
-    .step-line { flex:1; height:1px; background:var(--line); }
-    .step h3 { font-family:var(--disp); font-style:italic; font-weight:400; font-size:1.5rem; margin-bottom:16px; color:var(--cream); text-transform:uppercase; letter-spacing:0.05em; }
-    .step p { font-size:1.05rem; color:var(--muted); line-height: 1.7; }
-
-    .reviews { position:relative; overflow:hidden; border-bottom:1px solid var(--line); }
-    .gpage-frame { border:1px solid var(--line); background:var(--card); padding:60px 40px; text-align:center; margin-top:60px; position: relative; }
-    .gpage-frame .quote-mark { font-family:var(--disp); font-size:5rem; color:var(--gold); line-height:1; opacity: 0.5; margin-bottom: -20px; }
-    .gpage-frame p { max-width:700px; margin:0 auto 32px; color:var(--muted); font-size:1.4rem; line-height:1.8; font-style:italic; font-weight: 400; }
-    .gpage-frame .glink { color:var(--gold-2); font-family:var(--mono); font-size:1.1rem; border-bottom:1px solid rgba(200,162,90,0.4); padding-bottom:2px; font-style:normal; transition: border-color 0.3s ease; }
-    .gpage-frame .glink:hover { border-color: var(--gold); }
-    .follow-ig { margin-top:32px; border:1px solid var(--line); background:var(--ink-2); padding:40px; display:flex; flex-direction:column; gap:32px; }
-    .follow-ig-item { display:flex; align-items:center; gap:20px; flex-wrap:wrap; justify-content:center; text-align:center; }
-    .follow-ig-divider { width:120px; height:1px; background:var(--line); margin:0 auto; }
-    .follow-ig svg { color:var(--gold); flex-shrink:0; }
-    .follow-ig span { color:var(--muted); font-size:1.1rem; max-width: 400px; }
-    .follow-ig strong { color:var(--gold-2); font-weight:500; }
-
-    .faq-grid { display:grid; grid-template-columns:0.8fr 1.2fr; gap:80px; align-items:start; }
-    .faq-left { position:sticky; top:150px; }
-    .faq-left p { color:var(--muted); font-size:1.2rem; margin:24px 0 32px; font-style:italic; line-height: 1.7; }
-    .faq-item { border:1px solid var(--line); background:var(--card); margin-bottom:16px; transition:border-color .4s ease, background .4s ease; }
-    .faq-item:hover { border-color:rgba(200,162,90,0.3); background: rgba(17, 14, 11, 0.8); }
-    .faq-item summary { cursor:pointer; padding:28px 32px; font-family:var(--disp); font-style:italic; font-weight:400; font-size:1.4rem; color:var(--cream); list-style:none; display:flex; justify-content:space-between; align-items:center; gap:20px; text-wrap:balance; }
-    .faq-item summary::-webkit-details-marker { display:none; }
-    .faq-item summary::after { content:'+'; color:var(--gold); font-family:var(--mono); font-size:1.5rem; flex-shrink:0; transition: transform 0.4s ease; }
-    .faq-item[open] summary::after { content:'−'; transform: rotate(180deg); }
-    .faq-a { padding:0 32px 32px; color:var(--muted); font-size:1.1rem; line-height:1.8; }
-
-    .contact { background:var(--bronze); color:var(--cream); }
-    .contact .eyebrow { color:var(--gold-2); }
-    .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
-    .contact h2 { font-family:var(--disp); font-style:italic; font-weight:400; font-size:clamp(3rem,5vw,4rem); color:var(--gold-2); margin:24px 0 32px; text-transform:uppercase; letter-spacing:-0.02em; }
-    .contact-loc { font-family:var(--mono); font-size:1rem; letter-spacing:0.2em; color:rgba(244,238,224,0.6); margin-bottom:16px; text-transform: uppercase; }
-    .contact-note { color:rgba(244,238,224,0.8); font-size:1.2rem; max-width:480px; margin-bottom:48px; line-height: 1.7; }
-    .c-big-label { font-family:var(--mono); font-size:0.9rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold-2); margin-bottom:12px; }
-    .c-big { font-family:var(--disp); font-weight:400; font-size:clamp(2.5rem,4vw,3.5rem); color:var(--cream); line-height:1.1; margin-bottom: 8px; }
-    .c-big a:hover { color:var(--gold-2); }
-    .c-sub { font-size:1.1rem; color:rgba(244,238,224,0.7); margin-top:12px; }
-    .c-sub a:hover { color:var(--gold-2); }
-    .c-hours { margin-top:40px; padding-top: 40px; border-top: 1px solid rgba(244,238,224,0.1); }
-    .contact-cta-row { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:48px; }
-    .btn-ink { display:flex; align-items:center; justify-content:center; gap:10px; background:rgba(8,7,6,0.4); color:var(--gold-2); font-family:var(--mono); font-size:0.95rem; letter-spacing:0.15em; text-transform:uppercase; padding:20px 14px; border:1px solid rgba(8,7,6,0.4); transition:all .4s cubic-bezier(0.16, 1, 0.3, 1); white-space:nowrap; }
-    .btn-ink:hover { background:var(--gold); border-color:var(--gold); color:#080706; transform:translateY(-2px); }
-    .wa-card { border:1px solid rgba(0,0,0,0.2); background:rgba(0,0,0,0.2); padding:56px 48px; text-align:center; backdrop-filter: blur(10px); }
-    .wa-card h3 { font-family:var(--disp); font-style:italic; font-weight:400; color:var(--gold-2); font-size:2rem; margin-bottom:24px; text-transform:uppercase; letter-spacing:-0.01em; }
-    .wa-card p { font-size:1.1rem; color:rgba(244,238,224,0.8); line-height:1.8; margin-bottom:36px; }
-
-    footer { border-top:1px solid var(--line); padding:80px 0 60px; text-align:center; }
-    .foot-brand { display:flex; flex-direction:column; gap:8px; margin:0 auto 40px; }
-    .foot-brand-line { font-family:var(--disp); font-style:italic; font-weight:400; font-size:1.5rem; color:var(--gold-2); line-height:1.3; text-transform:uppercase; letter-spacing:0.05em; }
-    .footer-socials { margin-bottom:40px; display:flex; justify-content:center; gap:16px; flex-wrap:wrap; }
-    .footer-socials a { width:50px; height:50px; border:1px solid var(--line); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--muted); transition:all .4s cubic-bezier(0.16, 1, 0.3, 1); }
-    .footer-socials a:hover { color:var(--gold); border-color:var(--gold); transform:translateY(-4px); box-shadow: 0 10px 30px rgba(200, 162, 90, 0.1); }
-    .foot-info-grid { display:grid; grid-template-columns:1fr 1fr; gap:60px; max-width:800px; margin:0 auto 60px; text-align:left; border-top:1px solid var(--line); padding-top:60px; }
-    .foot-info-title { font-family:var(--mono); font-size:0.9rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
-    .foot-info p { font-size:1.05rem; color:var(--muted); line-height:1.7; margin-bottom:16px; }
-    .foot-info a { font-family:var(--mono); font-size:1rem; color:var(--gold-2); border-bottom:1px solid rgba(200,162,90,0.3); padding-bottom:2px; transition: border-color 0.3s ease; }
-    .foot-info a:hover { color:var(--cream); border-color: var(--gold); }
-    .foot-line { font-family:var(--mono); font-size:0.9rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); opacity: 0.7; }
-    .foot-line + .foot-line { margin-top:8px; }
-
-    .whatsapp-float { position:fixed; bottom:32px; left:32px; width:64px; height:64px; border-radius:50%; background:#25D366; color:#fff; display:flex; align-items:center; justify-content:center; z-index:1200; box-shadow:0 10px 40px rgba(37,211,102,0.3); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-    .whatsapp-float:hover { transform: scale(1.1); }
-    .whatsapp-float svg { width:32px; height:32px; fill:#fff; }
-
-    .reveal-up { opacity: 0; transform: translateY(40px); transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1); }
-    .reveal-up.active { opacity: 1; transform: translateY(0); }
-
-    @media (max-width:1200px) {
-        nav ul { flex-direction:column; align-items:stretch; gap:0; position:absolute; top:100%; left:0; right:0; background:var(--ink); border-bottom:1px solid var(--line); padding:20px 24px; display:none; }
-        nav ul.nav-open { display:flex; }
-        nav ul li { border-top:1px solid var(--line); } nav ul li:first-child { border-top:none; }
-        nav ul a { display:block; padding:16px 0; font-size:1rem; } nav ul a::after { display:none; }
-        .nav-toggle { display:flex; } .top-meta { display:none; }
-        .hero { padding:180px 0 100px; }
-        .hero-grid { grid-template-columns:1fr; gap:60px; }
-        .cert-doc { margin: 0 auto; max-width: 400px; transform: rotate(0); }
-        .stats-grid { grid-template-columns:1fr 1fr; gap: 40px 20px; }
-        .stat-cell:not(:last-child)::after { display: none; }
-        .rp-body { grid-template-columns:1fr; text-align:center; gap:24px; }
-        .rp-divider { width:60px; height:1px; align-self:center; margin:0 auto; }
-        .rp-arrow { margin:0 auto; }
-        .tag-row-lang, .tag-row-grid4 { grid-template-columns:repeat(3,1fr); }
-        .process-grid { grid-template-columns:1fr 1fr; gap:60px 30px; }
-        .faq-grid { grid-template-columns:1fr; gap:40px; }
-        .faq-left { position:static; text-align: center; }
-        .faq-left p { margin: 24px auto 32px; }
-        .contact-grid { grid-template-columns:1fr; gap:60px; }
-        .contact h2 { text-align: center; }
-        .contact-loc { text-align: center; }
-        .contact-note { margin: 0 auto 48px; text-align: center; }
-        .contact-cta-row { grid-template-columns:1fr 1fr; }
-        section { padding:100px 0; }
+<!-- LocalBusiness structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "TAÇ Noter Halka Açık İstanbul",
+  "image": "https://notarypublic.istanbul/og-image.jpg",
+  "url": "https://notarypublic.istanbul/tr/",
+  "telephone": "+905013338707",
+  "email": "notarypublic.istanbul@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fatih",
+    "addressRegion": "Istanbul",
+    "addressCountry": "TR"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "17:00"
     }
-    @media (max-width:600px) {
-        .process-grid { grid-template-columns:1fr; }
-        .stat-value { font-size:2.5rem; }
-        .foot-info-grid { grid-template-columns:1fr; gap:40px; }
-        .brand-sub { display:none; }
-        .svc-head h3 { font-size:1.8rem; }
-        .tag-row-lang, .tag-row-grid4 { grid-template-columns:repeat(2,1fr); }
-        .contact-cta-row { grid-template-columns:1fr; }
-        .lang-switch { font-size: 1.2rem; gap: 8px; }
+  ],
+  "sameAs": [
+    "https://www.instagram.com/tac_notary_ist/",
+    "https://t.me/TAC_NOTARY_IST",
+    "https://g.page/translation.istanbul"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "500"
+  }
+}
+</script>
+
+<!-- FAQPage structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ofisinizi bizzat ziyaret etmem gerekir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ofis ziyareti gerekli değildir. İşlemlerimizi hızlı ve verimli tutmak için tüm belge incelemelerini, maliyet tahminlerini ve danışmanlığı tamamen çevrimiçi olarak WhatsApp üzerinden gerçekleştiriyoruz. Belgelerinizi inceleyip proje detaylarınızı onayladıktan sonra, tam ofis adresimizi ve fiziksel belge teslim/alım için planlanmış randevunuzu size bildiririz. Ayrıca yeni E-Apostil hizmetimizle, uygun belgeler görüntülü görüşme ile doğrulanır ve tamamen çevrimiçi olarak apostillenir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "İstanbul'da apostil işlemi ne kadar sürer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Çoğu belge 1–3 iş günü içinde tamamlanır. E-Apostil ile onaylı PDF'niz 1–2 iş günü içinde hazır olur ve fiziksel kopya ülkenize 3–7 iş günü içinde ulaşır. Bazı işlemler için aynı gün acil işlem mümkündür — WhatsApp üzerinden teyit edin, size tek bir mesajla kesin süre ve ücreti bildirelim."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vekaletname için bizzat hazır bulunmam gerekir mi?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Evet. Türk noterleri, vekaleti verecek kişinin Noter huzurunda bizzat imza atmasını zorunlu kılar — bu, atlanabilecek bir formalite değil, yasal bir zorunluluktur ve hiçbir vekaletname çevrimiçi olarak yapılamaz. Belgeyi teyit edip randevunuzu ayarlayabilmemiz ve geldiğinizde bekleme yaşamamanız için önce bize WhatsApp'tan yazın."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Added Amiri font for better Bismillah rendering -->
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --gold: #D4AF37;
+        --gold-light: #F4E8C1;
+        --gold-dark: #B8941F;
+        --gold-glow: rgba(212, 175, 55, 0.4);
+        --dark: #0a0a0a;
+        --darker: #050505;
+        --gray: #1a1a1a;
+        --gray-light: #2a2a2a;
+        --text: #f5f5f5;
+        --text-muted: #888;
+        --text-dim: #666;
+        --ox: #9a2c22;
+        --ox-soft: rgba(154,44,34,0.16);
+        --font-serif: 'Cormorant Garamond', Georgia, serif;
+        --font-sans: 'Inter', -apple-system, sans-serif;
+        --font-arabic: 'Amiri', serif; /* New font for Bismillah */
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    
+    ::selection { background: rgba(212, 175, 55, 0.3); color: #fff; }
+    
+    ::-webkit-scrollbar { width: 10px; }
+    ::-webkit-scrollbar-track { background: var(--darker); }
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(var(--gold-dark), var(--gold));
+        border-radius: 6px;
+        border: 2px solid var(--darker);
+    }
+    ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+    html { scrollbar-color: var(--gold-dark) var(--darker); scrollbar-width: thin; }
+    
+    body {
+        font-family: var(--font-sans);
+        background: var(--darker);
+        color: var(--text);
+        line-height: 1.6;
+        overflow-x: hidden;
+    }
+    
+    .bg-animation {
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        z-index: -1;
+        background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+    }
+    
+    .bg-animation::before {
+        content: '';
+        position: absolute;
+        width: 200%; height: 200%;
+        background: radial-gradient(circle, rgba(212,175,55,0.04) 1px, transparent 1px);
+        background-size: 50px 50px;
+        animation: moveGrid 20s linear infinite;
+    }
+    
+    /* Fine film-grain texture for a more tactile, premium surface */
+    .bg-animation::after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        opacity: 0.035;
+        mix-blend-mode: overlay;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        pointer-events: none;
+    }
+    
+    /* Scroll-reveal: elements fade + rise into place as they enter view */
+    .reveal {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    @keyframes moveGrid {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(50px, 50px); }
+    }
+    
+    header {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        padding: 1.2rem 5%;
+        background: rgba(10, 10, 10, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        z-index: 1000;
+        transition: box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1), padding 0.4s cubic-bezier(0.22, 1, 0.36, 1), background 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    header.scrolled {
+        padding: 0.8rem 5%;
+        background: rgba(8, 8, 8, 0.98);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(212, 175, 55, 0.15);
+    }
+    
+    .header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.8rem;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        letter-spacing: 1px;
+    }
+    
+    .bis-link {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.35rem 1rem;
+        background: transparent;
+        border: none;
+        text-decoration: none;
+    }
+    
+    /* UPDATED: Bismillah Image Style */
+    .bismillah-img {
+        height: 26px;
+        width: auto;
+        display: inline-block;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .bismillah-img:hover {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+    }
+    
+    .lang-switcher {
+        display: flex;
+        gap: 0.3rem;
+        align-items: center;
+    }
+    
+    .lang-btn {
+        padding: 0.4rem 0.9rem;
+        background: transparent;
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        color: var(--text-muted);
+        cursor: pointer;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        font-family: var(--font-sans);
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .lang-btn:hover, .lang-btn.active {
+        border-color: var(--gold);
+        color: var(--gold);
+        background: rgba(212, 175, 55, 0.05);
+        transform: translateY(-2px);
+    }
+    
+    .lang-btn.active { background: rgba(212, 175, 55, 0.1); }
+    
+    .nav-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+    }
+    
+    .brand-name {
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        color: #ffffff;
+    }
+    
+    .brand-name span { color: var(--gold); }
+    
+    .brand-sub {
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-top: 0.2rem;
+    }
+    
+    nav ul {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        list-style: none;
+    }
+    
+    nav ul a {
+        font-size: 0.85rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        font-weight: 500;
+        position: relative;
+    }
+    
+    nav ul a::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: var(--gold);
+        transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    nav ul a:hover, nav ul a.active { color: var(--gold); }
+    nav ul a:hover::after, nav ul a.active::after { width: 100%; }
+    
+    nav ul a i {
+        font-style: normal;
+        color: var(--gold);
+        font-size: 0.75rem;
+        margin-right: 0.3rem;
+    }
+    
+    .nav-toggle {
+        display: none;
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        cursor: pointer;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+    }
+    
+    .nav-toggle span {
+        display: block;
+        width: 20px;
+        height: 1px;
+        background: var(--text);
+        transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .hero {
+        margin-top: 90px;
+        padding: 5rem 5% 3.5rem;
+        text-align: center;
+        position: relative;
+    }
+    
+    .hero-badge {
+        display: inline-block;
+        padding: 0.6rem 1.5rem;
+        background: rgba(212, 175, 55, 0.1);
+        border: 1px solid var(--gold);
+        color: var(--gold);
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        animation: fadeInDown 1s ease;
+        box-shadow: 0 8px 24px rgba(212, 175, 55, 0.12);
+    }
+    
+    .hero h1 {
+        font-family: var(--font-serif);
+        font-size: clamp(2.5rem, 6vw, 4.5rem);
+        font-weight: 400;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        letter-spacing: 1px;
+        animation: fadeInUp 1s ease 0.2s both;
+    }
+    
+    .hero h1 em {
+        color: var(--gold);
+        font-style: italic;
+        font-weight: 500;
+    }
+    
+    .hero-flourish {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin: 2rem auto;
+        color: var(--gold);
+        font-size: 0.9rem;
+        animation: fadeInUp 1s ease 0.3s both;
+    }
+    
+    .hero-flourish::before, .hero-flourish::after {
+        content: '';
+        height: 1px;
+        width: 80px;
+        background: linear-gradient(90deg, transparent, var(--gold));
+    }
+    
+    .hero-flourish::after {
+        background: linear-gradient(90deg, var(--gold), transparent);
+    }
+    
+    .hero-subtitle {
+        font-size: 1.15rem;
+        color: var(--text-muted);
+        max-width: 700px;
+        margin: 0 auto 2.5rem;
+        line-height: 1.8;
+        font-weight: 300;
+        animation: fadeInUp 1s ease 0.4s both;
+    }
+    
+    .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        animation: fadeInUp 1s ease 0.6s both;
+    }
+    
+    .btn-primary {
+        padding: 1rem 2.5rem;
+        background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 45%, var(--gold-dark) 100%);
+        color: var(--dark);
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        border: 2px solid var(--gold);
+        display: inline-block;
+        position: relative;
+        box-shadow: 0 8px 24px rgba(212, 175, 55, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+    
+    .btn-primary:hover {
+        background: transparent;
+        color: var(--gold);
+        transform: translateY(-3px);
+        box-shadow: 0 16px 40px rgba(212, 175, 55, 0.3);
+    }
+    
+    .btn-secondary {
+        padding: 1rem 2.5rem;
+        background: rgba(255, 255, 255, 0.02);
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        display: inline-block;
+        backdrop-filter: blur(6px);
+    }
+    
+    .btn-secondary:hover {
+        border-color: var(--gold);
+        color: var(--gold);
+        transform: translateY(-3px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    }
+    
+    .marquee {
+        overflow: hidden;
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        padding: 1.5rem 0;
+        background: var(--gray);
+    }
+    
+    .marquee-track {
+        display: flex;
+        gap: 3rem;
+        animation: marquee 40s linear infinite;
+        white-space: nowrap;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--text-muted);
+    }
+    
+    .marquee-track span { color: var(--gold); margin: 0 0.5rem; }
+    
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    
+    .stats {
+        padding: 2.5rem 5%;
+        background: var(--gray);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        text-align: center;
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    }
+    
+    .stat-item { padding: 0.75rem; transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+    .stat-item:hover { transform: translateY(-4px); }
+    .stat-item:hover .stat-number { text-shadow: 0 0 24px rgba(212, 175, 55, 0.5); }
+    
+    .stat-number {
+        font-family: var(--font-serif);
+        font-size: 3.5rem;
+        font-weight: 600;
+        color: var(--gold);
+        display: block;
+        margin-bottom: 0.5rem;
+        line-height: 1;
+        transition: text-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .stat-label {
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    
+    .trust-showcase {
+        padding: 3rem 5%;
+        background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.1) 0%, var(--darker) 70%);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .trust-showcase::before {
+        content: '';
+        position: absolute;
+        top: -50%; left: -50%;
+        width: 200%; height: 200%;
+        background: 
+            radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 50%);
+        animation: trustGlow 8s ease-in-out infinite alternate;
+        pointer-events: none;
+    }
+    
+    @keyframes trustGlow {
+        0% { opacity: 0.5; transform: scale(1); }
+        100% { opacity: 1; transform: scale(1.1); }
+    }
+    
+    /* UPDATED: Wider container for trust section */
+    .trust-container {
+        max-width: 1200px; /* Increased from 1000px */
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .trust-card {
+        background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(10, 10, 10, 0.98) 100%);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 20px;
+        padding: 2.5rem 3rem;
+        display: grid;
+        /* UPDATED: Adjusted grid to give text more space */
+        grid-template-columns: 350px 1fr; 
+        align-items: center;
+        gap: 3rem;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 
+            0 0 60px rgba(212, 175, 55, 0.2),
+            0 20px 60px rgba(0, 0, 0, 0.5),
+            inset 0 1px 0 rgba(212, 175, 55, 0.2);
+        transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .trust-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 
+            0 0 80px rgba(212, 175, 55, 0.25),
+            0 30px 70px rgba(0, 0, 0, 0.55),
+            inset 0 1px 0 rgba(212, 175, 55, 0.25);
+    }
+    
+    .trust-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+        animation: shimmer 4s ease-in-out infinite;
+    }
+    
+    @keyframes shimmer {
+        0% { left: -100%; }
+        50%, 100% { left: 100%; }
+    }
+    
+    .trust-score-section { 
+        text-align: center; 
+        position: relative; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .trust-score {
+        font-family: 'Inter', sans-serif;
+        font-weight: 900;
+        font-size: 8rem;
+        color: var(--gold);
+        line-height: 1;
+        letter-spacing: -4px;
+        text-shadow: 0 0 40px rgba(212, 175, 55, 0.5);
+    }
+    
+    .trust-score .out-of {
+        font-size: 2.5rem;
+        color: var(--text-muted);
+        font-weight: 700;
+        letter-spacing: 0;
+    }
+    
+    .trust-stars {
+        font-size: 1.8rem;
+        color: var(--gold);
+        letter-spacing: 4px;
+        text-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+    }
+    
+    .trust-divider {
+        width: 1px;
+        align-self: stretch;
+        background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.4), transparent);
+    }
+    
+    .trust-details { 
+        position: relative; 
+        text-align: center;
+    }
+    
+    /* UPDATED: Headline styling to encourage single line */
+    .trust-headline {
+        font-family: var(--font-serif);
+        font-size: 1.8rem; /* Slightly larger */
+        color: var(--text);
+        margin-bottom: 1rem;
+        font-weight: 500;
+        line-height: 1.3;
+    }
+    
+    .trust-headline strong {
+        color: var(--gold);
+        font-weight: 700;
+    }
+    
+    .trust-subtext {
+        color: var(--text-muted);
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+    
+    .trust-subtext a {
+        color: var(--gold);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .trust-subtext a:hover {
+        border-bottom-color: var(--gold);
+        text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+    }
+    
+    .trust-google-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 1rem 2rem;
+        background: rgba(212, 175, 55, 0.15);
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        border-radius: 8px;
+        color: var(--gold);
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-decoration: none;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .trust-google-badge:hover {
+        background: rgba(212, 175, 55, 0.25);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    }
+    
+    .trust-google-badge .g-icon { 
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+    
+    .services { padding: 4rem 5%; }
+    
+    .section-header { 
+        text-align: center; 
+        margin-bottom: 2.5rem;
+    }
+    
+    .section-num {
+        display: inline-block;
+        font-size: 0.85rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 1rem;
+    }
+    
+    .section-title {
+        font-family: var(--font-serif);
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+    
+    .section-title span { color: var(--gold); font-style: italic; }
+    
+    .services-grid {
+        display: grid;
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .service-card {
+        background: linear-gradient(160deg, rgba(255,255,255,0.025), rgba(255,255,255,0) 40%), var(--gray);
+        padding: 3rem;
+        border: 1px solid rgba(255,255,255,0.05);
+        transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+        position: relative;
+        text-align: center;
+    }
+    
+    .service-card:hover {
+        border-color: var(--gold);
+        transform: translateY(-8px);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(212, 175, 55, 0.15), 0 0 50px rgba(212, 175, 55, 0.08);
+    }
+    
+    .service-card.featured {
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.08), rgba(10, 10, 10, 0));
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    }
+    
+    .service-badge {
+        display: inline-block;
+        padding: 0.4rem 1rem;
+        background: var(--gold);
+        color: var(--dark);
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-num {
+        color: var(--gold);
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+        display: block;
+        font-weight: 600;
+    }
+    
+    .service-card h3 {
+        font-family: var(--font-serif);
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+    }
+    
+    .service-tag {
+        color: var(--gold);
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        display: block;
+    }
+    
+    .service-card p {
+        color: var(--text-muted);
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-links {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+        justify-content: center;
+    }
+    
+    .service-link {
+        padding: 0.8rem 1.5rem;
+        background: linear-gradient(135deg, var(--gold-light), var(--gold) 55%, var(--gold-dark));
+        color: var(--dark);
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        border: 1px solid var(--gold);
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        box-shadow: 0 6px 18px rgba(212, 175, 55, 0.15);
+    }
+    
+    .service-link:hover {
+        background: transparent;
+        color: var(--gold);
+        border: 1px solid var(--gold);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(212, 175, 55, 0.25);
+    }
+    
+    .service-link.outline {
+        background: transparent;
+        color: var(--gold);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    
+    .service-link.outline:hover {
+        background: var(--gold);
+        color: var(--dark);
+    }
+    
+    .service-note {
+        background: var(--ox-soft);
+        border: 1px solid rgba(154, 44, 34, 0.3);
+        padding: 1rem 1.5rem;
+        color: #e0a999;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .language-grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+    }
+    
+    .lang-tag {
+        padding: 0.8rem 0.5rem;
+        background: rgba(212, 175, 55, 0.05);
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        text-align: center;
+        font-size: 0.8rem;
+        color: var(--gold-light);
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+    
+    .lang-tag:hover {
+        background: var(--gold);
+        color: var(--dark);
+        border-color: var(--gold);
+    }
+    
+    .workflow-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.8rem;
+        margin-top: 1.5rem;
+    }
+    
+    .workflow-tag {
+        padding: 1rem 0.5rem;
+        background: rgba(212, 175, 55, 0.05);
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        text-align: center;
+        font-size: 0.85rem;
+        color: var(--gold-light);
+        text-decoration: none;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        line-height: 1.4;
+    }
+    
+    .workflow-tag:hover {
+        background: var(--gold);
+        color: var(--dark);
+        border-color: var(--gold);
+        transform: translateY(-2px);
+    }
+    
+    .courier-tags {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .courier-tag {
+        padding: 1.2rem 1rem;
+        background: rgba(212, 175, 55, 0.05);
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        text-align: center;
+        font-size: 1rem;
+        color: var(--gold-light);
+        letter-spacing: 1px;
+        font-weight: 500;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .courier-tag:hover {
+        background: var(--gold);
+        color: var(--dark);
+        border-color: var(--gold);
+    }
+    
+    .appt-notice {
+        max-width: 1200px;
+        margin: 2.5rem auto;
+        padding: 2.5rem 3rem;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(10, 10, 10, 0.5));
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+    }
+    
+    .appt-notice::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.05), transparent);
+        animation: shimmer 6s ease-in-out infinite;
+    }
+    
+    .appt-notice h4 {
+        font-family: var(--font-serif);
+        font-size: 2.5rem;
+        color: var(--gold);
+        margin-bottom: 1.5rem;
+        font-style: italic;
+        position: relative;
+    }
+    
+    .appt-notice p {
+        color: var(--text-muted);
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+    
+    .appt-notice strong { color: var(--text); }
+    
+    .process {
+        padding: 4rem 5%;
+        background: var(--gray);
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    }
+    
+    .process-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 3rem auto 0;
+    }
+    
+    .process-step {
+        padding: 2rem;
+        text-align: center;
+        position: relative;
+        transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .process-step:hover {
+        transform: translateY(-6px);
+    }
+    
+    .process-step:hover::before {
+        -webkit-text-stroke: 1px rgba(212, 175, 55, 0.6);
+    }
+    
+    .process-step::before {
+        content: attr(data-n);
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: var(--font-serif);
+        font-size: 4rem;
+        color: transparent;
+        -webkit-text-stroke: 1px rgba(212, 175, 55, 0.3);
+        line-height: 1;
+        transition: -webkit-text-stroke-color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .process-step h3 {
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--text);
+        font-weight: 500;
+    }
+    
+    .process-step p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
+    .reviews { padding: 6rem 5%; }
+    
+    .review-card {
+        max-width: 900px;
+        margin: 3rem auto;
+        padding: 3rem;
+        background: var(--gray);
+        border: 1px solid rgba(212, 175, 55, 0.1);
+        text-align: center;
+        position: relative;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .review-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.4), 0 0 40px rgba(212, 175, 55, 0.08);
+    }
+    
+    .review-card::before {
+        content: '"';
+        font-family: var(--font-serif);
+        font-size: 6rem;
+        color: var(--gold);
+        opacity: 0.3;
+        position: absolute;
+        top: -20px;
+        left: 30px;
+        line-height: 1;
+    }
+    
+    .review-card p {
+        font-family: var(--font-serif);
+        font-size: 1.3rem;
+        color: var(--text-muted);
+        line-height: 1.8;
+        font-style: italic;
+        margin-bottom: 2rem;
+    }
+    
+    .review-card a {
+        color: var(--gold);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+    }
+    
+    .social-links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 900px;
+        margin: 3rem auto 0;
+    }
+    
+    .social-card {
+        padding: 2rem;
+        background: var(--gray);
+        border: 1px solid rgba(212, 175, 55, 0.1);
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .social-card:hover {
+        border-color: var(--gold);
+        transform: translateY(-5px);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+    }
+    
+    .social-card p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+    
+    .social-card a {
+        color: var(--gold);
+        text-decoration: none;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+    
+    .faq {
+        padding: 4rem 5%;
+        background: var(--gray);
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+    }
+    
+    .faq-grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 4rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .faq-left {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .faq-left h2 {
+        font-family: var(--font-serif);
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: 400;
+    }
+    
+    .faq-left p {
+        color: var(--text-muted);
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+    }
+    
+    .faq-item {
+        border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        padding: 1.5rem 0;
+    }
+    
+    .faq-item summary {
+        cursor: pointer;
+        font-family: var(--font-serif);
+        font-size: 1.2rem;
+        color: var(--text);
+        font-weight: 500;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        text-align: center;
+        position: relative;
+    }
+    
+    .faq-item summary::-webkit-details-marker { display: none; }
+    
+    .faq-item summary::after {
+        content: '+';
+        color: var(--gold);
+        font-size: 1.5rem;
+        position: absolute;
+        right: 0;
+        transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .faq-item {
+        transition: padding-left 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item summary:hover { color: var(--gold); }
+    
+    .faq-item .faq-a {
+        padding-top: 1rem;
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.7;
+        text-align: center;
+    }
+    
+    .contact { padding: 4rem 5%; }
+    
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .contact-info h2 {
+        font-family: var(--font-serif);
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        font-weight: 400;
+    }
+    
+    .contact-info h2 span { color: var(--gold); font-style: italic; }
+    
+    .contact-location {
+        font-size: 0.85rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        margin-bottom: 2rem;
+    }
+    
+    .contact-note {
+        color: var(--text-muted);
+        font-size: 1rem;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-label {
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 0.5rem;
+    }
+    
+    .contact-phone {
+        font-family: var(--font-serif);
+        font-size: 2.5rem;
+        color: var(--text);
+        text-decoration: none;
+        display: block;
+        margin-bottom: 1rem;
+        transition: color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .contact-phone:hover { color: var(--gold); }
+    
+    .contact-email {
+        color: var(--text-muted);
+        text-decoration: none;
+        font-size: 1rem;
+        transition: color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .contact-email:hover { color: var(--gold); }
+    
+    .contact-hours {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+    }
+    
+    .contact-hours p {
+        color: var(--text);
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .contact-hours .priority {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+    }
+    
+    .quote-card {
+        background: linear-gradient(160deg, rgba(212, 175, 55, 0.05), rgba(255,255,255,0) 50%), var(--gray);
+        padding: 3rem;
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        text-align: center;
+        box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+    }
+    
+    .quote-card h3 {
+        font-family: var(--font-serif);
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        font-weight: 400;
+        font-style: italic;
+    }
+    
+    .quote-card p {
+        color: var(--text-muted);
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+    }
+    
+    .contact-methods {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .contact-method-btn {
+        padding: 1rem 1.5rem;
+        background: linear-gradient(135deg, var(--gold-light), var(--gold) 55%, var(--gold-dark));
+        color: var(--dark);
+        text-decoration: none;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        border: 2px solid var(--gold);
+        text-align: center;
+        box-shadow: 0 8px 22px rgba(212, 175, 55, 0.15);
+    }
+    
+    .contact-method-btn:hover {
+        background: transparent;
+        color: var(--gold);
+        transform: translateY(-3px);
+        box-shadow: 0 16px 36px rgba(212, 175, 55, 0.25);
+    }
+    
+    footer {
+        padding: 2.5rem 5% 1.5rem;
+        background: var(--darker);
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+        text-align: center;
+    }
+    
+    .alhamdulillah {
+        margin-bottom: 1.25rem;
+    }
+    
+    .alhamdulillah img {
+        height: 60px;
+        width: auto;
+        opacity: 0.9;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    
+    .alhamdulillah img:hover {
+        opacity: 1;
+        filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
+    }
+    
+    .footer-brand {
+        font-family: var(--font-serif);
+        font-size: 1.5rem;
+        color: var(--gold);
+        margin-bottom: 2rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    
+    .footer-info {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        max-width: 800px;
+        margin: 0 auto 3rem;
+        text-align: center;
+    }
+    
+    .footer-info h4 {
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 1rem;
+    }
+    
+    .footer-info p {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-info a {
+        color: var(--gold);
+        text-decoration: none;
+    }
+    
+    .footer-bottom {
+        padding-top: 2rem;
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+        color: var(--text-dim);
+        font-size: 0.85rem;
+        text-align: center;
+    }
+    
+    .footer-bottom a {
+        color: var(--gold);
+        text-decoration: none;
+    }
+    
+    @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes fadeInDown {
+        from { opacity: 0; transform: translateY(-30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @media (max-width: 968px) {
+        .trust-card {
+            grid-template-columns: 1fr;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        .trust-divider {
+            width: 60px;
+            height: 1px;
+            margin: 0 auto;
+        }
+        .faq-grid { grid-template-columns: 1fr; }
+        nav ul { display: none; }
+        .nav-toggle { display: flex; }
+        .language-grid { grid-template-columns: repeat(4, 1fr); }
+        .workflow-grid { grid-template-columns: repeat(3, 1fr); }
+        .courier-tags { grid-template-columns: repeat(3, 1fr); }
+    }
+    
+    @media (max-width: 768px) {
+        .header-top { flex-direction: column; gap: 0.5rem; }
+        .lang-switcher { flex-wrap: wrap; justify-content: center; }
+        .hero h1 { font-size: 2.5rem; }
+        .service-card { padding: 2rem; }
+        .language-grid { grid-template-columns: repeat(3, 1fr); }
+        .workflow-grid { grid-template-columns: repeat(2, 1fr); }
+        .courier-tags { grid-template-columns: repeat(2, 1fr); }
+        .contact-methods { grid-template-columns: 1fr; }
+        .trust-score { font-size: 6rem; }
+        .appt-notice { padding: 3rem 1.5rem; }
+        .appt-notice h4 { font-size: 2rem; }
     }
 </style>
 </head>
 <body>
-
-<div class="noise-overlay"></div>
-<div class="bg-orb bg-orb-1"></div>
-<div class="bg-orb bg-orb-2"></div>
-
-<a href="https://wa.me/905013338707?text=Merhaba%2C+randevu+almak+istiyorum" target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-</a>
-
-<header>
-    <div class="container bismillah-bar">
-        <span class="top-meta">Fatih, İstanbul — 2014'ten beri</span>
-        <a class="bis-link" href="https://www.youtube.com/watch?v=_bjK1bQFXkI" target="_blank" rel="noopener"><span class="bis">&#65021;</span></a>
-        <span class="lang-switch">
-            <a href="../" title="English">🇬</a>
-            <a href="#" class="lang-current" title="Türkçe">🇹🇷</a>
-            <a href="../ru/" title="Русский">🇷🇺</a>
-            <a href="../ar/" title="عربي">🇸</a>
-            <a href="../zh/" title="中文">🇨🇳</a>
-        </span>
-    </div>
-    <div class="container nav-wrap">
-        <a href="#home" class="brand">
-            <span>
-                <span class="brand-name">Taç Noter Hizmetleri</span>
-                <span class="brand-sub">Apostil & Yeminli Tercüme</span>
-            </span>
-        </a>
-        <nav>
-            <ul id="navList">
-                <li><a href="#services"><i>01</i>Hizmetler</a></li>
-                <li><a href="e-apostille.html"><i>02</i>E-Apostil</a></li>
-                <li><a href="getting-married-in-turkey.html"><i>03</i>Evlilik</a></li>
-                <li><a href="#process"><i>04</i>Süreç</a></li>
-                <li><a href="reviews.html"><i>05</i>Yorumlar</a></li>
-                <li><a href="faq.html"><i>06</i>SSS</a></li>
-                <li><a href="#contact"><i>07</i>İletişim</a></li>
-            </ul>
-        </nav>
-        <div class="nav-right">
-            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navList">
+    <div class="bg-animation"></div>
+    
+    <header>
+        <div class="header-top">
+            <span>Fatih, İstanbul — 2014'ten beri</span>
+            <!-- UPDATED: Bismillah Image (background removed) -->
+            <a href="https://www.youtube.com/watch?v=_bjK1bQFXkI" target="_blank" rel="noopener" class="bis-link">
+                <img src="../bismillah-gold.png" alt="Bismillah" class="bismillah-img">
+            </a>
+            <nav class="lang-switcher">
+                <a href="../" class="lang-btn">ENGLISH</a>
+                <a href="#" class="lang-btn active">TÜRKÇE</a>
+                <a href="../ru/" class="lang-btn">РУССКИЙ</a>
+                <a href="../ar/" class="lang-btn">العربية</a>
+                <a href="../zh/" class="lang-btn">中文</a>
+            </nav>
+        </div>
+        <div class="nav-wrap">
+            <a href="#home" class="brand">
+                <div>
+                    <div class="brand-name"><span>TAÇ</span> NOTARY PUBLIC</div>
+                    <div class="brand-sub">Apostil & Yeminli Tercüme</div>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#services"><i>01</i> Hizmetler</a></li>
+                    <li><a href="e-apostille.html"><i>02</i> E-Apostil</a></li>
+                    <li><a href="getting-married-in-turkey.html"><i>03</i> Türkiye'de Evlilik</a></li>
+                    <li><a href="#process"><i>04</i> Süreç</a></li>
+                    <li><a href="reviews.html"><i>05</i> Değerlendirmeler</a></li>
+                    <li><a href="faq.html"><i>06</i> SSS</a></li>
+                    <li><a href="#contact"><i>07</i> İletişim</a></li>
+                </ul>
+            </nav>
+            <button class="nav-toggle" aria-label="Menüyü aç/kapat">
                 <span></span><span></span><span></span>
             </button>
         </div>
-    </div>
-</header>
-
-<section class="hero" id="home">
-    <div class="container hero-grid">
-        <div class="hero-copy">
-            <div class="eyebrow reveal-up">Fatih, İstanbul'dayız — 2014'ten beri Noter hizmeti sunuyoruz</div>
-            <h1 class="reveal-up">Dünya Çapında Otoriteler Tarafından Tanınan <em>Güvenin</em> Nihai Mührü.</h1>
-            <div class="hero-flourish reveal-up" aria-hidden="true">&#9670;</div>
-            <p class="lead reveal-up">Yeminli tercüme, noter onayı ve apostil tasdiki — WhatsApp üzerinden kolayca ayarlanır, özenle hazırlanır ve kapınıza teslim edilir. Nerede olursanız olun, tek gereken bu.</p>
-            <div class="hero-actions reveal-up">
-                <a href="https://wa.me/905013338707?text=Merhaba%2C+randevu+almak+istiyorum" target="_blank" rel="noopener" class="btn-gold magnetic-btn">Çalışmalarımızdan Örnekler! — WhatsApp'tan Yazın — Ücretsiz Teklif &nbsp;&rarr;</a>
-                <a href="#services" class="btn-outline magnetic-btn">Neler Yapıyoruz Görün</a>
-            </div>
+    </header>
+    
+    <section class="hero" id="home">
+        <h1>Küresel Belge Onayı,<br>Özenle <em>Ele Alınır</em>.</h1>
+        <div class="hero-flourish">◆</div>
+        <p class="hero-subtitle">
+            YEMİNLİ TERCÜME, NOTER ONAYI VE APOSTİL—WHATSAPP ÜZERİNDEN DÜZENLENİR, ÖZENLE HAZIRLANIR VE KAPINIZA TESLİM EDİLİR.
+        </p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/905013338707?text=Merhaba%2C+%C3%A7al%C4%B1%C5%9Fmalar%C4%B1n%C4%B1zdan+%C3%B6rnekler+g%C3%B6rebilir+miyim%3F" class="btn-primary">Çalışma Örneklerimizi Görün</a>
+            <a href="#services" class="btn-secondary">Neleri Kapsadığımızı Görün</a>
         </div>
-        <div class="reveal-up">
-            <div class="cert-doc">
-                <h4>Apostil</h4>
-                <div class="sub">(5 Ekim 1961 Lahey Konvansiyonu)</div>
-                <div class="cert-row"><b>1. ÜLKE</b> <span>Türkiye</span></div>
-                <div class="cert-row"><b>2. İMZALAYAN</b> <span>İstanbul Noteri</span></div>
-                <div class="cert-row"><b>3. GÖREVİ</b> <span>Yeminli Tercüman & Tasdik Memuru</span></div>
-                <div class="cert-row"><b>4. MÜHÜR</b> <span>TAC Noter & Apostil Hizmetleri</span></div>
-                <div class="cert-seal">TAÇ<br>EST. 2014<br>№ 2014-0092</div>
-            </div>
+    </section>
+    
+    <div class="marquee">
+        <div class="marquee-track">
+            <div>E-Apostil · %100 Çevrimiçi <span>◆</span> Yeminli Tercüme · Yasal Onay <span>◆</span> Vekaletnameler · Noterlik İşlemleri <span>◆</span> Türkiye'de Evlilik · VIP Hızlı Süreç <span>◆</span> Apostil · Küresel Onay <span>◆</span> Öğrenci İzinleri · Akademik ve Göçmenlik <span>◆</span> Parmak İzi ve Fotoğraf · Kimlik Doğrulama <span>◆</span> Dünya Çapında Kargo · Teslimat <span>◆</span></div>
+            <div>E-Apostil · %100 Çevrimiçi <span>◆</span> Yeminli Tercüme · Yasal Onay <span>◆</span> Vekaletnameler · Noterlik İşlemleri <span>◆</span> Türkiye'de Evlilik · VIP Hızlı Süreç <span>◆</span> Apostil · Küresel Onay <span>◆</span> Öğrenci İzinleri · Akademik ve Göçmenlik <span>◆</span> Parmak İzi ve Fotoğraf · Kimlik Doğrulama <span>◆</span> Dünya Çapında Kargo · Teslimat <span>◆</span></div>
         </div>
     </div>
-</section>
-
-<div class="marquee">
-    <div class="marquee-track">
-        <div>E-Apostil · %100 Çevrimiçi <span>◆</span> Yeminli Tercüme · Hukuki Tasdik <span>◆</span> Vekaletnameler · Noter İşlemleri <span>◆</span> Türkiye'de Evlilik · VIP Hızlı Kanal <span>◆</span> Apostil · Küresel Doğrulama <span>◆</span> Öğrenci İzinleri · Akademik & Göç <span>◆</span> Parmak İzi & Fotoğraf · Kimlik Doğrulama <span>◆</span> Dünya Çapında Kurye · Teslimat <span>◆</span></div>
-        <div>E-Apostil · %100 Çevrimiçi <span>◆</span> Yeminli Tercüme · Hukuki Tasdik <span>◆</span> Vekaletnameler · Noter İşlemleri <span>◆</span> Türkiye'de Evlilik · VIP Hızlı Kanal <span>◆</span> Apostil · Küresel Doğrulama <span>◆</span> Öğrenci İzinleri · Akademik & Göç <span>◆</span> Parmak İzi & Fotoğraf · Kimlik Doğrulama <span>◆</span> Dünya Çapında Kurye · Teslimat <span>◆</span></div>
-    </div>
-</div>
-
-<div class="stats-bar">
-    <div class="container">
-        <div class="stats-grid">
-            <div class="stat-cell reveal-up"><div class="stat-value">500+</div><div class="stat-key">Mutlu Gerçek Müşteri</div></div>
-            <div class="stat-cell reveal-up"><div class="stat-value">55+</div><div class="stat-key">Tasdikli Dil</div></div>
-            <div class="stat-cell reveal-up"><div class="stat-value">92</div><div class="stat-key">Apostil Ülkesi</div></div>
-            <div class="stat-cell reveal-up"><div class="stat-value">2014</div><div class="stat-key">Hizmetteyiz</div></div>
-            <div class="stat-cell reveal-up"><div class="stat-value">24/7</div><div class="stat-key">Tercüme Önceliği</div></div>
+    
+    <section class="stats">
+        <div class="stat-item"><span class="stat-number">500+</span><span class="stat-label">Mutlu Müşteri</span></div>
+        <div class="stat-item"><span class="stat-number">55+</span><span class="stat-label">Dil</span></div>
+        <div class="stat-item"><span class="stat-number">92</span><span class="stat-label">Ülke</span></div>
+        <div class="stat-item"><span class="stat-number">2014</span><span class="stat-label">Beri Hizmetteyiz</span></div>
+        <div class="stat-item"><span class="stat-number">24/7</span><span class="stat-label">Tercüme Önceliği</span></div>
+    </section>
+    
+    <section class="trust-showcase">
+        <div class="trust-container">
+            <div class="trust-card">
+                <div class="trust-score-section">
+                    <div class="trust-score">4.9<span class="out-of">/5</span></div>
+                    <div class="trust-stars">★★★★★</div>
+                </div>
+                
+                <div class="trust-details">
+                    <!-- UPDATED: Text is now in a wider container, should fit on one line on desktop -->
+                    <h3 class="trust-headline">
+                        50+ ülkeden 500+ müşteri tarafından <strong>4,9/5</strong> puanlandık
+                    </h3>
+                    <p class="trust-subtext">
+                        Gerçek müşterilerden gerçek değerlendirmeler. Google İşletme'deki hikayelerimizi görün: 
+                        <a href="https://g.page/translation.istanbul" target="_blank" rel="noopener">g.page/translation.istanbul</a>
+                    </p>
+                    <a href="https://g.page/translation.istanbul" target="_blank" rel="noopener" class="trust-google-badge">
+                        <span class="g-icon">G</span>
+                        Google'da Tüm Değerlendirmeleri Oku
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="rating-plaque reveal-up">
-            <div class="rp-top"><script defer async src='https://cdn.trustindex.io/loader.js?3b622c67958b841f6c46f0e017b'></script></div>
-            <div class="rp-body">
-                <div class="rp-score">4.9<em>/5</em></div>
-                <div class="rp-divider"></div>
-                <div>
-                    <div class="rp-main">500+ küresel müşteri tarafından <b>4.9/5</b> puanlandı &nbsp;·&nbsp; 92 ülke</div>
-                    <div class="rp-sub">Google Business'taki yorumlarımızı okuyun — <a class="g-url" href="https://g.page/translation.istanbul" target="_blank" rel="noopener">g.page/translation.istanbul</a></div>
-                </div>
-                <a class="rp-arrow magnetic-btn" href="https://g.page/translation.istanbul" target="_blank" rel="noopener">&rarr;</a>
-            </div>
+    </section>
+    
+    <section class="services" id="services">
+        <div class="section-header">
+            <div class="section-num">I — Hizmetler</div>
+            <h2 class="section-title">Onayladığımız <span>Belgeler</span></h2>
         </div>
-        <div class="cert-slot reveal-up" style="margin-top:40px;"><script defer async src='https://cdn.trustindex.io/loader-cert.js?529eae479b1284067046d5021fa'></script></div>
-    </div>
-</div>
-
-<section id="services">
-    <div class="container">
-        <div class="chap reveal-up" style="justify-content:center;"><span class="chap-num">I</span><span class="chap-line"></span><span class="eyebrow">Hizmetler</span></div>
-        <h2 class="disp reveal-up" style="text-align:center;">Neleri Tasdik Ediyoruz</h2>
-        <div class="svc-list">
-            <div class="svc-row svc-row-featured reveal-up">
-                <span class="badge-new">Yeni · Tamamen Çevrimiçi</span>
-                <div class="svc-num">№ 01</div>
-                <div class="svc-head"><h3>E-Apostil Dünya Çapında — Çevrimiçi Apostil Tasdiki</h3><span class="svc-tag">%100 Uzaktan · Seyahat Gerekmez</span></div>
-                <p>Türkiye'nin ilk tamamen uzaktan apostil hizmeti. Belgenizin taramasını gönderin, canlı görüntülü görüşmede özgünlüğünü doğrulayın, apostil ile tasdikleyip ülkenize teslim edelim. Her asli, gerçek belge uygundur.</p>
-                <div class="tag-row">
-                    <a class="tag tag-cta magnetic-btn" href="e-apostille.html">E-Apostil Dünya Çapında — Daha Fazla Bilgi &nbsp;&rarr;</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Merhaba%2C+E-Apostil+g%C3%B6r%C3%BCnt%C3%BCl%C3%BC+g%C3%B6r%C3%BC%C5%9Fmesi+i%C3%A7in+randevu+almak+istiyorum" target="_blank" rel="noopener">Doğrulama Görüşmesi Rezerve Et</a>
+        
+        <div class="services-grid">
+            <div class="service-card featured">
+                <div class="service-badge">Yeni · Tamamen Çevrimiçi</div>
+                <span class="service-num">№ 01</span>
+                <h3>Dünya Çapında E-Apostil — Çevrimiçi Apostil Onayı</h3>
+                <span class="service-tag">%100 Uzaktan · Seyahat Gerekmez</span>
+                <p>Güvenilir ABD çevrimiçi noter standardını örnek alan, Türkiye'nin ilk tamamen uzaktan apostil hizmeti. Belgenizin taranmış bir kopyasını gönderin, canlı görüntülü görüşmede özgünlüğünü doğrulayalım; belgeyi apostille onaylayıp ülkenize teslim edelim — Türkiye dışında dahi. Orijinal, gerçek her belge uygundur — seyahat yok, kuyruk yok, sizin tarafınızda evrak işi yok.</p>
+                <div class="service-links">
+                    <a href="e-apostille.html" class="service-link">Daha Fazla Bilgi →</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+E-Apostil+g%C3%B6r%C3%BCnt%C3%BCl%C3%BC+g%C3%B6r%C3%BC%C5%9Fme+randevusu+almak+istiyorum" class="service-link outline">Doğrulama Görüntülü Görüşmesi Ayırt</a>
                 </div>
-                <span class="flag">E-Apostil, canlı bir doğrulama görüntülü görüşmesi ve belgenin her yüzünü gösteren kayıtlı bir video gerektirir — kesinlikle randevuyla. Tasdikli PDF 1–2 iş gününde; apostilli basılı kopya 3–7 iş gününde dünya çapında teslim edilir.</span>
+                <div class="service-note">E-Apostil, canlı bir doğrulama görüntülü görüşmesi ile belgenin her yönden kaydedilmiş bir videosunu gerektirir — yalnızca randevu ile. Onaylı PDF 1–2 iş günü içinde; apostillenmiş fiziksel kopya dünya çapında 3–7 iş günü içinde teslim edilir.</div>
             </div>
-            <div class="svc-row reveal-up">
-                <div class="svc-num">№ 02</div>
-                <div class="svc-head"><h3>Yeminli / Onaylı Tercüme &amp; Noter Tasdiki</h3><span class="svc-tag">Hukuki Tasdik</span></div>
-                <p>Yeminli (Yeminli) tercüme, Türk noterleri, mahkemeleri ve konsolosluklarınca resmen kabul edilir — 10-20 yıllık deneyime sahip hukuk dilbilimcileri tarafından hazırlanır. 7/24.</p>
-                <div class="tag-row tag-row-lang">
-                    <span class="tag">Arapça</span><span class="tag">İngilizce</span><span class="tag">Rusça</span><span class="tag">Türkçe</span><span class="tag">Almanca</span><span class="tag">Fransızca</span>
-                    <span class="tag">Farsça</span><span class="tag">Ukraynaca</span><span class="tag">Kürtçe</span><span class="tag">Azerice</span><span class="tag">İspanyolca</span><span class="tag">İtalyanca</span>
-                    <span class="tag">Çince</span><span class="tag">Felemenkçe</span><span class="tag">Yunanca</span><span class="tag">Bulgarca</span><span class="tag">Romence</span><span class="tag">Lehçe</span>
-                </div>
-            </div>
-            <div class="svc-row reveal-up">
-                <div class="svc-num">№ 03</div>
-                <div class="svc-head"><h3>Vekaletnameler, Muvafakatnameler &amp; Beyanlar</h3><span class="svc-tag">Noter İşlemleri</span></div>
-                <p>İki dilli hazırlama, Noter ve Apostil tasdikiyle dünyanın her yerinde geçerli. Aşağıdan işleminizi seçin ve örnek isteyin.</p>
-                <div class="tag-row tag-row-grid4">
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Property+Purchase+or+Sale+Power+of+Attorney" target="_blank" rel="noopener">Gayrimenkul Alım / Satım</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Vehicle+Purchase+or+Sale+Power+of+Attorney" target="_blank" rel="noopener">Araç Alım / Satım</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Power+of+Attorney+to+Drive+a+Car+Abroad" target="_blank" rel="noopener">Yurt Dışında Araç Kullanma</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Turkish+University+Registration+Power+of+Attorney" target="_blank" rel="noopener">Üniversite Kaydı</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Bank+%26+Financial+Power+of+Attorney" target="_blank" rel="noopener">Banka &amp; Finans</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Company+Formation+Power+of+Attorney" target="_blank" rel="noopener">Şirket Kuruluşu</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Residence+Permit+Power+of+Attorney" target="_blank" rel="noopener">İkamet İzni</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Divorce+Power+of+Attorney" target="_blank" rel="noopener">Boşanma</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+to+Revoke+a+Power+of+Attorney" target="_blank" rel="noopener">Vekalet İptali</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Marriage+Eligibility+%28Celibacy%29+Certificate" target="_blank" rel="noopener">Evlilik Ehliyeti Belgesi</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Child+Travel+Consent+Letter" target="_blank" rel="noopener">Çocuk Seyahat Muvafakatnamesi</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+Commercial+Contract+Notarization" target="_blank" rel="noopener">Ticari Sözleşme Tasdiki</a>
-                </div>
-                <span class="flag">Lütfen dikkat: Yeni E-Apostil hizmetimiz tamamen çevrimiçi olsa da, vekaletname asla çevrimiçi yapılamaz — Türk hukuku, noter ofisimizde bizzat imza atmanızı gerektirir. Önce WhatsApp'tan bize mesaj atın, randevunuzu ayarlayalım.</span>
-            </div>
-            <div class="svc-row reveal-up">
-                <div class="svc-num">№ 04</div>
-                <div class="svc-head"><h3>VIP Hızlı Takip Türkiye'de Evlilik</h3><span class="svc-tag">Apostil Tasdikli &amp; Küresel Tanınan</span></div>
-                <p>Yabancı çift olarak Türkiye'de evleniyor musunuz? VIP hızlı takip evlilik hizmetimiz her şeyi yönetir — ilk danışmadan apostilli Aile Cüzdanınızın verilmesine kadar, tamamen yasallaştırılmış ve dünya çapında tanınır.</p>
-                <div class="tag-row"><a class="tag tag-cta magnetic-btn" href="getting-married-in-turkey.html">Türkiye'de Evlilik — Daha Fazla Bilgi İçin &nbsp;&rarr;</a></div>
-            </div>
-            <div class="svc-row reveal-up">
-                <div class="svc-num">№ 05</div>
-                <div class="svc-head"><h3>Apostil &amp; Konsolosluk Tasdiki</h3><span class="svc-tag">Küresel Doğrulama</span></div>
-                <p>Apostil tasdiki 92 Lahey Konvansiyonu ülkesinde tanınır, genellikle 1-3 iş gününde tamamlanır. Lahey dışı destinasyonlar için, İstanbul'daki konsolosluklar ve Ankara'daki büyükelçiliklerle doğrudan konsolosluk tasdikini yönetiriz.</p>
-                <div class="tag-row">
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+an+Apostille+Certificate" target="_blank" rel="noopener">Apostil Belgesi</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+Consular+Legalization" target="_blank" rel="noopener">Konsolosluk Tasdiki</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+Embassy+Attestation" target="_blank" rel="noopener">Büyükelçilik Onayı</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+Governorship+of+Istanbul+Legalization" target="_blank" rel="noopener">İstanbul Valiliği Tasdiki</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+Ministry+of+Foreign+Affairs+Legalization" target="_blank" rel="noopener">Dışişleri Bakanlığı (Ankara)</a>
+            
+            <div class="service-card">
+                <span class="service-num">№ 02</span>
+                <h3>Yeminli / Onaylı Tercüme ve Noter Tasdiki</h3>
+                <span class="service-tag">Yasal Onay</span>
+                <p>Türk noterleri, mahkemeleri ve konsoloslukları tarafından resmi olarak kabul edilen, 10–20 yıllık deneyime sahip hukuki dilbilimciler tarafından hazırlanan Yeminli tercüme. 7/24 hizmet.</p>
+                <div class="language-grid">
+                    <div class="lang-tag">ENGLISH</div>
+                    <div class="lang-tag">العربية</div>
+                    <div class="lang-tag">TÜRKÇE</div>
+                    <div class="lang-tag">РУССКИЙ</div>
+                    <div class="lang-tag">DEUTSCH</div>
+                    <div class="lang-tag">FRANÇAIS</div>
+                    <div class="lang-tag">فارسی</div>
+                    <div class="lang-tag">УКРАЇНСЬКА</div>
+                    <div class="lang-tag">كوردی</div>
+                    <div class="lang-tag">AZƏRBAYCAN</div>
+                    <div class="lang-tag">ESPAÑOL</div>
+                    <div class="lang-tag">ITALIANO</div>
+                    <div class="lang-tag">中文</div>
+                    <div class="lang-tag">NEDERLANDS</div>
+                    <div class="lang-tag">ΕΛΛΗΝΙΚΑ</div>
+                    <div class="lang-tag">БЪЛГАРСКИ</div>
+                    <div class="lang-tag">ROMÂNĂ</div>
+                    <div class="lang-tag">POLSKI</div>
+                    <div class="lang-tag">PORTUGUÊS</div>
+                    <div class="lang-tag">日本語</div>
+                    <div class="lang-tag">한국어</div>
+                    <div class="lang-tag">اردو</div>
+                    <div class="lang-tag">SVENSKA</div>
+                    <div class="lang-tag">DANSK</div>
                 </div>
             </div>
-            <div class="svc-row reveal-up">
-                <div class="svc-num">№ 06</div>
-                <div class="svc-head"><h3>Üniversite Kaydı &amp; Öğrenci İzinleri</h3><span class="svc-tag">Akademik &amp; Göç</span></div>
-                <p>Kabul mektupları, ders kaydı, yurt evrakları ve öğrenci ikamet izinlerini koordine ederiz — ilk kabul e-postanızdan ilk ders gününüze kadar.</p>
-                <div class="tag-row">
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+help+with+University+Admission" target="_blank" rel="noopener">Üniversite Kabul</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+help+with+Course+Registration" target="_blank" rel="noopener">Ders Kaydı</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Student+Residence+Permit" target="_blank" rel="noopener">Öğrenci İkamet İzni</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+help+with+Health+Insurance+Registration" target="_blank" rel="noopener">Sağlık Sigortası Kaydı</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+help+with+Transcript+Equivalency" target="_blank" rel="noopener">Transkript Denkliği</a>
+            
+            <div class="service-card">
+                <span class="service-num">№ 03</span>
+                <h3>Vekaletnameler, Muvafakatnameler ve Yeminli Beyanlar</h3>
+                <span class="service-tag">Noterlik İşlemleri</span>
+                <p>Dünya genelinde geçerli olacak şekilde Noter ve Apostil ile onaylanan iki dilli metin hazırlığı — aşağıdan sürecinizi seçin ve çalışma örneği isteyin.</p>
+                <div class="workflow-grid">
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Ta%C5%9F%C4%B1nmaz+Al%C4%B1m+veya+Sat%C4%B1m%C4%B1+Vekaletnamesine+ihtiyac%C4%B1m+var" class="workflow-tag">Taşınmaz Alım / Satım</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Ara%C3%A7+Al%C4%B1m+veya+Sat%C4%B1m%C4%B1+Vekaletnamesine+ihtiyac%C4%B1m+var" class="workflow-tag">Araç Alım / Satım</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Yurtd%C4%B1%C5%9F%C4%B1nda+Ara%C3%A7+Kullan%C4%B1m%C4%B1+Vekaletnamesine+ihtiyac%C4%B1m+var" class="workflow-tag">Yurt Dışında Araç Kullanımı</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+T%C3%BCrk+%C3%9Cniversite+Kayd%C4%B1+Vekaletnamesine+ihtiyac%C4%B1m+var" class="workflow-tag">Üniversite Kaydı</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Banka+ve+Mali+Vekaletnameye+ihtiyac%C4%B1m+var" class="workflow-tag">Banka ve Mali İşler</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+%C5%9Eirket+Kurulu%C5%9Fu+Vekaletnamesine+ihtiyac%C4%B1m+var" class="workflow-tag">Şirket Kuruluşu</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Oturma+%C4%B0zni+Vekaletnamesine+ihtiyac%C4%B1m+var" class="workflow-tag">Oturma İzni</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Bo%C5%9Fanma+Vekaletnamesine+ihtiyac%C4%B1m+var" class="workflow-tag">Boşanma</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Vekaletnameyi+iptal+etmem+gerekiyor" class="workflow-tag">Vekaletname İptali</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Bekarl%C4%B1k+Belgesine+ihtiyac%C4%B1m+var" class="workflow-tag">Bekarlık Belgesi</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+%C3%87ocuk+Seyahat+Muvafakatnamesine+ihtiyac%C4%B1m+var" class="workflow-tag">Çocuk Seyahat Muvafakatnamesi</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Kira+S%C3%B6zle%C5%9Fmesi+konusunda+yard%C4%B1ma+ihtiyac%C4%B1m+var" class="workflow-tag">Kira Sözleşmesi</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Miras+ve+Vek%C3%A2let+i%C5%9Flerine+ihtiyac%C4%B1m+var" class="workflow-tag">Miras ve Tereke İşleri</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+T%C4%B1bbi+Muvafakat+ve+Yetkilendirmeye+ihtiyac%C4%B1m+var" class="workflow-tag">Tıbbi Muvafakat</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Mahkemede+Hukuki+Temsile+ihtiyac%C4%B1m+var" class="workflow-tag">Hukuki Temsil</a>
+                </div>
+                <div class="service-note" style="margin-top: 1.5rem;">Lütfen dikkat: yeni E-Apostil hizmetimiz tamamen çevrimiçi olsa da, vekaletname hiçbir zaman çevrimiçi düzenlenemez — Türk hukuku, noter huzurunda bizzat imza atmanızı zorunlu kılar. Önce bize WhatsApp'tan yazın, randevunuzu ayarlayalım.</div>
+            </div>
+            
+            <div class="service-card">
+                <span class="service-num">№ 04</span>
+                <h3>Türkiye'de VIP Hızlı Evlilik Süreci</h3>
+                <span class="service-tag">Apostil Onaylı ve Küresel Olarak Tanınır</span>
+                <p>Yabancı bir çift olarak Türkiye'de mi evleniyorsunuz? VIP hızlı evlilik hizmetimiz ilk danışmanlık ve belge hazırlığından, dünya çapında tamamen tasdikli ve tanınan apostilli Aile Cüzdanınızın (Uluslararası Evlilik Belgesi) düzenlenmesine kadar her şeyi yönetir.</p>
+                <div class="service-links">
+                    <a href="getting-married-in-turkey.html" class="service-link">Daha Fazla Bilgi →</a>
                 </div>
             </div>
-            <div class="svc-row reveal-up">
-                <div class="svc-num">№ 07</div>
-                <div class="svc-head"><h3>Parmak İzi &amp; Fotoğraf Tasdiki</h3><span class="svc-tag">Kimlik Tespiti</span></div>
-                <p>Parmak izi kartları arka plan kontrolleri, vize başvuruları ve güvenlik izinleri için kabul edilir; biyometrik pasaport ve vize standartlarına uygun gerçek benzeri fotoğraflar — aynı gün hazır.</p>
-                <div class="tag-row">
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+Fingerprinting+for+a+Visa+Application" target="_blank" rel="noopener">Vize Parmak İzi</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+Fingerprinting+for+a+Background+Check" target="_blank" rel="noopener">Arka Plan Kontrolü</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Biometric+Passport+Photo" target="_blank" rel="noopener">Biyometrik Pasaport Fotoğrafı</a>
-                    <a class="tag tag-link magnetic-btn" href="https://wa.me/905013338707?text=Hi%2C+I+need+a+Visa+Photo" target="_blank" rel="noopener">Vize Fotoğrafı</a>
+            
+            <div class="service-card">
+                <span class="service-num">№ 05</span>
+                <h3>Apostil ve Konsolosluk Tasdiki</h3>
+                <span class="service-tag">Küresel Onay</span>
+                <p>92 Lahey Sözleşmesi ülkesinde tanınan, genellikle 1–3 iş günü içinde tamamlanan apostil tasdiki. Lahey Sözleşmesi'ne taraf olmayan ülkeler için, İstanbul'daki konsolosluklar ve Ankara'daki büyükelçilikler ile doğrudan konsolosluk tasdiki işlemlerini yürütüyoruz.</p>
+                <div class="workflow-grid" style="grid-template-columns: repeat(5, 1fr);">
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Apostil+Sertifikas%C4%B1na+ihtiyac%C4%B1m+var" class="workflow-tag">Apostil Sertifikası</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Konsolosluk+Tasdikine+ihtiyac%C4%B1m+var" class="workflow-tag">Konsolosluk Tasdiki</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+B%C3%BCy%C3%BCkel%C3%A7ilik+Tasdikine+ihtiyac%C4%B1m+var" class="workflow-tag">Büyükelçilik Tasdiki</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+%C4%B0stanbul+Valili%C4%9Fi+Tasdikine+ihtiyac%C4%B1m+var" class="workflow-tag">İstanbul Valiliği</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+D%C4%B1%C5%9Fi%C5%9Fleri+Bakanl%C4%B1%C4%9F%C4%B1+Tasdikine+ihtiyac%C4%B1m+var" class="workflow-tag">Dışişleri Bakanlığı</a>
                 </div>
             </div>
-            <div class="svc-row reveal-up">
-                <div class="svc-num">№ 08</div>
-                <div class="svc-head"><h3>Dünya Çapında Kurye</h3><span class="svc-tag">Teslimat</span></div>
-                <p>Her bitmiş belge paketlenir, takip edilir ve yolculuk için sigortalanır — sonra Türkiye içinde veya dünyanın her yerinde kapınıza özenle teslim edilir, genellikle 2 ila 7 iş günü içinde.</p>
-                <div class="tag-row"><span class="tag">DHL</span><span class="tag">FedEx</span><span class="tag">UPS</span><span class="tag">Aramex</span><span class="tag">Yurtiçi Kargo</span></div>
+            
+            <div class="service-card">
+                <span class="service-num">№ 06</span>
+                <h3>Üniversite Kaydı ve Öğrenci İzinleri</h3>
+                <span class="service-tag">Akademik ve Göçmenlik</span>
+                <p>Kabul mektuplarını, ders kaydını, yurt evraklarını ve öğrenci oturma izinlerini — ilk kabul e-postanızdan ilk okul gününüze kadar koordine ediyoruz.</p>
+                <div class="workflow-grid" style="grid-template-columns: repeat(5, 1fr);">
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+%C3%9Cniversite+Kabul%C3%BC+konusunda+yard%C4%B1ma+ihtiyac%C4%B1m+var" class="workflow-tag">Üniversite Kabulü</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Ders+Kayd%C4%B1+konusunda+yard%C4%B1ma+ihtiyac%C4%B1m+var" class="workflow-tag">Ders Kaydı</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+%C3%96%C4%9Frenci+Oturma+%C4%B0znine+ihtiyac%C4%B1m+var" class="workflow-tag">Öğrenci Oturma İzni</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Sa%C4%9Fl%C4%B1k+Sigortas%C4%B1+Kayd%C4%B1+konusunda+yard%C4%B1ma+ihtiyac%C4%B1m+var" class="workflow-tag">Sağlık Sigortası</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Transkript+Denklik+konusunda+yard%C4%B1ma+ihtiyac%C4%B1m+var" class="workflow-tag">Transkript Denkliği</a>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <span class="service-num">№ 07</span>
+                <h3>Parmak İzi ve Fotoğraf Onayı</h3>
+                <span class="service-tag">Kimlik Doğrulama</span>
+                <p>Sabıka kaydı sorgulamaları, vize başvuruları ve güvenlik izinleri için kabul edilen parmak izi kartları; biyometrik pasaport ve vize standartlarına uygun gerçek görünümlü fotoğraflar — aynı gün hazır.</p>
+                <div class="workflow-grid" style="grid-template-columns: repeat(5, 1fr);">
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Vize+Ba%C5%9Fvurusu+i%C3%A7in+Parmak+%C4%B0zine+ihtiyac%C4%B1m+var" class="workflow-tag">Vize Parmak İzi</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Sab%C4%B1ka+Kayd%C4%B1+i%C3%A7in+Parmak+%C4%B0zine+ihtiyac%C4%B1m+var" class="workflow-tag">Sabıka Kaydı Sorgulaması</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Biyometrik+Pasaport+Foto%C4%9Fraf%C4%B1na+ihtiyac%C4%B1m+var" class="workflow-tag">Biyometrik Pasaport Fotoğrafı</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Vize+Foto%C4%9Fraf%C4%B1na+ihtiyac%C4%B1m+var" class="workflow-tag">Vize Fotoğrafı</a>
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+Ger%C3%A7ek+G%C3%B6r%C3%BCn%C3%BCml%C3%BC+Foto%C4%9Fraf%C4%B1na+ihtiyac%C4%B1m+var" class="workflow-tag">Gerçek Görünümlü Fotoğraf</a>
+                </div>
+            </div>
+            
+            <div class="service-card">
+                <span class="service-num">№ 08</span>
+                <h3>Dünya Çapında Kargo</h3>
+                <span class="service-tag">Teslimat</span>
+                <p>Tamamlanan her belge, yolculuk için paketlenir, takip edilir ve sigortalanır — ardından genellikle 2 ile 7 iş günü içinde Türkiye'nin herhangi bir yerine veya dünyanın dört bir yanına özenle kapınıza teslim edilir.</p>
+                <div class="courier-tags">
+                    <div class="courier-tag">DHL</div>
+                    <div class="courier-tag">FedEx</div>
+                    <div class="courier-tag">UPS</div>
+                    <div class="courier-tag">Aramex</div>
+                    <div class="courier-tag">Yurtiçi Kargo</div>
+                </div>
             </div>
         </div>
         
-        <div class="appt-notice reveal-up">
-            <h4>Sadece Randevuyla</h4>
-            <p>Sürecinizin sorunsuz işlemesini sağlamak için, varışınızdan önce tüm gerekli belgeleri hazırlarız. Bu nedenle, misafirlerimize önceden randevu almadan <strong>kesinlikle ani ziyaretleri kabul edemediğimizi</strong> bilgilerinize sunarız.</p>
-            <p>Acil, aynı gün yardıma ihtiyacınız varsa, lütfen planlanan varışınızdan en geç 60 dakika önce WhatsApp üzerinden bizimle iletişime geçin. Sizin için her şeyi halletmekten memnuniyet duyarız.</p>
+        <div class="appt-notice">
+            <h4>Yalnızca Randevu ile</h4>
+            <p>Bizimle geçireceğiniz zamanın sorunsuz olmasını sağlamak için, gerekli tüm belgeleri gelişinizden önce hazırlıyoruz. Bu nedenle, önceden randevu almadan <strong>kesinlikle randevusuz kabul edemeyeceğimizi</strong> misafirlerimize saygıyla bildiririz.</p>
+            <p>Acil, aynı gün yardıma ihtiyacınız olursa, lütfen planladığınız varış saatinizden en az 60 dakika önce WhatsApp üzerinden bize ulaşın. Her şeyle ilgilenmek bizim için bir zevktir.</p>
         </div>
-    </div>
-</section>
-
-<section class="process" id="process">
-    <div class="container">
-        <div class="chap reveal-up" style="justify-content:center;"><span class="chap-num">II</span><span class="chap-line"></span><span class="eyebrow">Süreç</span></div>
-        <h2 class="disp reveal-up" style="margin:0 auto; text-align:center;">Sürprizsiz<br>Bir<br>Süreç</h2>
+    </section>
+    
+    <section class="process" id="process">
+        <div class="section-header">
+            <div class="section-num">II — Süreç</div>
+            <h2 class="section-title">Sürpriz <span>İçermeyen</span> Bir Süreç</h2>
+        </div>
         <div class="process-grid">
-            <div class="step reveal-up" data-n="1"><div class="step-top"><span class="step-line"></span><span class="step-dot"></span><span class="step-line"></span></div><h3>Belgenizi Gönderin</h3><p>WhatsApp üzerinden fotoğraf veya tarama paylaşın. Kapsamı, ücreti ve süreyi tek yanıtta onaylarız.</p></div>
-            <div class="step reveal-up" data-n="2"><div class="step-top"><span class="step-line"></span><span class="step-dot"></span><span class="step-line"></span></div><h3>Onaylı Tercüme</h3><p>Yeminli bir dil uzmanı metni hazırlar; ikinci bir okuyucu isimleri, tarihleri ve rakamları doğrular.</p></div>
-            <div class="step reveal-up" data-n="3"><div class="step-top"><span class="step-line"></span><span class="step-dot"></span><span class="step-line"></span></div><h3>Noter &amp; Apostil</h3><p>Noter ve Valilik işlemlerinde sizin adınıza hazır bulunuruz. İmzanızın gerektiği durumlar randevuyla ayarlanır.</p></div>
-            <div class="step reveal-up" data-n="4"><div class="step-top"><span class="step-line"></span><span class="step-dot"></span><span class="step-line"></span></div><h3>Dünya Çapında Teslim</h3><p>Belgelerinizi DHL, FedEx veya UPS ile takipli alın — ofise gelmenize gerek yok.</p></div>
+            <div class="process-step" data-n="1"><h3>Belgenizi Gönderin</h3><p>WhatsApp üzerinden bir fotoğraf veya tarama paylaşın. Kapsamı, ücreti ve süreyi tek bir yanıtta teyit ederiz.</p></div>
+            <div class="process-step" data-n="2"><h3>Onaylı Tercüme</h3><p>Yeminli bir dilbilimci metni hazırlar; ikinci bir okuyucu isimleri, tarihleri ve rakamları doğrular.</p></div>
+            <div class="process-step" data-n="3"><h3>Noter ve Apostil</h3><p>Sizin adınıza Noter ve Valilik'e gideriz. Bizzat hazır bulunmanızı gerektiren imzalar randevu ile ayarlanır.</p></div>
+            <div class="process-step" data-n="4"><h3>Dünya Çapında Teslimat</h3><p>Belgelerinizi takip numarasıyla DHL, FedEx veya UPS ile teslim alın — ofis ziyareti gerekmez.</p></div>
         </div>
-    </div>
-</section>
-
-<section class="reviews" id="reviews">
-    <div class="container">
-        <div class="chap reveal-up" style="justify-content:center;"><span class="chap-num">III</span><span class="chap-line"></span><span class="eyebrow">Yorumlar</span></div>
-        <h2 class="disp reveal-up" style="text-align:center;">Müşterilerimizin Kararı</h2>
-        <div class="head-sub reveal-up" style="text-align:center; font-family:var(--mono); font-size:1rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-top:16px;">Google profilimizden canlı · 500+ yorum · ★★★★★ 4.9 / 5</div>
-        <div class="gpage-frame reveal-up">
-            <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-            <p>Google'ın nazik kısa bağlantı hizmeti sayesinde, ofisimizin haritada kendi kolay hatırlanan adresi var — <a class="glink" href="https://g.page/translation.istanbul" target="_blank" rel="noopener">g.page/translation.istanbul</a> — böylece 92 ülkeden müşteriler tek dokunuşla bize ulaşabilir. Orada paylaşılan her güzel söz, onurlandığımız bir emanettir.</p>
-            <a href="reviews.html" class="btn-outline magnetic-btn">Tüm Yorumları Özel Sayfamızda Okuyun</a>
-        </div>
-        <div class="follow-ig reveal-up">
-            <div class="follow-ig-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg>
-                <span>Güncellemeler ve günlük çalışmalarımızın perde arkası için <strong>@TAC_NOTARY_IST</strong>'i Instagram'da takip edin.</span>
-                <a href="https://www.instagram.com/tac_notary_ist/" target="_blank" rel="noopener" class="btn-outline magnetic-btn">Instagram'da Takip Et</a>
+    </section>
+    
+    <section class="faq" id="faq">
+        <div class="faq-grid">
+            <div class="faq-left">
+                <div class="section-num">IV — Sorular</div>
+                <h2>Sorular ve <span style="color: var(--gold); font-style: italic;">Yanıtları</span></h2>
+                <p>En sık sorulan sorularımızın açık, eksiksiz ve tamamen şeffaf yanıtları</p>
+                <a href="faq.html" class="btn-primary">Tüm SSS'leri Görüntüle</a>
             </div>
-            <div class="follow-ig-divider"></div>
-            <div class="follow-ig-item">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9z"/></svg>
-                <span>Telegram'ı mı tercih edersiniz? <strong>@TAC_NOTARY_IST</strong>'e her zaman mesaj atın — gece gündüz hızla yanıt veririz.</span>
-                <a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener" class="btn-outline magnetic-btn">Telegram'dan Mesaj At</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="fade-in" id="faq">
-    <div class="container faq-grid">
-        <div class="faq-left reveal-up">
-            <div class="chap"><span class="chap-num">IV</span><span class="chap-line"></span><span class="eyebrow">Sorular</span></div>
-            <h2 class="disp">Sorular &amp; Cevaplar</h2>
-            <p>Misafirlerimizin ilk mesajdan önce genellikle bilmek istedikleri her şey — açıkça cevaplanmış, sürpriz yok.</p>
-            <a href="faq.html" class="btn-gold magnetic-btn">Tüm SSS'yi Gör &nbsp;&rarr;</a>
-        </div>
-        <div>
-            <details class="faq-item reveal-up"><summary>Ofisinizi bizzat ziyaret etmem gerekiyor mu?</summary><div class="faq-a">Hayır. Sürecimizi hızlı ve verimli tutmak için tüm belge incelemelerini, maliyet tahminlerini ve danışmanlıkları tamamen WhatsApp üzerinden çevrimiçi olarak yürütüyoruz. Belgelerinizi inceledikten ve proje detaylarınızı onayladıktan sonra, tam ofis adresimizi ve fiziksel belge teslimi veya alımı için planlanmış bir randevuyu paylaşacağız. Yeni <strong>E-Apostil</strong> hizmetimizle, uygun belgeler görüntülü görüşme ile doğrulanır ve tamamen çevrimiçi olarak apostillenir. <strong>3 Adımlı Sürecimiz:</strong> <strong>1. Belgeleri Gönderin:</strong> Hızlı bir belge denetimi ve fiyat teklifi için WhatsApp üzerinden net bir fotoğraf veya tarama paylaşın. <strong>2. Onay &amp; Planlama:</strong> Anlaştıktan sonra, yüz yüze randevunuzu planlarız veya uzaktan devam ederiz. <strong>3. Yasallaştırma &amp; Teslimat:</strong> Tüm Noter ve Valilik tasdiklerini sizin adınıza tamamlarız ve bitmiş belgeleri DHL, FedEx veya UPS ile dünya çapında teslim ederiz.</div></details>
-            <details class="faq-item reveal-up"><summary>İstanbul'da apostil süreci ne kadar sürer?</summary><div class="faq-a">Çoğu belge 1-3 iş gününde tamamlanır. E-Apostil ile, tasdikli PDF'niz 1-2 iş gününde hazır olur ve basılı kopya 3-7 iş gününde ülkenize ulaşır. Bazı prosedürler için aynı gün acil hizmet mümkündür — WhatsApp'tan onaylayın, kesin süre ve ücreti tek mesajda yanıtlayalım.</div></details>
-            <details class="faq-item reveal-up"><summary>Vekaletname için bizzat hazır bulunmam gerekir mi?</summary><div class="faq-a">Evet. Türk noterleri, vekalet veren kişinin Noter huzurunda bizzat imza atmasını zorunlu kılar — bu atlayamayacağımız bir hukuki zorunluluktur ve vekaletname asla çevrimiçi yapılamaz. Önce WhatsApp'tan bize mesaj atın, belgeyi onaylayalım, randevunuzu ayarlayalım ve vardığınızda bekleme olmasın.</div></details>
-        </div>
-    </div>
-</section>
-
-<section class="contact" id="contact">
-    <div class="container contact-grid">
-        <div class="reveal-up">
-            <div class="chap"><span class="chap-num">V</span><span class="chap-line"></span><span class="eyebrow">İletişim</span></div>
-            <h2>WhatsApp'ta Başlayın</h2>
-            <div class="contact-loc">Fatih, İstanbul</div>
-            <p class="contact-note">Onaylı tercüme, noter tasdiki ve apostil yasallaştırması — WhatsApp üzerinden ayarlanır, kapınıza teslim edilir.</p>
-            <div class="c-big-label">WhatsApp — tek numara, gece gündüz</div>
-            <div class="c-big"><a href="https://wa.me/905013338707?text=Merhaba%2C+randevu+almak+istiyorum" target="_blank" rel="noopener">+90 501 333 87 07</a></div>
-            <div class="c-sub"><a href="mailto:notarypublic.istanbul@gmail.com">notarypublic.istanbul@gmail.com</a></div>
-            <div class="c-hours">
-                <div class="c-big-label">Çalışma Saatleri</div>
-                <div class="c-sub" style="margin-top:0; font-size:1.2rem; color:var(--cream); font-weight:600;">Pzt-Cum: 09:00 – 17:00</div>
-                <div class="c-sub">Tercüme: 7/24 Öncelik</div>
-            </div>
-            <div class="contact-cta-row">
-                <a href="https://wa.me/905013338707?text=Merhaba%2C+randevu+almak+istiyorum" target="_blank" rel="noopener" class="btn-ink magnetic-btn">WhatsApp</a>
-                <a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener" class="btn-ink magnetic-btn">Telegram</a>
-                <a href="https://ig.me/m/tac_notary_ist" target="_blank" rel="noopener" class="btn-ink magnetic-btn">Instagram</a>
-                <a href="mailto:notarypublic.istanbul@gmail.com" class="btn-ink magnetic-btn">E-posta</a>
+            <div>
+                <details class="faq-item">
+                    <summary>Ofisinizi bizzat ziyaret etmem gerekir mi?</summary>
+                    <div class="faq-a">Ofis ziyareti gerekli değildir. İşlemlerimizi hızlı ve verimli tutmak için tüm belge incelemelerini, maliyet tahminlerini ve danışmanlığı tamamen çevrimiçi olarak WhatsApp üzerinden gerçekleştiriyoruz. Belgelerinizi inceleyip proje detaylarınızı onayladıktan sonra, tam ofis adresimizi ve fiziksel belge teslim/alım için planlanmış randevunuzu size bildiririz. Ayrıca yeni E-Apostil hizmetimizle, uygun belgeler görüntülü görüşme ile doğrulanır ve tamamen çevrimiçi olarak apostillenir.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>İstanbul'da apostil işlemi ne kadar sürer?</summary>
+                    <div class="faq-a">Çoğu belge 1–3 iş günü içinde tamamlanır. E-Apostil ile onaylı PDF'niz 1–2 iş günü içinde hazır olur ve fiziksel kopya ülkenize 3–7 iş günü içinde ulaşır. Bazı işlemler için aynı gün acil işlem mümkündür — WhatsApp üzerinden teyit edin, size tek bir mesajla kesin süre ve ücreti bildirelim.</div>
+                </details>
+                <details class="faq-item">
+                    <summary>Vekaletname için bizzat hazır bulunmam gerekir mi?</summary>
+                    <div class="faq-a">Evet. Türk noterleri, vekaleti verecek kişinin Noter huzurunda bizzat imza atmasını zorunlu kılar — bu, atlanabilecek bir formalite değil, yasal bir zorunluluktur ve hiçbir vekaletname çevrimiçi olarak yapılamaz. Belgeyi teyit edip randevunuzu ayarlayabilmemiz ve geldiğinizde bekleme yaşamamanız için önce bize WhatsApp'tan yazın.</div>
+                </details>
             </div>
         </div>
-        <div class="wa-card reveal-up">
-            <h3>Her Fiyat Teklifi, Özenle Hazırlanır</h3>
-            <p>Her belge benzersizdir, bu yüzden fiyat teklifinizi kişisel olarak hazırlarız — sadece WhatsApp'ta bir fotoğraf paylaşın, aynı gün ücret ve süre ile yanıtlayalım. Öğrenciyseniz veya zor bir mali dönemden geçiyorsanız, lütfen bize söyleyin: makul, indirimli bir ücret sunmak bizim için onurdur. Özenli hizmet herkese yakışır.</p>
-            <a href="https://wa.me/905013338707?text=Merhaba%2C+randevu+almak+istiyorum" target="_blank" rel="noopener" class="btn-outline magnetic-btn">WhatsApp Sohbetini Aç</a>
+    </section>
+    
+    <section class="contact" id="contact">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="section-num">V — İletişim</div>
+                <h2><span>WhatsApp</span>'tan Başlayın</h2>
+                <div class="contact-location">Fatih, İstanbul</div>
+                
+                <div class="contact-label">WhatsApp — tek numara, gece gündüz</div>
+                <a href="https://wa.me/905013338707?text=Merhaba%2C+randevu+rica+edebilir+miyim%21" class="contact-phone">+90 501 333 87 07</a>
+                <a href="mailto:notarypublic.istanbul@gmail.com" class="contact-email">notarypublic.istanbul@gmail.com</a>
+                
+                <div class="contact-hours">
+                    <div class="contact-label">Çalışma Saatleri</div>
+                    <p>Pzt–Cuma: 09:00 – 17:00</p>
+                    <p class="priority">Tercüme: 7/24 Öncelikli</p>
+                </div>
+            </div>
+            
+            <div class="quote-card">
+                <h3>Her Teklif, Özenle Hazırlanır</h3>
+                <p>Her belge kendine özgü olduğu için, teklifinizi kişisel olarak hazırlıyoruz — WhatsApp'ta bir fotoğraf paylaşmanız yeterli, aynı gün maliyet ve süre ile yanıt veririz. Öğrenciyseniz veya zor bir mali dönemden geçiyorsanız, lütfen bize söyleyin: düşünceli, indirimli bir ücret sunmak bizim için bir onurdur. Özenli hizmet herkese aittir.</p>
+                
+                <div class="contact-methods">
+                    <a href="https://wa.me/905013338707?text=Merhaba%2C+randevu+rica+edebilir+miyim%21" class="contact-method-btn">WhatsApp</a>
+                    <a href="https://t.me/TAC_NOTARY_IST" class="contact-method-btn">Telegram</a>
+                    <a href="https://ig.me/m/tac_notary_ist" class="contact-method-btn">Instagram</a>
+                    <a href="mailto:notarypublic.istanbul@gmail.com" class="contact-method-btn">E-posta</a>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
-
-<footer>
-    <div class="container">
-        <div class="foot-brand reveal-up">
-            <span class="foot-brand-line">TAÇ Onaylı &amp; Yeminli Tercüme</span>
-            <span class="foot-brand-line">Noter &amp; Apostil Hizmetleri</span>
+    </section>
+    
+    <footer>
+        <div class="alhamdulillah">
+            <img src="../alhamdulillah-gold.png" alt="Alhamdulillah" />
         </div>
-        <div class="footer-socials reveal-up">
-            <a href="https://www.instagram.com/tac_notary_ist/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none"/></svg></a>
-            <a href="https://tr.linkedin.com/company/notarypublic-istanbul" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4V8h4v1.5"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-            <a href="https://t.me/TAC_NOTARY_IST" target="_blank" rel="noopener" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9z"/></svg></a>
-            <a href="mailto:notarypublic.istanbul@gmail.com" aria-label="E-posta"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></a>
-        </div>
-        <div class="foot-info-grid reveal-up">
-            <div class="foot-info">
-                <div class="foot-info-title">Geri Bildirim &amp; Şikayetler</div>
-                <p>Her zaman gelişmeye açığız — şikayet, öneri veya geri bildiriminizi her zaman paylaşın. Her mesaj gizli tutulur.</p>
+        
+        <div class="footer-brand">TAÇ Onaylı ve Yeminli Tercüme · Noter ve Apostil Hizmetleri</div>
+        
+        <div class="footer-info">
+            <div>
+                <h4>Geri Bildirim ve Şikayetler</h4>
+                <p>Her zaman gelişmeye çalışıyoruz — şikayet, öneri veya geri bildirimlerinizi istediğiniz zaman paylaşın.</p>
                 <a href="mailto:info@notarypublic.istanbul">info@notarypublic.istanbul</a>
             </div>
-            <div class="foot-info">
-                <div class="foot-info-title">Ticari İş Birlikleri</div>
-                <p>Kurumsal noter çözümleri, belge doğrulama veya ortaklıklar için iş masamızla doğrudan iletişime geçin.</p>
+            <div>
+                <h4>Kurumsal Başvurular</h4>
+                <p>Kurumsal noter çözümleri, belge onayı veya ortaklıklar için doğrudan kurumsal masamıza ulaşın.</p>
                 <a href="mailto:business@notarypublic.istanbul">business@notarypublic.istanbul</a>
             </div>
         </div>
-        <div class="foot-line reveal-up">© 2026 TAC Translation, Notary Public &amp; Apostille Services — Fatih, İstanbul</div>
-        <div class="foot-line reveal-up">notarypublic.istanbul · g.page/translation.istanbul</div>
-    </div>
-</footer>
-
-<script>
-    const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) });
-    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
-    requestAnimationFrame(raf);
-
-    gsap.registerPlugin(ScrollTrigger);
-    const revealElements = document.querySelectorAll('.reveal-up');
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                revealObserver.unobserve(entry.target);
-            }
+        
+        <div class="footer-bottom">
+            <p>© 2026 TAÇ Tercüme, Noter ve Apostil Hizmetleri — Fatih, İstanbul</p>
+            <p>
+                <a href="https://notarypublic.istanbul/tr/" style="color: var(--gold); text-decoration: none;">notarypublic.istanbul</a> 
+                · 
+                <a href="https://g.page/translation.istanbul" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: none;">g.page/translation.istanbul</a>
+            </p>
+        </div>
+    </footer>
+    
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navList = document.querySelector('nav ul');
+        navToggle.addEventListener('click', () => {
+            navList.style.display = navList.style.display === 'flex' ? 'none' : 'flex';
+            navList.style.flexDirection = 'column';
+            navList.style.position = 'absolute';
+            navList.style.top = '100%';
+            navList.style.left = '0';
+            navList.style.right = '0';
+            navList.style.background = 'rgba(10, 10, 10, 0.98)';
+            navList.style.padding = '2rem';
+            navList.style.borderBottom = '1px solid rgba(212, 175, 55, 0.1)';
         });
-    }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
-    revealElements.forEach(el => revealObserver.observe(el));
 
-    const magneticBtns = document.querySelectorAll('.magnetic-btn');
-    magneticBtns.forEach(btn => {
-        btn.addEventListener('mousemove', (e) => {
-            const rect = btn.getBoundingClientRect();
-            const x = e.clientX - rect.left - rect.width / 2;
-            const y = e.clientY - rect.top - rect.height / 2;
-            gsap.to(btn, { x: x * 0.3, y: y * 0.3, duration: 0.3, ease: "power2.out" });
-        });
-        btn.addEventListener('mouseleave', () => {
-            gsap.to(btn, { x: 0, y: 0, duration: 0.5, ease: "elastic.out(1, 0.3)" });
-        });
-    });
+        // Header gains a subtle shadow + shrinks slightly once the page scrolls
+        const siteHeader = document.querySelector('header');
+        const onScroll = () => {
+            siteHeader.classList.toggle('scrolled', window.scrollY > 20);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
 
-    const navToggle = document.getElementById('navToggle');
-    const navList = document.getElementById('navList');
-    navToggle.addEventListener('click', () => { 
-        navToggle.classList.toggle('active');
-        const open = navList.classList.toggle('nav-open'); 
-        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false'); 
-    });
-    navList.querySelectorAll('a').forEach(link => { 
-        link.addEventListener('click', () => { 
-            navList.classList.remove('nav-open'); 
-            navToggle.classList.remove('active');
-            navToggle.setAttribute('aria-expanded', 'false'); 
-        }); 
-    });
-</script>
+        // Scroll-reveal: fade + rise elements into place as they enter the viewport
+        const revealSelectors = '.service-card, .process-step, .review-card, .social-card, .quote-card, .faq-item, .trust-card, .stat-item, .contact-info, .footer-info > div';
+        const revealEls = document.querySelectorAll(revealSelectors);
+        revealEls.forEach((el, i) => {
+            el.classList.add('reveal');
+            el.style.transitionDelay = (i % 4) * 0.08 + 's';
+        });
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(el => revealObserver.observe(el));
+    </script>
 </body>
 </html>
