@@ -2,103 +2,303 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://notarypublic.istanbul/getting-married-in-turkey.html</loc>
-        <lastmod>2026-08-23</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
         <loc>https://notarypublic.istanbul/</loc>
-        <lastmod>2026-08-22</lastmod>
+        <lastmod>2026-09-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/"/>
     </url>
     <url>
         <loc>https://notarypublic.istanbul/tr/</loc>
-        <lastmod>2026-08-22</lastmod>
+        <lastmod>2026-09-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/"/>
     </url>
     <url>
         <loc>https://notarypublic.istanbul/ru/</loc>
-        <lastmod>2026-08-22</lastmod>
+        <lastmod>2026-09-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/"/>
     </url>
     <url>
         <loc>https://notarypublic.istanbul/ar/</loc>
-        <lastmod>2026-08-22</lastmod>
+        <lastmod>2026-09-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/zh/</loc>
+        <lastmod>2026-09-05</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/"/>
     </url>
     <url>
         <loc>https://notarypublic.istanbul/faq.html</loc>
-        <lastmod>2026-08-22</lastmod>
+        <lastmod>2026-09-05</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/faq.html"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/faq.html"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/faq.html"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/faq.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/faq.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/faq.html"/>
     </url>
     <url>
         <loc>https://notarypublic.istanbul/tr/faq.html</loc>
-        <lastmod>2026-08-22</lastmod>
+        <lastmod>2026-09-05</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/faq.html"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/faq.html"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/faq.html"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/faq.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/faq.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/faq.html"/>
     </url>
     <url>
         <loc>https://notarypublic.istanbul/ru/faq.html</loc>
-        <lastmod>2026-08-22</lastmod>
+        <lastmod>2026-09-05</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/faq.html"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/faq.html"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/faq.html"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/faq.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/faq.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/faq.html"/>
     </url>
     <url>
         <loc>https://notarypublic.istanbul/ar/faq.html</loc>
-        <lastmod>2026-08-22</lastmod>
+        <lastmod>2026-09-05</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/faq.html"/>
         <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/faq.html"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/faq.html"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/faq.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/faq.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/faq.html"/>
     </url>
     <url>
-        <loc>https://notarypublic.istanbul/getting-married-in-turkey.html</loc>
-        <lastmod>2026-08-23</lastmod>
+        <loc>https://notarypublic.istanbul/zh/faq.html</loc>
+        <lastmod>2026-09-05</lastmod>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/faq.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/faq.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/faq.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/faq.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/faq.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/faq.html"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/e-apostille.html</loc>
+        <lastmod>2026-09-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/e-apostille.html"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/tr/e-apostille.html</loc>
+        <lastmod>2026-09-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/e-apostille.html"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/ru/e-apostille.html</loc>
+        <lastmod>2026-09-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/e-apostille.html"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/ar/e-apostille.html</loc>
+        <lastmod>2026-09-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/e-apostille.html"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/zh/e-apostille.html</loc>
+        <lastmod>2026-09-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/e-apostille.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/e-apostille.html"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/getting-married-in-turkey.html</loc>
+        <lastmod>2026-09-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/getting-married-in-turkey.html"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/tr/getting-married-in-turkey.html</loc>
+        <lastmod>2026-09-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/getting-married-in-turkey.html"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/ru/getting-married-in-turkey.html</loc>
+        <lastmod>2026-09-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/getting-married-in-turkey.html"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/ar/getting-married-in-turkey.html</loc>
+        <lastmod>2026-09-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/getting-married-in-turkey.html"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/zh/getting-married-in-turkey.html</loc>
+        <lastmod>2026-09-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/getting-married-in-turkey.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/getting-married-in-turkey.html"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/reviews.html</loc>
+        <lastmod>2026-09-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/reviews.html"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/tr/reviews.html</loc>
+        <lastmod>2026-09-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/reviews.html"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/ru/reviews.html</loc>
+        <lastmod>2026-09-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/reviews.html"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/ar/reviews.html</loc>
+        <lastmod>2026-09-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/reviews.html"/>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/zh/reviews.html</loc>
+        <lastmod>2026-09-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="en" href="https://notarypublic.istanbul/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="tr" href="https://notarypublic.istanbul/tr/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://notarypublic.istanbul/ru/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://notarypublic.istanbul/ar/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://notarypublic.istanbul/zh/reviews.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/reviews.html"/>
     </url>
 </urlset>
