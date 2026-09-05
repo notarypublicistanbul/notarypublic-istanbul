@@ -1,0 +1,84 @@
+/* zh-specific styles for e-apostille.html */
+
+.hero-subtitle { font-size: 0.95rem; color: var(--muted); max-width: 820px; margin: 0 auto 2.5rem; line-height: 1.9; font-weight: 500; letter-spacing: 2px; }
+
+.section-text { color: var(--muted); font-size: 1.05rem; line-height: 1.8; max-width: 900px; margin: 0 auto 1.5rem; }
+
+.how { padding: 6rem 5%; }
+
+.steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1200px; margin: 3rem auto 0; }
+
+.step { padding: 2rem; text-align: center; position: relative; }
+
+.step::before { content: attr(data-n); position: absolute; top: -20px; left: 50%; transform: translateX(-50%); font-family: var(--font-serif); font-size: 4rem; color: transparent; -webkit-text-stroke: 1px rgba(212, 175, 55, 0.3); line-height: 1; }
+
+.step h3 { font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text); font-weight: 500; }
+
+.step p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
+
+.req-box { max-width: 1000px; margin: 4rem auto 0; padding: 3rem; border: 1px solid rgba(154, 44, 34, 0.4); background: var(--ox-soft); text-align: center; position: relative; }
+
+.req-box h3 { font-family: var(--font-serif); font-size: 1.8rem; color: #e0a999; margin-bottom: 1.2rem; font-style: italic; }
+
+.req-box p { color: #e0a999; font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; }
+
+.req-box p:last-child { margin-bottom: 0; }
+
+.req-box strong { color: #f3c3b6; }
+
+.proof { padding: 6rem 5%; background: var(--gray); border-top: 1px solid rgba(212, 175, 55, 0.1); border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
+
+.sample-img { width: 100%; max-width: 640px; display: block; margin: 0 auto 3rem; border: 1px solid rgba(212, 175, 55, 0.3); box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 60px rgba(212, 175, 55, 0.15); transition: transform 0.6s ease; }
+
+.sample-img:hover { transform: scale(1.02); }
+
+.sample-sub-title { font-family: var(--font-serif); font-size: 1.6rem; color: var(--gold-2); margin: 1rem auto; font-style: italic; }
+
+.check-row { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 2rem 0; }
+
+.check-tag { padding: 0.7rem 1.2rem; background: rgba(212, 175, 55, 0.08); border: 1px solid rgba(212, 175, 55, 0.3); color: var(--gold-light); font-size: 0.9rem; }
+
+.chain-list { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-top: 2rem; }
+
+.chain-item { padding: 0.8rem 1.2rem; background: rgba(212, 175, 55, 0.05); border: 1px solid rgba(212, 175, 55, 0.15); color: var(--gold-light); font-size: 0.85rem; font-family: var(--mono); }
+
+.world { padding: 6rem 5%; }
+
+.world-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1200px; margin: 3rem auto 0; }
+
+.world-card { background: var(--gray); border: 1px solid rgba(255,255,255,0.05); padding: 2.5rem 2rem; text-align: center; transition: all 0.3s ease; }
+
+.world-card:hover { border-color: var(--gold); transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+
+.world-card h3 { font-family: var(--font-serif); font-size: 1.5rem; color: var(--gold-2); margin-bottom: 1rem; font-weight: 500; }
+
+.world-card p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
+
+.world-close { text-align: center; color: var(--muted); font-size: 1.1rem; margin-top: 3rem; }
+
+.world-close b { color: var(--gold-2); font-weight: 500; }
+
+@media (max-width: 968px) {
+        nav ul { display: none; }
+        .nav-toggle { display: flex; }
+        nav ul.nav-open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10, 10, 10, 0.98); padding: 2rem; border-bottom: 1px solid rgba(212, 175, 55, 0.1); gap: 1.2rem; }
+        .steps-grid { grid-template-columns: repeat(2, 1fr); }
+        .world-grid { grid-template-columns: 1fr; }
+    }
+
+@media (max-width: 768px) {
+        .hero { margin-top: 170px; }
+        .bismillah-bar { flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .top-meta { display: none; }
+        .bis-link { position: static; transform: none; order: -1; width: 100%; text-align: center; }
+        .bis-img { margin: 0 auto; }
+        .lang-switcher { flex-wrap: wrap; justify-content: center; margin-left: 0; }
+        .nav-wrap { padding: 0.7rem 0; }
+        .brand-name { font-size: 1.2rem; }
+        .brand-sub { font-size: 0.65rem; }
+        .hero h1 { font-size: 2.3rem; }
+        .hero-subtitle { font-size: 0.8rem; letter-spacing: 1.5px; }
+        .steps-grid { grid-template-columns: 1fr; }
+        .req-box, .final-card { padding: 2rem 1.5rem; }
+        .footer-info { grid-template-columns: 1fr; }
+    }

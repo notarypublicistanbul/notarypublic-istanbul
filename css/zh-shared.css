@@ -1,0 +1,158 @@
+/* Shared styles across TAC Notary Public Istanbul zh/ pages */
+
+:root {
+        --gold: #D4AF37; --gold-light: #F4E8C1; --gold-2: #ecd08a; --gold-dark: #B8941F;
+        --gold-glow: rgba(212, 175, 55, 0.4); --dark: #0a0a0a; --darker: #050505;
+        --gray: #1a1a1a; --gray-light: #2a2a2a; --text: #f5f5f5; --text-muted: #888;
+        --muted: #a99f8d; --text-dim: #666; --line: rgba(242, 236, 222, 0.08);
+        --ox: #9a2c22; --ox-soft: rgba(154,44,34,0.16);
+        --font-serif: 'Cormorant Garamond', Georgia, serif;
+        --font-sans: 'Inter', -apple-system, sans-serif;
+        --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, 'Courier New', monospace;
+    }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body { font-family: var(--font-sans); background: var(--darker); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+
+.bg-animation { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%); }
+
+.bg-animation::before { content: ''; position: absolute; width: 200%; height: 200%; background: radial-gradient(circle, rgba(212,175,55,0.04) 1px, transparent 1px); background-size: 50px 50px; animation: moveGrid 20s linear infinite; }
+
+@keyframes moveGrid { 0% { transform: translate(0,0); } 100% { transform: translate(50px,50px); } }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(8,7,6,0.85); backdrop-filter: blur(16px); border-bottom: 1px solid var(--line); }
+
+.bismillah-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); position: relative; }
+
+.top-meta { font-family: var(--mono); font-size: 0.9rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+
+.bis-link { position: absolute; left: 50%; transform: translateX(-50%); display: inline-block; text-decoration: none; }
+
+.bis-img { height: 38px; width: auto; display: block; filter: drop-shadow(0 0 10px rgba(212,175,55,0.35)); transition: all 0.3s ease; }
+
+.bis-link:hover .bis-img { filter: drop-shadow(0 0 18px rgba(212,175,55,0.65)); transform: scale(1.05); }
+
+.lang-switcher { display: flex; gap: 0.3rem; align-items: center; margin-left: auto; }
+
+.lang-btn { padding: 0.4rem 0.9rem; background: transparent; border: 1px solid rgba(212, 175, 55, 0.2); color: var(--muted); cursor: pointer; transition: all 0.3s ease; font-size: 0.75rem; letter-spacing: 1px; font-family: var(--font-sans); text-decoration: none; font-weight: 500; }
+
+.lang-btn:hover, .lang-btn.active { border-color: var(--gold); color: var(--gold); background: rgba(212, 175, 55, 0.05); transform: translateY(-2px); }
+
+.lang-btn.active { background: rgba(212, 175, 55, 0.1); }
+
+.nav-wrap { display: flex; justify-content: space-between; align-items: center; padding: 0.9rem 0; }
+
+.brand { display: flex; align-items: center; gap: 1rem; text-decoration: none; }
+
+.brand-name { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; letter-spacing: 2px; color: #ffffff; }
+
+.brand-name span { color: var(--gold); }
+
+.brand-sub { font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-top: 0.2rem; }
+
+nav ul { display: flex; align-items: center; gap: 2rem; list-style: none; }
+
+nav ul a { font-size: 0.85rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: all 0.3s ease; font-weight: 500; position: relative; }
+
+nav ul a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.3s ease; }
+
+nav ul a:hover, nav ul a.active { color: var(--gold); }
+
+nav ul a:hover::after, nav ul a.active::after { width: 100%; }
+
+nav ul a i { font-style: normal; color: var(--gold); font-size: 0.75rem; margin-right: 0.3rem; }
+
+.nav-toggle { display: none; width: 40px; height: 40px; background: none; border: 1px solid rgba(212, 175, 55, 0.3); cursor: pointer; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
+
+.nav-toggle span { display: block; width: 20px; height: 1px; background: var(--text); transition: all 0.4s ease; }
+
+.hero { margin-top: 150px; padding: 5rem 5% 4rem; text-align: center; position: relative; }
+
+.hero-badge { display: inline-block; padding: 0.6rem 1.5rem; background: rgba(212, 175, 55, 0.1); border: 1px solid var(--gold); color: var(--gold); font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 2rem; }
+
+.hero h1 { font-family: var(--font-serif); font-size: clamp(2.4rem, 6vw, 4.5rem); font-weight: 400; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: 1px; }
+
+.hero h1 em { color: var(--gold); font-style: italic; font-weight: 500; }
+
+.hero-flourish { display: flex; align-items: center; justify-content: center; gap: 16px; margin: 1.5rem auto; color: var(--gold); font-size: 0.9rem; }
+
+.hero-flourish::before, .hero-flourish::after { content: ''; height: 1px; width: 80px; }
+
+.hero-flourish::before { background: linear-gradient(90deg, transparent, var(--gold)); }
+
+.hero-flourish::after { background: linear-gradient(90deg, var(--gold), transparent); }
+
+.hero-subtitle { font-size: 0.95rem; color: var(--muted); max-width: 760px; margin: 0 auto 2.5rem; line-height: 1.9; font-weight: 500; letter-spacing: 2px; }
+
+.cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+.btn-primary { padding: 1rem 2.5rem; background: var(--gold); color: var(--dark); text-decoration: none; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 0.85rem; transition: all 0.3s ease; border: 2px solid var(--gold); display: inline-block; }
+
+.btn-primary:hover { background: transparent; color: var(--gold); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2); }
+
+.btn-secondary { padding: 1rem 2.5rem; background: transparent; color: var(--text); text-decoration: none; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; font-size: 0.85rem; border: 2px solid rgba(255, 255, 255, 0.2); transition: all 0.3s ease; display: inline-block; }
+
+.btn-secondary:hover { border-color: var(--text); transform: translateY(-3px); }
+
+.marquee { overflow: hidden; border-top: 1px solid rgba(212, 175, 55, 0.1); border-bottom: 1px solid rgba(212, 175, 55, 0.1); padding: 1.5rem 0; background: var(--gray); }
+
+.marquee-track { display: flex; gap: 3rem; animation: marquee 40s linear infinite; white-space: nowrap; font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+
+.marquee-track span { color: var(--gold); margin: 0 0.5rem; }
+
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+@keyframes shimmer { 0% { left: -100%; } 50%, 100% { left: 100%; } }
+
+.section-header { text-align: center; margin-bottom: 4rem; }
+
+.section-num { display: inline-block; font-size: 0.85rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+
+.section-title { font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 400; margin-bottom: 1rem; }
+
+.section-title span { color: var(--gold); font-style: italic; }
+
+.faq-item:hover { border-color: rgba(212, 175, 55, 0.4); }
+
+.faq-item summary { cursor: pointer; font-family: var(--font-serif); font-size: 1.2rem; color: var(--text); font-weight: 500; list-style: none; display: flex; justify-content: center; align-items: center; text-align: center; position: relative; padding: 1.5rem 3.5rem; transition: color 0.3s ease; }
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after { content: '+'; color: var(--gold); font-size: 1.5rem; position: absolute; right: 1.2rem; transition: transform 0.3s ease; }
+
+.faq-item[open] summary::after { transform: rotate(45deg); }
+
+.faq-item summary:hover { color: var(--gold); }
+
+.faq-item .faq-a { padding: 0 2.5rem 2rem; color: var(--muted); font-size: 0.95rem; line-height: 1.8; text-align: center; }
+
+footer { padding: 4rem 5% 2rem; background: var(--darker); border-top: 1px solid rgba(212, 175, 55, 0.1); text-align: center; }
+
+.alhamdulillah { margin-bottom: 2rem; }
+
+.alhamdulillah img { height: 60px; width: auto; opacity: 0.9; transition: all 0.3s ease; display: inline-block; }
+
+.alhamdulillah img:hover { opacity: 1; filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4)); }
+
+.footer-brand { font-family: var(--font-serif); font-size: 1.5rem; color: var(--gold); margin-bottom: 2rem; letter-spacing: 2px; text-transform: uppercase; }
+
+.footer-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 800px; margin: 0 auto 3rem; text-align: center; }
+
+.footer-info h4 { font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+
+.footer-info p { color: var(--muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 0.5rem; }
+
+.footer-info a { color: var(--gold); text-decoration: none; }
+
+.footer-bottom { padding-top: 2rem; border-top: 1px solid rgba(212, 175, 55, 0.1); color: var(--text-dim); font-size: 0.85rem; text-align: center; }
+
+.footer-bottom a { color: var(--gold); text-decoration: none; }
+
+.final-card { max-width: 900px; margin: 4rem auto 0; padding: 3rem; border: 1px solid rgba(212, 175, 55, 0.3); background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(10, 10, 10, 0.5)); text-align: center; }
+
+.final-card h3 { font-family: var(--font-serif); font-size: 2rem; color: var(--gold); margin-bottom: 1.5rem; font-style: italic; }

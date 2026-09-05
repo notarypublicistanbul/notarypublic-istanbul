@@ -1,0 +1,35 @@
+/* zh-specific styles for faq.html */
+
+.hero { margin-top: 150px; padding: 5rem 5% 3rem; text-align: center; position: relative; }
+
+.hero h1 span { color: var(--gold); font-style: italic; }
+
+.faq { padding: 2rem 5% 6rem; }
+
+.faq-list { max-width: 900px; margin: 0 auto; }
+
+.faq-item { border: 1px solid rgba(212, 175, 55, 0.15); background: var(--gray); margin-bottom: 1rem; transition: all 0.3s ease; }
+
+@media (max-width: 968px) {
+        nav ul { display: none; }
+        .nav-toggle { display: flex; }
+        nav ul.nav-open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10, 10, 10, 0.98); padding: 2rem; border-bottom: 1px solid rgba(212, 175, 55, 0.1); gap: 1.2rem; }
+    }
+
+@media (max-width: 768px) {
+        .hero { margin-top: 170px; }
+        .bismillah-bar { flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .top-meta { display: none; }
+        .bis-link { position: static; transform: none; order: -1; width: 100%; text-align: center; }
+        .bis-img { margin: 0 auto; }
+        .lang-switcher { flex-wrap: wrap; justify-content: center; margin-left: 0; }
+        .nav-wrap { padding: 0.7rem 0; }
+        .brand-name { font-size: 1.2rem; }
+        .brand-sub { font-size: 0.65rem; }
+        .hero h1 { font-size: 2.3rem; }
+        .hero-subtitle { font-size: 0.8rem; letter-spacing: 1.5px; }
+        .faq-item summary { padding: 1.2rem 2.8rem; font-size: 1.05rem; }
+        .faq-item .faq-a { padding: 0 1.5rem 1.5rem; }
+        .final-card { padding: 2rem 1.5rem; }
+        .footer-info { grid-template-columns: 1fr; }
+    }
