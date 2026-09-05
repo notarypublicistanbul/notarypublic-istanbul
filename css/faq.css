@@ -1,0 +1,143 @@
+/* Page-specific styles for faq.html */
+
+.hero-badge {
+        display: inline-block;
+        padding: 0.6rem 1.5rem;
+        background: rgba(212, 175, 55, 0.1);
+        border: 1px solid var(--gold);
+        color: var(--gold);
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        animation: fadeInDown 1s ease;
+    }
+
+.btn-primary {
+        padding: 1rem 2.5rem;
+        background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 45%, var(--gold-dark) 100%);
+        color: var(--dark);
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        border: 2px solid var(--gold);
+        display: inline-block;
+        box-shadow: 0 8px 24px rgba(212, 175, 55, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+
+/* ============ FAQ PAGE CONTENT ============ */
+    .faq-page {
+        padding: 1.5rem 5% 4rem;
+    }
+
+.faq-list {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+.faq-item {
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        background: var(--gray);
+        margin-bottom: 1rem;
+        transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+.faq-item:hover {
+        border-color: rgba(212, 175, 55, 0.4);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+    }
+
+.faq-item[open] {
+        border-color: rgba(212, 175, 55, 0.5);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.35), 0 0 30px rgba(212, 175, 55, 0.06);
+    }
+
+.faq-item summary {
+        cursor: pointer;
+        font-family: var(--font-serif);
+        font-size: 1.25rem;
+        color: var(--text);
+        font-weight: 500;
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: color 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        text-align: center;
+        position: relative;
+        padding: 1.5rem 3.5rem;
+    }
+
+.faq-item summary::after {
+        content: '+';
+        color: var(--gold);
+        font-size: 1.5rem;
+        position: absolute;
+        right: 1.2rem;
+        transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+.faq-item .faq-a {
+        padding: 0 2.5rem 2rem;
+        color: var(--text-muted);
+        font-size: 1rem;
+        line-height: 1.8;
+        text-align: center;
+    }
+
+.info-card {
+        max-width: 900px;
+        margin: 3rem auto 0;
+        padding: 3rem;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(10, 10, 10, 0.5));
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+    }
+
+.info-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: -100%;
+        width: 100%; height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.05), transparent);
+        animation: shimmer 6s ease-in-out infinite;
+    }
+
+.info-card h3 {
+        font-family: var(--font-serif);
+        font-size: 2rem;
+        color: var(--gold);
+        margin-bottom: 1.5rem;
+        font-style: italic;
+        position: relative;
+    }
+
+/* ============ FOOTER ============ */
+    footer {
+        padding: 2.5rem 5% 1.5rem;
+        background: var(--darker);
+        border-top: 1px solid rgba(212, 175, 55, 0.1);
+        text-align: center;
+    }
+
+@media (max-width: 968px) {
+        nav ul { display: none; }
+        .nav-toggle { display: flex; }
+    }
+
+@media (max-width: 768px) {
+        .header-top { flex-direction: column; gap: 0.5rem; }
+        .lang-switcher { flex-wrap: wrap; justify-content: center; }
+        .hero h1 { font-size: 2.5rem; }
+        .faq-item summary { padding: 1.2rem 2.8rem; font-size: 1.1rem; }
+        .faq-item .faq-a { padding: 0 1.5rem 1.5rem; }
+        .info-card { padding: 2rem 1.5rem; }
+        .alhamdulillah img { height: 50px; }
+    }
