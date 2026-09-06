@@ -1,0 +1,69 @@
+/* zh-specific styles for getting-married-in-turkey.html */
+
+.section-text { color: var(--muted); font-size: 1.05rem; line-height: 1.8; max-width: 900px; margin: 0 auto 1.5rem; }
+
+.how { padding: 6rem 5%; }
+
+.steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1200px; margin: 3rem auto 0; }
+
+.step { padding: 2rem; text-align: center; position: relative; }
+
+.step::before { content: attr(data-n); position: absolute; top: -20px; left: 50%; transform: translateX(-50%); font-family: var(--font-serif); font-size: 4rem; color: transparent; -webkit-text-stroke: 1px rgba(212, 175, 55, 0.3); line-height: 1; }
+
+.step h3 { font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text); font-weight: 500; }
+
+.step p { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
+
+.tags-row { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; margin-top: 3rem; }
+
+.tag { padding: 0.8rem 1.2rem; background: rgba(212, 175, 55, 0.05); border: 1px solid rgba(212, 175, 55, 0.15); text-align: center; font-size: 0.85rem; color: var(--gold-light); transition: all 0.3s ease; font-weight: 500; }
+
+.tag:hover { background: var(--gold); color: var(--dark); border-color: var(--gold); }
+
+.keepsake { padding: 6rem 5%; background: var(--gray); border-top: 1px solid rgba(212, 175, 55, 0.1); border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
+
+.family-book-img { width: 100%; max-width: 520px; display: block; margin: 0 auto 3rem; border: 1px solid rgba(212, 175, 55, 0.3); box-shadow: 0 40px 80px rgba(0,0,0,0.5), 0 0 60px rgba(212, 175, 55, 0.15); transition: transform 0.6s ease; }
+
+.family-book-img:hover { transform: scale(1.02); }
+
+.appt-notice { max-width: 1200px; margin: 4rem auto 0; padding: 3rem; border: 1px solid rgba(212, 175, 55, 0.3); background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(10, 10, 10, 0.5)); text-align: center; position: relative; overflow: hidden; }
+
+.appt-notice::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.05), transparent); animation: shimmer 6s ease-in-out infinite; }
+
+.appt-notice h4 { font-family: var(--font-serif); font-size: 2.2rem; color: var(--gold); margin-bottom: 1.2rem; font-style: italic; position: relative; }
+
+.appt-notice p { color: var(--muted); font-size: 1.05rem; line-height: 1.8; max-width: 900px; margin: 0 auto; position: relative; }
+
+.appt-notice strong { color: var(--text); }
+
+.faq { padding: 6rem 5%; }
+
+.faq-list { max-width: 900px; margin: 3rem auto 0; }
+
+.faq-item { border: 1px solid rgba(212, 175, 55, 0.15); background: var(--gray); margin-bottom: 1rem; transition: all 0.3s ease; }
+
+@media (max-width: 968px) {
+        nav ul { display: none; }
+        .nav-toggle { display: flex; }
+        nav ul.nav-open { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: rgba(10, 10, 10, 0.98); padding: 2rem; border-bottom: 1px solid rgba(212, 175, 55, 0.1); gap: 1.2rem; }
+        .steps-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+@media (max-width: 768px) {
+        .hero { margin-top: 170px; }
+        .bismillah-bar { flex-wrap: wrap; justify-content: center; gap: 10px; }
+        .top-meta { display: none; }
+        .bis-link { position: static; transform: none; order: -1; width: 100%; text-align: center; }
+        .bis-img { margin: 0 auto; }
+        .lang-switcher { flex-wrap: wrap; justify-content: center; margin-left: 0; }
+        .nav-wrap { padding: 0.7rem 0; }
+        .brand-name { font-size: 1.2rem; }
+        .brand-sub { font-size: 0.65rem; }
+        .hero h1 { font-size: 2.3rem; }
+        .hero-subtitle { font-size: 0.8rem; letter-spacing: 1.5px; }
+        .steps-grid { grid-template-columns: 1fr; }
+        .appt-notice { padding: 2rem 1.5rem; }
+        .faq-item summary { padding: 1.2rem 2.8rem; font-size: 1.05rem; }
+        .faq-item .faq-a { padding: 0 1.5rem 1.5rem; }
+        .footer-info { grid-template-columns: 1fr; }
+    }
