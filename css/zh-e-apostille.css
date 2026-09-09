@@ -82,3 +82,60 @@
         .req-box, .final-card { padding: 2rem 1.5rem; }
         .footer-info { grid-template-columns: 1fr; }
     }
+
+
+/* === showcase-card layout, matched from css/e-apostille.css === */
+.showcase-card {
+    margin: 3rem auto 0;
+    background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(10, 10, 10, 0.98) 100%);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    align-items: stretch;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 0 60px rgba(212, 175, 55, 0.15), 0 20px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(212, 175, 55, 0.15);
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.showcase-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 80px rgba(212, 175, 55, 0.2), 0 30px 70px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(212, 175, 55, 0.2);
+}
+
+.showcase-image {
+    position: relative;
+    min-height: 420px;
+    overflow: hidden;
+    background: var(--darker);
+}
+
+.showcase-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.showcase-card:hover .showcase-image img { transform: scale(1.04); }
+
+.showcase-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent 55%, rgba(10,10,10,0.55) 100%);
+    pointer-events: none;
+}
+
+.showcase-content {
+    padding: 3rem 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .showcase-card { grid-template-columns: 1fr; }
+    .showcase-image { min-height: 320px; }
+    .showcase-content { padding: 2.5rem 2rem; }
+}
