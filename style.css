@@ -58,7 +58,7 @@ body {
 header {
         position: fixed;
         top: 0; left: 0; right: 0;
-        padding: 0.7rem 5%;
+        padding: 0.35rem 5%;
         background: rgba(10, 10, 10, 0.95);
         backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(212, 175, 55, 0.1);
@@ -67,7 +67,7 @@ header {
     }
 
 header.scrolled {
-        padding: 0.5rem 5%;
+        padding: 0.25rem 5%;
         background: rgba(8, 8, 8, 0.98);
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(212, 175, 55, 0.15);
     }
@@ -76,7 +76,7 @@ header.scrolled {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 0.35rem;
+        margin-bottom: 0.15rem;
         font-size: 0.85rem;
         color: var(--text-muted);
         letter-spacing: 1px;
