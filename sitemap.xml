@@ -491,4 +491,16 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://notarypublic.istanbul/pt/reviews.html"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://notarypublic.istanbul/reviews.html"/>
     </url>
+    <url>
+        <loc>https://notarypublic.istanbul/blog/</loc>
+        <lastmod>2026-10-07</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/blog/how-long-does-apostille-take-in-turkey.html</loc>
+        <lastmod>2026-10-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
 </urlset>
