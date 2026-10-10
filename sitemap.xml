@@ -545,4 +545,10 @@
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
+    <url>
+        <loc>https://notarypublic.istanbul/blog/affidavit-consent-letter-turkey-notary.html</loc>
+        <lastmod>2026-10-11</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
 </urlset>
