@@ -493,7 +493,7 @@
     </url>
     <url>
         <loc>https://notarypublic.istanbul/blog/</loc>
-        <lastmod>2026-10-09</lastmod>
+        <lastmod>2026-10-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
@@ -518,6 +518,30 @@
     <url>
         <loc>https://notarypublic.istanbul/blog/what-is-an-apostille-turkey.html</loc>
         <lastmod>2026-10-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/blog/getting-married-in-turkey-documents-checklist.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/blog/family-residence-permit-turkey-documents.html</loc>
+        <lastmod>2026-10-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/blog/turkish-birth-marriage-certificate-use-abroad.html</loc>
+        <lastmod>2026-10-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://notarypublic.istanbul/blog/apostille-vs-consular-legalization-turkey.html</loc>
+        <lastmod>2026-10-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
